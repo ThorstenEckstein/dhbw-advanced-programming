@@ -1,0 +1,20 @@
+include::settings.adoc[]
+
+== {course-1}
+
+*Allgemeine Inhalte*
+
+* IDE, Git, Java (Installation, Nutzung, etc. ...)
+* Setup: Test-Driven-Development
+* Setup: Unit-Tests
+
+*Fachlicher Kontext*
+----
+Vorbereitung: Darstellung des fachlichen Kontextes
+
+ + Überwachungssystem in der Betriebsleitung
+ + Zug, Triebfahrzeug (Tbf), Wagons (Spezialisierung Flügelzug)
+ + Streckennetz
+ + Störung, Weichenausfall, Abfahrt, Ankunft (z.B. verspätete Ankunft im Bahnhof)
+ + Dispositionsmaßnahme, Umleitung
+----

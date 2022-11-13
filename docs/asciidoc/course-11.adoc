@@ -1,0 +1,21 @@
+include::settings.adoc[]
+
+== {course-11}
+
+*Allgemeine Inhalte*
+
+* Design Patterns
+** Singleton
+** Template Method
+** Factory
+** Strategy
+** ...
+* Refactoring
+** Vorgehensweisen
+** Nutzung der IDE
+** ...
+
+*Fachlicher Kontext*
+----
+ to be done
+----

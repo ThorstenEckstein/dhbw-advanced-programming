@@ -1,0 +1,24 @@
+include::settings.adoc[]
+
+== {course-3}
+
+*Allgemeine Inhalte*
+
+* Sichtbarkeiten von Klassen, Members, Methoden, Modifier
+* Beziehungsarten (Besitz, Aufruf, Vererbung, ...), Aggregation vs. Komposition etc.
+* Collections API
+
+_Referenzen_
+
+* -> https://www.ibm.com/docs/de/rational-soft-arch/9.6.1?topic=diagrams-relationships-in-class[Beziehungen in Klassendiagrammen]
+
+*Fachlicher Kontext*
+----
+ + Zug 1:1 Tbf (hat)
+ + Zug 1:n Wagon (besteht aus)
+ + Zug 1:n Fahrt
+ + Fahrt 1:n Reisende
+ + Zug 1:2 Flügel
+ + Streckennetz 1:m Strecken
+ + Strecke n:m Abschnitte
+----

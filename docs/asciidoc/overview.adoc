@@ -1,0 +1,46 @@
+[subs=normal]
+----
+*Titel*   : Programmierung II
+*Kontext* : Zugüberwachung & -disposition im Störungsfall
+----
+
+[subs=normal]
+----
+*Übersicht*
+ Hochschule        : Duale Hochschule BaWü (Mannheim)
+ Fachbereich       : Studienbereich Wirtschaft, Wirtschaftsinformatik,
+                     Appl. Management
+ Lehrveranstaltung : Programmierung II (W3WI_109)
+ Lehrform          : Vorlesung, Übung, Laborübung, Case Study
+ Prüfungsleistung  : Klausur oder Portfolio
+ Dozent            : Thorsten Eckstein
+
+*Lehrinhalte (Pflicht)*
+ Fortgeschrittene objektorientierte Konzepte: Generische Interfaces
+ und Klassen, Nutzung der Klassenbibliothek. Aufbau grafischer Ober-
+ flächen: Layout, typische Komponenten für grafische Benutzungs-
+ schnittstellen, Ereignisbehandlung. Fortgeschrittene Programmier-
+ methodik: Parallele Programmierung mit Threads, Synchronisations- &
+ Kommunikationskonzepte, Ein- und Ausgabe über Streams.
+
+*Lehrinhalte (Kür)*
+ - Design Prinzipien & Design Patterns
+ - Code Qualität
+ - TDD, JUnit & Mockito
+
+*Woche   KW       Mo    -    So*
+  1     07    13.02.23 - 19.02.23
+  2     08    20.02.23 - 26.02.23
+  3     09    27.02.23 - 05.03.23
+  4     10    06.03.23 - 12.03.23
+  5     11    13.03.23 - 19.03.23
+  6     12    20.03.23 - 26.03.23
+  7     13    27.03.23 - 02.04.23
+  8     14    03.04.23 - 09.04.23 (6.-10. Ostern)
+  9     15    10.04.23 - 16.04.23
+  10    16    17.04.23 - 23.04.23
+  11    17    24.04.23 - 30.04.23
+  12    18    01.05.23 - 07.05.23
+----
+
+IMPORTANT: [.red]#_Die Anzahl der Kurse muss variabel bleiben, in Abhängigkeit von Länge des Semesters, des Kursfortschritts sowie des Prüfungszeitraums_#

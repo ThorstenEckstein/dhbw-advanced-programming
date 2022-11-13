@@ -1,0 +1,22 @@
+
+== Inhaltsbeispiele anderer Lehrveranstaltungen
+
+=== javatraining.de
+
+https://javatraining.de/schulungen/java-advanced/
+
+**Inhalt**: Grundlagen der Java 8, d.h. Datentypen, Operatoren, Control Statements, Classes, sowie Vererbung, Interfaces und Exceptions. Tiefergreifend Mutithreaded Programming, Enumerations, Autoboxing und Annotations, I/O sowie Generis, Lambda Expressions, Collections und Networking, Stream API, Regular Expressions, Syntaxänderungen in Java 9-17, Datenbankzugriff mit Hibernate und JPA behandelt.
+
+=== it-schulungen.com
+
+https://www.it-schulungen.com/seminare/softwareentwicklung/java/java-fortgeschrittene-programmiertech.html
+
+*Fortgeschrittene Themen der Sprache Java*: Generics, Reguläre Ausdrücke, Flexible Parameterlisten mit varargs, Annotationen, Enumerations, Datenbankprogrammierung, Funktionale Programmierung mit Lambda-Ausdrücken, Entwicklung mit Tools optimieren
+
+*Code-Qualität*: Code-Qualität steigern, Guter und Schlechter Code, Projektaufbau, das Fundament muss passen, Statische Codeanalyse ins Projekt einbinden
+
+*Code Prinzipien*: OOP Best Practices oder einfach nur das Grundwerkzeug eines Entwicklers, Design Prinzipien, Design Patterns, Domain Driven Design (DDD), Refactoring, Exception Handling, Exceptions in Java SE, Die verschiedenen Strategien, Eigene Exception-Hierarchie oder bestehende Exceptions verwenden, Wann verwende ich Checked- und wann Unchecked-Exceptions, Logging
+
+*Performance*: maximieren, Was ist Performance?, Toolbasiertes Stressen und Messen, Manuell messen, Einflussfaktoren auf die Performance, Effiziente Programmiertechniken, Performance Benchmarks
+
+*Tests*: Wozu Tests? Saubere und schnelle Tests mit JUnit und Mockito, Testautomatisierung

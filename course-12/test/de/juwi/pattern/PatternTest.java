@@ -242,5 +242,4 @@ public class PatternTest {
 		assertEquals(expectedC, c.toString());
 	}
 
-
 }

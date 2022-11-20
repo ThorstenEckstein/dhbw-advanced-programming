@@ -1,4 +1,4 @@
-package de.juwi.patterns;
+package de.juwi.pattern;
 
 import static de.juwi.pattern.printsupport.print.PrinterFactory.PrinterType.STRING;
 import static de.juwi.pattern.printsupport.print.PrinterFactory.PrinterType.XML;
@@ -37,7 +37,7 @@ import de.juwi.pattern.proxy.RenderException;
 import de.juwi.pattern.template.AbstractBusinessService;
 import de.juwi.pattern.template.MyBusinessService;
 
-import static de.juwi.patterns.Assertions.*;
+import static de.juwi.pattern.Assertions.*;
 
 public class PatternTest {
 

@@ -1,4 +1,4 @@
-package de.juwi;
+package de.juwi.patterns;
 
 public class Assertions {
 

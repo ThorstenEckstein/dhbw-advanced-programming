@@ -1,9 +1,7 @@
-package de.juwi;
+package de.juwi.patterns;
 
 import static de.juwi.pattern.printsupport.print.PrinterFactory.PrinterType.STRING;
 import static de.juwi.pattern.printsupport.print.PrinterFactory.PrinterType.XML;
-
-import java.util.List;
 
 import de.juwi.pattern.adapter.LocalMapRenderEngine;
 import de.juwi.pattern.adapter.LocalRenderEngine;
@@ -25,11 +23,6 @@ import de.juwi.pattern.filter.v1.impl.IdentityFilter;
 import de.juwi.pattern.filter.v1.impl.SynonymityFilter;
 import de.juwi.pattern.filter.v1.mock.Input;
 import de.juwi.pattern.filter.v1.mock.Output;
-import de.juwi.pattern.filter.v2.AnalysisCase;
-import de.juwi.pattern.filter.v2.MatchException;
-import de.juwi.pattern.filter.v2.MatchProcessor;
-import de.juwi.pattern.filter.v2.mock.Candidate;
-import de.juwi.pattern.filter.v2.mock.Subject;
 import de.juwi.pattern.observer.MapObserver;
 import de.juwi.pattern.observer.Observable;
 import de.juwi.pattern.observer.ObservableMap;
@@ -44,7 +37,7 @@ import de.juwi.pattern.proxy.RenderException;
 import de.juwi.pattern.template.AbstractBusinessService;
 import de.juwi.pattern.template.MyBusinessService;
 
-import static de.juwi.Assertions.*;
+import static de.juwi.patterns.Assertions.*;
 
 public class PatternTest {
 

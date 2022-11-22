@@ -19,9 +19,17 @@ Vorbereitung: Darstellung des fachlichen Kontextes
  + Dispositionsmaßnahme, Umleitung
 ----
 
+Überblick über das grundsätzliche *Fachklassenmodell*:
+
+[plantuml, klassenmodell, png]
+....
+include::diagrams/course-1/business-model.puml[]
+....
+
 Das Interface `Train` sieht dabei wie folgt aus:
 
 [subs="normal"]
 ----
 include::{course-1-src}/train/Train.java[lines=5..13]
 ----
+

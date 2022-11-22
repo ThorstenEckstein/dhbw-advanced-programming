@@ -1,0 +1,28 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+interface Train
+abstract class BaseTrain {
+  String number
+  List wagons
+}
+class LongDistanceTrain
+class RegionalTrain
+class Locomotive
+
+interface Wagon
+abstract class BaseWagon
+class PassengerWagon
+class FreightWagon
+
+Train        <|..       BaseTrain         : implements
+BaseTrain    <|--       LongDistanceTrain : extends
+BaseTrain    <|--       RegionalTrain     : extends
+BaseTrain    -l->       Locomotive        : > has
+BaseTrain    o-r- "1:n" Wagon
+
+Wagon        <|..       BaseWagon
+BaseWagon    <|--       PassengerWagon
+BaseWagon    <|--       FreightWagon
+
+@enduml

@@ -16,3 +16,6 @@
 :course-10: {title-prefix} 10 - Clean Code 1/2
 :course-11: {title-prefix} 11 - Clean Code 2/2
 :course-12: {title-prefix} 12 - Prüfungsvorbereitung
+
+// Variables with scope for 'course 1'
+:course-1-src: ../../course-1/src/de/dhbw/course1/model

@@ -18,3 +18,10 @@ Vorbereitung: Darstellung des fachlichen Kontextes
  + Störung, Weichenausfall, Abfahrt, Ankunft (z.B. verspätete Ankunft im Bahnhof)
  + Dispositionsmaßnahme, Umleitung
 ----
+
+Das Interface `Train` sieht dabei wie folgt aus:
+
+[subs="normal"]
+----
+include::{course-1-src}/train/Train.java[lines=5..13]
+----

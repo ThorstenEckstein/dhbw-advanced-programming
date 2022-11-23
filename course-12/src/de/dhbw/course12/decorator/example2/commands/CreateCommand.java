@@ -4,7 +4,7 @@ public class CreateCommand extends AbstractCommand {
 
 	@Override
 	public void execute() {
-		System.out.println("  executing create ...");
+		System.out.println("  executing 'create' ...");
 	}
 
 }

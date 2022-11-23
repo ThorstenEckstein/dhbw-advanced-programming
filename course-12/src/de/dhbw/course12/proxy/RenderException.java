@@ -1,7 +1,6 @@
 package de.dhbw.course12.proxy;
 
-/**<b>Build on</b>: Aug 2, 2012 <br>
- * <b>@author </b>: Thorsten Eckstein <br>
+/**
  * <b>Description </b>: This class is a sample exception when errors occurs in
  *    rendering processes.
  */

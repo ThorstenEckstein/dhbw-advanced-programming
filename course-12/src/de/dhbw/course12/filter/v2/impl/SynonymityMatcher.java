@@ -21,7 +21,7 @@ public class SynonymityMatcher implements Matcher {
 			throw new MatchException();
 		}
 		
-		if (false /* check synonmymity*/) {
+		if (false /* check synonymity*/) {
 			System.err.println("'" + this + "' matches! Exiting chain ...");
 			AnalysisDetail<Candidate> detail = new AnalysisDetail<Candidate>();
 			detail.setCandidate(candidate);

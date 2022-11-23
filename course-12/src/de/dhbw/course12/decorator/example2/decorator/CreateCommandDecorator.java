@@ -10,7 +10,7 @@ public class CreateCommandDecorator extends CommandDecorator {
 
 	@Override
 	public void execute() {
-		getRecorder().record(" >>> record 'create' execution!");
+		getRecorder().record("  recording 'create' execution!");
 		super.execute();
 	}
 

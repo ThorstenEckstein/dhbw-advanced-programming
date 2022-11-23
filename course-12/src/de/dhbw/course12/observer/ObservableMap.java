@@ -1,8 +1,6 @@
 package de.dhbw.course12.observer;
 
 /**
- * <b>Build on</b>: Aug 2, 2012 <br>
- * <b>@author </b>: Thorsten Eckstein <br>
  * <b>Description </b>: This class is a prototype implementation of some
  * "observed subject", which will notify/update any attached observer if
  * this object is changed ("state-changed" event) on calling one of the 

@@ -20,7 +20,7 @@ public class MatchProcessor {
 	}
 
 	public void execute(
-			AnalysisCase<Subject, Candidate> analysisCase, Candidate candidate)
+            AnalysisCase<Subject, Candidate> analysisCase, Candidate candidate)
 			throws MatchException {
 		matcherChain.proceed(analysisCase, candidate);
 	}

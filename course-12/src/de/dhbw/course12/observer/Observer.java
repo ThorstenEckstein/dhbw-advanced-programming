@@ -1,8 +1,6 @@
 package de.dhbw.course12.observer;
 
 /**
- * <b>Build on</b>: Aug 2, 2012 <br>
- * <b>@author </b>: Thorsten Eckstein <br>
  * <b>Description </b>: This interfaces represents all observer objects 
  *    watching the observed subject, which is also called the "Observable".
  *    This implementation uses the "push-notification" (=observed subjects 

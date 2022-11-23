@@ -4,7 +4,7 @@ public class UpdateCommand extends AbstractCommand {
 
 	@Override
 	public void execute() {
-		System.out.println("  executing update ...");
+		System.out.println("  executing 'update' ...");
 	}
 
 }

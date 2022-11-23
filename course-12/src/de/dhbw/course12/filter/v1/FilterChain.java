@@ -6,9 +6,11 @@ import java.util.Queue;
 import de.dhbw.course12.filter.v1.mock.Input;
 import de.dhbw.course12.filter.v1.mock.Output;
 
-/* FilterChain acting like a controller, but should be a separate class! 
- * Although * unused, the FilterChainManager in this package could be that 
- * controller */
+/*
+ * FilterChain acting like a controller, but should be a separate class!
+ * Although unused, the FilterChainManager in this package could be that
+ * controller
+ */
 public class FilterChain {
 
 	private Queue<Filter> filters = new LinkedList<Filter>();

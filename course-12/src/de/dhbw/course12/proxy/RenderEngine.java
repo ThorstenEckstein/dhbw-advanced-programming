@@ -1,7 +1,6 @@
 package de.dhbw.course12.proxy;
 
-/**<b>Build on</b>: Aug 2, 2012 <br>
- * <b>@author </b>: Thorsten Eckstein <br>
+/**
  * <b>Description </b>: This interface is the one which must be implemented
  *    by either ther proxy itself as well as the concrete (real) implementation
  *    of some real algorithm, such as here the real map rendering process.

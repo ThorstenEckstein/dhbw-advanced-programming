@@ -10,7 +10,7 @@ public class UpdateCommandDecorator extends CommandDecorator {
 
 	@Override
 	public void execute() {
-		getRecorder().record(" >>> record 'update' execution!");
+		getRecorder().record("  recording 'update' execution!");
 		super.execute();
 	}
 

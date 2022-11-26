@@ -1,4 +1,4 @@
-package de.dhbw.course12;
+package de.dhbw;
 
 public class Assertions {
 

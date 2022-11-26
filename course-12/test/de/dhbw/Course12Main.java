@@ -1,4 +1,6 @@
-package de.dhbw.course12;
+package de.dhbw;
+
+import de.dhbw.course12.TestSuite;
 
 public class Course12Main {
 

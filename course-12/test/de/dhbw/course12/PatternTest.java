@@ -1,10 +1,9 @@
 package de.dhbw.course12;
 
-import de.dhbw.course12.demo.model.Entity;
-import de.dhbw.course12.adapter.SelfMadeMapRenderEngine;
-import de.dhbw.course12.adapter.SelfMadeRenderEngine;
 import de.dhbw.course12.adapter.ProprietaryRenderEngine;
 import de.dhbw.course12.adapter.Renderer;
+import de.dhbw.course12.adapter.SelfMadeMapRenderEngine;
+import de.dhbw.course12.adapter.SelfMadeRenderEngine;
 import de.dhbw.course12.decorator.example1.DefaultRenderer;
 import de.dhbw.course12.decorator.example1.RenderAndPrintDecorator;
 import de.dhbw.course12.decorator.example2.commands.Command;
@@ -13,6 +12,7 @@ import de.dhbw.course12.decorator.example2.commands.UpdateCommand;
 import de.dhbw.course12.decorator.example2.decorator.CommandDecorator;
 import de.dhbw.course12.decorator.example2.decorator.CreateCommandDecorator;
 import de.dhbw.course12.decorator.example2.decorator.UpdateCommandDecorator;
+import de.dhbw.course12.demo.model.Entity;
 import de.dhbw.course12.facade.Printer;
 import de.dhbw.course12.filter.v1.FilterChain;
 import de.dhbw.course12.filter.v1.FilterException;
@@ -21,12 +21,7 @@ import de.dhbw.course12.filter.v1.impl.IdentityFilter;
 import de.dhbw.course12.filter.v1.impl.SynonymityFilter;
 import de.dhbw.course12.filter.v1.mock.Input;
 import de.dhbw.course12.filter.v1.mock.Output;
-import de.dhbw.course12.filter.v2.AnalysisCase;
-import de.dhbw.course12.filter.v2.MatchException;
-import de.dhbw.course12.filter.v2.MatchProcessor;
-import de.dhbw.course12.filter.v2.mock.Candidate;
 import de.dhbw.course12.filter.v2.mock.MockFactory;
-import de.dhbw.course12.filter.v2.mock.Subject;
 import de.dhbw.course12.observer.MapObserver;
 import de.dhbw.course12.observer.Observable;
 import de.dhbw.course12.observer.ObservableMap;
@@ -37,8 +32,8 @@ import de.dhbw.course12.proxy.RenderException;
 import de.dhbw.course12.strategy.DetailedPrintStrategy;
 import de.dhbw.course12.strategy.SimplePrintStrategy;
 
-import static de.dhbw.course12.Assertions.assertEquals;
-import static de.dhbw.course12.Assertions.assertTrue;
+import static de.dhbw.Assertions.assertEquals;
+import static de.dhbw.Assertions.assertTrue;
 
 public class PatternTest {
 

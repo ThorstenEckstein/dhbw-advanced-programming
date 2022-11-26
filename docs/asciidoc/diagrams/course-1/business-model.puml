@@ -1,7 +1,13 @@
 @startuml
 'https://plantuml.com/class-diagram
 
-interface Train
+'skinparam groupInheritance 2
+
+scale 0.8
+
+interface Train {
+  String getNumber()
+}
 abstract class BaseTrain {
   String number
   List wagons
@@ -10,19 +16,34 @@ class LongDistanceTrain
 class RegionalTrain
 class Locomotive
 
+interface Driver
+abstract class TrainDriver
+
 interface Wagon
 abstract class BaseWagon
 class PassengerWagon
 class FreightWagon
 
-Train        <|..       BaseTrain         : implements
-BaseTrain    <|--       LongDistanceTrain : extends
-BaseTrain    <|--       RegionalTrain     : extends
-BaseTrain    -l->       Locomotive        : > has
-BaseTrain    o-r- "1:n" Wagon
+class Route
+class Section
+class Track
 
-Wagon        <|..       BaseWagon
-BaseWagon    <|--       PassengerWagon
-BaseWagon    <|--       FreightWagon
+Train         <|..       BaseTrain         : implements
+BaseTrain     <|--       LongDistanceTrain : extends
+BaseTrain     <|--       RegionalTrain     : extends
+BaseTrain     -l->       Locomotive        : > has
+BaseTrain     o-r- "1:n" Wagon
+
+Wagon         <|..       BaseWagon         : implements
+BaseWagon     <|--       PassengerWagon    : extends
+BaseWagon     <|--       FreightWagon      : extends
+
+Locomotive    -l->       Driver            : > has
+Driver        <|..       TrainDriver       : implements
+
+Train         -r->       Route             : runs on >
+Route "0..*"  -  "1..*"  Section
+(Route, Section) ..      Journey
+Section       o-r-       Track
 
 @enduml

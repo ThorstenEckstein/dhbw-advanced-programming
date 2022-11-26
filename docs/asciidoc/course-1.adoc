@@ -33,3 +33,6 @@ Das Interface `Train` sieht dabei wie folgt aus:
 include::{course-1-src}/train/Train.java[lines=5..13]
 ----
 
+Zur Erläuterung, ein paar *Fachbegriffe*:
+
+image::diagrams/course-1/business-model.svg["Fachbegriffe",width="75%",align="center"]

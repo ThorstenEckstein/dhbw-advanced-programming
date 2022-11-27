@@ -16,4 +16,20 @@ public class DateTimeUtil {
                 0,
                 ZoneId.systemDefault());
     }
+
+    /**
+     * Returns the date time as a simplified string: dd/mm/yyyy
+     * @param zonedDateTime the date time instance
+     * @return the converted & simplified date time instance
+     */
+    public static String asSimpleString(ZonedDateTime zonedDateTime) {
+        if (zonedDateTime != null) {
+            return String.format(
+                    "%s/%s/%s",
+                    zonedDateTime.getDayOfMonth(),
+                    zonedDateTime.getMonthValue(),
+                    zonedDateTime.getYear());
+        }
+        return "not-set";
+    }
 }

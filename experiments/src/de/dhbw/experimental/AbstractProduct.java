@@ -1,5 +1,7 @@
 package de.dhbw.experimental;
 
+import de.dhbw.DateTimeUtil;
+
 import java.time.ZonedDateTime;
 import java.util.Objects;
 
@@ -37,17 +39,6 @@ public abstract class AbstractProduct implements Food {
         return bestBeforeDate;
     }
 
-    public String getBestBeforeDateAsString() {
-        if (bestBeforeDate != null) {
-            return String.format(
-                    "%s/%s/%s",
-                    bestBeforeDate.getDayOfMonth(),
-                    bestBeforeDate.getMonthValue(),
-                    bestBeforeDate.getYear());
-        }
-        return "not-set";
-    }
-
     public void setBestBeforeDate(ZonedDateTime bestBeforeDate) {
         this.bestBeforeDate = bestBeforeDate;
     }
@@ -71,7 +62,7 @@ public abstract class AbstractProduct implements Food {
         return "Product{" +
                 "name='" + name + '\'' +
                 ", foodGroup=" + foodGroup +
-                ", bestBeforeDate=" + getBestBeforeDateAsString() +
+                ", bestBeforeDate=" + DateTimeUtil.asSimpleString(bestBeforeDate) +
                 '}';
     }
 

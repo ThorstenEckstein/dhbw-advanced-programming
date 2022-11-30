@@ -31,9 +31,9 @@ import de.dhbw.course12.proxy.RenderEngineProxy;
 import de.dhbw.course12.proxy.RenderException;
 import de.dhbw.course12.strategy.DetailedPrintStrategy;
 import de.dhbw.course12.strategy.SimplePrintStrategy;
+import org.junit.jupiter.api.Test;
 
-import static de.dhbw.Assertions.assertEquals;
-import static de.dhbw.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class PatternTest {
 
@@ -45,6 +45,7 @@ public class PatternTest {
 
 	// ------------------------------------------------------------------------------------------------ basic unit tests
 
+	@Test
 	public void structure_decorator_example1() {
 		// arrange: create default
 		de.dhbw.course12.decorator.example1.Renderer defaultRenderer =
@@ -63,6 +64,7 @@ public class PatternTest {
 		assertEquals("now printing ...", actualDecorated);
 	}
 
+	@Test
 	public void structure_decorator_example2() {
 		// arrange: concrete command 'create' and decorate it
 		Command createCommand = new CreateCommand();
@@ -85,6 +87,7 @@ public class PatternTest {
 		// no asserts in this test
 	}
 
+	@Test
 	public void structure_proxy() throws RenderException {
 		// arrange: a new instance of the proxy behind the public interface
 		RenderEngine renderEngine = new RenderEngineProxy();
@@ -101,6 +104,7 @@ public class PatternTest {
 		assertEquals(actual, renderResult);
 	}
 
+	@Test
 	public void behavior_observer() {
 		// arrange: create a new observable subject (implements interface 'Observable')
 		Observable spatialMap = new ObservableMap("Map Client");
@@ -124,6 +128,7 @@ public class PatternTest {
 		assertEquals("UMN Mapserver Map Client", spatialMap.getName());
 	}
 
+	@Test
 	public void behavior_strategy_facade_templateMethod() {
 		// given
 		Printer simplePrinter = new Printer(new SimplePrintStrategy());
@@ -145,6 +150,7 @@ public class PatternTest {
 		// then
 	}
 
+	@Test
 	public void behavior_adapter() {
 
 		// (1) complete self-implemented use case
@@ -179,6 +185,7 @@ public class PatternTest {
 		assertEquals(expected, result);
 	}
 
+	@Test
 	public void architecture_filterV1() throws FilterException {
 		// arrange
 		FilterChain filterChain = new FilterChain();
@@ -203,7 +210,7 @@ public class PatternTest {
 				Filtering: EqualityFilter
 				Filtering: IdentityFilter
 				Filtering: SynonymityFilter
-				End of Queue reached!
+				End of Queue reached
 				""";
 		assertEquals(actualTrace, filterChain.getTrace());
 	}

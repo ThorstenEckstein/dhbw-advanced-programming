@@ -1,7 +1,8 @@
 package de.dhbw.experimental.foodstore;
 
-import de.dhbw.DateTimeUtil;
-import de.dhbw.Logger;
+import de.dhbw.commons.DateTimeUtil;
+import de.dhbw.commons.Logger;
+import org.junit.jupiter.api.Test;
 
 import static de.dhbw.experimental.foodstore.MockFactory.mockProduct;
 
@@ -9,6 +10,7 @@ public class FoodstoreTest {
 
     private final Logger logger = new Logger(FoodstoreTest.class);
 
+    @Test
     public void canCreateFoodModel() {
         // given
         Product product = mockProduct(

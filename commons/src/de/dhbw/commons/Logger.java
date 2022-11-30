@@ -1,4 +1,4 @@
-package de.dhbw;
+package de.dhbw.commons;
 
 @SuppressWarnings("unused")
 public class Logger {

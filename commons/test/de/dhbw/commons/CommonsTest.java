@@ -1,13 +1,13 @@
-package de.dhbw.experimental.delay;
+package de.dhbw.commons;
 
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class DispatcherTest {
+class CommonsTest {
 
     @Test
-    void sortTrainsByArrival() {
+    void of2() {
         assertTrue(true);
     }
 }

@@ -1,8 +1,6 @@
 package de.dhbw.experimental.delay;
 
-import de.dhbw.DateTimeUtil;
-import de.dhbw.experimental.foodstore.FoodGroup;
-import de.dhbw.experimental.foodstore.Product;
+import de.dhbw.commons.DateTimeUtil;
 
 import java.time.ZonedDateTime;
 

@@ -1,16 +1,18 @@
 package de.dhbw.experimental.delay;
 
-import de.dhbw.Logger;
+import de.dhbw.commons.Logger;
+import org.junit.jupiter.api.Test;
 
 import java.time.ZonedDateTime;
 
-import static de.dhbw.Assertions.assertEquals;
 import static de.dhbw.experimental.delay.MockFactory.mockTrain;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class DelayTest {
 
     private final Logger logger = new Logger(Train.class);
 
+    @Test
     public void canSetDelay() {
         // given
         Train train = mockTrain(

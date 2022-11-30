@@ -1,4 +1,4 @@
-package de.dhbw;
+package de.dhbw.commons;
 
 public class Assertions {
 

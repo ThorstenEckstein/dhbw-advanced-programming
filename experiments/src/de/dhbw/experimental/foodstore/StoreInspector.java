@@ -1,4 +1,4 @@
-package de.dhbw.experimental;
+package de.dhbw.experimental.foodstore;
 
 import java.util.Comparator;
 import java.util.List;

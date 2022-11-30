@@ -1,4 +1,4 @@
-package de.dhbw.experimental;
+package de.dhbw.experimental.foodstore;
 
 public class Product extends AbstractProduct {
 

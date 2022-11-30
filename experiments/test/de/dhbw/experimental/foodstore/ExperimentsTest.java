@@ -1,9 +1,9 @@
-package de.dhbw.experimental;
+package de.dhbw.experimental.foodstore;
 
 import de.dhbw.DateTimeUtil;
 import de.dhbw.Logger;
 
-import static de.dhbw.experimental.MockFactory.mockProduct;
+import static de.dhbw.experimental.foodstore.MockFactory.mockProduct;
 
 public class ExperimentsTest {
 

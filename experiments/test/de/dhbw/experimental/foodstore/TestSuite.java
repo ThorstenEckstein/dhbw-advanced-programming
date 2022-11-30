@@ -2,7 +2,7 @@ package de.dhbw.experimental.foodstore;
 
 public class TestSuite {
     public void run() {
-        ExperimentsTest test = new ExperimentsTest();
+        FoodstoreTest test = new FoodstoreTest();
         test.canCreateFoodModel();
         test.canSeedFoodStore();
         test.canSortProductsByDate();

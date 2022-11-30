@@ -5,9 +5,9 @@ import de.dhbw.Logger;
 
 import static de.dhbw.experimental.foodstore.MockFactory.mockProduct;
 
-public class ExperimentsTest {
+public class FoodstoreTest {
 
-    private final Logger logger = new Logger(ExperimentsTest.class);
+    private final Logger logger = new Logger(FoodstoreTest.class);
 
     public void canCreateFoodModel() {
         // given

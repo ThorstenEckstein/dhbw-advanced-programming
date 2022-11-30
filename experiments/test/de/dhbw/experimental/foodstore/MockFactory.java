@@ -1,8 +1,6 @@
 package de.dhbw.experimental.foodstore;
 
 import de.dhbw.DateTimeUtil;
-import de.dhbw.experimental.foodstore.FoodGroup;
-import de.dhbw.experimental.foodstore.Product;
 
 import java.time.ZonedDateTime;
 

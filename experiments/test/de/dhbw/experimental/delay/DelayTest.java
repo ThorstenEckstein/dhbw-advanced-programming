@@ -19,11 +19,19 @@ public class DelayTest {
                 "RE 1045",
                 "2022-11-30T10:15:00");
 
+        Trip trip = new Trip.Builder()
+                .departureStation("MZ")
+                .departure(ZonedDateTime.now())
+                .arrivalStation("FFM")
+                .arrival(ZonedDateTime.now())
+                .build();
+
         // when
         ZonedDateTime arrival = train.getArrival();
 
         // then
         assertEquals("2022-11-30T10:15+01:00[Europe/Berlin]", arrival.toString());
+        assertEquals("MZ", trip.getDepartureStation());
     }
 
 }

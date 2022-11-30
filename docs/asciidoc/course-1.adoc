@@ -4,9 +4,18 @@ include::settings.adoc[]
 
 *Allgemeine Inhalte*
 
+_Setup_:
+
 * IDE, Git, Java (Installation, Nutzung, etc. ...)
 * Setup: Test-Driven-Development
 * Setup: Unit-Tests
+
+_Objektmodell_:
+
+* Objekte & Klassen
+* Vererbung & Implementierung (Interfaces)
+* Abstrakte Klassen
+* Objektvertrag (hashCode, equals)
 
 *Fachlicher Kontext*
 ----
@@ -19,6 +28,16 @@ Vorbereitung: Darstellung des fachlichen Kontextes
  + Dispositionsmaßnahme, Umleitung
 ----
 
+*Technisches Setup*
+----
+ + Klassen erzeugen
+ + Zug, Triebfahrzeug (Tbf), Wagons (Spezialisierung Flügelzug)
+ + Strecke, Topologie (Streckennnetz)
+ + Störung, Weichenausfall, Abfahrt, Ankunft
+ + Dispositionsmaßnahme, Umleitung
+----
+
+
 Überblick über das grundsätzliche *Fachklassenmodell*:
 
 [plantuml, klassenmodell, png]
@@ -30,7 +49,7 @@ Das Interface `Train` sieht dabei wie folgt aus:
 
 [subs="normal"]
 ----
-include::{course-1-src}/regionalTrain/Train.java[lines=5..13]
+include::{course-1-src}/train/Train.java[lines=5..13]
 ----
 
 Zur Erläuterung, ein paar *Fachbegriffe*:

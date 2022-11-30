@@ -4,12 +4,18 @@ include::settings.adoc[]
 
 *Allgemeine Inhalte*
 
-* Thread
-* Runnable
-* Enumerations
+* Beziehungen zwischen Systemen oder Komponenten (Call, ...)
+* synchron vs. asynchron
+* synchron
+** Method Calls
+** REST (SOAP?)
+** RMI
+* asynchron
+** publish/subscribe
+** fire & forget
 
 *Fachlicher Kontext*
 ----
- + Viele Züge fahren gleichzeitig im Streckennetz
- + Live-Überwachung fahrender Züge
+ + eher Theorie
+ + Übungsaufgabe?
 ----

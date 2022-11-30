@@ -4,10 +4,16 @@ include::settings.adoc[]
 
 *Allgemeine Inhalte*
 
-_References_
-
-* -> https://www.baeldung.com/java-17-new-features[Java 17 Features]
-* -> https://advancedweb.hu/a-categorized-list-of-all-java-and-jvm-features-since-jdk-8-to-18/[Features from Java 8 to 18]
+* Design Patterns
+** Singleton
+** Template Method
+** Factory
+** Strategy
+** ...
+* Refactoring
+** Vorgehensweisen
+** Nutzung der IDE
+** ...
 
 *Fachlicher Kontext*
 ----

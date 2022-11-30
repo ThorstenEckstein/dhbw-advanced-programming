@@ -4,15 +4,9 @@ include::settings.adoc[]
 
 *Allgemeine Inhalte*
 
-* OOP Best Practices
-** SOLID
-** Zyklomatische Komplexität (Reduktion Konditionalstatements)
-* Design Prinzipien
-** KISS & DRY
-** Composition Over Inheritance Principle
-** Convention oder Configuration
+* to be done
 
-*Fachlicher Kontext*
+*Fachlicher Prüfungskontext*
 ----
  to be done
 ----

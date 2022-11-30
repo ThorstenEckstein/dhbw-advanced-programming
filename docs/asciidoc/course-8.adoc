@@ -4,11 +4,15 @@ include::settings.adoc[]
 
 *Allgemeine Inhalte*
 
-* SQL vs. NoSQL Datenbanken
-* ORM Objektrelationales Mapping
-* Unit-Tests gegen In-Memory-Datenbank (H2)
+* OOP Best Practices
+** SOLID
+** Zyklomatische Komplexität (Reduktion Konditionalstatements)
+* Design Prinzipien
+** KISS & DRY
+** Composition Over Inheritance Principle
+** Convention oder Configuration
 
 *Fachlicher Kontext*
 ----
- + Speichern vom fachlichen Objektmodell (s.o.) in Datenbank
+ to be done
 ----

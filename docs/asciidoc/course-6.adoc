@@ -4,18 +4,15 @@ include::settings.adoc[]
 
 *Allgemeine Inhalte*
 
-* Beziehungen zwischen Systemen oder Komponenten (Call, ...)
-* synchron vs. asynchron
-* synchron
-** Method Calls
-** REST (SOAP?)
-** RMI
-* asynchron
-** publish/subscribe
-** fire & forget
+* Catched vs. uncatched exceptions
+* Fachliche Exceptions
+* Runtime Exceptions
+* Exception Handling - was ist zu tun?
+* Javadoc - die wichtigsten Regeln
+* Javadoc - Syntax
 
 *Fachlicher Kontext*
 ----
- + eher Theorie
- + Übungsaufgabe?
+ + Fach-Exceptions (z.B. InvalidTrainNumberException, DelayedDepartureWarning)
+ + Dokumentation des fachlichen Klassenmodells aus den vorangegagenen Beispielen
 ----

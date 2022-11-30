@@ -4,18 +4,16 @@
 :course-title-count: {counter:course-title-count}
 
 :title-prefix: Kurstag
-:course-1:  {title-prefix} 1 - Technisches & fachliches Setup
-:course-2:  {title-prefix} 2 - Basics 1/2
-:course-3:  {title-prefix} 3 - Basics 2/2
-:course-4:  {title-prefix} 4 - Generics, Streaming & funktionale Programmierung
-:course-5:  {title-prefix} 5 - Parallele Programmierung
-:course-6:  {title-prefix} 6 - Kommunikationskonzepte
-:course-7:  {title-prefix} 7 - Exceptions, Code Dokumentation
-:course-8:  {title-prefix} 8 - Datenbank & Persistenz
-:course-9:  {title-prefix} 9 - Java 8-17 neuere Features
-:course-10: {title-prefix} 10 - Clean Code 1/2
-:course-11: {title-prefix} 11 - Clean Code 2/2
-:course-12: {title-prefix} 12 - Prüfungsvorbereitung
+:course-1:  {title-prefix} 1 - Setup & Basics 1/2
+:course-2:  {title-prefix} 2 - Basics 2/2
+:course-3:  {title-prefix} 3 - Generics, Streaming & funktionale Programmierung
+:course-4:  {title-prefix} 4 - Parallele Programmierung
+:course-5:  {title-prefix} 5 - Kommunikationskonzepte
+:course-6:  {title-prefix} 6 - Exceptions, Code Dokumentation
+:course-7:  {title-prefix} 7 - Datenbank & Persistenz
+:course-8:  {title-prefix} 8 - Clean Code 1/2
+:course-9:  {title-prefix} 9 - Clean Code 2/2
+:course-10: {title-prefix} 10 - Prüfungsvorbereitung
 
 // Variables with scope for 'course 1'
 :course-1-src: ../../course-1/src/de/dhbw/course1/model

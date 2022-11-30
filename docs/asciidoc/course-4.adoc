@@ -4,12 +4,12 @@ include::settings.adoc[]
 
 *Allgemeine Inhalte*
 
-* Generics
-* Streaming API
-* Funktionale Programmierung mit Lambda-Ausdrücken
+* Thread
+* Runnable
+* Enumerations
 
 *Fachlicher Kontext*
 ----
- + eher Theorie
- + Standard-Beispiele/-Übungsaufgaben
+ + Viele Züge fahren gleichzeitig im Streckennetz
+ + Live-Überwachung fahrender Züge
 ----

@@ -4,15 +4,11 @@ include::settings.adoc[]
 
 *Allgemeine Inhalte*
 
-* Catched vs. uncatched exceptions
-* Fachliche Exceptions
-* Runtime Exceptions
-* Exception Handling - was ist zu tun?
-* Javadoc - die wichtigsten Regeln
-* Javadoc - Syntax
+* SQL vs. NoSQL Datenbanken
+* ORM Objektrelationales Mapping
+* Unit-Tests gegen In-Memory-Datenbank (H2)
 
 *Fachlicher Kontext*
 ----
- + Fach-Exceptions (z.B. InvalidTrainNumberException, DelayedDepartureWarning)
- + Dokumentation des fachlichen Klassenmodells aus den vorangegagenen Beispielen
+ + Speichern vom fachlichen Objektmodell (s.o.) in Datenbank
 ----

@@ -13,45 +13,17 @@ public class DateTimeUtil {
     public static final Boolean SORT_ASCENDING = true;
     public static final Boolean SORT_DESCENDING = false;
 
-    public static ZonedDateTime of(int year, int month, int dayOfMonth) {
-        return ZonedDateTime.of(
-                year,
-                month,
-                dayOfMonth,
-                0,
-                0,
-                0,
-                0,
-                ZoneId.systemDefault());
-    }
-
     /**
-     * Returns a zoned datetime from a string of format: "yyyy-mm-ddTHH:MM:SS"
-     * @param dateTime the date time string
-     * @return the instance od date time
+     * Return a zoned date time instance using ISO-like date-time formatter that formats or parses a date-time
+     * with the offset and zone if available, such as '2011-12-03T10:15:30', '2011-12-03T10:15:30+01:00' or
+     * '2011-12-03T10:15:30+01:00[Europe/Paris]'. If no Zone is provided, the ZoneId.systemDefault() is used.
      *
+     * @param dateTime the string representing a date time
+     * @return the zones date time
+     */
     public static ZonedDateTime of(String dateTime) {
-        return ZonedDateTime.parse(
-                dateTime,
-                zonedFormatter);
-    }*/
-
-    public static ZonedDateTime of2(String dateTime) {
         LocalDateTime localDateTime = LocalDateTime.parse(dateTime, localFormatter);
         return ZonedDateTime.of(localDateTime, ZoneId.systemDefault());
-    }
-
-    public static ZonedDateTime of(String dateTime) {
-        String[] dateTimeParts = dateTime.split("\\.");
-        return ZonedDateTime.of(
-                Integer.parseInt(dateTimeParts[2]),
-                Integer.parseInt(dateTimeParts[1]),
-                Integer.parseInt(dateTimeParts[0]),
-                0,
-                0,
-                0,
-                0,
-                ZoneId.systemDefault());
     }
 
     /**
@@ -69,4 +41,32 @@ public class DateTimeUtil {
         }
         return "not-set";
     }
+
+    /*
+    public static ZonedDateTime of(String dateTime) {
+        String[] dateTimeParts = dateTime.split("\\.");
+        return ZonedDateTime.of(
+                Integer.parseInt(dateTimeParts[2]),
+                Integer.parseInt(dateTimeParts[1]),
+                Integer.parseInt(dateTimeParts[0]),
+                0,
+                0,
+                0,
+                0,
+                ZoneId.systemDefault());
+    }
+
+    /*
+     * Returns a zoned datetime from a string of format: "yyyy-mm-ddTHH:MM:SS"
+     * @param dateTime the date time string
+     * @return the instance od date time
+     */
+    /*
+    public static ZonedDateTime of(String dateTime) {
+        return ZonedDateTime.parse(
+                dateTime,
+                zonedFormatter);
+    }
+    */
+
 }

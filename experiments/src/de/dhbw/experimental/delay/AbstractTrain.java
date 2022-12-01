@@ -1,14 +1,10 @@
 package de.dhbw.experimental.delay;
 
-import de.dhbw.commons.DateTimeUtil;
-
-import java.time.ZonedDateTime;
 import java.util.Objects;
 
 public abstract class AbstractTrain implements Train {
 
     private String key;
-    private ZonedDateTime bestBeforeDate;
 
     public AbstractTrain(String key) {
         this.key = key;
@@ -25,17 +21,6 @@ public abstract class AbstractTrain implements Train {
     }
 
     @Override
-    public ZonedDateTime getArrival() {
-        return bestBeforeDate;
-    }
-
-    @Override
-    public void setArrival(ZonedDateTime bestBeforeDate) {
-        this.bestBeforeDate = bestBeforeDate;
-    }
-
-
-    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
@@ -50,10 +35,7 @@ public abstract class AbstractTrain implements Train {
 
     @Override
     public String toString() {
-        return "Train {" +
-                "name='" + key + '\'' +
-                ", bestBeforeDate=" + DateTimeUtil.asSimpleString(bestBeforeDate) +
-                '}';
+        return key;
     }
 
 }

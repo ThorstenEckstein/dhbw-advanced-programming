@@ -6,22 +6,32 @@ import java.time.ZonedDateTime;
 
 public class MockFactory {
 
-    public static Train mockTrain(String key, ZonedDateTime arrival) {
-        Train train = new RegionalTrain(key);
-        train.setArrival(arrival);
-        return train;
-    }
-
     /**
      * Use zoned datetime string of format:
      * <pre>
      * dd.mm.yyyy:HH:MM
      * </pre>.
      */
-    public static Train mockTrain(String key, String arrival) {
-        Train train = new RegionalTrain(key);
-        train.setArrival(DateTimeUtil.of2(arrival));
-        return train;
+    public static Train mockTrain(String key) {
+        return new RegionalTrain(key);
+    }
+
+    public static Trip mockTrip(
+            String trainKey,
+            String departureStation,
+            ZonedDateTime departure,
+            String arrivalStation,
+            ZonedDateTime arrival) {
+
+        RegionalTrain train = new RegionalTrain(trainKey);
+
+        return new Trip.Builder()
+                .train(train)
+                .departureStation(departureStation)
+                .departure(departure)
+                .arrivalStation(arrivalStation)
+                .arrival(arrival)
+                .build();
     }
 
 }

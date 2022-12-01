@@ -4,6 +4,8 @@ import java.time.ZonedDateTime;
 
 public class Trip {
 
+    private Train train;
+
     private String departureStation;
     private ZonedDateTime departure;
 
@@ -14,6 +16,10 @@ public class Trip {
 
     public String getDepartureStation() {
         return departureStation;
+    }
+
+    public Train getTrain() {
+        return train;
     }
 
     public ZonedDateTime getDeparture() {
@@ -34,6 +40,11 @@ public class Trip {
 
         public Builder() {
             this.trip = new Trip();
+        }
+
+        public Builder train(Train val) {
+            this.trip.train = val;
+            return this;
         }
 
         public Builder departureStation(String val) {
@@ -59,5 +70,14 @@ public class Trip {
         public Trip build() {
             return trip;
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Trip{" +
+                "train=" + train +
+                ", arrivalStation='" + arrivalStation + '\'' +
+                ", arrival=" + arrival +
+                '}';
     }
 }

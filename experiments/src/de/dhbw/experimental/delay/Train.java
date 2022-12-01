@@ -8,7 +8,4 @@ public interface Train {
 
     void setKey(String key);
 
-    ZonedDateTime getArrival();
-
-    void setArrival(ZonedDateTime arrival);
 }

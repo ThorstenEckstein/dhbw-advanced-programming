@@ -42,8 +42,7 @@ public class DateTimeUtil {
         return "not-set";
     }
 
-    /*
-    public static ZonedDateTime of(String dateTime) {
+    public static ZonedDateTime from(String dateTime) {
         String[] dateTimeParts = dateTime.split("\\.");
         return ZonedDateTime.of(
                 Integer.parseInt(dateTimeParts[2]),

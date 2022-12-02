@@ -1,4 +1,4 @@
-package de.dhbw.experimental.delay;
+package de.dhbw.experimental.trip;
 
 import java.time.ZonedDateTime;
 
@@ -79,5 +79,15 @@ public class Trip {
                 ", arrivalStation='" + arrivalStation + '\'' +
                 ", arrival=" + arrival +
                 '}';
+    }
+
+    public String format() {
+        return String.format(
+                "%n%-5s arrives in %s at %s:%s",
+                this.getTrain().getKey(),
+                this.getArrivalStation(),
+                this.getArrival().getHour(),
+                this.getArrival().getMinute()
+        );
     }
 }

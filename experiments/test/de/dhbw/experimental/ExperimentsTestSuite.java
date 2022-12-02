@@ -4,7 +4,7 @@ import org.junit.platform.suite.api.SelectPackages;
 import org.junit.platform.suite.api.Suite;
 
 @SelectPackages({
-        "de.dhbw.experimental.delay",
+        "de.dhbw.experimental.trip",
         "de.dhbw.experimental.foodstore"
 })
 @Suite

@@ -1,6 +1,8 @@
-package de.dhbw.experimental.delay;
+package de.dhbw.experimental.trip;
 
-import de.dhbw.commons.DateTimeUtil;
+import de.dhbw.experimental.trip.RegionalTrain;
+import de.dhbw.experimental.trip.Train;
+import de.dhbw.experimental.trip.Trip;
 
 import java.time.ZonedDateTime;
 

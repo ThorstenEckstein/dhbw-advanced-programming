@@ -1,4 +1,4 @@
-package de.dhbw.experimental.delay;
+package de.dhbw.experimental.trip;
 
 import de.dhbw.commons.DateTimeUtil;
 import de.dhbw.commons.Logger;
@@ -8,6 +8,8 @@ import java.time.Duration;
 import java.time.ZonedDateTime;
 import java.util.List;
 
+import static de.dhbw.experimental.trip.DisplayHelper.map;
+import static de.dhbw.experimental.trip.DisplayHelper.reduce;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TripsTest {
@@ -69,7 +71,9 @@ public class TripsTest {
 
         // when
         TimeTableInspector inspector = new TimeTableInspector(timeTable);
-        Duration arrivalPrediction = inspector.predictArrivalFor(train, Duration.ofMinutes(17));
+
+        Duration alreadyRiding = Duration.ofMinutes(17);
+        Duration arrivalPrediction = inspector.predictArrivalFor(train, alreadyRiding);
 
         // then
         assertEquals(16, arrivalPrediction.toMinutes(),
@@ -80,7 +84,7 @@ public class TripsTest {
     public void canSortTripsByArrival() {
         // given
         Trip trip1 = MockFactory.mockTrip(
-                "RB 10",
+                "RB-10",
                 "WI",
                 DateTimeUtil.of("2022-11-30T07:02:00"),
                 "FFM",
@@ -112,7 +116,8 @@ public class TripsTest {
         List<Trip> upcomingArrivals = inspector.getSortedArrivalsFor("FFM", true);
 
         // then
-        logger.log(upcomingArrivals);
+        logger.log(map(upcomingArrivals));
+        logger.log(reduce(upcomingArrivals));
     }
 
 }

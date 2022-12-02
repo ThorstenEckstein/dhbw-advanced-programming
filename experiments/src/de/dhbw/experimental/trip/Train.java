@@ -1,4 +1,4 @@
-package de.dhbw.experimental.delay;
+package de.dhbw.experimental.trip;
 
 import java.time.ZonedDateTime;
 

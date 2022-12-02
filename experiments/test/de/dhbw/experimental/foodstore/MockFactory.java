@@ -20,7 +20,7 @@ public class MockFactory {
      */
     public static Product mockProduct(FoodGroup foodGroup, String name, String bestBeforeDate) {
         Product product = new Product(foodGroup, name);
-        product.setBestBeforeDate(DateTimeUtil.of(bestBeforeDate));
+        product.setBestBeforeDate(DateTimeUtil.from(bestBeforeDate));
         return product;
     }
 

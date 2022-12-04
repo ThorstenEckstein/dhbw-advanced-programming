@@ -1,55 +1,57 @@
 package de.dhbw.course4;
 
 import de.dhbw.commons.Logger;
+import de.dhbw.course4.model.TimeTable;
+import de.dhbw.course4.model.Train;
 import de.dhbw.course4.model.Trip;
-import de.dhbw.course4.model.TripEvent;
-import de.dhbw.course4.model.TripOperator;
 import org.junit.jupiter.api.Test;
-
-import static de.dhbw.course4.model.TripEvent.EventType.Arrival;
-import static de.dhbw.course4.model.TripEvent.EventType.Departure;
 
 public class Course4Test {
 
     private final Logger logger = new Logger(Course4Main.class);
+    TripBuilder builder = new TripBuilder();
 
     @Test
     public void canCreateTrip() {
         // given
 
         // when
-        Trip trip = buildTrip();
+        Trip trip = builder.mock_MA_to_FFM();
+        trip.setTrain(new Train("RE-13"));
 
         // then
         logger.log(trip);
     }
 
     @Test
-    public void canRunTrip() {
+    public void canRunSingleTrip() {
         // given
-        Trip trip = buildTrip();
-
-        TripOperator operator = new TripOperator();
-        operator.setTrip(trip);
+        Trip trip = builder.mock_FU_to_FFM();
+        trip.setTrain(new Train("RB-1234"));
 
         // when
-        operator.run();
+        trip.run();
 
         // then
-        //logger.log(trip);
     }
 
-    private Trip buildTrip() {
-        Trip trip = new Trip();
+    @Test
+    public void canRunMultipleTrips() {
+        // given
+        Trip trip1 = builder.mock_MA_to_FFM();
+        Trip trip2 = builder.mock_MZ_to_FFM();
+        Trip trip3 = builder.mock_FU_to_FFM();
 
-        trip.add(TripEvent.of("MA",   Departure, 3)); // "Mannheim"
-        trip.add(TripEvent.of("BIB",  Arrival,    1)); // "Biblis"
-        trip.add(TripEvent.of("BIB",  Departure, 4)); // "Biblis"
-        trip.add(TripEvent.of("SSTD", Arrival,    2)); // "Stockstadt"
-        trip.add(TripEvent.of("SSTD", Departure, 4)); // "Stockstadt"
-        trip.add(TripEvent.of("FFM",  Arrival,    1)); // "Frankfurt"
+        TimeTable timeTable = new TimeTable();
+        timeTable.putTrip("RE-23", trip1);
+        timeTable.putTrip("S8", trip2);
+        timeTable.putTrip("RB-2461", trip3);
 
-        return trip;
+        // when
+        timeTable.run();
+
+        // then
+
     }
 
 }

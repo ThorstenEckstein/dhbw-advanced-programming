@@ -37,13 +37,13 @@ public class TripEvent {
         String transition = "";
         switch (type) {
             case Arrival -> {
-                transition = "(at station)";
+                transition = "waiting";
             }
             case Departure -> {
-                transition = "(on track)";
+                transition = "running";
             }
             case Via -> {
-                transition = "(running slowly)";
+                transition = "running slowly";
             }
         }
         return transition;

@@ -4,10 +4,10 @@
 = Lehrkonzept Programmierung II
 
 :show-overview:  false
-:show-course-1:  false
+:show-course-1:  true
 :show-course-2:  false
 :show-course-3:  false
-:show-course-4:  true
+:show-course-4:  false
 :show-course-5:  false
 :show-course-6:  false
 :show-course-7:  false

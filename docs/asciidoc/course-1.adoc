@@ -6,14 +6,14 @@ include::settings.adoc[]
 
 _Setup_:
 
-* IDE, Git, Java (Installation, Nutzung, etc. ...)
-* Setup: Test-Driven-Development
+* IDE (IntelliJ & Visual Studio Code), Java (Installation, etc. ...)
+* Setup: Test-Driven-Development mit JUnit
 * Setup: Unit-Tests
 
 _Objektmodell_:
 
 * Objekte & Klassen
-* Vererbung & Implementierung (Interfaces)
+* Vererbung & Interfaces
 * Abstrakte Klassen
 * Objektvertrag (hashCode, equals)
 
@@ -29,11 +29,15 @@ Vorbereitung: Darstellung des fachlichen Kontextes
 ----
 
 *Technisches Setup*
+
+Klassenmodell erzeugen:
+
 ----
- + Klassen erzeugen
- + Zug, Triebfahrzeug (Tbf), Wagons (Spezialisierung Flügelzug)
- + Strecke, Topologie (Streckennnetz)
- + Störung, Weichenausfall, Abfahrt, Ankunft
+ + Zug (Zugarten), Wagons (Wagonarten)
+ + Strecke, Abschnitt, Gleis
+ + Ereignisse: Abfahrt, Ankunft
+ + Fahrt
+
  + Dispositionsmaßnahme, Umleitung
 ----
 

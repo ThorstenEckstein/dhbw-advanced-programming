@@ -16,6 +16,7 @@ class LongDistanceTrain
 class RegionalTrain
 class Locomotive
 
+class Journey
 interface Driver
 abstract class TrainDriver
 
@@ -26,24 +27,30 @@ class FreightWagon
 
 class Route
 class Section
-class Track
+class Schedule
+class Timetable
 
-Train         <|..       BaseTrain         : implements
-BaseTrain     <|--       LongDistanceTrain : extends
-BaseTrain     <|--       RegionalTrain     : extends
-BaseTrain     -l->       Locomotive        : > has
-BaseTrain     o-r- "1:n" Wagon
+Train            <|..        BaseTrain         : realizes
+BaseTrain        <|--        LongDistanceTrain : is a
+BaseTrain        <|--        RegionalTrain     : is a
+BaseTrain        -l->        Locomotive        : > has
+BaseTrain        o-r- "0..*" Wagon             : consists of
 
-Wagon         <|..       BaseWagon         : implements
-BaseWagon     <|--       PassengerWagon    : extends
-BaseWagon     <|--       FreightWagon      : extends
+Wagon            <|..        BaseWagon         : realizes
+BaseWagon        <|--        PassengerWagon    : is a
+BaseWagon        <|--        FreightWagon      : is a
 
-Locomotive    -l->       Driver            : > has
-Driver        <|..       TrainDriver       : implements
+Timetable        o-d-        Schedule
+Schedule "0..*"  -- "1..*"   Train        : > requires
+(Schedule,Train) ..          Journey
+Journey          -r->        Driver            : > driven\nby
+Driver           <|.d.       TrainDriver       : realizes
 
-Train         -r->       Route             : runs on >
-Route "0..*"  -  "1..*"  Section
-(Route, Section) ..      Journey
-Section       o-r-       Track
+Journey          -u->        Route             : runs on >
+Route            *-u- "1..*" Section           : > composed of
+
+'Route "0..*"  -  "1..*"  Section
+'(Route, Section) ..      Journey
+'Section       o-r-       Track
 
 @enduml

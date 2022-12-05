@@ -3,17 +3,65 @@
 
 = Lehrkonzept Programmierung II
 
+:show-overview:  false
+:show-course-1:  false
+:show-course-2:  false
+:show-course-3:  false
+:show-course-4:  true
+:show-course-5:  false
+:show-course-6:  false
+:show-course-7:  false
+:show-course-8:  false
+:show-course-9:  false
+:show-course-10: false
+:show-refs:      false
+
+ifeval::[{show-overview} == true]
 include::overview.adoc[]
+endif::[]
+
+ifeval::[{show-course-1} == true]
 include::course-1.adoc[]
+endif::[]
+
+ifeval::[{show-course-2} == true]
 include::course-2.adoc[]
+endif::[]
+
+ifeval::[{show-course-3} == true]
 include::course-3.adoc[]
+endif::[]
+
+ifeval::[{show-course-4} == true]
 include::course-4.adoc[]
+endif::[]
+
+ifeval::[{show-course-5} == true]
 include::course-5.adoc[]
+endif::[]
+
+ifeval::[{show-course-6} == true]
 include::course-6.adoc[]
+endif::[]
+
+ifeval::[{show-course-7} == true]
 include::course-7.adoc[]
+endif::[]
+
+ifeval::[{show-course-8} == true]
 include::course-8.adoc[]
+endif::[]
+
+ifeval::[{show-course-9} == true]
 include::course-9.adoc[]
+endif::[]
+
+ifeval::[{show-course-10} == true]
 include::course-10.adoc[]
+endif::[]
+
+ifeval::[{show-refs2} == true]
 include::refs.adoc[]
+endif::[]
 
 //include::examples-from-websites.adoc[]

@@ -1,13 +1,11 @@
-package de.dhbw.course1;
+package de.dhbw.course1.model;
 
 import de.dhbw.commons.Logger;
-import de.dhbw.course1.model.Course1Main;
 import de.dhbw.course1.model.personnel.Driver;
 import de.dhbw.course1.model.personnel.TrainDriver;
 import de.dhbw.course1.model.timetable.Journey;
 import de.dhbw.course1.model.timetable.Schedule;
 import de.dhbw.course1.model.train.Locomotive;
-import de.dhbw.course1.model.train.LongDistanceTrain;
 import de.dhbw.course1.model.train.RegionalTrain;
 import de.dhbw.course1.model.train.Train;
 import org.junit.jupiter.api.Test;

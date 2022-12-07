@@ -7,15 +7,17 @@ include::settings.adoc[]
 _Setup_:
 
 * IDE (IntelliJ & Visual Studio Code), Java (Installation, etc. ...)
-* Setup: Test-Driven-Development mit JUnit
-* Setup: Unit-Tests
+* Test-Driven-Development
+* Unit-Tests mit JUnit
 
 _Objektmodell_:
 
 * Objekte & Klassen
-* Vererbung & Interfaces
+* Vererbung & Interfaces, Assoziationen
 * Abstrakte Klassen
 * Objektvertrag (hashCode, equals)
+* Methoden überladen, überschreiben
+* Sichtbarkeiten, Modifiziere
 
 *Fachlicher Kontext*
 ----
@@ -25,6 +27,7 @@ Vorbereitung: Darstellung des fachlichen Kontextes
  + Zug, Triebfahrzeug (Tbf), Wagons (Spezialisierung Flügelzug)
  + Streckennetz
  + Störung, Weichenausfall, Abfahrt, Ankunft (z.B. verspätete Ankunft im Bahnhof)
+ + Fahrplan
  + Dispositionsmaßnahme, Umleitung
 ----
 
@@ -44,7 +47,7 @@ Klassenmodell erzeugen:
 
 Überblick über das grundsätzliche *Fachklassenmodell*:
 
-[plantuml, klassenmodell, png]
+[plantuml, "Klassenmodell", png]
 ....
 include::diagrams/course-1/business-model.puml[]
 ....

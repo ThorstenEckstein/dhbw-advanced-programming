@@ -3,18 +3,18 @@
 
 = Lehrkonzept Programmierung II
 
-:show-overview:  false
+:show-overview:  true
 :show-course-1:  true
-:show-course-2:  false
-:show-course-3:  false
-:show-course-4:  false
-:show-course-5:  false
-:show-course-6:  false
-:show-course-7:  false
-:show-course-8:  false
-:show-course-9:  false
-:show-course-10: false
-:show-refs:      false
+:show-course-2:  true
+:show-course-3:  true
+:show-course-4:  true
+:show-course-5:  true
+:show-course-6:  true
+:show-course-7:  true
+:show-course-8:  true
+:show-course-9:  true
+:show-course-10: true
+:show-refs:      true
 
 ifeval::[{show-overview} == true]
 include::overview.adoc[]

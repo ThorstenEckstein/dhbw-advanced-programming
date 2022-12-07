@@ -4,13 +4,24 @@ import de.dhbw.course1.model.personnel.Driver;
 
 public class Locomotive {
 
-    private Driver driver;
-
-    public Driver getDriver() {
-        return driver;
+    public enum EngineType {
+        SteamEngine, CombustionMotor, Electrical
     }
 
-    public void setDriver(Driver driver) {
-        this.driver = driver;
+    private EngineType type;
+
+    public EngineType getType() {
+        return type;
+    }
+
+    public void setType(EngineType type) {
+        this.type = type;
+    }
+
+    @Override
+    public String toString() {
+        return "Locomotive{" +
+                "type=" + type +
+                '}';
     }
 }

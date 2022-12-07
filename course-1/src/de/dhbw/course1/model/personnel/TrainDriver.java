@@ -31,4 +31,11 @@ public class TrainDriver implements Driver {
     public int hashCode() {
         return Objects.hash(name);
     }
+
+    @Override
+    public String toString() {
+        return "TrainDriver{" +
+                "name='" + name + '\'' +
+                '}';
+    }
 }

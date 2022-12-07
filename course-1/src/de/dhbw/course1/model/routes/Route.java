@@ -10,6 +10,14 @@ public class Route {
      */
     private String name;
 
+    // 'final' represents composition (bound to the lifetime of parent class)
+    private final List<Section> sections;
+
+    public Route(String name, List<Section> sections) {
+        this.name = name;
+        this.sections = sections;
+    }
+
     public String getName() {
         return name;
     }
@@ -18,14 +26,8 @@ public class Route {
         this.name = name;
     }
 
-    private List<Section> sections;
-
     public List<Section> getSections() {
         return sections;
-    }
-
-    public void setSections(List<Section> sections) {
-        this.sections = sections;
     }
 
     @Override

@@ -7,7 +7,7 @@ public abstract class BaseTrain implements Train {
 
     private String number;
     private Locomotive locomotive;
-    private List<PassengerWagon> wagons;
+    private List<Wagon> wagons;
 
     @Override
     public String getNumber() {
@@ -30,12 +30,12 @@ public abstract class BaseTrain implements Train {
     }
 
     @Override
-    public List<PassengerWagon> getWagons() {
+    public List<Wagon> getWagons() {
         return wagons;
     }
 
     @Override
-    public void setWagons(List<PassengerWagon> wagons) {
+    public void setWagons(List<Wagon> wagons) {
         this.wagons = wagons;
     }
 

@@ -1,16 +1,18 @@
 package de.dhbw.course1.model.routes;
 
-import java.util.List;
-
 public class Section {
 
-    private List<Track> tracks;
+    private int number;
 
-    public List<Track> getTracks() {
-        return tracks;
+    public Section(int number) {
+        this.number = number;
     }
 
-    public void setTracks(List<Track> tracks) {
-        this.tracks = tracks;
+    public int getNumber() {
+        return number;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
     }
 }

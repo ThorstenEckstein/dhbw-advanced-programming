@@ -41,12 +41,12 @@ BaseWagon        <|--        PassengerWagon    : is a
 BaseWagon        <|--        FreightWagon      : is a
 
 Timetable        o-d-        Schedule
-Schedule "0..*"  -- "1..*"   Train        : > requires
+Schedule "1..*"  -- "1..*"   Train             : (n:m)
 (Schedule,Train) ..          Journey
 Journey          -r->        Driver            : > driven\nby
 Driver           <|.d.       TrainDriver       : realizes
 
-Journey          -u->        Route             : runs on >
+Schedule          -l->        Route             : runs on >
 Route            *-u- "1..*" Section           : > composed of
 
 'Route "0..*"  -  "1..*"  Section

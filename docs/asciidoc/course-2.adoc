@@ -14,11 +14,15 @@ _Referenzen_
 
 *Fachlicher Kontext*
 ----
- + Zug 1:1 Tbf (hat)
- + Zug 1:n Wagon (besteht aus)
- + Zug 1:n Fahrt
+ + Zug 1:n Wagon
+ + Zug 1:1 Lokomotive
+ + Zug n:m Soll-Fahrplan (Zug 1:n Fahrt 1:n Soll-Fahrplan)
+
+ + Zug 1:n Fahrplan n:1 Fahrt
+ + Zug 1:n Fahrplan n:1 Strecke
+
  + Fahrt 1:n Reisende
  + Zug 1:2 Flügel
- + Streckennetz 1:m Strecken
+ + Streckennetz 1:n Strecke
  + Strecke n:m Abschnitte
 ----

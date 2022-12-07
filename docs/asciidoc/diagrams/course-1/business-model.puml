@@ -25,32 +25,30 @@ abstract class BaseWagon
 class PassengerWagon
 class FreightWagon
 
+class Network
 class Route
 class Section
-class Schedule
 class Timetable
 
-Train            <|..        BaseTrain         : realizes
-BaseTrain        <|--        LongDistanceTrain : is a
-BaseTrain        <|--        RegionalTrain     : is a
-BaseTrain        -l->        Locomotive        : > has
-BaseTrain        o-r- "0..*" Wagon             : consists of
+' Train model
+Train             <|..          BaseTrain         : realizes
+BaseTrain         <|--          LongDistanceTrain : is a
+BaseTrain         <|--          RegionalTrain     : is a
+BaseTrain         -l->          Locomotive        : > has
+BaseTrain         o-r-  "0..*"  Wagon             : consists of
+Wagon             <|..          BaseWagon         : realizes
+BaseWagon         <|--          PassengerWagon    : is a
+BaseWagon         <|--          FreightWagon      : is a
 
-Wagon            <|..        BaseWagon         : realizes
-BaseWagon        <|--        PassengerWagon    : is a
-BaseWagon        <|--        FreightWagon      : is a
+' Route model
+'Network      "1"  -l-   "n"    Route
+Route             *-u-  "1..*" Section            : > composed\nof
 
-Timetable        o-d-        Schedule
-Schedule "1..*"  -- "1..*"   Train             : (n:m)
-(Schedule,Train) ..          Journey
-Journey          -r->        Driver            : > driven\nby
-Driver           <|.d.       TrainDriver       : realizes
-
-Schedule          -l->        Route             : runs on >
-Route            *-u- "1..*" Section           : > composed of
-
-'Route "0..*"  -  "1..*"  Section
-'(Route, Section) ..      Journey
-'Section       o-r-       Track
+' Journey model
+Route        "n"  --    "m"    Train
+(Route,Train)     ..           Journey
+Journey      "n"  -r-o  "1"    Timetable
+Journey           -u->         Driver             : > driven\nby
+Driver            <|.u.        TrainDriver        : realizes
 
 @enduml

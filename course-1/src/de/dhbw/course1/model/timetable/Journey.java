@@ -1,6 +1,7 @@
 package de.dhbw.course1.model.timetable;
 
 import de.dhbw.course1.model.personnel.Driver;
+import de.dhbw.course1.model.routes.Route;
 import de.dhbw.course1.model.train.Train;
 
 import java.time.ZonedDateTime;
@@ -10,7 +11,7 @@ public class Journey {
     /**
      * Journey takes place on which route (from where to where)?
      */
-    private Schedule schedule;
+    private Route route;
 
     /**
      * Journey takes place for what train?
@@ -27,12 +28,12 @@ public class Journey {
      */
     private Driver driver;
 
-    public Schedule getSchedule() {
-        return schedule;
+    public Route getRoute() {
+        return route;
     }
 
-    public void setSchedule(Schedule schedule) {
-        this.schedule = schedule;
+    public void setRoute(Route route) {
+        this.route = route;
     }
 
     public Train getTrain() {
@@ -62,7 +63,7 @@ public class Journey {
     @Override
     public String toString() {
         return "Journey{" +
-                "schedule=" + schedule +
+                "route=" + route +
                 ", train=" + train +
                 ", departure=" + departure +
                 ", driver=" + driver +

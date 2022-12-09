@@ -10,14 +10,14 @@ _Setup_:
 * Test-Driven-Development
 * Unit-Tests mit JUnit
 
-_Objektmodell_:
+_Theorie & Objektmodell_:
 
-* Objekte & Klassen
-* Vererbung & Interfaces, Assoziationen
-* Abstrakte Klassen
-* Objektvertrag (hashCode, equals)
-* Methoden überladen, überschreiben
-* Sichtbarkeiten, Modifiziere
+. Klassen & Objekte
+. Objektvertrag (hashCode, equals)
+. Vererbung & Interfaces
+. Abstrakte Klassen
+. Beziehungsarten (Besitz, Aufruf, Vererbung, ...), Aggregation vs. Komposition etc.
+. Referenzsemantik
 
 *Fachlicher Kontext*
 ----

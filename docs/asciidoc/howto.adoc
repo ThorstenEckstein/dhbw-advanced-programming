@@ -1,0 +1,25 @@
+include::settings.adoc[]
+
+== How To's
+
+=== Duplicate a new IntelliJ module on the base of another module
+
+Follow these steps to create a new module in an IntelliJ project, here for example `Programmierung-II-W3WI-109`. Created module shall be named `course-2` as an example, using the settings of `course-1`:
+
+. Open project dialog:
+
+ File > Project Structure ...
+
+. Select project modules in the dialog:
+
+ Project Settings > Modules
+
+. Add a new module using the `+` sign, specify a unique name, for example `course-2`.
+
+. Accept settings as proposed by clicking `Create`. The new module now appears in the project view!
+
+. Open the `iml` file from `course-1.iml` as the source for settings. Copy the full file contents simply into the previously created new module file, here `course-2.iml`. Save and exit.
+
+. Optional: Simply copy `/src` and maybe also `/test` directories if you want to have existing code in the new module.
+
+The new module now has (code and) settings of the source module!

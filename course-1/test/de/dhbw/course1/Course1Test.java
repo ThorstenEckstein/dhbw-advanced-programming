@@ -1,6 +1,5 @@
 package de.dhbw.course1;
 
-import de.dhbw.course1.model.Course1Main;
 import de.dhbw.commons.Logger;
 import de.dhbw.course1.model.train.LongDistanceTrain;
 import de.dhbw.course1.model.train.Train;

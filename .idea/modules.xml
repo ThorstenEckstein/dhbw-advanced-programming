@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/commons/commons.iml" filepath="$PROJECT_DIR$/commons/commons.iml" />
       <module fileurl="file://$PROJECT_DIR$/course-1/course-1.iml" filepath="$PROJECT_DIR$/course-1/course-1.iml" />
       <module fileurl="file://$PROJECT_DIR$/course-12/course-12.iml" filepath="$PROJECT_DIR$/course-12/course-12.iml" />
+      <module fileurl="file://$PROJECT_DIR$/course-2/course-2.iml" filepath="$PROJECT_DIR$/course-2/course-2.iml" />
       <module fileurl="file://$PROJECT_DIR$/course-4/course-4.iml" filepath="$PROJECT_DIR$/course-4/course-4.iml" />
       <module fileurl="file://$PROJECT_DIR$/docs/docs.iml" filepath="$PROJECT_DIR$/docs/docs.iml" />
       <module fileurl="file://$PROJECT_DIR$/experiments/experiments.iml" filepath="$PROJECT_DIR$/experiments/experiments.iml" />

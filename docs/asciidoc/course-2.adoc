@@ -4,8 +4,8 @@ include::settings.adoc[]
 
 *Allgemeine Inhalte*
 
-* Sichtbarkeiten von Klassen, Members, Methoden, Modifier
-* Beziehungsarten (Besitz, Aufruf, Vererbung, ...), Aggregation vs. Komposition etc.
+* Sichtbarkeiten von Klassen, Members, Methoden (Access Modifiers)
+* Methoden überladen, überschreiben
 * Collections API
 
 _Referenzen_

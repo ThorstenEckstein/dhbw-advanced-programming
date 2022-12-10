@@ -16,4 +16,5 @@
 :course-10: {title-prefix} 10 - Prüfungsvorbereitung
 
 // Variables with scope for 'course 1'
-:course-1-src: ../../course-1/src/de/dhbw/course1/model
+:course-1-src: ../../course-1/src/de/dhbw/course1
+:course-1-test: ../../course-1/test/de/dhbw/course1

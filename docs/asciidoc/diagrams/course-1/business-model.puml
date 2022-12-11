@@ -42,13 +42,13 @@ BaseWagon         <|--          FreightWagon      : is a
 
 ' Route model
 'Network      "1"  -l-   "n"    Route
-Route             *-u-  "1..*" Section            : > composed\nof
+Route             *-u-  "1..*" Section            : < composed\nof
 
 ' Journey model
 Route        "n"  --    "m"    Train
 (Route,Train)     ..           Journey
 Journey      "n"  -r-o  "1"    Timetable
-Journey           -u->         Driver             : > driven\nby
+Journey           -u->         Driver             : < drives
 Driver            <|.u.        TrainDriver        : realizes
 
 @enduml

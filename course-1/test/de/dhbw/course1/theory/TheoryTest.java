@@ -38,13 +38,13 @@ public class TheoryTest {
         AccountManager manager = new AccountManager();
 
         int amount = 2100;
-        System.out.println("Amount before deposit : " + amount);
+        logger.log("Amount before deposit : " + amount);
 
         // when
         manager.depositV1(amount, 500);
 
         // then
-        System.out.println("Amount after deposit  : " + amount);
+        logger.log("Amount after deposit  : " + amount);
     }
     //end::ref-semantics-1[]
 
@@ -64,13 +64,13 @@ public class TheoryTest {
         AccountManager manager = new AccountManager();
         Account account = new Account();
 
-        System.out.println("Amount before deposit : " + account.getAmount());
+        logger.log("Amount before deposit : " + account.getAmount());
 
         // when
         manager.depositV2(account, 750);
 
         // then
-        System.out.println("Amount after deposit  : " + account.getAmount());
+        logger.log("Amount after deposit  : " + account.getAmount());
     }
     //end::ref-semantics-2[]
 
@@ -88,13 +88,13 @@ public class TheoryTest {
         AccountManager manager = new AccountManager();
         Account account = new Account(1000);
 
-        System.out.println("Amount before deposit : " + account.getAmount());
+        logger.log("Amount before deposit : " + account.getAmount());
 
         // when
         manager.depositV3(account, 300);
 
         // then
-        System.out.println("Amount after deposit  : " + account.getAmount());
+        logger.log("Amount after deposit  : " + account.getAmount());
     }
     //end::ref-semantics-3[]
 

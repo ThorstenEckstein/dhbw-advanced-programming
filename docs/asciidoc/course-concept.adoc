@@ -1,9 +1,11 @@
+
 :toc-title: Inhaltsverzeichnis
 :toc:
+:toclevels: 1
 
 = Lehrkonzept Programmierung II
 
-:show-overview:  true
+:show-overview:  false
 :show-course-1:  true
 :show-course-2:  true
 :show-course-3:  true

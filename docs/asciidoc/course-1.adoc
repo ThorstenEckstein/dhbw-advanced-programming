@@ -1,10 +1,10 @@
 include::settings.adoc[]
 
-//:toc:
+:toc:
 
 == {course-1}
 
-=== Allgemeine Inhalte
+=== Inhalte
 
 _Setup_:
 
@@ -26,14 +26,15 @@ _Theorie & Objektmodell_:
 Vorbereitung: Darstellung des fachlichen Kontextes
 
  + Überwachungssystem in der Betriebsleitung
- + Zug, Triebfahrzeug (Tbf), Wagons (Spezialisierung Flügelzug)
- + Streckennetz
- + Störung, Weichenausfall, Abfahrt, Ankunft (z.B. verspätete Ankunft im Bahnhof)
- + Fahrplan
- + Dispositionsmaßnahme, Umleitung
-----
 
-=== Ein paar Fachbegriffe
+ + Zug, Zugtypen, Triebfahrzeug (Tbf), Wagons
+ + Streckennetz
+
+ + Fahrplan
+
+ + Störung, Weichenausfall, Abfahrt, Ankunft (z.B. verspätete Ankunft im Bahnhof)
+ + Dispositionsmaßnahme (z.B. Umleitung)
+----
 
 Zur Erläuterung:
 
@@ -54,7 +55,7 @@ image::diagrams/course-1/business-model.svg["Fachbegriffe",width="75%",align="ce
 
 Überblick über das grundsätzliche *Fachklassenmodell*:
 
-[plantuml, "Klassenmodell", png]
+[plantuml, "Klassenmodell", png, align="center"]
 ....
 include::diagrams/course-1/business-model.puml[]
 ....
@@ -70,34 +71,42 @@ include::{course-1-src}/model/train/Train.java[lines=5..13]
 
 *Example 1*: "_pass by value_"
 
-Pass by Value: In the pass by value concept, the method is called by passing a value. The argument
-is a copy of the original one. This is called 'pass by value'. It does not affect the original parameter.
+In the *pass by value* concept, the method is called by passing a value. The argument is a copy of the original one. This is called 'pass by value'. It does not affect the original parameter.
 
 [subs="normal"]
 ----
 include::{course-1-test}/theory/TheoryTest.java[tags="ref-semantics-1"]
 ----
 
+image::diagrams/course-1/reference-semantics-prim.svg["RefSemPrim",width="50%",align="center"]
+
 *Example 2*: "_pass by reference_"
 
-Pass by Reference: In the pass by reference concept, the method is called using an alias or reference
-of the actual parameter. This is called pass by reference. It forwards the unique identifier of the
-object to the method. If we make changes to the parameter's instance member, it would affect the original
-value.
+In the *pass by reference* concept, the method is called using an alias or reference of the actual parameter. This is called pass by reference. It forwards the unique identifier of the object to the method. If we make changes to the parameter's instance member, it would affect the original value.
 
-CAUTION: _Java does not support pass by reference concept!_
+CAUTION: [red]#_Java does not support pass by reference concept!_#
 
-[subs="normal"]
-----
-include::{course-1-test}/theory/TheoryTest.java[tags="ref-semantics-2"]
-----
+//[subs="normal"]
+//----
+//include::{course-1-test}/theory/TheoryTest.java[tags="ref-semantics-2"]
+//----
 
 *Example 3*: "_pass reference and update its' state_"
 
-Although the argument variable is passed in, the reference is just copied. The object that is really referenced
-is still the same and can thus be changed!
+Although the argument variable is passed in, the reference itself is copied. The object that is really referenced is still the same and can thus be changed!
 
 [subs="normal"]
 ----
 include::{course-1-test}/theory/TheoryTest.java[tags="ref-semantics-3"]
 ----
+
+image::diagrams/course-1/reference-semantics-obj.svg["RefSemObj",width="50%",align="center"]
+
+
+=== Übungsaufgaben
+
+Übungsaufgabe 1::
+Erzeuge ein eigenes Klassenmodell mit Klassen aus dem oben dargestellten Klassenmodell!
+
+Übungsaufgabe 2::
+Versuche "Reference Semantics" grafisch zu erläutern!

@@ -1,4 +1,4 @@
-package de.dhbw.course1.theory.aggregation;
+package de.dhbw.course2.theory.aggregation;
 
 import java.util.List;
 

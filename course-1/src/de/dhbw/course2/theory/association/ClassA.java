@@ -1,4 +1,4 @@
-package de.dhbw.course1.theory.association;
+package de.dhbw.course2.theory.association;
 
 public class ClassA {
 

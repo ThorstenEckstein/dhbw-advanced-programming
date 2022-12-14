@@ -1,4 +1,4 @@
-package de.dhbw.course1;
+package de.dhbw.course2;
 
 import de.dhbw.commons.Logger;
 import org.junit.jupiter.api.Test;

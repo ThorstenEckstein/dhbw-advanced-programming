@@ -1,4 +1,4 @@
-package de.dhbw.course1.theory;
+package de.dhbw.course2.theory;
 
 import de.dhbw.commons.Logger;
 import de.dhbw.course2.theory.visibility.VisibilityExampleClass;

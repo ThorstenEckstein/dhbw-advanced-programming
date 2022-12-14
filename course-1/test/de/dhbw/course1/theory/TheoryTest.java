@@ -1,10 +1,10 @@
 package de.dhbw.course1.theory;
 
 import de.dhbw.commons.Logger;
-import de.dhbw.course1.theory.objectcontract.Passenger;
-import de.dhbw.course1.theory.objectcontract.Train;
-import de.dhbw.course1.theory.refsemantics.Account;
-import de.dhbw.course1.theory.refsemantics.AccountManager;
+import de.dhbw.course2.theory.objectcontract.Passenger;
+import de.dhbw.course2.theory.objectcontract.Train;
+import de.dhbw.course2.theory.refsemantics.Account;
+import de.dhbw.course2.theory.refsemantics.AccountManager;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

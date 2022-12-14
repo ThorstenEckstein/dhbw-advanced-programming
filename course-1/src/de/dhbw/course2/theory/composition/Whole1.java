@@ -1,4 +1,4 @@
-package de.dhbw.course1.theory.composition;
+package de.dhbw.course2.theory.composition;
 
 import java.util.Set;
 

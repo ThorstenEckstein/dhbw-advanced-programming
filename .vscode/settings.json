@@ -14,5 +14,9 @@
         "course-1/test",
         "course-2/src",
         "course-2/test"
+    ],
+    "plantuml.java": "/opt/homebrew/Cellar/openjdk/17.0.2/libexec/openjdk.jdk/Contents/Home/bin/java",
+    "plantuml.commandArgs": [
+        "-DGRAPHVIZ_DOT=/opt/homebrew/Cellar/graphviz/6.0.1/bin/dot",
     ]
 }

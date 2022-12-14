@@ -6,17 +6,11 @@ import de.dhbw.course1.model.personnel.Driver;
 import de.dhbw.course1.model.personnel.TrainDriver;
 import de.dhbw.course1.model.routes.Route;
 import de.dhbw.course1.model.timetable.Journey;
-import de.dhbw.course1.model.timetable.Schedule;
 import de.dhbw.course1.model.timetable.Timetable;
 import de.dhbw.course1.model.train.Locomotive;
 import de.dhbw.course1.model.train.RegionalTrain;
 import de.dhbw.course1.model.train.Train;
 import org.junit.jupiter.api.Test;
-
-import java.time.ZoneId;
-import java.time.ZonedDateTime;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class JourneyTest {
 

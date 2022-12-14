@@ -1,0 +1,18 @@
+{
+    "workbench.colorTheme": "Visual Studio Light",
+    "java.configuration.runtimes": [
+        {
+            "name": "JavaSE-17",
+            "path": "/opt/homebrew/Cellar/openjdk/17.0.2/libexec/openjdk.jdk/Contents/Home",
+            "default": true
+        }
+    ],
+    "java.project.sourcePaths": [
+        "commons/test",
+        "commons/src",
+        "course-1/src",
+        "course-1/test",
+        "course-2/src",
+        "course-2/test"
+    ]
+}

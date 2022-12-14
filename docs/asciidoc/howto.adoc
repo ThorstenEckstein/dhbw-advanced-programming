@@ -51,15 +51,20 @@ NOTE: [small]#Alternatively, edit your `settings.json` file directly by opening 
 [start=6]
 . *Extensions*: To get a sophisticated Java environment, extend VSCode with some extensions, the recommended are:
 
-.. Asciidoc
-.. Extension Pack for Java, which bundles the following:
-... Debugger for Java
-... Project Manager for Java
-... Test Runner for Java
-... Maven for Java
-.. IntelliCode
-.. Language Support for Java(TM) by RedHat
+.. Documentation: Asciidoc
+.. Coding: Extension Pack for Java, which bundles the following (Debugger for Java, Project Manager for Java, Test Runner for Java, Maven for Java)
+.. Quality Assurance: IntelliCode
+.. Quality Assurance: Language Support for Java(TM) by RedHat
 
+To be able to create and display *UML diagrams*, you'll need:
+
+[start=7]
+. PlantUML (for diagrams)
+. Graphviz (dot) language support for Visual Studio (for diagrams)
+
+And finally, in case of problems:
+
+[start=8]
 . Check if *tests* are working simply by executing any unit test file via the `play` button, that is displayed on every unit test class as well as on each of its test methods
 
 . If there are any *compilation* problems, that may be caused by missing *classpath configuration*. To fix this, click `Manage > Command Palette` and search `Java: Configure Classpath`, then add - if not already done - `/src` and `/test` folders of each course module.

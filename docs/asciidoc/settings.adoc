@@ -1,4 +1,5 @@
 // document settings
+:icons: font
 
 // content settings
 :course-title-count: {counter:course-title-count}

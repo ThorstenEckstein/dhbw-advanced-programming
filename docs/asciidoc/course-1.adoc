@@ -80,18 +80,8 @@ include::{course-1-test}/theory/TheoryTest.java[tags="ref-semantics-1"]
 
 image::diagrams/course-1/reference-semantics-prim.svg["RefSemPrim",width="50%",align="center"]
 
-*Example 2*: "_pass by reference_"
 
-In the *pass by reference* concept, the method is called using an alias or reference of the actual parameter. This is called pass by reference. It forwards the unique identifier of the object to the method. If we make changes to the parameter's instance member, it would affect the original value.
-
-CAUTION: [red]#_Java does not support pass by reference concept!_#
-
-//[subs="normal"]
-//----
-//include::{course-1-test}/theory/TheoryTest.java[tags="ref-semantics-2"]
-//----
-
-*Example 3*: "_pass reference and update its' state_"
+*Example 2*: "_pass reference and update its' state_"
 
 Although the argument variable is passed in, the reference itself is copied. The object that is really referenced is still the same and can thus be changed!
 
@@ -103,10 +93,32 @@ include::{course-1-test}/theory/TheoryTest.java[tags="ref-semantics-3"]
 image::diagrams/course-1/reference-semantics-obj.svg["RefSemObj",width="50%",align="center"]
 
 
+// ---------------------- HIDDEN ----------------------
+.Click to reveal details for *Example 3*: "_pass by reference_"
+[%collapsible]
+====
+*Example 3*: "_pass by reference_"
+
+In the *pass by reference* concept, the method is called using an alias or reference of the actual parameter. This is called pass by reference. It forwards the unique identifier of the object to the method. If we make changes to the parameter's instance member, it would affect the original value.
+
+CAUTION: [red]#_Java does not support pass by reference concept!_#
+
+//[subs="normal"]
+//----
+//include::{course-1-test}/theory/TheoryTest.java[tags="ref-semantics-2"]
+//----
+====
+// ---------------------- HIDDEN ----------------------
+
+
 === Übungsaufgaben
 
+
 Übungsaufgabe 1::
-Erzeuge ein eigenes Klassenmodell mit Klassen aus dem oben dargestellten Klassenmodell!
+Erzeuge ein kleines Klassenmodell aus dem folgenden Anwendungsfall:
+
+-> _"Ein Bahnhof besteht aus einer Wartehalle und Bahnsteigen mit je mindestens 1 oder 2 Gleisen. Bahnhöfe werden zudem nach Fern- und Regionalbahnhöfen differenziert."_
+
 
 Übungsaufgabe 2::
 Versuche "Reference Semantics" grafisch zu erläutern!

@@ -1,5 +1,10 @@
 // document settings
 :icons: font
+:sectnums:
+:toc-title: Inhaltsverzeichnis
+:toclevels: 3
+//:stylesdir: styles
+//:stylesheet: dhbw.css
 
 // content settings
 :course-title-count: {counter:course-title-count}
@@ -17,5 +22,7 @@
 :course-10: {title-prefix} 10 - Prüfungsvorbereitung
 
 // Variables with scope for 'course 1'
-:course-1-src: ../../course-1/src/de/dhbw/course1
-:course-1-test: ../../course-1/test/de/dhbw/course1
+:course-1-src: ../../../course-1/src/de/dhbw/course1
+:course-1-test: ../../../course-1/test/de/dhbw/course1
+:course-2-src: ../../../course-2/src/de/dhbw/course1
+:course-2-test: ../../../course-2/test/de/dhbw/course1

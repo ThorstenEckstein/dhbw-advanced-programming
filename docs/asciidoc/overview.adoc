@@ -1,7 +1,11 @@
+include::settings.adoc[]
+
+== Überblick
+
 [subs=normal]
 ----
-*Titel*   : Programmierung II
-*Kontext* : Zugüberwachung & -disposition im Störungsfall
+*Titel*   : *Programmierung II*
+*Kontext* : _Zugüberwachung & -disposition im Störungsfall_
 ----
 
 [subs=normal]
@@ -23,7 +27,7 @@
  methodik: Parallele Programmierung mit Threads, Synchronisations- &
  Kommunikationskonzepte, Ein- und Ausgabe über Streams.
 
-*Lehrinhalte (Kür)*
+*Zusätzliche Lehrinhalte*
  - Design Prinzipien & Design Patterns
  - Code Qualität
  - TDD, JUnit & Mockito
@@ -42,4 +46,6 @@
 (17    24.04.23 - 30.04.23   11: Mi., 26.04. [Ersatztermin])
 ----
 
+////
 IMPORTANT: [.red]#_Die Anzahl der Kurse muss variabel bleiben, in Abhängigkeit von Länge des Semesters, des Kursfortschritts sowie des Prüfungszeitraums_#
+////

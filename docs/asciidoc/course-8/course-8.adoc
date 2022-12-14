@@ -1,0 +1,18 @@
+include::../settings.adoc[]
+
+== {course-8}
+
+*Allgemeine Inhalte*
+
+* OOP Best Practices
+** SOLID
+** Zyklomatische Komplexität (Reduktion Konditionalstatements)
+* Design Prinzipien
+** KISS & DRY
+** Composition Over Inheritance Principle
+** Convention oder Configuration
+
+*Fachlicher Kontext*
+----
+ to be done
+----

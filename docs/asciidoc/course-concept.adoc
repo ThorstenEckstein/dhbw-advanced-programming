@@ -1,69 +1,24 @@
-
-:toc-title: Inhaltsverzeichnis
-:toc:
-:toclevels: 1
+include::settings.adoc[]
 
 = Lehrkonzept Programmierung II
 
-:show-overview:  false
-:show-course-1:  true
-:show-course-2:  true
-:show-course-3:  true
-:show-course-4:  true
-:show-course-5:  true
-:show-course-6:  true
-:show-course-7:  true
-:show-course-8:  true
-:show-course-9:  true
-:show-course-10: true
-:show-refs:      true
+== Inhaltsverzeichnis
 
-ifeval::[{show-overview} == true]
+. {course-1}
+. {course-2}
+. {course-3}
+. {course-4}
+. {course-5}
+. {course-6}
+. {course-7}
+. {course-8}
+. {course-9}
+. {course-10}
+
 include::overview.adoc[]
-endif::[]
 
-ifeval::[{show-course-1} == true]
-include::course-1.adoc[]
-endif::[]
 
-ifeval::[{show-course-2} == true]
-include::course-2.adoc[]
-endif::[]
-
-ifeval::[{show-course-3} == true]
-include::course-3.adoc[]
-endif::[]
-
-ifeval::[{show-course-4} == true]
-include::course-4.adoc[]
-endif::[]
-
-ifeval::[{show-course-5} == true]
-include::course-5.adoc[]
-endif::[]
-
-ifeval::[{show-course-6} == true]
-include::course-6.adoc[]
-endif::[]
-
-ifeval::[{show-course-7} == true]
-include::course-7.adoc[]
-endif::[]
-
-ifeval::[{show-course-8} == true]
-include::course-8.adoc[]
-endif::[]
-
-ifeval::[{show-course-9} == true]
-include::course-9.adoc[]
-endif::[]
-
-ifeval::[{show-course-10} == true]
-include::course-10.adoc[]
-endif::[]
-
-ifeval::[{show-refs2} == true]
 include::refs.adoc[]
-endif::[]
 
+//[.dhbw]#ein-test-text#
 //include::examples-from-websites.adoc[]

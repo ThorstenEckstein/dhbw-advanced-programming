@@ -1,0 +1,15 @@
+include::../settings.adoc[]
+
+== {course-4}
+
+*Allgemeine Inhalte*
+
+* Thread
+* Runnable
+* Enumerations
+
+*Fachlicher Kontext*
+----
+ + Viele Züge fahren gleichzeitig im Streckennetz
+ + Live-Überwachung fahrender Züge
+----

@@ -14,30 +14,20 @@ public class BasicsTest {
 
     private final Logger logger = new Logger(BasicsTest.class);
 
-    // --------------------------------------------------------------------------------
-    //                               Reference Semantics
-    //
-    //                               +---------+
-    //  Variable: account -----------> Account |
-    //                               | ....... |
-    //                               | amount  |
-    //                               +---------+
-    // --------------------------------------------------------------------------------
-
     @Test
     @DisplayName(
             """
-            Reference Semantics 1:
+            Reference Semantics with primitives:
              Pass by Value: In the pass by value concept, the method is called by passing a value. The argument
              is a copy of the original one. This is called 'pass by value'. It does not affect the original parameter.
             """
     )
-    //tag::ref-semantics-1[]
-    public void canDemonstrateReferenceSemantics1() {
+    //tag::ref-semantics-prim[]
+    public void canDemonstrateReferenceSemanticsWithPrimitives() {
         // given - a primitive value
         AccountManager manager = new AccountManager();
-
         int amount = 2100;
+
         logger.log("Amount before deposit : " + amount);
 
         // when
@@ -46,44 +36,18 @@ public class BasicsTest {
         // then
         logger.log("Amount after deposit  : " + amount);
     }
-    //end::ref-semantics-1[]
+    //end::ref-semantics-prim[]
 
     @Test
     @DisplayName(
             """
-            Reference Semantics 2:
-             Pass by Reference: In the pass by reference concept, the method is called using an alias or reference
-             of the actual parameter. This is called pass by reference. It forwards the unique identifier of the
-             object to the method. If we made changes to the parameter's instance member, it would affect the original
-             value. Java does not support pass by reference concept!
-            """
-    )
-    //tag::ref-semantics-2[]
-    public void canDemonstrateReferenceSemantics2() {
-        // given
-        AccountManager manager = new AccountManager();
-        Account account = new Account();
-
-        logger.log("Amount before deposit : " + account.getAmount());
-
-        // when
-        manager.depositV2(account, 750);
-
-        // then
-        logger.log("Amount after deposit  : " + account.getAmount());
-    }
-    //end::ref-semantics-2[]
-
-    @Test
-    @DisplayName(
-            """
-            Reference Semantics 3:
+            Reference Semantics with objects:
              Although the argument variable is copied, just the reference ist copied. The object that is referenced
              is still the same and thus changed here!
             """
     )
-    //tag::ref-semantics-3[]
-    public void canDemonstrateReferenceSemantics3() {
+    //tag::ref-semantics-obj[]
+    public void canDemonstrateReferenceSemanticsWithObjects() {
         // given
         AccountManager manager = new AccountManager();
         Account account = new Account(1000);
@@ -96,7 +60,24 @@ public class BasicsTest {
         // then
         logger.log("Amount after deposit  : " + account.getAmount());
     }
-    //end::ref-semantics-3[]
+    //end::ref-semantics-obj[]
+
+    //tag::ref-semantics[]
+    @Test
+    public void canExplainReferenceSemanticsByExample() {
+        // given
+        Account a1 = new Account();
+        assertEquals(0, a1.getAmount(), "initial amount of instance 'a1'");
+
+        // when
+        Account a2 = Account.process(a1);
+
+        // then
+        assertEquals(350, a2.getAmount(), "processed amount of (new inner) instance 'a2'");
+
+        assertEquals(0, a1.getAmount(), "amount of instance 'a1' is still the same");
+    }
+    //end::ref-semantics[]
 
     // --------------------------------------------------------------------------------
     //                               Object Contract
@@ -133,5 +114,36 @@ public class BasicsTest {
         logger.log(String.format("%s != %s", passenger1.hashCode(), passenger2.hashCode()));
     }
     //end::object-contract-2[]
+
+
+    // #################################################
+    // ################## ARCHIVE ######################
+    // #################################################
+
+    //@Test
+    @DisplayName(
+            """
+            Reference Semantics:
+             Pass by Reference: In the pass by reference concept, the method is called using an alias or reference
+             of the actual parameter. This is called pass by reference. It forwards the unique identifier of the
+             object to the method. If we made changes to the parameter's instance member, it would affect the original
+             value. Java does not support pass by reference concept!
+            """
+    )
+    //tag::ref-semantics-2[]
+    public void canDemonstrateReferenceSemantics2() {
+        // given
+        AccountManager manager = new AccountManager();
+        Account account = new Account();
+
+        logger.log("Amount before deposit : " + account.getAmount());
+
+        // when
+        manager.depositV2(account, 750);
+
+        // then
+        logger.log("Amount after deposit  : " + account.getAmount());
+    }
+    //end::ref-semantics-2[]
 
 }

@@ -90,9 +90,9 @@ include::{course-1-test}/basics/BasicsTest.java[tag="object-contract-2"]
 
 In the *pass by value* concept, the method is called by passing a value. The argument is a copy of the original one. This is called 'pass by value'. It does not affect the original parameter.
 
-[source, java, linenums, title="Reference Sematics Bsp. 1"]
+[source, java, linenums, title="Reference Sematics Bsp. mit Primitiven"]
 ----
-include::{course-1-test}/basics/BasicsTest.java[tags="ref-semantics-1"]
+include::{course-1-test}/basics/BasicsTest.java[tags="ref-semantics-prim"]
 ----
 
 image::diagrams/reference-semantics-prim.svg["RefSemPrim",width="50%",align="center"]
@@ -102,9 +102,9 @@ image::diagrams/reference-semantics-prim.svg["RefSemPrim",width="50%",align="cen
 
 Although the argument variable is passed in, the reference itself is copied. The object that is really referenced is still the same and can thus be changed!
 
-[source, java, linenums, title="Reference Semantics Bsp. 2"]
+[source, java, linenums, title="Reference Semantics Bsp. mit Objekten"]
 ----
-include::{course-1-test}/basics/BasicsTest.java[tags="ref-semantics-3"]
+include::{course-1-test}/basics/BasicsTest.java[tags="ref-semantics-obj"]
 ----
 
 image::diagrams/reference-semantics-obj.svg["RefSemObj",width="50%",align="center"]
@@ -126,6 +126,68 @@ CAUTION: [red]#_Java does not support pass by reference concept!_#
 //----
 ====
 // ---------------------- HIDDEN ----------------------
+
+
+Ein weiteres Beispiel für *Reference Semantics*:
+
+image::diagrams/reference-semantics.svg["RefSem",width="100%",align="center"]
+
+[cols="^1,9a", grid="none", frame="none"]
+|===
+| # | Erläuterung/Kommentar
+
+| [yellow]#(1)#
+| Erzeugung einer Variable `a1` vom Typ `Account` mit Zuweisung zur neuen Instanz sowie der Initialisierung des Attributes `amount` mit dem Wert `0`
+
+[source,java]
+----
+include::{course-1-test}/basics/BasicsTest.java[lines="69"]
+----
+
+| [yellow]#(2)#
+| Aus Sicht der Methode `process(Account acc)` wird eine Variable `acc` definiert, sie hat initial den Wert `null`
+
+[source,java]
+----
+include::{course-1-src}/basics/refsemantics/Account.java[lines="22"]
+----
+
+| [yellow]#(3)#
+| Beim Aufruf der Methode `process(a1)` wird der Wert bzw. die "Adresse" der Variable `a1`  nach `acc` kopiert (_"copy-by-value"_)
+
+//include::{course-1-test}/basics/BasicsTest.java[lines="73"]
+[source]
+----
+        Account.process(a1)
+----
+
+
+| [yellow]#(4)#
+| Hier wird (einfach) eine neue Instanz `a2` von `Account` angelegt, sie hat zunächst nichts mit den vorhergehenden Dingen zu tun. Bei dieser zweiten Instanz wird das Attribut `amount` allerdings gleich dem Wert `100` initialisiert
+
+[source,java]
+----
+include::{course-1-src}/basics/refsemantics/Account.java[lines="24"]
+----
+
+| [yellow]#(5)#
+| Bei der Zuweisung von `acc = a2` wird die Referenz auf die neue Instanz "gelenkt"
+
+[source,java]
+----
+include::{course-1-src}/basics/refsemantics/Account.java[lines="25"]
+----
+
+| [yellow]#(6)#
+| Hier wird der interne Status der Instanz von `Account`, nämlich der Attributwert von `amount` um `250` erhöht, der Objektzustand wird also verändert!
+
+[source,java]
+----
+include::{course-1-src}/basics/refsemantics/Account.java[lines="27"]
+----
+
+|===
+
 
 
 === Übungen

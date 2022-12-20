@@ -10,6 +10,7 @@ interface Train {
 }
 abstract class BaseTrain {
   String number
+  Locomotive loco
   List wagons
 }
 class LongDistanceTrain
@@ -18,14 +19,14 @@ class Locomotive
 
 class Journey
 interface Driver
-abstract class TrainDriver
+class TrainDriver
 
 interface Wagon
 abstract class BaseWagon
 class PassengerWagon
 class FreightWagon
 
-class Network
+'class Network
 class Route
 class Section
 class Timetable

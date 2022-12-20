@@ -102,6 +102,7 @@ public class BasicsTest {
     //                               Object Contract
     // --------------------------------------------------------------------------------
 
+    //tag::object-contract-1[]
     @Test
     public void canCommitEqualInstances() {
         // given
@@ -115,7 +116,9 @@ public class BasicsTest {
         assertTrue(areEqual);
         logger.log(String.format("%s == %s", train1.hashCode(), train2.hashCode()));
     }
+    //end::object-contract-1[]
 
+    //tag::object-contract-2[]
     @Test
     public void cannotCommitEqualInstances() {
         // given
@@ -129,5 +132,6 @@ public class BasicsTest {
         assertFalse(areEqual);
         logger.log(String.format("%s != %s", passenger1.hashCode(), passenger2.hashCode()));
     }
+    //end::object-contract-2[]
 
 }

@@ -6,20 +6,20 @@ include::../../docs/asciidoc/settings.adoc[]
 
 === Inhalte
 
-_Setup_:
+*Setup*:
 
-* IDE (IntelliJ & Visual Studio Code), Java (Installation, etc. ...)
-* Test-Driven-Development
-* Unit-Tests mit JUnit
+- [ ] IDE (IntelliJ & Visual Studio Code), Java (Installation, etc. ...)
+- [ ] Test-Driven-Development
+- [ ] Unit-Tests mit JUnit
 
-_Theorie & Objektmodell_:
+*Theorie & Objektmodell*:
 
-. Klassen & Objekte
-. Objektvertrag (hashCode, equals)
-. Vererbung & Interfaces
-. Abstrakte Klassen
-. Beziehungsarten (Besitz, Aufruf, Vererbung, ...), Aggregation vs. Komposition etc.
-. Referenzsemantik
+- [ ] Klassen & Objekte
+- [ ] Objektvertrag (hashCode, equals)
+- [ ] Vererbung & Interfaces
+- [ ] Abstrakte Klassen
+- [ ] Beziehungsarten (Besitz, Aufruf, Vererbung, ...), Aggregation vs. Komposition etc.
+- [ ] Referenzsemantik
 
 === Fachlicher Kontext
 ----
@@ -62,10 +62,27 @@ include::diagrams/business-model.puml[]
 
 Das Interface `Train` sieht dabei wie folgt aus:
 
-[subs="normal"]
+[source, java, linenums]
 ----
 include::{course-1-src}/model/train/Train.java[lines=5..13]
 ----
+
+=== Objektvertrag (object contract)
+
+The Object class defines both the `equals()` and `hashCode()` methods, which means that these two methods are implicitly defined in every Java class, even if they are not implemented explicitly.
+
+The default implementation of `equals()` in the Object class says that *equality* is the same as object *identity*.
+
+[source, java, linenums, title="Gleich oder Identisch?"]
+----
+include::{course-1-test}/basics/BasicsTest.java[tag="object-contract-1"]
+----
+
+[source, java, linenums, title="Gleich oder Identisch?"]
+----
+include::{course-1-test}/basics/BasicsTest.java[tag="object-contract-2"]
+----
+
 
 === Reference Semantics
 
@@ -73,7 +90,7 @@ include::{course-1-src}/model/train/Train.java[lines=5..13]
 
 In the *pass by value* concept, the method is called by passing a value. The argument is a copy of the original one. This is called 'pass by value'. It does not affect the original parameter.
 
-[subs="normal"]
+[source, java, linenums, title="Reference Sematics Bsp. 1"]
 ----
 include::{course-1-test}/basics/BasicsTest.java[tags="ref-semantics-1"]
 ----
@@ -85,7 +102,7 @@ image::diagrams/reference-semantics-prim.svg["RefSemPrim",width="50%",align="cen
 
 Although the argument variable is passed in, the reference itself is copied. The object that is really referenced is still the same and can thus be changed!
 
-[subs="normal"]
+[source, java, linenums, title="Reference Semantics Bsp. 2"]
 ----
 include::{course-1-test}/basics/BasicsTest.java[tags="ref-semantics-3"]
 ----

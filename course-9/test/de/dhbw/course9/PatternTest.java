@@ -1,36 +1,36 @@
-package de.dhbw.course12;
+package de.dhbw.course9;
 
-import de.dhbw.course12.decorator.example1.Renderer;
-import de.dhbw.course12.adapter.ProprietaryRenderEngine;
-import de.dhbw.course12.adapter.SelfMadeMapRenderEngine;
-import de.dhbw.course12.adapter.SelfMadeRenderEngine;
-import de.dhbw.course12.decorator.example1.DefaultRenderer;
-import de.dhbw.course12.decorator.example1.RenderAndPrintDecorator;
-import de.dhbw.course12.decorator.example2.commands.Command;
-import de.dhbw.course12.decorator.example2.commands.CreateCommand;
-import de.dhbw.course12.decorator.example2.commands.UpdateCommand;
-import de.dhbw.course12.decorator.example2.decorator.CommandDecorator;
-import de.dhbw.course12.decorator.example2.decorator.CreateCommandDecorator;
-import de.dhbw.course12.decorator.example2.decorator.UpdateCommandDecorator;
-import de.dhbw.course12.model.Entity;
-import de.dhbw.course12.facade.Printer;
-import de.dhbw.course12.filter.v1.FilterChain;
-import de.dhbw.course12.filter.v1.FilterException;
-import de.dhbw.course12.filter.v1.impl.EqualityFilter;
-import de.dhbw.course12.filter.v1.impl.IdentityFilter;
-import de.dhbw.course12.filter.v1.impl.SynonymityFilter;
-import de.dhbw.course12.filter.v1.mock.Input;
-import de.dhbw.course12.filter.v1.mock.Output;
-import de.dhbw.course12.filter.v2.mock.MockFactory;
-import de.dhbw.course12.observer.MapObserver;
-import de.dhbw.course12.observer.Observable;
-import de.dhbw.course12.observer.ObservableMap;
-import de.dhbw.course12.observer.Observer;
-import de.dhbw.course12.proxy.RenderEngine;
-import de.dhbw.course12.proxy.RenderEngineProxy;
-import de.dhbw.course12.proxy.RenderException;
-import de.dhbw.course12.strategy.DetailedPrintStrategy;
-import de.dhbw.course12.strategy.SimplePrintStrategy;
+import de.dhbw.course9.adapter.ProprietaryRenderEngine;
+import de.dhbw.course9.adapter.Renderer;
+import de.dhbw.course9.adapter.SelfMadeMapRenderEngine;
+import de.dhbw.course9.adapter.SelfMadeRenderEngine;
+import de.dhbw.course9.decorator.example1.DefaultRenderer;
+import de.dhbw.course9.decorator.example1.RenderAndPrintDecorator;
+import de.dhbw.course9.decorator.example2.commands.Command;
+import de.dhbw.course9.decorator.example2.commands.CreateCommand;
+import de.dhbw.course9.decorator.example2.commands.UpdateCommand;
+import de.dhbw.course9.decorator.example2.decorator.CommandDecorator;
+import de.dhbw.course9.decorator.example2.decorator.CreateCommandDecorator;
+import de.dhbw.course9.decorator.example2.decorator.UpdateCommandDecorator;
+import de.dhbw.course9.model.Entity;
+import de.dhbw.course9.facade.Printer;
+import de.dhbw.course9.filter.v1.FilterChain;
+import de.dhbw.course9.filter.v1.FilterException;
+import de.dhbw.course9.filter.v1.impl.EqualityFilter;
+import de.dhbw.course9.filter.v1.impl.IdentityFilter;
+import de.dhbw.course9.filter.v1.impl.SynonymityFilter;
+import de.dhbw.course9.filter.v1.mock.Input;
+import de.dhbw.course9.filter.v1.mock.Output;
+import de.dhbw.course9.filter.v2.mock.MockFactory;
+import de.dhbw.course9.observer.MapObserver;
+import de.dhbw.course9.observer.Observable;
+import de.dhbw.course9.observer.ObservableMap;
+import de.dhbw.course9.observer.Observer;
+import de.dhbw.course9.proxy.RenderEngine;
+import de.dhbw.course9.proxy.RenderEngineProxy;
+import de.dhbw.course9.proxy.RenderException;
+import de.dhbw.course9.strategy.DetailedPrintStrategy;
+import de.dhbw.course9.strategy.SimplePrintStrategy;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -48,10 +48,10 @@ public class PatternTest {
 	@Test
 	public void structure_decorator_example1() {
 		// arrange: create default
-		Renderer defaultRenderer =
+		de.dhbw.course9.decorator.example1.Renderer defaultRenderer =
 				new DefaultRenderer();
 		// ... now decorate the default
-		Renderer decoratedRenderer =
+		de.dhbw.course9.decorator.example1.Renderer decoratedRenderer =
 				new RenderAndPrintDecorator(defaultRenderer);
 
 		// act
@@ -156,7 +156,7 @@ public class PatternTest {
 		// (1) complete self-implemented use case
 
 		// given: create renderer, the main interface for renderings that shall be done (can acts as a facade!)
-		de.dhbw.course12.adapter.Renderer renderer = new de.dhbw.course12.adapter.Renderer();
+		Renderer renderer = new Renderer();
 		// For rendering purposes, a render engine is required, use self-made implementation of this rendering mechanism
 		SelfMadeRenderEngine engine = new SelfMadeRenderEngine();
 

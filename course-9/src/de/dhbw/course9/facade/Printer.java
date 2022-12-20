@@ -1,9 +1,9 @@
-package de.dhbw.course12.facade;
+package de.dhbw.course9.facade;
 
-import de.dhbw.course12.model.Entity;
-import de.dhbw.course12.strategy.PrintContext;
-import de.dhbw.course12.strategy.PrintStrategy;
-import de.dhbw.course12.template.AbstractPrintStrategy;
+import de.dhbw.course9.model.Entity;
+import de.dhbw.course9.template.AbstractPrintStrategy;
+import de.dhbw.course9.strategy.PrintContext;
+import de.dhbw.course9.strategy.PrintStrategy;
 
 /**
  * This is a simple realization of the pattern "Facade".

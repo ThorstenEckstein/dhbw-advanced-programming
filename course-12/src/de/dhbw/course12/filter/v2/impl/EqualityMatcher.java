@@ -1,12 +1,12 @@
 package de.dhbw.course12.filter.v2.impl;
 
+import de.dhbw.course12.filter.v2.mock.Candidate;
+import de.dhbw.course12.filter.v2.mock.Subject;
 import de.dhbw.course12.filter.v2.AnalysisCase;
 import de.dhbw.course12.filter.v2.AnalysisDetail;
 import de.dhbw.course12.filter.v2.MatchException;
 import de.dhbw.course12.filter.v2.Matcher;
 import de.dhbw.course12.filter.v2.MatcherChain;
-import de.dhbw.course12.filter.v2.mock.Candidate;
-import de.dhbw.course12.filter.v2.mock.Subject;
 
 public class EqualityMatcher implements Matcher {
 

@@ -1,4 +1,4 @@
-package de.dhbw.course12.demo.model;
+package de.dhbw.course9.model;
 
 public class Entity {
 

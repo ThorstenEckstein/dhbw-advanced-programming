@@ -1,16 +1,15 @@
-package de.dhbw.course12.filter.v2.impl;
+package de.dhbw.course9.filter.v2.impl;
 
-import de.dhbw.course12.filter.v2.mock.Candidate;
-import de.dhbw.course12.filter.v2.mock.Subject;
-import de.dhbw.course12.filter.v2.AnalysisCase;
-import de.dhbw.course12.filter.v2.AnalysisDetail;
-import de.dhbw.course12.filter.v2.MatchException;
-import de.dhbw.course12.filter.v2.Matcher;
-import de.dhbw.course12.filter.v2.MatcherChain;
+import de.dhbw.course9.filter.v2.AnalysisCase;
+import de.dhbw.course9.filter.v2.AnalysisDetail;
+import de.dhbw.course9.filter.v2.MatchException;
+import de.dhbw.course9.filter.v2.Matcher;
+import de.dhbw.course9.filter.v2.MatcherChain;
+import de.dhbw.course9.filter.v2.mock.Candidate;
+import de.dhbw.course9.filter.v2.mock.Subject;
 
-public class SynonymityMatcher implements Matcher {
+public class IdentityMatcher implements Matcher {
 
-	@SuppressWarnings("unused")
 	@Override
 	public void matches(AnalysisCase<Subject, Candidate> analysisCase,
 			Candidate candidate, MatcherChain matcherChain) throws MatchException {
@@ -21,17 +20,19 @@ public class SynonymityMatcher implements Matcher {
 			throw new MatchException();
 		}
 		
-		if (false /* check synonymity*/) {
+		if (subject.hashCode() == candidate.hashCode()) {
 			System.err.println("'" + this + "' matches! Exiting chain ...");
 			AnalysisDetail<Candidate> detail = new AnalysisDetail<Candidate>();
 			detail.setCandidate(candidate);
+			detail.setDirective(1);
 			analysisCase.addUncommittedCandidate(detail);
 			matcherChain.resetProgressIndex();
 		} else {
-			System.out.println("'" + this + "' doesn't match ... proceeding to next matcher ...");
 			// proceed to next matcher representing another check-algorithm 
+			System.out.println("'" + this + "' doesn't match ... proceeding to next matcher ...");
 			matcherChain.proceed(analysisCase, candidate);
 		}
+
 	}
 
 	@Override

@@ -1,7 +1,7 @@
-package de.dhbw.course12.strategy;
+package de.dhbw.course9.strategy;
 
-import de.dhbw.course12.model.Entity;
-import de.dhbw.course12.template.AbstractPrintStrategy;
+import de.dhbw.course9.model.Entity;
+import de.dhbw.course9.template.AbstractPrintStrategy;
 
 public class SimplePrintStrategy extends AbstractPrintStrategy {
 

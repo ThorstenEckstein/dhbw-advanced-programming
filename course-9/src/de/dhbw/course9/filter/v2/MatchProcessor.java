@@ -1,7 +1,7 @@
-package de.dhbw.course12.filter.v2;
+package de.dhbw.course9.filter.v2;
 
-import de.dhbw.course12.filter.v2.mock.Candidate;
-import de.dhbw.course12.filter.v2.mock.Subject;
+import de.dhbw.course9.filter.v2.mock.Candidate;
+import de.dhbw.course9.filter.v2.mock.Subject;
 
 public class MatchProcessor {
 
@@ -20,7 +20,7 @@ public class MatchProcessor {
 	}
 
 	public void execute(
-			AnalysisCase<Subject, Candidate> analysisCase, Candidate candidate)
+            AnalysisCase<Subject, Candidate> analysisCase, Candidate candidate)
 			throws MatchException {
 		matcherChain.proceed(analysisCase, candidate);
 	}

@@ -1,6 +1,6 @@
-package de.dhbw.course12.strategy;
+package de.dhbw.course9.strategy;
 
-import de.dhbw.course12.model.Entity;
+import de.dhbw.course9.model.Entity;
 
 import java.util.HashMap;
 import java.util.Map;

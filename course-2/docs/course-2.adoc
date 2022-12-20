@@ -1,0 +1,30 @@
+include::../../docs/asciidoc/settings.adoc[]
+
+:toc:
+
+== {course-2}
+
+*Allgemeine Inhalte*
+
+* Sichtbarkeiten von Klassen, Members, Methoden (Access Modifiers)
+* Methoden überladen, überschreiben
+* Collections API
+
+*Fachlicher Kontext*
+----
+ + Zug 1:n Wagon
+ + Zug 1:1 Lokomotive
+ + Zug n:m Soll-Fahrplan (Zug 1:n Fahrt 1:n Soll-Fahrplan)
+
+ + Zug 1:n Fahrplan n:1 Fahrt
+ + Zug 1:n Fahrplan n:1 Strecke
+
+ + Fahrt 1:n Reisende
+ + Zug 1:2 Flügel
+ + Streckennetz 1:n Strecke
+ + Strecke n:m Abschnitte
+----
+
+=== Collections API
+
+image::images/collections-api.png["Collections API",width="100%",align="center"]

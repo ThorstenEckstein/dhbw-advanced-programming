@@ -25,6 +25,25 @@ include::../../docs/asciidoc/settings.adoc[]
  + Strecke n:m Abschnitte
 ----
 
+
+=== Access Modifier
+
+* `default`
+* `public`
+* `protected`
+* `private`
+
+[source,java]
+----
+include::{course-2-test}/basics/BasicsTest.java[tags="visibility"]
+----
+
+
+=== Überladen & Überschreiben
+
+IMPORTANT: HIER FORTSETZEN ... SIEHE TEST!
+
+
 === Collections API
 
 image::images/collections-api.png["Collections API",width="100%",align="center"]

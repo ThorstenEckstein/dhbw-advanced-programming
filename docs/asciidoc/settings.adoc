@@ -21,8 +21,8 @@
 :course-9:  {title-prefix} 9 - Clean Code 2/2
 :course-10: {title-prefix} 10 - Prüfungsvorbereitung
 
-// Variables with scope for 'course 1'
-:course-1-src: ../../../course-1/src/de/dhbw/course1
-:course-1-test: ../../../course-1/test/de/dhbw/course1
-:course-2-src: ../../../course-2/src/de/dhbw/course1
-:course-2-test: ../../../course-2/test/de/dhbw/course1
+:course-1-src: ../src/de/dhbw/course1
+:course-1-test: ../test/de/dhbw/course1
+
+:course-2-src: ../src/de/dhbw/course2
+:course-2-test: ../test/de/dhbw/course2

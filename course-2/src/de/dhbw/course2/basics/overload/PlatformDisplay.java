@@ -4,7 +4,8 @@ import java.util.List;
 
 public class PlatformDisplay {
 
-    // multiple methods can be used to update a platforms' display
+    // multiple methods can be used to
+    // update a platforms' display
 
     public void update() {}
 

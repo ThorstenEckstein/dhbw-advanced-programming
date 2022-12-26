@@ -6,6 +6,9 @@
 //:stylesdir: styles
 //:stylesheet: dhbw.css
 
+// special settings
+:nl: pass:[<br/>]
+
 // content settings
 :course-title-count: {counter:course-title-count}
 

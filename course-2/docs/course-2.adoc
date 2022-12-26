@@ -7,22 +7,28 @@ include::../../docs/asciidoc/settings.adoc[]
 *Allgemeine Inhalte*
 
 * Sichtbarkeiten von Klassen, Members, Methoden (Access Modifiers)
-* Methoden überladen, überschreiben
+* Methoden überladen, überschreiben/übersteuern
 * Collections API
 
 *Fachlicher Kontext*
+
+Mögliche Assoziationen/Relationen mit Kardinalitäten
+
 ----
- + Zug 1:n Wagon
- + Zug 1:1 Lokomotive
- + Zug n:m Soll-Fahrplan (Zug 1:n Fahrt 1:n Soll-Fahrplan)
+ + Zug          1:n      Wagon
+ + Zug          1:1      Lokomotive
+ + Zug          n:m      Soll-Fahrplan
+  (=> Zug 1:n Fahrt 1:n Soll-Fahrplan)
 
- + Zug 1:n Fahrplan n:1 Fahrt
- + Zug 1:n Fahrplan n:1 Strecke
+ + Zug          n:m      Strecke
+ + Zug          1:n      Fahrt
+ + Strecke      1:n      Fahrt
+  (=> Zug 1:n Fahrt n:1 Strecke)
 
- + Fahrt 1:n Reisende
- + Zug 1:2 Flügel
- + Streckennetz 1:n Strecke
- + Strecke n:m Abschnitte
+ + Fahrt        1:n      Reisende
+ + Zug          1:2..3   Flügel
+ + Streckennetz 1:n      Strecke
+ + Strecke      n:m      Abschnitte
 ----
 
 
@@ -38,12 +44,49 @@ include::../../docs/asciidoc/settings.adoc[]
 include::{course-2-test}/basics/BasicsTest.java[tags="visibility"]
 ----
 
-
 === Überladen & Überschreiben
 
-IMPORTANT: HIER FORTSETZEN ... SIEHE TEST!
+//IMPORTANT: HIER FORTSETZEN ... SIEHE TEST!
+
+[source,java,title="Beispiel Überladen von Methoden"]
+----
+include::{course-2-src}/basics/overload/PlatformDisplay.java[lines="5..16"]
+----
+
+[plantuml, "overrides", png, float="left"]
+....
+include::diagrams/override.puml[]
+....
+
+[source,java,title="Beispiel Übersteuern von Methoden"]
+----
+include::{course-2-src}/basics/override/Display.java[lines="2..5"]
+----
+
+{nl}
+{nl}
+{nl}
+
+Die zugehörige Markierung im Code ist
+
+ @Override
+
+Sie sollte in jedem Fall genutzt werden, zudem wird sie auch von der IDE vorgeschlagen
 
 
 === Collections API
 
 image::images/collections-api.png["Collections API",width="100%",align="center"]
+
+==== Many-to-Many-Assoziation
+
+DIe folgenden zwei Varianten kommen am häufigsten vor:
+
+[plantuml, "many-to-many", png, align="center"]
+....
+include::diagrams/many-to-many-example-2.puml[]
+....
+
+Siehe Implementierungen für V1 und V2:
+
+ de.dhbw.course2.basics.collections.nm

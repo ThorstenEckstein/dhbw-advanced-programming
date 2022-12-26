@@ -21,8 +21,8 @@ class Route       /' Strecke    '/
 class Timetable   /' Fahrplan   '/
 class Journey     /' (Zug)Fahrt '/
 {
-  Train train
-  Route route
+  Long trainNumber
+  Long routeId
   DateTime departure
 }
 

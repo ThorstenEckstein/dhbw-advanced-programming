@@ -6,5 +6,11 @@ public class Student {
 
     Long id;
 
+    String name;
+
     Set<Course> courses;
+
+    public Student(String name) {
+        this.name = name;
+    }
 }

@@ -6,9 +6,10 @@ include::../../docs/asciidoc/settings.adoc[]
 
 *Allgemeine Inhalte*
 
-* Sichtbarkeiten von Klassen, Members, Methoden (Access Modifiers)
-* Methoden überladen, überschreiben/übersteuern
-* Collections API
+* [ ] Sichtbarkeiten von Klassen, Members, Methoden (Access Modifiers)
+* [ ] Methoden überladen, überschreiben/übersteuern
+* [ ] Collections API
+* [ ] Assoziationen (Beziehungsart "Besitz" im Code, sh. Kurstag 1)
 
 *Fachlicher Kontext*
 
@@ -67,20 +68,33 @@ include::{course-2-src}/basics/override/Display.java[lines="2..5"]
 {nl}
 {nl}
 
-Die zugehörige Markierung im Code ist
+Die zugehörige Annotation im Code ist
 
  @Override
 
 Sie sollte in jedem Fall genutzt werden, zudem wird sie auch von der IDE vorgeschlagen
 
 
-=== Collections API
+=== Collections Framework
+
+Siehe z.B. -> https://en.wikipedia.org/wiki/Java_collections_framework[Java Collections Framework auf Wikipedia]
+
+*Die wichtigsten Auswahlkriterien*:
+
+* Position von Elementen (_numerischer index_)
+* Möglichkeit zur Ordnung von Elementen (z.B. _insertion order_)
+* Möglichkeit von `null` Elementen oder Duplikaten (_Set vs. List_)
+* Zugriff auf Elemente anhand eines Schlüssels (_List vs. Map_)
 
 image::images/collections-api.png["Collections API",width="100%",align="center"]
 
+
+=== Assoziation
+
+
 ==== Many-to-Many-Assoziation
 
-DIe folgenden zwei Varianten kommen am häufigsten vor:
+Die folgenden zwei Varianten kommen am häufigsten vor:
 
 [plantuml, "many-to-many", png, align="center"]
 ....
@@ -90,3 +104,8 @@ include::diagrams/many-to-many-example-2.puml[]
 Siehe Implementierungen für V1 und V2:
 
  de.dhbw.course2.basics.collections.nm
+
+[%collapsible, title="_Exkurs - n:m Relationen in der Datenbank_"]
+====
+image::diagrams/erd.svg[width="80%"]
+====

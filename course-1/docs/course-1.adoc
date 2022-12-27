@@ -67,6 +67,10 @@ Das Interface `Train` sieht dabei wie folgt aus:
 include::{course-1-src}/model/train/Train.java[lines=5..13]
 ----
 
+Für mehr Einblicke in das Modell und die Objekterzeugung, siehe auch
+
+ test/de/dhbw/course1/model/ModelTest.java
+
 === Objektvertrag (object contract)
 
 The Object class defines both the `equals()` and `hashCode()` methods, which means that these two methods are implicitly defined in every Java class, even if they are not implemented explicitly.

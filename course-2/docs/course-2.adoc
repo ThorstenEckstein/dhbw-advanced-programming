@@ -9,7 +9,7 @@ include::../../docs/asciidoc/settings.adoc[]
 * [ ] Sichtbarkeiten von Klassen, Members, Methoden (Access Modifiers)
 * [ ] Methoden überladen, überschreiben/übersteuern
 * [ ] Collections API
-* [ ] Assoziationen (Beziehungsart "Besitz" im Code, sh. Kurstag 1)
+* [ ] Assoziationen (Beziehungsart "Besitz" im Code, sh. auch Kurstag 1)
 
 *Fachlicher Kontext*
 
@@ -105,7 +105,7 @@ Siehe Implementierungen für V1 und V2:
 
  de.dhbw.course2.basics.collections.nm
 
-[%collapsible, title="_Exkurs - n:m Relationen in der Datenbank_"]
+[%collapsible, title="_Exkurs - n:m Relationen in der Datenbank (mit Krähenfuß-Notation)_"]
 ====
 image::diagrams/erd.svg[width="80%"]
 ====

@@ -95,7 +95,10 @@ public class BasicsTest {
 
         // then
         assertTrue(areEqual);
-        logger.log(String.format("%s == %s", train1.hashCode(), train2.hashCode()));
+        logger.log(String.format(
+                "%s == %s",
+                train1.hashCode(),
+                train2.hashCode()));
     }
     //end::object-contract-1[]
 
@@ -111,7 +114,10 @@ public class BasicsTest {
 
         // then
         assertFalse(areEqual);
-        logger.log(String.format("%s != %s", passenger1.hashCode(), passenger2.hashCode()));
+        logger.log(String.format(
+                "%s != %s",
+                passenger1.hashCode(),
+                passenger2.hashCode()));
     }
     //end::object-contract-2[]
 

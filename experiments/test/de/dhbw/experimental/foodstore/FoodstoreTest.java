@@ -11,19 +11,6 @@ public class FoodstoreTest {
     private final Logger logger = new Logger(FoodstoreTest.class);
 
     @Test
-    public void canCreateFoodModel() {
-        // given
-        Product product = mockProduct(
-                FoodGroup.Getreideprodukte,
-                "Dinkelmehl",
-                "13.4.2023");
-
-        // when
-
-        // then
-        logger.log(product);
-    }
-
     public void canSeedFoodStore() {
         // given
         Product product1 = mockProduct(
@@ -46,6 +33,7 @@ public class FoodstoreTest {
         logger.log(store.getProducts());
     }
 
+    @Test
     public void canSortProductsByDate() {
         // given
         Product product1 = mockProduct(

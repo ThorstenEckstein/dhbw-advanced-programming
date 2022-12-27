@@ -2,19 +2,37 @@ package de.dhbw.course1.model;
 
 import de.dhbw.commons.DateTimeUtil;
 import de.dhbw.commons.Logger;
+import de.dhbw.course1.Course1Main;
 import de.dhbw.course1.model.personnel.Driver;
 import de.dhbw.course1.model.personnel.TrainDriver;
 import de.dhbw.course1.model.routes.Route;
 import de.dhbw.course1.model.timetable.Journey;
 import de.dhbw.course1.model.timetable.Timetable;
 import de.dhbw.course1.model.train.Locomotive;
+import de.dhbw.course1.model.train.LongDistanceTrain;
 import de.dhbw.course1.model.train.RegionalTrain;
 import de.dhbw.course1.model.train.Train;
 import org.junit.jupiter.api.Test;
 
-public class JourneyTest {
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-    private final Logger logger = new Logger(JourneyTest.class);
+public class ModelTest {
+
+    private final Logger logger = new Logger(Course1Main.class);
+
+    @Test
+    public void canCreateValidTrainModel() {
+        // given
+        Train train = new LongDistanceTrain();
+        String expected = "AZ02638";
+
+        // when
+        train.setNumber(expected);
+
+        // then
+        assertEquals(expected, train.getNumber());
+        logger.log(train);
+    }
 
     @Test
     public void canBuildJourney() {

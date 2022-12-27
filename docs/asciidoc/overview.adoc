@@ -81,15 +81,16 @@ include::settings.adoc[]
 Asciidoc::
 -> https://docs.asciidoctor.org/asciidoc/latest/[docs.asciidoctor.org]
 
-=== Course 1
+Oracle Java 17 Documentation::
+-> https://docs.oracle.com/en/java/javase/17/docs/api/index.html[docs.oracle.com]
 
-_nothing yet_
-
-=== Course 2
+=== Aus den Kursen
 
 UML Beziehungen::
 -> https://www.ibm.com/docs/de/rational-soft-arch/9.6.1?topic=diagrams-relationships-in-class[Beziehungen in Klassendiagrammen]
 
+Generics::
+-> https://de.wikipedia.org/wiki/Generische_Programmierung_in_Java[Generics on Wikipedia]
 
 //[.dhbw]#ein-test-text#
 //include::examples-from-websites.adoc[]

@@ -1,12 +1,14 @@
 include::../../docs/asciidoc/settings.adoc[]
 
+:toc:
+
 == {course-3}
 
 *Allgemeine Inhalte*
 
-* Generics
-* Streaming API
-* Funktionale Programmierung mit Lambda-Ausdrücken
+* [ ] Generics
+* [ ] Streaming API
+* [ ] Funktionale Programmierung mit Lambda-Ausdrücken
 
 *Fachlicher Kontext*
 ----
@@ -17,13 +19,12 @@ include::../../docs/asciidoc/settings.adoc[]
 
 === Generics
 
-Generische Programmierung in Java ist durch Generics seit langem möglich. Der Begriff steht synonym für „parametrisierte Typen“. Die Idee ist, zusätzliche Variablen für Typen einzuführen. Diese Typ-Variablen repräsentieren zum Zeitpunkt der Implementierung unbekannte Typen. Erst bei der Verwendung der Klassen, Schnittstellen und Methoden werden diese Typ-Variablen durch konkrete Typen ersetzt. Damit kann typsichere Programmierung meistens gewährleistet werden. In der Regel wird die Codemenge durch Generics reduziert (Prinzip: DRY), manchmal wird er allerdings auch schwerer wartbar und abnehmende Lesbarkeit. Die folgenden zwei Varianten finden sich in der Praxis am häufigsten:
+Generische Programmierung in Java ist durch Generics seit langem möglich. Der Begriff steht synonym für "parametrisierte Typen". Die Idee ist, zusätzliche Variablen für Typen einzuführen. Diese Typ-Variablen repräsentieren zum Zeitpunkt der Implementierung unbekannte Typen. Erst bei der Verwendung der Klassen, Schnittstellen und Methoden werden diese Typ-Variablen durch konkrete Typen ersetzt. Damit kann typsichere Programmierung meistens gewährleistet werden. In der Regel wird die Codemenge durch Generics reduziert (Prinzip: `DRY`), manchmal wird er allerdings auch schwerer wartbar und abnehmende Lesbarkeit. Die folgenden zwei Varianten finden sich in der Praxis am häufigsten:
 
 * Java Generics `Klasse`
 * Java Generics `Methode`
 
-See also:
--> https://de.wikipedia.org/wiki/Generische_Programmierung_in_Java[Generics on Wikipedia]
+TIP: [small]#_Viele Beispiele finden sich auch im Collections Framework, etwa die  Interfaces `List<T>` oder `Map<K,V>`. Siehe dazu z.B. -> https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/package-summary.html[Java 17 Package Documentation für `java.util`]!_#
 
 [source,java,lines,title="Beispiel einer generischen Klasse"]
 ----
@@ -31,3 +32,17 @@ include::{course-3-src}/generics/Joiner.java[tag="generic-class"]
 ----
 
 Zeile 1 macht die Klasse generisch, in Zeile 9 wird der unbekannte Typ genutzt.
+
+[source,java,title="Beispiel einer generischen Methode"]
+----
+include::{course-3-src}/generics/Printer.java[tag="generic-method"]
+----
+
+
+=== Streaming (API)
+
+{tbd}
+
+
+=== Funktionale Programmierung
+

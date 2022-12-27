@@ -81,4 +81,23 @@ public class GenericsTest {
         assertEquals("Ronaldo", output3);
     }
 
+    @Test
+    public void canUseBoundedGenericMethod() {
+        // given
+        Printer printer = new Printer();
+
+        Person person1 = new Person("Messi");
+        Person person2 = new NaturalPerson("Ronaldo");
+        String person3 = "Neymar";
+
+        // when
+        String output1 = printer.format(person1);
+        String output2 = printer.format(person2);
+        //String output3 = printer.format(person3);
+
+        // then
+        assertEquals("Messi", output1);
+        assertEquals("NaturalPerson: Ronaldo", output2);
+    }
+
 }

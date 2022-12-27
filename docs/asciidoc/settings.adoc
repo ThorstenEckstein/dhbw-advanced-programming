@@ -29,3 +29,27 @@
 
 :course-2-src: ../src/de/dhbw/course2
 :course-2-test: ../test/de/dhbw/course2
+
+:course-3-src: ../src/de/dhbw/course3
+:course-3-test: ../test/de/dhbw/course3
+
+:course-4-src: ../src/de/dhbw/course4
+:course-4-test: ../test/de/dhbw/course4
+
+:course-5-src: ../src/de/dhbw/course5
+:course-5-test: ../test/de/dhbw/course5
+
+:course-6-src: ../src/de/dhbw/course6
+:course-6-test: ../test/de/dhbw/course6
+
+:course-7-src: ../src/de/dhbw/course7
+:course-7-test: ../test/de/dhbw/course7
+
+:course-8-src: ../src/de/dhbw/course8
+:course-8-test: ../test/de/dhbw/course8
+
+:course-9-src: ../src/de/dhbw/course9
+:course-9-test: ../test/de/dhbw/course9
+
+:course-10-src: ../src/de/dhbw/course10
+:course-10-test: ../test/de/dhbw/course10

@@ -82,6 +82,40 @@ include::{course-3-test}/streaming/StreamingTest.java[tag="reduce-example"]
  course-3/test/de/dhbw/course3/study/MyStudyTests.java
 
 
-=== Funktionale Programmierung
+=== Funktionale Programmierung mit Lambda Ausdrücken
 
-{tbd}
+Funktionale Programmierung ist ein *Programmierparadigma*, in dem Funktionen im Mittelpunkt stehen, sie werden nicht nur definiert und angewendet, sondern auch wie Daten miteinander verknüpft, als Parameter verwendet und als Funktionsergebnisse genutzt.
+
+Seit Java 8 sind Elemente aus der funktionalen Programmierung in der Sprache enthalten. Ermöglicht werden sie durch die *Lambda-Ausdrücke*, sowie - wie bereits gesehen - die Streams.
+
+Die einfachste Form eines Lambda Ausdruckes ist:
+
+ parameter -> expression
+
+Um mehr als einen Parameter zu nutzen, werden runde Klammern erforderlich:
+
+ (parameter1, parameter2) -> expression
+
+Weil die Ausdrücke limitiert sind und direkt einen Wert zurückgeben, kann auch ein Code-Block genutzt werden:
+
+ (parameter1, parameter2) -> { code block }
+
+Zu beachten ist, dass der `{ code block }` ein return statement enthalten muss.
+
+Die Beispiele finden sich in
+
+ course-3/test/de/dhbw/course3/lambda/LambdaTest.java
+
+z.B. für den Gebrauch in *Listen*:
+
+[source,java,title="Lamdba Ausdrücke"]
+----
+include::{course-3-test}/lambda/LambdaTest.java[tag="lambda-example-1"]
+----
+
+Und eines für einen *fachlichen* Nutzen:
+
+[source,java,title="Lamdba Ausdrücke"]
+----
+include::{course-3-test}/lambda/LambdaTest.java[tag="lambda-example-2"]
+----

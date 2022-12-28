@@ -41,8 +41,47 @@ include::{course-3-src}/generics/Printer.java[tag="generic-method"]
 
 === Streaming (API)
 
-{tbd}
+Zur verbesserten Verarbeitung von "Listen" in Java wurden spezielle Methoden durch "streaming" mit Java 8 eingeführt. Häufig wird der Begriff `filter-map-reduce` genutzt, um diese Möglichkeiten zusammenzufassen.
+
+Beispiele siehe
+
+ course-3/test/de/dhbw/course3/streaming/StreamingTest.java
+
+`Filter`
+
+Bei der Anwendung mehrerer oder komplexer Filteroperationen sollte die Performanz beachtet werden. Hier eine Einschätzung:
+
+.Performanz bei komplexen Filteroperationen
+image::images/FilterPerformance.png[width="100%",align="center"]
+
+`Map`
+
+_"Mapping"_ Operationen auf Listen transformieren diese. Methoden oder Klassen, deren Zweck die Abbildung von Klassen in andere Strukturen implementieren, werden häufig _"mapping"_ Methoden genannt, daher hier dieser Term hier ebenfalls genutzt.
+
+Besonders die Veränderung der Datentypen der Listenelemente ist ein wichtiger Anwendungsfall beim Einsatz von `map(...)`.
+
+`Reduce`
+
+`Stream.reduce()` Operation reduzieren die Ausgangsdatenmenge. Dies erfolgt in Teilschritten:
+
+* `Identity` – Ein Element mit einem initialen Wert für die Reduktionsoperation und der "default return value" wenn der Stream leer sein sollte.
+* `Accumulator` – Eine Funktion mit zwei Parametern: ein Teilergebnis der Reduktionsoperation und das nächste Element des Streams.
+* `Combiner` – Eine Funktion um die Teilergebnisse (der Reduktionsoperation) zu kombinieren wenn `reduce` parallelisiert wird.
+
+Richtig nutzbringend ist oft erst die Kombination `filter`, `map` und `reduce` Operationen, um aus Daten *Informationen* zu gewinnen.
+
+Dazu ein Beispiel:
+
+[source,java,title="Beispiel einer reduce() Operation"]
+----
+include::{course-3-test}/streaming/StreamingTest.java[tag="reduce-example"]
+----
+
+Übung am Beispiel - Warenkorb mit Produkten:
+
+ course-3/test/de/dhbw/course3/study/MyStudyTests.java
 
 
 === Funktionale Programmierung
 
+{tbd}

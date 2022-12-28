@@ -27,6 +27,42 @@ public class DateTimeUtil {
     }
 
     /**
+     *
+     * @param dateTime the simple date formatted as: <pre>dd.mm.yyyy</pre>.
+     * @return the zoned date time instance
+     */
+    public static ZonedDateTime from(String dateTime) {
+        String[] dateTimeParts = dateTime.split("\\.");
+        return ZonedDateTime.of(
+                Integer.parseInt(dateTimeParts[2]),
+                Integer.parseInt(dateTimeParts[1]),
+                Integer.parseInt(dateTimeParts[0]),
+                0,
+                0,
+                0,
+                0,
+                ZoneId.systemDefault());
+    }
+
+    /**
+     * Returns the date time as a simplified string: dd/mm/yyyy
+     * @param zonedDateTime the date time instance
+     * @return the converted & simplified date time instance
+     */
+    public static String asSimpleStringWithTime(ZonedDateTime zonedDateTime) {
+        if (zonedDateTime != null) {
+            return String.format(
+                    "%s.%s.%s %s:%s",
+                    zonedDateTime.getDayOfMonth(),
+                    zonedDateTime.getMonthValue(),
+                    zonedDateTime.getYear(),
+                    zonedDateTime.getHour(),
+                    zonedDateTime.getMinute());
+        }
+        return "not-set";
+    }
+
+    /**
      * Returns the date time as a simplified string: dd/mm/yyyy
      * @param zonedDateTime the date time instance
      * @return the converted & simplified date time instance
@@ -40,19 +76,6 @@ public class DateTimeUtil {
                     zonedDateTime.getYear());
         }
         return "not-set";
-    }
-
-    public static ZonedDateTime from(String dateTime) {
-        String[] dateTimeParts = dateTime.split("\\.");
-        return ZonedDateTime.of(
-                Integer.parseInt(dateTimeParts[2]),
-                Integer.parseInt(dateTimeParts[1]),
-                Integer.parseInt(dateTimeParts[0]),
-                0,
-                0,
-                0,
-                0,
-                ZoneId.systemDefault());
     }
 
     /*

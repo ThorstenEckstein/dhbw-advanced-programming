@@ -22,6 +22,7 @@ include::../../docs/asciidoc/settings.adoc[]
 - [ ] Referenzsemantik
 
 === Fachlicher Kontext
+
 ----
 Vorbereitung: Darstellung des fachlichen Kontextes
 
@@ -36,7 +37,13 @@ Vorbereitung: Darstellung des fachlichen Kontextes
  + Dispositionsmaßnahme (z.B. Umleitung)
 ----
 
-Zur Erläuterung:
+Der Zugbetrieb kann grundsätzlich unterteilt werden in:
+
+. *infrastrukturelle* Sicht (_Stammdaten_)
+. *planerische* Sicht auf den Betrieb (_Bewegungsdaten, SOLL_)
+. *operative* Sicht auf den Betrieb (_Bewegungsdaten, IST_)
+
+Ein paar Begriffe in der Übericht:
 
 image::diagrams/business-model.svg["Fachbegriffe",width="75%",align="center"]
 
@@ -55,10 +62,20 @@ image::diagrams/business-model.svg["Fachbegriffe",width="75%",align="center"]
 
 Überblick über das grundsätzliche *Fachklassenmodell*:
 
+*Infrastrukturelle* Sicht:
+
 [plantuml, "Klassenmodell", png, align="center"]
 ....
-include::diagrams/business-model.puml[]
+include::diagrams/business-model-ist.puml[]
 ....
+
+*Planerische* Sicht:
+
+[plantuml, "Klassenmodell", png, align="center"]
+....
+include::diagrams/business-model-soll.puml[]
+....
+
 
 Das Interface `Train` sieht dabei wie folgt aus:
 

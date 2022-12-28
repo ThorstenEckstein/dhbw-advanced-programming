@@ -1,6 +1,11 @@
 @startuml
 'https://plantuml.com/class-diagram
 
+'
+' This model represents the planning view from the timetable perspective
+' This is internally known as the "IST" view
+'
+
 'skinparam groupInheritance 2
 
 scale 0.8

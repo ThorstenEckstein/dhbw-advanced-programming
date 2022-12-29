@@ -59,11 +59,9 @@ public abstract class AbstractProduct implements Food {
 
     @Override
     public String toString() {
-        return "Product{" +
-                "name='" + name + '\'' +
-                ", foodGroup=" + foodGroup +
-                ", bestBeforeDate=" + DateTimeUtil.asSimpleString(bestBeforeDate) +
-                '}';
+        return name +
+                " {foodGroup=" + foodGroup.getOriginal() +
+                ", bestBeforeDate=" + DateTimeUtil.asSimpleString(bestBeforeDate) + '}';
     }
 
 }

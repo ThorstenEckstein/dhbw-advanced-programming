@@ -1,0 +1,31 @@
+Warengruppe;Produkt;Anzahl;Menge;ME;Ablaufdatum;in Tagen;<30;<90;<180;>180
+Getreideprodukte;Weizenvollkornmehl;2;1000;g;17.03.2023;78;;x;;
+Getreideprodukte;Dinkelvollkornmehl;2;1000;g;22.01.2023;24;x;;;
+Fischerzeugnisse;Fischfilet Mango Curry;1;200;g;27.05.2026;1245;;;;x
+Fischerzeugnisse;Fischfilet BBQ;1;200;g;;;;;;
+Getreideprodukte;Reis Basmati Bio;1;500;g;31.03.2024;458;;;;x
+Getreideprodukte;Reis Basmati Aromatisch;1;1000;g;31.10.2024;672;;;;x
+Getreideprodukte;Haferflocken Bio;1;500;g;27.10.2023;302;;;;x
+Getreideprodukte;Dinkelflocken Bio;1;500;g;08.08.2023;222;;;;x
+Getreideprodukte;Dinkelvollkorn Fussili Bio;1;500;g;11.10.2025;1017;;;;x
+Getreideprodukte;Dinkel Bandnudel;1;500;g;02.11.2025;1039;;;;x
+Getreideprodukte;Vollkornspaghetti Bio;1;500;g;26.04.2025;849;;;;x
+Hülsenfruechte, Schalenobst;Grüne Linsen;1;500;g;28.02.2024;426;;;;x
+Süßwaren;Edelnussmix Bio;1;200;g;08.06.2023;161;;;x;
+Süßwaren;Studentenfutter;1;200;g;20.06.2023;173;;;x;
+Gewürze;Jodsalz;1;500;g;02.05.2025;855;;;;x
+Zucker;Zucker Fein;1;1000;g;;;;;;
+Kaffee;Kaffee Melitta Harmonie;2;500;g;21.09.2023;266;;;;x
+Fette, Öle;Rapsöl;1;750;ml;30.04.2023;122;;;x;
+Fertiggerichte;Linseneintopf;1;800;g;31.12.2025;1098;;;;x
+Fertiggerichte;Möhreneintopf mit Fleischbällchen;1;800;g;31.12.2025;1098;;;;x
+Fertiggerichte;Erbseneintopf mit Würstchen;1;800;g;31.12.2025;1098;;;;x
+Fertiggerichte;Grüner Bohneneintopf, vegetarisch;1;800;g;31.12.2025;1098;;;;x
+Obsterzeugnisse;Aprikosen, Dose;1;820;g;24.06.2025;908;;;;x
+Obsterzeugnisse;Birnen, Dose;1;820;g;31.12.2024;733;;;;x
+Obsterzeugnisse;Pfirsiche, Dose;1;820;g;22.08.2026;1332;;;;x
+Gemüseerzeugnisse;Apfelrotkohl, Glas;1;680;g;15.12.2024;717;;;;x
+Gemüseerzeugnisse;Erbsen und Möhrchen, Glas;1;660;g;31.12.2026;1463;;;;x
+Gemüseerzeugnisse;Grünkohl, Glas;1;660;g;15.12.2025;1082;;;;x
+Obsterzeugnisse;Pflaumen, Glas;1;680;g;17.09.2024;628;;;;x
+Sonstiges;Toilettenpapier, Rollen;26;;;;;;;;

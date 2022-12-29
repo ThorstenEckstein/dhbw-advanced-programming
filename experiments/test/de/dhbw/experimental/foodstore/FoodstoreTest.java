@@ -4,11 +4,25 @@ import de.dhbw.commons.DateTimeUtil;
 import de.dhbw.commons.Logger;
 import org.junit.jupiter.api.Test;
 
+import java.util.Set;
+
 import static de.dhbw.experimental.foodstore.MockFactory.mockProduct;
 
 public class FoodstoreTest {
 
     private final Logger logger = new Logger(FoodstoreTest.class);
+
+    @Test
+    public void canReadDataFromCsvFile() {
+        // given
+        DataLoader loader = new DataLoader();
+
+        // when - files are searched relative to module root 'experiments'
+        Set<Product> data = loader.load("resources/Vorratsliste.csv");
+
+        // then
+        logger.log(data);
+    }
 
     @Test
     public void canSeedFoodStore() {

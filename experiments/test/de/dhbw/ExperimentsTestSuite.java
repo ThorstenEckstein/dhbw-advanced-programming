@@ -1,4 +1,4 @@
-package de.dhbw.experimental;
+package de.dhbw;
 
 import org.junit.platform.suite.api.SelectPackages;
 import org.junit.platform.suite.api.Suite;

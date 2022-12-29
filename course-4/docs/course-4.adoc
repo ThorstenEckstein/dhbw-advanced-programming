@@ -31,3 +31,9 @@ include::../../docs/asciidoc/settings.adoc[]
 
 {tbd}
 
+*Übungen*:
+
+In der folgenden Testklasse finden sich kleine Übungen im Kontext von Enumerations:
+
+ course-4/test/de/dhbw/course4/exam/ExamTest.java
+

@@ -52,7 +52,7 @@ public class DateTimeUtil {
     public static String asSimpleStringWithTime(ZonedDateTime zonedDateTime) {
         if (zonedDateTime != null) {
             return String.format(
-                    "%s.%s.%s %s:%s",
+                    "%02d.%02d.%d %02d:%02d",
                     zonedDateTime.getDayOfMonth(),
                     zonedDateTime.getMonthValue(),
                     zonedDateTime.getYear(),
@@ -70,7 +70,7 @@ public class DateTimeUtil {
     public static String asSimpleString(ZonedDateTime zonedDateTime) {
         if (zonedDateTime != null) {
             return String.format(
-                    "%s/%s/%s",
+                    "%02d.%02d.%d",
                     zonedDateTime.getDayOfMonth(),
                     zonedDateTime.getMonthValue(),
                     zonedDateTime.getYear());

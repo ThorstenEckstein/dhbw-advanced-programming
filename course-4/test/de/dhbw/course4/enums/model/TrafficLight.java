@@ -1,4 +1,4 @@
-package de.dhbw.exam.course4;
+package de.dhbw.course4.enums.model;
 
 /*
 
@@ -31,6 +31,11 @@ package de.dhbw.exam.course4;
 */
 
 public enum TrafficLight {
+
+    // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    // Exercise 3                                  !!!!!
+    // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
     Red, DarkRedYellow, LightRedYellow, Yellow, Green;
 
     public static boolean canBePassed(String state) {

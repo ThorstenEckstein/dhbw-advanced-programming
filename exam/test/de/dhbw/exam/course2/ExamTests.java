@@ -1,19 +1,19 @@
-package de.dhbw.course2.exam;
+package de.dhbw.exam.course2;
 
 import de.dhbw.commons.Logger;
-import de.dhbw.exam.Course2Answers;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
-import static de.dhbw.exam.Course2Answers.*;
+import static de.dhbw.exam.course2.ExamAnswers.*;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+@DisplayName("Course 2 ExamTests")
 public class ExamTests {
 
     private final Logger logger = new Logger(ExamTests.class);
 
-    private final Course2Answers correctAnswers = new Course2Answers();
+    private final ExamAnswers correctAnswers = new ExamAnswers();
 
     @DisplayName(
         """

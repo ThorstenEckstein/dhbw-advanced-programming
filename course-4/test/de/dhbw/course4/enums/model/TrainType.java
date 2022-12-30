@@ -1,4 +1,4 @@
-package de.dhbw.exam.course4;
+package de.dhbw.course4.enums.model;
 
 import java.util.Arrays;
 

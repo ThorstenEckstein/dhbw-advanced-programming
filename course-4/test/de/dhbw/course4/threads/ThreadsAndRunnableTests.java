@@ -1,4 +1,4 @@
-package de.dhbw.course4.runnable;
+package de.dhbw.course4.threads;
 
 import de.dhbw.commons.Logger;
 import de.dhbw.course4.Course4Main;
@@ -8,7 +8,7 @@ import de.dhbw.course4.model.Train;
 import de.dhbw.course4.model.Trip;
 import org.junit.jupiter.api.Test;
 
-public class RunnableTest {
+public class ThreadsAndRunnableTests {
 
     private final Logger logger = new Logger(Course4Main.class);
     TripBuilder builder = new TripBuilder();

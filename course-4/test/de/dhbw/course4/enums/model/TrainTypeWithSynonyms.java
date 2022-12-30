@@ -1,15 +1,13 @@
-package de.dhbw.exam.course4;
+package de.dhbw.course4.enums.model;
 
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
-
-// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-// Exercise 2                                  !!!!!
-// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 public enum TrainTypeWithSynonyms {
 
+    // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    // Exercise 2                                  !!!!!
+    // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
     RegionalTrain(List.of(
             "Regionalzug",

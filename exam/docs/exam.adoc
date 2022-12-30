@@ -1,0 +1,18 @@
+include::../../docs/asciidoc/settings.adoc[]
+
+:toc:
+
+
+=== Teil 1 - Praxis
+
+Anwendungsbeispiel/Szenario
+
+* Klassenmodell nach Beschreibung durch "Kunde"
+* Diskussion über das Modell
+
+=== Teil 2 - Theorie
+
+Interview wie in einem Bewerbungsgespräch
+
+* Wissensfragen
+* Übungsaufgaben

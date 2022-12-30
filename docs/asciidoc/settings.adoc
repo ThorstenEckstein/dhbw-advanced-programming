@@ -1,3 +1,7 @@
+// NOTES:
+// - The asciidoc intention "errors in source code blocks" is disabled
+//   (see asciidoc plugin intention settings, Settings > Editor Intentions)
+
 // document settings
 :icons: font
 :sectnums:

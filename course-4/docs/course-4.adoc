@@ -6,8 +6,8 @@ include::../../docs/asciidoc/settings.adoc[]
 
 *Allgemeine Inhalte*
 
-* [ ] Thread
-* [ ] Runnable
+* [ ] Thread & Runnable
+* [ ] synchronized
 * [ ] Enumerations
 
 *Fachlicher Kontext*
@@ -17,19 +17,79 @@ include::../../docs/asciidoc/settings.adoc[]
 ----
 
 
-=== Thread
+=== Thread & Runnable
 
-{tbd}
+*Threads* erlauben einer Applikation mehrere Operationen gleichzeitig und effizient auszuführen. Das wird häufig genutzt, um komplexe, langwierige oder performanzlastige Operationen wie z.B. IO-Operationen im Hintergrund auszuführen, ohne dass der "Hauptablauf" der Applikation unterbrochen werden muss.
+
+Threads durchschreiten einen Lebenszyklus, die den Beispielen finden sich Methodenaufrufe, die entsprechend den Zustandstransitionen benannt sind, z.B. `start()`.
+
+.Thread Lifecycle
+image::images/ThreadLifecycle.jpeg["Lifecycle",width="80%",align="center"]]
+
+Die wichtigsten *Klassen* für die Implementierung sind dabei
+
+* `Thread` und
+* `Runnable`
+
+Dazu ein paar Begriffe & Erläuterungen als Übersicht:
+
+image::diagrams/threads.svg["Threads",width="100%",align="center"]
+
+Beispiele für die Erzeugung, Start und Stopp finden sich im Package
+
+ course-4/src/de/dhbw/course4/threads (/ex1 bis /ex8)
 
 
-=== Runnable
+=== Synchronized
 
-{tbd}
+Vereinfacht ausgedrückt können, in einer _multi-threaded_ Umgebung, sogenannte *race conditions* vorkommen, wenn zwei oder mehr Threads zur gleichen Zeit versuchen, Daten zu aktualisieren, die in einem gemeinsam genutzten Speicher vorhanden sind.
+
+Java bietet zur Vermeidung dieses Problems den Mechanismus der *Synchronisierung* bzw. des *synchronisierten Zugriffs auf geteilte Daten* durch Threads an.
+
+Durch die Verwendung von des Schlüsselwortes `synchronized` kann nur ein einziger Thread auf den markierten Codeabschnitt (oder die Methode) zugreifen, er hat sozusagen exklusiven Zugriff für dessen Prozessierung.
+
+Dazu gibt es im Wesentlichen zwei Wege:
+
+1. In der *Methodensignatur*
+
+[source, java, lines]
+----
+public synchronized File load(String fileName) {
+    // code that loads the specified file
+    // ...
+}
+----
+
+1. Als *Codeblock*
+
+[source, java, lines]
+----
+public File load(String fileName) {
+    synchronized(this) {
+        // code that loads the specified file
+        // ...
+    }
+}
+----
+[small]#_Zeile 2: `this` ist die Referenz auf die Instanz der umgebenden Klasse (das Monitor-Objekt)_#
 
 
 === Enumerations
 
-{tbd}
+`Enumerations` sind vordefinierte *Wertelisten* und können typsicher genutzt werden.
+
+Die Werte haben ein *Ordinal* (Index), beginnend mit `0`, und können automatisch von einem String in den gleichlautenden Enum-Wert umgewandelt werden.
+
+[source, java]
+----
+public enum Color {
+    Red,   // ordinal 0
+    Green, // ordinal 1
+    Blue;  // ordinal 2
+}
+
+Color blue = Color.valueOf("Blue");
+----
 
 *Übungen*:
 

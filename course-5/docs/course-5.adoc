@@ -2,6 +2,7 @@ include::../../docs/asciidoc/settings.adoc[]
 
 == {course-5}
 
+////
 *Allgemeine Inhalte*
 
 * Beziehungen zwischen Systemen oder Komponenten (Call, ...)
@@ -13,9 +14,54 @@ include::../../docs/asciidoc/settings.adoc[]
 * asynchron
 ** publish/subscribe
 ** fire & forget
+////
 
-*Fachlicher Kontext*
-----
- + eher Theorie
- + Übungsaufgabe?
-----
+Ganz allgemein umfasst der Begriff *Integration* das Ziel, verschiedene Applikationen zusammen arbeiten zu lassen, um einen einheitlichen Satz an Funktionalität bereitzustellen. Hierbei werden viele Teilbereiche berührt, z.B.
+
+* Integration auf verschiedenen *Ebenen* (Mikro- bis Makro)
+* Integration mit unterschiedlichen *Technologien* (Frameworks, Protokolle)
+* Verschiedene Integrations*zwecke* (Daten, Funktionen)
+* Integration durch unterschiedliche *Stile* (Methoden, Architekturen)
+
+*Was kann miteinander integriert werden?*
+
+So gut wie alles, d.h. unter anderem ...
+
+image::diagrams/integration-overview.svg[width="100%"]
+
+
+=== Kriterien
+
+Um Daten, Funktionen, Services oder Anwendungen integrieren zu können, müssen viele Aspekte beachtet werden. Eine *gute Integration* muss entsprechend all die Erfordernisse, Komplexitäten Konsequenzen berücksichtigen. D.h., die Auswahl dessen, "was" und "wie" integriert wird, bedarf einer guten Entscheidungsgrundlage. Die folgenden *Kriterien* helfen bei diesen Überlegungen:
+
+Standalone vs. Distributed::
+Muss überhaupt integriert werden?
+
+Lose vs. enge Kopplung (Grad der Integration)::
+Wie viele Dinge/Aspekte und wie "eng" muss integriert werden? Wie unabhängig sind die integrierten Komponenten. Wie unabhängig sollen/müssen diese überhaupt sein? (Prinzip: _Loose Coupling_)
+
+Simpel vs. Komplex (Einfachheit der Integration)::
+Je komplexer eine Integration ist, desto schwieriger wird die Wartung und Weiterentwicklung sein. Das ist besonders dann relevant, wenn die integrierten Komponenten von unterschiedlichen Teams entwickelt werden. Also, je simpler, desto eher kann das "Zusammenwirken" der integrierten Teile evolvieren.
+(Prinzip: _Minimum Impact_)
+
+Technologie::
+Welche Technologie soll/muss genutzt werden. Hier gibt es eine starke Abhängigkeit vom "Use Case" bzw. von den Erfordernissen der Fachlichkeit.
+
+_Beispiel: Ein Überwachungssystem von Zügen muss Echtzeitdaten verarbeiten, d.h. alle Integrationsaspekte müssen diese Echtzeitverarbeitung ebenfalls unterstützen, wodurch die Auswahl der möglichen Technologien eingeschränkt wird._
+
+Datenformat::
+Integrierte Applikationen müssen sich in aller Regel über die ausgetauschten Daten einigen, entsprechend ist zu entscheiden, ob die übertragenen Daten einen "Vertrag" oder ein "Protokoll" erfüllen müssen oder ob es nur simple Daten ohne große Struktur handelt. Bestimmte Technologien adressieren diesen Punkt, z.B. _OpenAPI_ oder _Avro_.
+
+Datenaktualität::
+Wann und wie häufig (Frequenz) sollen integrierte System miteinander kommunizieren?
+
+Daten vs. Funktionen::
+Siehe Diagramm oben. Was muss integriert werden. Sind es nur (z.B. gemeinsam genutzte) Daten in einer Datenbank oder sollen ganze Services nutzbar sein?
+
+Synchron vs. Asynchron::
+Müssen Integrationsprozesse (Aufrufe) direkt beantwortet werden oder kann die Anfrage von der Antwort entkoppelt werden, sodass sie zeitlich nicht voneinander abhängig sind?
+
+_Zwei bekannte Beispiele für ..._
+
+* synchrone Kommunikation: `RESTful Webservices`
+* asynchrone Kommunikation: `Messaging`

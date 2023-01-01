@@ -94,6 +94,9 @@ Lambdas::
 Funktionale Interfaces::
 -> https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/package-summary.html[docs.oracle.com für `java.util.function`]
 
+Integration::
+-> https://www.amazon.de/s?k=enterprise+integration+patterns+deutsch&i=stripbooks&crid=28SN4MQVVJUZV&sprefix=enterprise+integration+patterns%2Cstripbooks%2C74&ref=nb_sb_ss_fb_1_31[Edison Wesley: Enterprise Integration Patterns]
+
 //[.dhbw]#ein-test-text#
 //include::examples-from-websites.adoc[]
 

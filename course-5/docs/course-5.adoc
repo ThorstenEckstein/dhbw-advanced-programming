@@ -20,7 +20,7 @@ Ganz allgemein umfasst der Begriff *Integration* das Ziel, verschiedene Applikat
 
 * Integration auf verschiedenen *Ebenen* (Mikro- bis Makro)
 * Integration mit unterschiedlichen *Technologien* (Frameworks, Protokolle)
-* Verschiedene Integrations*zwecke* (Daten, Funktionen)
+* Unterschiedliche Integrations-*Zwecke* (Daten, Funktionen)
 * Integration durch unterschiedliche *Stile* (Methoden, Architekturen)
 
 *Was kann miteinander integriert werden?*
@@ -65,3 +65,26 @@ _Zwei bekannte Beispiele für ..._
 
 * synchrone Kommunikation: `RESTful Webservices`
 * asynchrone Kommunikation: `Messaging`
+
+
+=== Integrationsoptionen bzw. -muster
+
+
+. *File Transfer*. Wenn eine Anwendung Dateien für andere bereitstellen will, so können diese einfach ausgetauscht werden. Viele Im- und Export-Prozesse nutzen dieses Muster.
+
+image::images/FileTransfer.png[width="40%"]
+
+[start=2]
+. *Shared Database*. Daten können - quasi im Hintergrund - einfach über eine gemeinsam genutzte Datenbank "ausgetauscht" werden. Hieraus ergeben sich natürlich weitere Fragestellungen, wie etwa die Einhaltung des ACID Prinzips (_Atomicity, Consistency, Isolation und Durability_).
+
+image::images/SharedDatabase.png[width="40%"]
+
+[start=3]
+. *Remote Procedure Invocation*. Wenn nicht Daten, sondern _"Verhalten"_ bereitgestellt werden, so können dieses von anderen Applikationen genutzt werden. Das Verhalten kann bspw. als Funktionen, Algorithmen, Logiken, Services oder ganze Geschäftsprozesse implementiert sein. Die Nutzung erfolgt dabei i.d.R. "remote", kann aber natürlich auch innerhalb einer Software auf diese Weise realisiert werden (z.B. über _"Service Meshes"_).
+
+image::images/RemoteProcedureInvocation.png[width="40%"]
+
+[start=4]
+. *Messaging*. Verteilte, unabhängige Systeme kommunizieren über eine (zentrale, gemeinsame) Messaging Plattform. Hier können sowohl Daten als auch Funktionen Gegenstand der Kommunikation sein.
+
+image::images/Messaging.png[width="40%"]

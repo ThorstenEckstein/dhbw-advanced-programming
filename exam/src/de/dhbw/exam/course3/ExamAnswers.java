@@ -1,11 +1,14 @@
 package de.dhbw.exam.course3;
 
+import de.dhbw.exam.Answer;
 import de.dhbw.exam.Answers;
 
 public class ExamAnswers extends Answers {
 
     static {
-        // put answers here
+        answers.put(Q1, Answer.from("B", "You cannot create a static field of the type parameter T"));
+
+        // put more answers here
     }
 
 }

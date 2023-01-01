@@ -1,6 +1,7 @@
 package de.dhbw.exam.course1;
 
 import de.dhbw.commons.Logger;
+import de.dhbw.exam.Answer;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
@@ -46,10 +47,10 @@ public class ExamTests {
     @ParameterizedTest
     public void question1(String studentAnswer) {
         // given
-        String correctAnswer = correctAnswers.of(Q1);
+        Answer correctAnswer = correctAnswers.of(Q1);
 
         // when
-        boolean isCorrect = studentAnswer.equals(correctAnswer);
+        boolean isCorrect = studentAnswer.equals(correctAnswer.getLetter());
 
         // then
         assertTrue(isCorrect, butMaybeWrong(Q1, studentAnswer));
@@ -68,10 +69,10 @@ public class ExamTests {
     @ParameterizedTest
     public void question2(String studentAnswer) {
         // given
-        String correctAnswer = correctAnswers.of(Q2);
+        Answer correctAnswer = correctAnswers.of(Q2);
 
         // when
-        boolean isCorrect = studentAnswer.equals(correctAnswer);
+        boolean isCorrect = studentAnswer.equals(correctAnswer.getLetter());
 
         // then
         assertTrue(isCorrect, butMaybeWrong(Q2, studentAnswer));

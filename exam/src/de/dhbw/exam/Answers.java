@@ -16,22 +16,16 @@ public class Answers {
     public static final String Q9 = "Q9";
     public static final String Q10 = "Q10";
 
-    protected static final Map<String, Object> answers = new HashMap<>();
+    protected static final Map<String, Answer> answers = new HashMap<>();
 
-    public String of(String key) {
-        Object _value = answers.get(key);
+    public Answer of(String question) {
+        Answer _value = answers.get(question);
 
         if (_value == null) {
             throw new NullPointerException(
-                    "Missing answer for question: " + key);
+                    "Missing answer for question: " + question);
         }
-
-        if (_value instanceof String) {
-            return (String)_value;
-        } else {
-            throw new RuntimeException(
-                    "Invalid answer type found: " + _value.getClass().getCanonicalName());
-        }
+        return _value;
     }
 
     public static String butMaybeWrong(String question, Object studentAnswer) {

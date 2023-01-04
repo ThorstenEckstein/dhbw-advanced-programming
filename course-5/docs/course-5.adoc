@@ -71,7 +71,6 @@ _Zwei bekannte Beispiele für ..._
 
 === Integrationsoptionen bzw. -muster
 
-
 . *File Transfer*. Wenn eine Anwendung Dateien für andere bereitstellen will, so können diese einfach ausgetauscht werden. Viele Im- und Export-Prozesse nutzen dieses Muster.
 
 image::images/FileTransfer.png[width="40%"]

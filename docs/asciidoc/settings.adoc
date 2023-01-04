@@ -15,6 +15,9 @@
 //  -> https://docs.asciidoctor.org/asciidoc/latest/pass
 :nl: pass:[<br/>]
 :tbd: pass:n[[blue]#_to be continued here ..._#]
+//:example: pass:[&#63;]
+//:example-caption: {example}
+
 
 // content settings
 :course-title-count: {counter:course-title-count}

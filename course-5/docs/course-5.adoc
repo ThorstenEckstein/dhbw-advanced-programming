@@ -65,8 +65,8 @@ Müssen Integrationsprozesse (Aufrufe) direkt beantwortet werden oder kann die A
 
 _Zwei bekannte Beispiele für ..._
 
-* synchrone Kommunikation: `RESTful Webservices`
-* asynchrone Kommunikation: `Messaging`
+* synchrone Kommunikation: `<<_restful_webservices>>`
+* asynchrone Kommunikation: `<<_messaging>>`
 
 
 === Integrationsoptionen bzw. -muster
@@ -102,8 +102,9 @@ APIs, die dem REST-Architekturstil folgen, werden als RESTful APIs bezeichnet. W
 Die wichtigsten *Charakteristiken* sind:
 
 * Aufrufe und Antworten erfolgen über `HTTP(S)` (Request-Response-Cycle)
-* Einheitliche Schnittstelle (konventionelle Ressourcen-URLs)
-* Es werden die Standard HTTP Operation genutzt (`GET, PUT, POST, DELETE, ...`)
+* Einheitliche Schnittstelle (konventionelle URLs)
+* Bereitstellung von *Ressourcen* (nicht von Funktionen/Operationen)
+* Die Standard *HTTP Operation* bilden die _Funktionalität_ ab (`GET, PUT, POST, DELETE, ...`)
 * Zustandslosigkeit (Idempotenz)
 * Cache-Fähigkeit
 * Clients können die Form der Antwort steuern (`Media-Types`)
@@ -155,12 +156,8 @@ public class SystemDataController extends AbstractController {
     /**
      * Creates a new system.
      */
-    @PostMapping(
-            consumes = APPLICATION_JSON_VALUE
-    )
-    @ResponseStatus(
-            HttpStatus.CREATED
-    )
+    @PostMapping(consumes = APPLICATION_JSON_VALUE)
+    @ResponseStatus(HttpStatus.CREATED)
     public String create(@RequestBody SystemDataRepresentation resource) {
         assertNotAlreadyPersistent(resource.getId());
         System system = toEntity(resource);
@@ -174,9 +171,7 @@ public class SystemDataController extends AbstractController {
             value = "/{id}",
             consumes = APPLICATION_JSON_VALUE
     )
-    @ResponseStatus(
-            HttpStatus.OK
-    )
+    @ResponseStatus(HttpStatus.OK)
     public void update(@PathVariable("id") String id, @RequestBody SystemDataRepresentation resource) {
         assertAlreadyPersistent(id);
         System system = toEntity(resource);
@@ -187,9 +182,7 @@ public class SystemDataController extends AbstractController {
             value = "/{id}",
             consumes = APPLICATION_JSON_VALUE
     )
-    @ResponseStatus(
-            HttpStatus.OK
-    )
+    @ResponseStatus(HttpStatus.OK)
     public void patch(@PathVariable("id") String id,
                       @RequestBody KeyValuePairRepresentation data) {
         assertAlreadyPersistent(id);
@@ -200,17 +193,13 @@ public class SystemDataController extends AbstractController {
     /**
      * Deletes the system identified by the specified ID
      */
-    @DeleteMapping(
-            value = "/{id}"
-    )
-    @ResponseStatus(
-            HttpStatus.OK
-    )
+    @DeleteMapping(value = "/{id}")
+    @ResponseStatus(HttpStatus.OK)
     public void delete(@PathVariable("id") String id) {
         service.deleteById(id);
     }
 
-    protected void assertAlreadyPersistent(String id) {
+    private void assertAlreadyPersistent(String id) {
         if (id == null) {
             ExceptionContext error = ExceptionContextBuilder.error(
                     "Updating 'System' with name '%s' failed, because ID is missing!",id);
@@ -268,8 +257,10 @@ Eine Auswahl an bekannten Middleware *Produkten*:
 * Java EE Framework JMS
 * Microsoft Message Queue
 
+NOTE: Ein _Real-Life-Beispiel_ aus einem Projekt der Deutschen Bahn
 
-NOTE: BEISPIEL aus RBL TNG
+image::diagrams/messaging-system-architecture-example.svg[width="100%", align="center"]
+
 
 [source, java, lines, title="Kafka Producer"]
 ----
@@ -364,3 +355,12 @@ public class Consumer {
     ]
 }
 ----
+
+[[pipes-and-filters-example]]
+
+NOTE: Abschließend noch ein weiteres Beispiel für Messaging bzw. Anwendung der `Pipes & Filters Architektur`
+
+.Pipes & Filters Beispiel
+image::diagrams/pipes-and-filters-architecture-example.svg[width="100%", align="center"]
+
+

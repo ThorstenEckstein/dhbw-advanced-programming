@@ -2,7 +2,11 @@ include::settings.adoc[]
 :icons: font
 
 [[alphabet]]
+[.small]
+[.text-center]
+****
 <<A,A>> | <<B,B>> | <<C,C>> | <<D,D>> | <<E,E>> | <<F,F>> | <<G,G>> | <<H,H>> | <<I,I>> | <<J,J>> | <<K,K>> | <<L,L>> | <<M,M>> | <<N,N>> | <<O,O>> | <<P,P>> | <<Q,Q>> | <<R,R>> | <<S,S>> | <<T,T>> | <<U,U>> | <<V,V>> | <<W,W>> | <<X,X>> | <<Y,Y>> | <<Z,Z>>
+****
 
 [cols="2a,2,6"]
 |===
@@ -50,7 +54,7 @@ s| Dispositions-maßnahme
 
 s| Domain
 | (Fach-) Domäne
-| A domain is a field of knowledge, impact or activity. The area of expertise, for which a user uses an application, is the domain of the software. See also <<tier_layer_domain>>
+| A domain is a field of knowledge, impact or activity. The area of expertise, for which a user uses an application, is the domain of the software.
 
 // ######################################
 // ###                E               ###
@@ -182,7 +186,7 @@ s| Strecke
 
 s| Tier
 | Stufe
-| The term tier refers to physical entities like deliverables or deployable applications. See also figure <<tier_layer_domain>>
+| The term tier refers to physical entities like deliverables or deployable applications.
 
 s|TLS, mTLS
 |
@@ -232,4 +236,8 @@ s| [[zuglaufmeldung]] Zuglaufmeldung
 
 |===
 
+[.small]
+[.text-center]
+****
 <<A,A>> | <<B,B>> | <<C,C>> | <<D,D>> | <<E,E>> | <<F,F>> | <<G,G>> | <<H,H>> | <<I,I>> | <<J,J>> | <<K,K>> | <<L,L>> | <<M,M>> | <<N,N>> | <<O,O>> | <<P,P>> | <<Q,Q>> | <<R,R>> | <<S,S>> | <<T,T>> | <<U,U>> | <<V,V>> | <<W,W>> | <<X,X>> | <<Y,Y>> | <<Z,Z>>
+****

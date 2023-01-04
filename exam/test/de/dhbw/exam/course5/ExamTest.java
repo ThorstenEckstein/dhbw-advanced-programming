@@ -19,11 +19,15 @@ public class ExamTest {
 
     @DisplayName(
     """
-    Q1: ...
+    Q1: Was ist eine 'Representation' im Kontext von REST?
+    
+    A. Eine PowerPoint Präsentation, die den Begriff erläutert
+    B. Der Dateninhalt, den ein Client an eine API sendet
+    C. Der Typ der Datenantwort eines API Calls
     """
     )
     // Please give your answer here:
-    @ValueSource(strings = {"?"}) // TODO: COURSE 5 -> REPLACE CORRECT ANSWER WITH "?" BEFORE COURSE DAY
+    @ValueSource(strings = {"C"}) // TODO: COURSE 5 -> REPLACE CORRECT ANSWER WITH "?" BEFORE COURSE DAY
     @ParameterizedTest
     public void question1(String studentAnswer) {
         // given

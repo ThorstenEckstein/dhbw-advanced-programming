@@ -97,6 +97,11 @@ Funktionale Interfaces::
 Integration::
 -> https://www.amazon.de/s?k=enterprise+integration+patterns+deutsch&i=stripbooks&crid=28SN4MQVVJUZV&sprefix=enterprise+integration+patterns%2Cstripbooks%2C74&ref=nb_sb_ss_fb_1_31[Edison Wesley: Enterprise Integration Patterns]
 
+== Glossar
+
+include::glossary.adoc[]
+
+
 //[.dhbw]#ein-test-text#
 //include::examples-from-websites.adoc[]
 

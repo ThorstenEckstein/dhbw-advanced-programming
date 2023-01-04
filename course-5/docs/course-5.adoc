@@ -95,7 +95,7 @@ image::images/Messaging.png[width="40%"]
 === RESTful WebServices
 
 REST::
-`Representational State Transfer (REST) ist eine Software-Architektur, die Bedingungen zur Funktionsweise einer API festlegt. Häufig wird eine REST-basierte Architektur verwendet, um leistungsstarke zuverlässige Kommunikation nach Maß umzusetzen. Die Komponenten sind grundsätzlich leicht implementierbar und modifizierbar. Dadurch wird jedem API-System Sichtbarkeit und plattformübergreifende Portierbarkeit verliehen.
+`Representational State Transfer` (REST) ist eine Software-Architektur, die Bedingungen zur Funktionsweise einer API festlegt. Häufig wird eine REST-basierte Architektur verwendet, um leistungsstarke zuverlässige Kommunikation nach Maß umzusetzen. Die Komponenten sind grundsätzlich leicht implementierbar und modifizierbar. Dadurch wird jedem API-System Sichtbarkeit und plattformübergreifende Portierbarkeit verliehen.
 
 RESTful APIs::
 APIs, die dem REST-Architekturstil folgen, werden als RESTful APIs bezeichnet. Webservices, die diese REST-Architektur implementieren, werden als *RESTful WebServices* bezeichnet.
@@ -109,7 +109,10 @@ Die wichtigsten *Charakteristiken* sind:
 * Cache-Fähigkeit
 * Clients können die Form der Antwort steuern (`Media-Types`)
 
-API -> Controller
+.Verwaltung von API Calls mit `Postman` (Integrationstests)
+image::./images/postman-api-example.png[width="25%", align="center"]
+
+Die *Implementierung* einer API kann auf sehr verschiedene Arten erfolgen. Die nachfolgenden Beispiele entstammen einem echten Projekt, sind aber natürlich etwas gekürzt. Das Projekt nutzt vor allem `SpringBoot` und dessen Features/Module, die API bzw. Endpunkte in Form von Controller und mithilfe von Annotationen umzusetzen:
 
 [source,java,lines,title="Beispiel für einen API Endpunkt, einen `Controller`"]
 ----

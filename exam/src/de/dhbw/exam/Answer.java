@@ -8,7 +8,7 @@ import java.util.List;
 public class Answer {
 
     private List<String> letters;
-    private final String detail;
+    private String detail;
 
     private Answer(String letter, String detail) {
         this.letters = List.of(letter);
@@ -46,6 +46,10 @@ public class Answer {
 
     public String getDetail() {
         return detail;
+    }
+
+    public void setDetail(String detail) {
+        this.detail = detail;
     }
 
     public void showDetail(boolean answerIsCorrect) {

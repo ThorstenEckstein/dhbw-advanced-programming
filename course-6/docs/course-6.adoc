@@ -1,5 +1,7 @@
 include::../../docs/asciidoc/settings.adoc[]
 
+:toc:
+
 == {course-6}
 
 *Allgemeine Inhalte*
@@ -16,3 +18,52 @@ include::../../docs/asciidoc/settings.adoc[]
  + Fach-Exceptions (z.B. InvalidTrainNumberException, DelayedDepartureWarning)
  + Dokumentation des fachlichen Klassenmodells aus den vorangegagenen Beispielen
 ----
+
+=== Exception Hierarchie
+
+[plantuml, title="Exceptions Hierarchie", png, align="center"]
+....
+include::diagrams/exceptions-hierarchy.puml[]
+....
+
+Throwable::
+Die `Throwable` Klasse ist die Superklasse von allen `Errors` oder `Exceptions` innerhalb von Java. Nur Objekte, die Instanzen dieser Klasse oder einer seiner Subklassen sind, werden von der JVM selbst geworfen, durch `throw new` manuell geworfen oder das entsprechende Schlüsselwort `throws` deklariert werden.
+Gleichermaßen können nur diese oder ihre Subklassen als Argumenttyp im `catch` Abschnitt genutzt werden.
+
+Die wichtigsten Codefragmente:
+
+[source, java, lines]
+----
+ public void process() throws ValidationException {
+    // code that may throw an exception
+ }
+
+ public void process() {
+   // code that may throw an exception in
+   // a specific situation
+   if (!condition) {
+     throw new ValidationException();
+   }
+ }
+
+ try {
+     // ...
+ } catch (ValidationException ve) {
+     // ...
+ }
+----
+
+Error::
+Die `Error` Subklasse zeigt ein "ernstes" Problem an, das eine Applikation nicht "fangen" oder "behandeln" sollte. Die meisten solcher Fehler bilden außergewöhnliche Fehlerbedingungen oder -zustände ab, die (in aller Regel) nicht _zur Laufzeit_ gehoben werden können.
+
+Exception::
+Die Klasse `Exception` und dessen Subklassen bilden Situationen im Code ab, die bekannt sind, eintreten könnten und daher "gefangen" und behandelt werden sollten. Tritt eine solche geplante Fehlersituation auf, so sollte der Fehler so behandelt werden, dass die Applikation nicht abgebrochen werden muss. Eine häufige Reaktion auf diese Art von Fehlern münden häufig in Meldungen an die Benutzer einer Anwendung.
+
+Ein *Beispiel*-Klassenmodell:
+
+[plantuml, title="Exceptions Beispiel", png, align="center"]
+....
+include::diagrams/exceptions-model.puml[]
+....
+
+{tbd}

@@ -3,6 +3,8 @@ package de.dhbw.course6.exceptions;
 import de.dhbw.commons.Colourizer;
 import de.dhbw.commons.Logger;
 import de.dhbw.course6.TrainObservationMonitor;
+import de.dhbw.course6.io.DataLoader;
+import de.dhbw.course6.io.Product;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -44,6 +46,30 @@ public class ExceptionsTests {
         assertTrue((int)passengersCount > 80);
 
         logger.log(Colourizer.red(thrown.getContext().getMessage()));
+    }
+
+    @Test()
+    public void testHandleException() {
+        // given
+        DataLoader loader = new DataLoader();
+
+        // when
+        Product product = loader.tryLoadWithResources("/resources/macbook-pro.csv");
+
+        // then
+        assertNull(product);
+    }
+
+    @Test()
+    public void testHandleExceptionWithSpecificHandler() {
+        // given
+        DataLoader loader = new DataLoader();
+
+        // when
+        Product product = loader.tryLoad("/resources/macbook-pro.csv");
+
+        // then
+        assertNull(product);
     }
 
 }

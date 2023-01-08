@@ -1,9 +1,6 @@
 package de.dhbw.course6;
 
-import de.dhbw.course6.exceptions.ExceptionContext;
-import de.dhbw.course6.exceptions.PassengerLimitPerWagonExceededException;
-import de.dhbw.course6.exceptions.Severity;
-import de.dhbw.course6.exceptions.TrainTooLateException;
+import de.dhbw.course6.exceptions.*;
 
 public class TrainObservationMonitor {
 

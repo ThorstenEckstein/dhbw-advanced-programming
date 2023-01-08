@@ -27,7 +27,7 @@ abstract class ApplicationRuntimeException <<app>>
 abstract class CheckedException <<app>>
 class ValidationException <<app>>
 class TrainTooLateException <<app>>
-class ProductNotFound\nException <<app>>
+class ProductNotUnique\nException <<app>>
 class PassengerLimitPerWagon\nExceededException <<app>>
 
 ' Associations
@@ -41,9 +41,10 @@ ContextAware         <|..   ApplicationRuntimeException
 ContextAware         <|..   CheckedException
 
 ApplicationRuntimeException <|--  ValidationException
-ApplicationRuntimeException <|--  TrainTooLateException
+ApplicationRuntimeException <|--  ProductNotUnique\nException
+ApplicationRuntimeException <|--- NullPointerException
 
 CheckedException     <|--  PassengerLimitPerWagon\nExceededException
-CheckedException     <|--  ProductNotFound\nException
+CheckedException     <|--- TrainTooLateException
 
 @enduml

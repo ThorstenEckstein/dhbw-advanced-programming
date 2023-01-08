@@ -71,6 +71,60 @@ include::settings.adoc[]
 10. {course-10}
 ----
 
+
+// ###################################################
+// ###################################################
+// ###################################################
+== Kursdurchführung
+
+Die grundsätzlich geplante Strukturierung der Kurstage sieht wie folgt aus. Insgesamt `03:00` Zeitstunden, grob aufgeteilt nach:
+
+[cols="^1s,^2m,^1m,5"]
+|===
+| Teil | Zeit | Dauer | Inhalt
+
+| 1
+| 09:00 - 09:30
+| 30'
+s| Theorie
+
+|
+| 09:30 - 10:00
+| 30'
+| Praxis: Individuell oder in Teamarbeit + Lösung
+
+| 2
+| 10:00 - 10:30
+| 30'
+s| Theorie
+
+|
+| 10:30 - 10:45
+| 15'
+e| &nbsp;&nbsp; Kaffeepause
+
+|
+| 10:45 - 11:15
+| 30'
+| Praxis: Individuell oder in Teamarbeit + Lösung
+
+| 3
+| 11:15 - 11:30
+| 15'
+| *Theorie* (_optional_)
+
+|
+| 11:30 - 11:45
+| 15'
+| Praxis: Individuell oder in Teamarbeit + Lösung
+
+| 4
+| 11:45 - 12:00
+| 15'
+| *Q&A*, Best Practices, Codequalität, Organisation, etc.
+|===
+
+
 // ###################################################
 // ###################################################
 // ###################################################

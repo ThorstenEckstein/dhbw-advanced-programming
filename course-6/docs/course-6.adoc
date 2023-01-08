@@ -66,4 +66,9 @@ Ein *Beispiel*-Klassenmodell:
 include::diagrams/exceptions-model.puml[]
 ....
 
+
+=== Exception Handling
+
+Java: try-catch-finally
+
 {tbd}

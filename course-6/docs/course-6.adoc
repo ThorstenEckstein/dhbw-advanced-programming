@@ -6,12 +6,11 @@ include::../../docs/asciidoc/settings.adoc[]
 
 *Allgemeine Inhalte*
 
-* Catched vs. uncatched exceptions
-* Fachliche Exceptions
-* Runtime Exceptions
-* Exception Handling - was ist zu tun?
-* Javadoc - die wichtigsten Regeln
-* Javadoc - Syntax
+* [ ] Checked vs. Runtime (unchecked) exceptions
+* [ ] Fachliche Exceptions
+* [ ] Exception Handling - was ist zu tun?
+* [ ] Javadoc - die wichtigsten Regeln
+* [ ] Javadoc - Syntax
 
 *Fachlicher Kontext*
 ----
@@ -84,5 +83,38 @@ Dinge zu tun. Dazu kann z.B. ein eigener, applikationsspezifischer `ExceptionHan
 [source, java]
 include::{course-6-src}/io/DataLoader.java[tags=exception-handling-2]
 
+
+=== Dokumentation mit Javadoc
+
+Quellcode sollte dokumentiert werden, allerdings gibt es sehr unterschiedliche Ansichten zu dem Thema. Zunächst kurz die Grundlagen.
+
+Es gibt 3 Arten von Kommentaren:
+
+. `// ...` Single-Line Kommentare
+. `/* ... */` Multi-Line Kommentare
+. `/** ... */` Javadoc Dokumentationskommentare
+
+Für die dritte Variante gibt es Syntaxregeln zu beachten, weil aus diesen Kommentaren Websites erstellt werden können, die die "offizielle" Dokumentation des Sourcecodes bzw. der API darstellen und insofern allgemein anerkannten Regeln folgen sollten.
+
+Ein paar grundlegende Richtlinien bzgl. der *Javadoc* Dokumentation:
+
+. Die öffentliche API *muss* dokumentiert werden
+. Darüber hinaus *sollten* alle Codeteile dokumentiert werden, die für das Verständnis des Codes von besonderer Bedeutung sind
+. Private Felder oder Methoden werden *in der Regel nicht* dokumentiert (_es sei denn sie dienen Punkt 2._)
+. In Javadoc *sollte* vorrangig die (_fachliche_) Bedeutung der Implementierung dokumentiert werden, weniger die (_technische_) Art und Weise bzw, Umsetzung
+. Javadoc sollte mithilfe des Command Line Tools `javadoc` erzeugt werden
+
+Und ein wenig *Best Practices* zu Umsetzung bzw. Syntax:
+
+* Use HTML tags to format the doc, like `<p>, <pre>, <ol>, <strong>` und weitere
+* Use `<code>` style for keywords and names
+* Use in-line links economically (links for API names using the `{@link}` tag
+* Omit parentheses for the general form of methods and constructors
+* OK to use phrases instead of complete sentences, in the interests of brevity.
+* Use 3rd person (descriptive) not 2nd person (prescriptive).
+* Method descriptions begin with a verb phrase
+* Class/interface/field descriptions can omit the subject and simply state the object.
+* Use "this" instead of "the" when referring to an object created from the current class.
+* Add description beyond the API name.
 
 {tbd}

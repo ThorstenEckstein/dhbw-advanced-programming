@@ -4,6 +4,9 @@
 
 scale 0.9
 
+skinparam class {
+  BorderColor<<extra-class>> Red
+}
 skinparam note {
   fontStyle italic
 }
@@ -13,7 +16,7 @@ class Throwable
 class Exception
 class Error
 class RuntimeException
-class CheckedException
+class CheckedException <<extra-class>>
 
 Throwable   <|--   Exception
 Throwable   <|--   Error
@@ -41,6 +44,8 @@ note bottom of RuntimeException
 end note
 
 note bottom of CheckedException
+Not part of the standard
+library of Java:
  - <color:red>Must</color> be caught
  - <color:red>Must</color> be declared
  - <color:red>Recoverable</color> errors

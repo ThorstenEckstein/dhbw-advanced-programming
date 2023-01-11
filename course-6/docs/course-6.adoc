@@ -7,15 +7,15 @@ include::../../docs/asciidoc/settings.adoc[]
 *Allgemeine Inhalte*
 
 * [ ] Checked vs. Runtime (unchecked) exceptions
-* [ ] Fachliche Exceptions
+* [ ] Technische vsw. Fachliche Exceptions
 * [ ] Exception Handling - was ist zu tun?
-* [ ] Javadoc - die wichtigsten Regeln
+* [ ] Javadoc - Regeln
 * [ ] Javadoc - Syntax
 
 *Fachlicher Kontext*
 ----
  + Fach-Exceptions (z.B. InvalidTrainNumberException, DelayedDepartureWarning)
- + Dokumentation des fachlichen Klassenmodells aus den vorangegagenen Beispielen
+ + Dokumentation des fachlichen Klassenmodells aus den vorangegangenen Beispielen
 ----
 
 === Exception Hierarchie

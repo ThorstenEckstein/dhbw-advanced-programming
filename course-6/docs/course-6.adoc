@@ -84,6 +84,61 @@ Dinge zu tun. Dazu kann z.B. ein eigener, applikationsspezifischer `ExceptionHan
 include::{course-6-src}/io/DataLoader.java[tags=exception-handling-2]
 
 
+=== Mehrere Exceptions
+
+In manchen Fällen gibt es Methoden oder Codeabschnitte, die gleich mehrere Fehler verursachen können. Sind dies `checked` Exceptions, so müssen sie alle mittels `catch` erfasst und behandelt werden. Dazu gibt es 3 Optionen:
+
+. Fangen der *allgemeinsten Exception* als derjenigen, von denen alle anderen vorkommenden Exceptions abgeleitet sind
+
+[source, java]
+----
+try {
+    risky();
+} catch (Exception ex) {
+    // ...
+}
+----
+
+CAUTION: _Das ist ein sogenanntes "Anti-Pattern", weil die wahre Fehlerursache hierdurch sehr schnell verschleiert wird!_
+
+[start=2]
+. *Mehrere* `catch` Abschnitte
+
+[source, java]
+----
+try {
+    risky();
+} catch (FileNotFoundException ex) {
+    // ...
+} catch (EOFException ex) {
+    // ...
+}
+----
+
+[start=3]
+. Ein *Multi-Catch* Block
+
+[source, java]
+----
+try {
+    risky();
+} catch (FileNotFoundException | EOFException ex) {
+    // ...
+}
+----
+
+CAUTION: _Ein weiteres "Anti-Pattern" ist das sogenannte "throw-rethrow" Muster. Auch dieses erschwert stark das Erkennen der Fehlerursache und erzeugt einfach viel Code ("Boiler-Plate-Code")_
+
+[source, java]
+----
+try {
+    risky();
+} catch (FileNotFoundException ex) {
+    throw new IAmSureThisIsAMuchBetterException(ex);
+}
+----
+
+
 === Dokumentation mit Javadoc
 
 Quellcode sollte dokumentiert werden, allerdings gibt es sehr unterschiedliche Ansichten zu dem Thema. Zunächst kurz die Grundlagen.

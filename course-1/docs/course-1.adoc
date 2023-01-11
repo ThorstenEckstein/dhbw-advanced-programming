@@ -206,9 +206,7 @@ include::{course-1-src}/basics/refsemantics/Account.java[lines="25"]
 ----
 include::{course-1-src}/basics/refsemantics/Account.java[lines="27"]
 ----
-
 |===
-
 
 
 === Übungen
@@ -235,3 +233,10 @@ In der Testklasse finden sich weitere kleine Übungen für die Inhalte des Kurse
 Test Driven Development (TDD)::
 Ist eine gute Praxis, um seinen Code von Beginn an - mithilfe von Unit-Tests regelmäßig und bei Änderungen auf Korrektheit zu überprüfen. Dazu gibt es z.B. die Strukturen `given-when-then` oder `arrange-act-assert`.
 
+*Exkurs*. Eigenschaften von Unit-Tests
+
+. Unit-Tests sind *automatisiert*. Ein Unit-Test-Framework führt Tests aus, verifiziert und gibt das Ergebnis zurück, damit es geprüft werden kann
+. Unit-Tests sind *granular*, sie sollen nur einen kleinen Teil des Codes -häufig eine Methode - testen.
+. Unit-Tests *isolieren* das Testziel und sollen möglichst ohne oder nur mit wenig "Vorbereitungen" gestartet werden können
+. Unit-Tests sind *deterministisch*, damit das Testergebnis sauber geprüft werden kann und wiederholt werden kann
+. Unit-Tests sind *unabhängig*. Die Ausführung der Tests dürfen in keiner Weise von anderen Testmethoden abhängen, denn die Reihenfolge der vom Framework ausgeführten Tests ist zufällig bzw. nicht vorhersagbar.

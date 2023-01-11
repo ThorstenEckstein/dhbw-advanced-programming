@@ -26,5 +26,8 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="junit.platform.suite.engine" level="project" />
+    <orderEntry type="library" name="dbunit" level="project" />
+    <orderEntry type="library" name="h2database.h2" level="project" />
+    <orderEntry type="library" scope="TEST" name="junit" level="project" />
   </component>
 </module>

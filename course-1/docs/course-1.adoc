@@ -222,3 +222,16 @@ Erzeuge ein kleines Klassenmodell aus dem folgenden Anwendungsfall:
 
 Übungsaufgabe 2::
 Versuche "Reference Semantics" grafisch zu erläutern!
+
+Weitere Übungen::
+In der Testklasse finden sich weitere kleine Übungen für die Inhalte des Kurses 1:
+
+[subs=attributes]
+ {course-1-exam}/ExamTest.java
+
+
+=== Tipps, Patterns & Best Practices
+
+Test Driven Development (TDD)::
+Ist eine gute Praxis, um seinen Code von Beginn an - mithilfe von Unit-Tests regelmäßig und bei Änderungen auf Korrektheit zu überprüfen. Dazu gibt es z.B. die Strukturen `given-when-then` oder `arrange-act-assert`.
+

@@ -119,3 +119,13 @@ Und eines für einen *fachlichen* Nutzen:
 ----
 include::{course-3-test}/lambda/LambdaTest.java[tag="lambda-example-2"]
 ----
+
+=== Übungen
+
+In der Testklasse finden sich kleine Übungen für die Inhalte des Kurses 3:
+
+[subs=attributes]
+ {course-3-exam}/ExamTest.java
+
+
+=== Tipps, Patterns & Best Practices

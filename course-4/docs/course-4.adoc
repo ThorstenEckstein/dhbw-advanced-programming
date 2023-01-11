@@ -91,9 +91,12 @@ public enum Color {
 Color blue = Color.valueOf("Blue");
 ----
 
-*Übungen*:
+=== Übungen
 
-In der folgenden Testklasse finden sich kleine Übungen im Kontext von Enumerations:
+In der Testklasse finden sich kleine Übungen für die Inhalte des Kurses 4:
 
- course-4/test/de/dhbw/course4/exam/ExamTest.java
+[subs=attributes]
+ {course-4-exam}/ExamTest.java
 
+
+=== Tipps, Patterns & Best Practices

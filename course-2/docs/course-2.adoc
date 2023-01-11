@@ -109,3 +109,13 @@ Siehe Implementierungen für V1 und V2:
 ====
 image::diagrams/erd.svg[width="80%"]
 ====
+
+=== Übungen
+
+In der Testklasse finden sich kleine Übungen für die Inhalte des Kurses 2:
+
+[subs=attributes]
+ {course-2-exam}/ExamTest.java
+
+
+=== Tipps, Patterns & Best Practices

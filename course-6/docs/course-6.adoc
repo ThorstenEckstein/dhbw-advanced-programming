@@ -99,7 +99,7 @@ try {
 }
 ----
 
-CAUTION: _Das ist ein sogenanntes "Anti-Pattern", weil die wahre Fehlerursache hierdurch sehr schnell verschleiert wird!_
+CAUTION: -> _<<Anti-Pattern-GenExcHdl, Anti-Pattern: Generische Exception Handler>>_
 
 [start=2]
 . *Mehrere* `catch` Abschnitte
@@ -127,7 +127,7 @@ try {
 }
 ----
 
-CAUTION: _Ein weiteres "Anti-Pattern" ist das sogenannte "throw-rethrow" Muster. Auch dieses erschwert stark das Erkennen der Fehlerursache und erzeugt einfach viel Code ("Boiler-Plate-Code")_
+CAUTION: _-> <<Anti-Pattern-ThrRethr, Anti Pattern "Throw-Rethrow">>_
 
 [source, java]
 ----
@@ -227,3 +227,18 @@ NOTE: [small]#_Falls die Java Laufzeitumgebung im Terminal nicht bekannt ist, mu
 source ~/.bash_profile
 java -version
 ////
+
+
+=== Tipps, Patterns & Best Practices
+
+[[Flache-Exception-Hierarchien]]
+Empfehlung: Flache Exception Hierarchien::
+... sind eine gute Praxis. Es erleichtert vor allem Entwicklern den Zugang zur nutzung zum Exception Handling, da es sehr "gerne" vernachlässigt wird.
+
+[[Anti-Pattern-GenExcHdl]]
+Anti Pattern: Generische Exception Handler::
+Das ist ein "Anti-Pattern", weil die wahre Fehlerursache hierdurch sehr schnell verschleiert wird!
+
+[[Anti-Pattern-ThrRethr]]
+Anti Pattern: Throw-Rethrow Exceptions::
+Das _"throw-rethrow"_ Muster ist auch ein Anti-Pattern. Auch dieses erschwert stark das Erkennen der Fehlerursache und erzeugt einfach viel Code (_"Boilerplate-Code"_). Es verstösst auch gegen das `KISS` Prinzip (_Keep-It-Simple-And-Stupid_).

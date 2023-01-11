@@ -52,7 +52,7 @@ Welche Technologie soll/muss genutzt werden. Hier gibt es eine starke Abhängigk
 _Beispiel: Ein Überwachungssystem von Zügen muss Echtzeitdaten verarbeiten, d.h. alle Integrationsaspekte müssen diese Echtzeitverarbeitung ebenfalls unterstützen, wodurch die Auswahl der möglichen Technologien eingeschränkt wird._
 
 Datenformat::
-Integrierte Applikationen müssen sich in aller Regel über die ausgetauschten Daten einigen, entsprechend ist zu entscheiden, ob die übertragenen Daten einen "Vertrag" oder ein "Protokoll" erfüllen müssen oder ob es nur simple Daten ohne große Struktur handelt. Bestimmte Technologien adressieren diesen Punkt, z.B. _OpenAPI_ oder _Avro_.
+Integrierte Applikationen müssen sich in aller Regel über die ausgetauschten Daten einigen, entsprechend ist zu entscheiden, ob die übertragenen Daten einen "Vertrag" oder ein "Protokoll" erfüllen müssen oder ob es nur simple Daten ohne große Struktur handelt. Bestimmte Technologien adressieren diesen Punkt, z.B. _OpenAPI_, _Protobuf_ oder _Avro_.
 
 Datenaktualität::
 Wann und wie häufig (Frequenz) sollen integrierte System miteinander kommunizieren?
@@ -364,3 +364,4 @@ NOTE: Abschließend noch ein weiteres Beispiel für Messaging bzw. Anwendung der
 image::diagrams/pipes-and-filters-architecture-example.svg[width="100%", align="center"]
 
 
+=== Tipps, Patterns & Best Practices

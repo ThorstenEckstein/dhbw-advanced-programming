@@ -10,22 +10,23 @@ import java.io.File;
 import java.sql.Connection;
 
 public class DatabaseTestConfig {
-    private Connection connection;
+
+    private static final String DATA =  "dbunit/data.xml";
 
     public DataSource getDataSource() {
         JdbcDataSource dataSource = new JdbcDataSource();
         dataSource.setURL(
                 "jdbc:h2:mem:test;" +
-                        "MODE=LEGACY;" +
-                        "DB_CLOSE_DELAY=-1;" +
-                        "INIT=runscript from '~/Projects/Lehre/SS23/Programmierung-II-W3WI-109/course-7/dbunit/schema.sql'");
+                "MODE=LEGACY;" +
+                "DB_CLOSE_DELAY=-1;" +
+                "INIT=runscript from '~/Projects/Lehre/SS23/Programmierung-II-W3WI-109/course-7/dbunit/schema.sql'");
         dataSource.setUser("sa");
         dataSource.setPassword("sa");
         return dataSource;
     }
 
     public IDataSet getDataSet() throws Exception {
-        return new FlatXmlDataSetBuilder().build(new File("dbunit/data.xml"));
+        return new FlatXmlDataSetBuilder().build(new File(DATA));
     }
 
     public DatabaseOperation getSetUpOperation() {

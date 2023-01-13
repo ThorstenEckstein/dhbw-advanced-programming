@@ -1,21 +1,25 @@
 package de.dhbw.course7.db;
 
+import de.dhbw.course7.simple.Client;
+import de.dhbw.course7.simple.Item;
+import de.dhbw.course7.simple.ObjectRelationalMapper;
 import org.dbunit.DataSourceBasedDBTestCase;
 import org.dbunit.dataset.IDataSet;
 import org.dbunit.dataset.ITable;
-import org.dbunit.dataset.xml.FlatXmlDataSetBuilder;
 import org.dbunit.operation.DatabaseOperation;
-import org.h2.jdbcx.JdbcDataSource;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 
 import javax.sql.DataSource;
-import java.io.File;
 import java.sql.Connection;
 import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * Tuo use the H2 shell from CLI, type:
@@ -81,105 +85,122 @@ public class DataSourceDBUnitTest extends DataSourceBasedDBTestCase {
                 expectedTable.getTableMetaData().getTableName(),
                 actualTable.getTableMetaData().getTableName());
 
-        //ResultSet rs = connection.createStatement().executeQuery("select * from ITEMS");
-        //while(rs.next()) {
-        //    System.out.println(rs.getString(1));
-        //}
-
     }
 
-    /*
-
+    @DisplayName("Select items from database")
     @Test
-    public void givenDataSet_whenSelect_thenFirstTitleIsGreyTShirt() throws SQLException {
-        ResultSet rs = connection.createStatement().executeQuery("select * from ITEMS where id = 1");
+    public void canLoadAllItems() throws Exception {
+        // given -  already setup database connection, see above
 
-        assertThat(rs.next()).isTrue();
-        assertThat(rs.getString("title")).isEqualTo("Grey T-Shirt");
+        // when
+        ResultSet rs = connection.createStatement().executeQuery("select * from ITEMS");
+        List<Item> items = new LinkedList<>();
+        while(rs.next()) {
+            Item item = ObjectRelationalMapper.toItem(rs);
+            items.add(item);
+        }
+
+        // then
+        assertEquals(5,items.size());
+
+        // dump
+        System.out.println(items);
     }
 
+    @DisplayName("Count number of entries in database table")
     @Test
-    public void givenDataSet_whenInsert_thenTableHasNewClient() throws Exception {
-        try (InputStream is = getClass().getClassLoader().getResourceAsStream("dbunit/expected-user.xml")) {
-            // given
-            IDataSet expectedDataSet = new FlatXmlDataSetBuilder().build(is);
-            ITable expectedTable = expectedDataSet.getTable("CLIENTS");
-            Connection conn = getDataSource().getConnection();
+    public void canCountTableEntries() throws Exception {
+        // given -  already setup database connection, see above
 
-            // when
-            conn.createStatement()
-                .executeUpdate("INSERT INTO CLIENTS (first_name, last_name) VALUES ('John', 'Jansen')");
-            ITable actualData = getConnection()
-                .createQueryTable("result_name", "SELECT * FROM CLIENTS WHERE last_name='Jansen'");
+        // when
+        int itemsCount = count(1,"ITEMS");
+        int clientsCount = count(2,"CLIENTS");
 
-            // then
-            assertEqualsIgnoreCols(expectedTable, actualData, new String[] { "id" });
+        // then
+        assertEquals(5, itemsCount);
+        assertEquals(1, clientsCount);
+    }
+
+    @DisplayName("Insert client into database")
+    @Test
+    public void canSaveClient() throws Exception {
+        // given -  already setup database connection, see above
+
+        // when - insert and ...
+        connection.createStatement().executeUpdate("INSERT INTO CLIENTS (first_name, last_name) VALUES ('John', 'Jansen')");
+
+        // directly fetch (select) the new data
+        ResultSet rs = connection.createStatement().executeQuery("select * from CLIENTS where last_name = 'Jansen'");
+
+        // then
+        assertTrue(rs.next());
+        Client client = ObjectRelationalMapper.toClient(rs);
+
+        assertEquals("Jansen", client.getLastName());
+
+        // dump to see full data
+        System.out.println(client);
+    }
+
+    @DisplayName("Update existing client in database")
+    @Test
+    public void canUpdateClient() throws Exception {
+        // given -  already setup database connection, see above
+
+        // when - insert and ...
+        connection.createStatement().executeUpdate("update CLIENTS set last_name='Darwin' where id = 1");
+
+        // directly fetch (select) the new data
+        ResultSet rs = connection.createStatement().executeQuery("select * from CLIENTS where last_name = 'Darwin'");
+
+        // then
+        assertTrue(rs.next());
+        Client client = ObjectRelationalMapper.toClient(rs);
+
+        assertEquals("Charles Darwin", client.getFirstName() + " " + client.getLastName());
+
+        // dump to see full data
+        System.out.println(client);
+    }
+
+    @DisplayName("Delete item from database")
+    @Test
+    public void canDeleteItem() throws Exception {
+        // given -  already setup database connection, see above
+
+        // when - insert and ...
+        int before = count(1, "ITEMS");
+        connection.createStatement().executeUpdate("delete from ITEMS where title = 'Backpack'");
+        int after = count(2, "ITEMS");
+
+        // then
+        assertEquals(5, before);
+        assertEquals(4, after);
+    }
+
+    // -------------------------------------- private methods, should be moved to separate helper class
+
+    private int count(int version, String tableName) throws Exception {
+        if (version == 1) {
+            return countV1(tableName);
+        } else if(version == 2) {
+            return countV2(tableName);
+        } else {
+            throw new IllegalArgumentException("Unsupported version: " + version);
         }
     }
 
-    @Test
-    public void givenDataSet_whenDelete_thenItemIsDeleted() throws Exception {
-        try (InputStream is = DataSourceDBUnitTest.class.getClassLoader()
-            .getResourceAsStream("dbunit/items_exp_delete.xml")) {
-            // given
-            ITable expectedTable = (new FlatXmlDataSetBuilder().build(is)).getTable("ITEMS");
-
-            // when
-            connection.createStatement().executeUpdate("delete from ITEMS where id = 2");
-
-            // then
-            IDataSet databaseDataSet = getConnection().createDataSet();
-            ITable actualTable = databaseDataSet.getTable("ITEMS");
-            Assertion.assertEquals(expectedTable, actualTable);
+    private int countV1(String tableName) throws SQLException {
+        ResultSet rs = connection.createStatement().executeQuery("select count(*) from " + tableName);
+        if (rs.next()) {
+            return rs.getInt(1);
         }
+        return 0;
     }
 
-    @Test
-    public void givenDataSet_whenUpdate_thenItemHasNewName() throws Exception {
-        try (InputStream is = DataSourceDBUnitTest.class.getClassLoader()
-            .getResourceAsStream("dbunit/items_exp_rename.xml")) {
-            // given
-            ITable expectedTable = (new FlatXmlDataSetBuilder().build(is)).getTable("ITEMS");
-
-            connection.createStatement().executeUpdate("update ITEMS set title='new name' where id = 1");
-
-            IDataSet databaseDataSet = getConnection().createDataSet();
-            ITable actualTable = databaseDataSet.getTable("ITEMS");
-
-            Assertion.assertEquals(expectedTable, actualTable);
-        }
+    private int countV2(String tableName) throws Exception {
+        IDataSet databaseDataSet = getConnection().createDataSet();
+        return databaseDataSet.getTable(tableName).getRowCount();
     }
 
-    @Test
-    public void givenDataSet_whenInsertUnexpectedData_thenFail() throws Exception {
-        try (InputStream is = getClass().getClassLoader()
-            .getResourceAsStream("dbunit/expected-multiple-failures.xml")) {
-
-            // given
-            IDataSet expectedDataSet = new FlatXmlDataSetBuilder().build(is);
-            ITable expectedTable = expectedDataSet.getTable("ITEMS");
-            Connection conn = getDataSource().getConnection();
-            DiffCollectingFailureHandler collectingHandler = new DiffCollectingFailureHandler();
-
-            // when
-            conn.createStatement().executeUpdate("INSERT INTO ITEMS (title, price) VALUES ('Battery', '1000000')");
-            ITable actualData = getConnection().createDataSet().getTable("ITEMS");
-
-            // then
-            Assertion.assertEquals(expectedTable, actualData, collectingHandler);
-            if (!collectingHandler.getDiffList().isEmpty()) {
-                String message = (String) collectingHandler.getDiffList().stream()
-                    .map(d -> formatDifference((Difference) d)).collect(joining("\n"));
-                logger.error(() -> message);
-            }
-        }
-    }
-
-    private static String formatDifference(Difference diff) {
-        return "expected value in " + diff.getExpectedTable().getTableMetaData().getTableName() + "." + diff
-            .getColumnName() + " row " + diff.getRowIndex() + ":" + diff.getExpectedValue() + ", but was: " + diff
-            .getActualValue();
-    }
-
-     */
 }

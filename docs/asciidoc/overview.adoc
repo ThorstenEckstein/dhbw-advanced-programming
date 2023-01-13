@@ -30,10 +30,12 @@ include::settings.adoc[]
  flächen: Layout, typische Komponenten für grafische Benutzungs-
  schnittstellen, Ereignisbehandlung. Fortgeschrittene Programmier-
  methodik: Parallele Programmierung mit Threads, Synchronisations- &
- Kommunikationskonzepte, Ein- und Ausgabe über Streams.
+ Kommunikationskonzepte, Ein- und Ausgabe über Streams, Datenbanken
+ und Objektrelationales Mapping.
 
-*Zusätzliche Lehrinhalte*
- - Design Prinzipien & Design Patterns
+*Ergänzende Lehrinhalte*
+ - Design Prinzipien
+ - Design Patterns
  - Code Qualität
  - TDD, JUnit & Mockito
 

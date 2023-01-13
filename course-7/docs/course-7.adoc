@@ -1,14 +1,107 @@
 include::../../docs/asciidoc/settings.adoc[]
 
+:toc:
+
 == {course-7}
 
 *Allgemeine Inhalte*
 
-* SQL vs. NoSQL Datenbanken
-* ORM Objektrelationales Mapping
-* Unit-Tests gegen In-Memory-Datenbank (H2)
+* [ ] SQL vs. NoSQL Datenbanken
+* [ ] SQL
+* [ ] ORM Objektrelationales Mapping
+* [ ] Unit-Tests gegen In-Memory-Datenbank (H2)
 
 *Fachlicher Kontext*
 ----
- + Speichern vom fachlichen Objektmodell (s.o.) in Datenbank
+ + Speichern von fachlichen Objekten in Datenbank
 ----
+
+=== SQL-Datenbanken
+
+Eine *SQL-Datenbank* ist eine relationale Datenbank, die `Structured Query Language (SQL)` zum Speichern, Abrufen und Bearbeiten von Daten verwendet. SQL-Datenbanken sind die gängigste Art von relationalen Datenbanken und werden von einer Vielzahl von Unternehmen und Organisationen verwendet.
+
+Structured Query Language (SQL)-Datenbanken sind einfach zu benutzen und zu warten und bieten viele Funktionen, die sie für verschiedene Anwendungen geeignet machen. SQL-Datenbanken bieten zum Beispiel folgendes:
+
+* Robuste Datensicherheit
+* Skalierbarkeit
+* hohe Leistung
+* Benutzerfreundlichkeit
+
+und haben anerkannte Eigenschaften, darunter:
+
+* Seit langer Zeit etabliert und weit verbreitet
+* Einfach zu bedienen & erlernen
+* Vielseitig, geeignet für stark strukturierte Daten, im kleinen wie im grossen Kontext einsetzbar
+* Folgen dem -> <<ACID,ACID>> Prinzip und sind daher "zuverlässig"
+* Sind skalierbar (vertikal)
+
+=== NoSQL-Datenbanken
+
+Eine *NoSQL-Datenbank* (nicht-relationale Datenbank, _Not-Only-SQL_) ist eine nicht-relationale Datenbank, die _nicht_ die traditionelle tabellenbasierte Struktur von relationalen Datenbanken verwendet. NoSQL-Datenbanken werden häufig für die Verarbeitung schwach strukturierter Daten und großer Datenmengen verwendet, die sich nicht gut für das relationale Modell eignen.
+
+NoSQL-Datenbanken können in vier Hauptkategorien eingeteilt werden:
+
+. *Schlüssel-Wert-Datenbank*. Daten als Sammlung von Schlüssel-Wert-Paaren. Der Wert, bei dem es sich um einen einfachen Text oder eine komplizierte Datenstruktur handeln kann, wird mithilfe des Schlüssels nachgeschlagen. Beispiele für Schlüssel-Wert-Speicher sind `DynamoDB` und `Riak`.
+
+. *Spaltenorientierte Datenbank*. Sie speichern Daten in Spalten statt in Zeilen. Spaltenorientierte Speicher werden häufig für Data Warehousing- und Analyseanwendungen verwendet. Beispiele für spaltenorientierte Speicher sind `Cassandra` und `HBase`.
+
+. *Dokumenten-Datenbank*. In diesen NoSQL-Datenbanken werden die Daten in "Dokumenten" gespeichert. Dokumente können auf beliebige Weise strukturiert werden, was sie sehr flexibel macht. Beispiele für Dokumentenspeicher sind `MongoDB` und `Couchbase`.
+
+. *Grafen-Datenbank*. Diese Datenbanken speichern Daten in einer Graphenstruktur, wobei Knoten und Kanten die Daten miteinander verbinden. Graphenspeicher werden häufig für Anwendungen verwendet, die komplexe Beziehungen analysieren müssen. Beispiele für Graphenspeicher sind `Neo4j` und `OrientDB`.
+
+=== SQL oder NoSQL?
+
+Zu den *Hauptunterschieden* zählen:
+
+* *SQL*-Datenbanken sind relationale Datenbanken. Das bedeutet, dass die Daten in Tabellen organisiert sind und jede Tabelle eine bestimmte *Struktur* mit Beziehungen (Relationen) hat. Die zu speichernden (fachlichen) Daten sollen entsprechend ebenfalls stark strukturiert sein. Beispiele wären u.a.:
+
+** _Infrastrukturdaten, z.B. Abbildung von Gebäuden oder Städten, oder vom Schienennetz_
+
+** _Abbildung von fachlichen Einheiten ("Entities" z.B. aus Natur & Umwelt)_
+
+* *NoSQL*-Datenbanken sind nicht-relationale Datenbanken. Das bedeutet, dass die Daten in einer Sammlung von "Elementen" gespeichert werden. Diese Elemente weisen häufig keine spezifische Struktur auf und sind wenig durch Beziehungen miteinander verbunden. Sie eignen sich daher besser für die Speicherung von Daten, die schwach strukturiert sind. Datenbeispiele wären:
+
+** _Dokumente und deren Inhalt_
+
+** _Daten aus Sensoren, Monitoring-Daten_
+
+* Ein Hauptunterschied zwischen SQL- und NoSQL-Datenbanken ist die *Skalierung*. SQL-Datenbanken verwenden einen vertikalen Skalierungsansatz, d.h. sie skalieren, indem sie dem Server mehr Leistung hinzufügen. NoSQL-Datenbanken verwenden einen horizontalen Skalierungsansatz, d.h. sie skalieren durch Hinzufügen weiterer Server.
+
+* SQL-Datenbanken sind im Allgemeinen auch *komplexer* als NoSQL-Datenbanken. Das liegt daran, dass SQL-Datenbanken den Regeln von -> <<ACID, ACID>> (Atomarität, Konsistenz, Isolation und Dauerhaftigkeit) folgen müssen, was sie ggf. langsamer und komplizierter machen kann. NoSQL-Datenbanken hingegen sind oft unkomplizierter und können schneller sein, weil sie die ACID Regeln nicht befolgen müssen.
+
+Was ist also *besser*?
+
+Die Entscheidung hängt sehr stark vom der Fachlichkeit ab. D.h. also, vor der technischen Abbildung in die Datenbank ist eine Analyse der Daten, deren Struktur, Zweck und Zuverlässigkeit erforderlich.
+
+
+=== ORM Objektrelationales Mapping
+
+Objektorientierte Programmiersprachen wie Java kapseln Daten und Verhalten in *Objekten*, hingegen legen relationale Datenbanken Daten in *Tabellen* ab. Die beiden Paradigmen sind grundlegend verschieden. So kapseln Objekte ihren Zustand und ihr Verhalten hinter einer Schnittstelle und haben eine eindeutige Identität. Relationale Datenbanken basieren dagegen auf dem mathematischen Konzept der relationalen Algebra. Dieser konzeptionelle Widerspruch wurde in den 1990er Jahren als object-relational impedance mismatch bekannt.
+
+image::images/orm-1.png[title="ORM 1", align="center", width="70%"]
+
+Um dieses Problem zu lösen oder zumindest zu mildern, wurden verschiedene Lösungen vorgeschlagen. Dazu gehört die direkte `objektrelationale Abbildung` von Objekten auf Relationen. Sie hat den Vorteil, dass einerseits die Programmiersprache selbst nicht erweitert werden muss und andererseits relationale Datenbanken als etablierte Technik in allen Umgebungen als ausgereifte Software verfügbar sind.
+
+image::images/orm-2.png[title="ORM 2", align="center", width="70%"]
+
+
+=== JPA - Java Persistence API
+
+{tbd}
+
+
+=== Übungen
+
+IMPORTANT: HIER Übungen überlegen, die die Studies umsetzen können!
+
+Und in der Testklasse finden sich auch ein paar kleine Übungen für die Inhalte des Kurses 7:
+
+[subs=attributes]
+ {course-7-exam}/ExamTest.java
+
+
+=== Tipps, Patterns & Best Practices
+
+[[ACID]]
+Das ACID Prinzip::
+ACID beschreibt die häufig erwünschte Eigenschaften von Transaktionen in Datenbankmanagementsystemen (DBMS). Es steht für `Atomicity`, `Consistency`, `Isolation` und `Durability`. Sie gelten als Voraussetzung für die Verlässlichkeit von Systemen. Demgegenüber steht der Begriff `Eventual Consistency` (gelegentliche Konsistenz) beim Einsatz von NoSQL Datenbanken.

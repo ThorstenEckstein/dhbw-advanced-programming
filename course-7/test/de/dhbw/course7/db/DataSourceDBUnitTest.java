@@ -15,38 +15,44 @@ import org.junit.runners.JUnit4;
 import javax.sql.DataSource;
 import java.io.File;
 import java.sql.Connection;
+import java.sql.ResultSet;
+
+/**
+ * Tuo use the H2 shell from CLI, type:
+ * (path-to-jar: /Users/thorsteneckstein/.m2/repository/com/h2database/h2/2.1.214/h2-2.1.214.jar)
+ *   java -cp <path-to-jar> org.h2.tools.Shell
+ * followed by some inputs:
+ *   [Enter]   jdbc:h2:~/test
+ *   URL       jdbc:h2:mem:default
+ *   [Enter]   org.h2.Driver
+ *   Driver
+ *   [Enter]
+ *   User      sa
+ *   Password
+ *   Type the same password again to confirm database creation.
+ *   Password
+ * Connected
+ */
 
 @RunWith(JUnit4.class)
 public class DataSourceDBUnitTest extends DataSourceBasedDBTestCase {
 
     private Connection connection;
 
-    @Override
-    protected DataSource getDataSource() {
-        JdbcDataSource dataSource = new JdbcDataSource();
-        dataSource.setURL(
-                "jdbc:h2:mem:default;" +
-                "MODE=LEGACY;" +
-                "DB_CLOSE_DELAY=-1;" +
-                "INIT=runscript from '~/Projects/Lehre/SS23/Programmierung-II-W3WI-109/course-7/dbunit/schema.sql'");
-        dataSource.setUser("sa");
-        dataSource.setPassword("sa");
-        return dataSource;
-    }
+    // helper class
+    DatabaseTestConfig setup = new DatabaseTestConfig();
 
     @Override
-    protected IDataSet getDataSet() throws Exception {
-        return new FlatXmlDataSetBuilder().build(new File("dbunit/data.xml"));
-    }
-
+    protected DataSource getDataSource() { return setup.getDataSource(); }
+    @Override
+    protected IDataSet getDataSet() throws Exception { return setup.getDataSet(); }
     @Override
     protected DatabaseOperation getSetUpOperation() {
-        return DatabaseOperation.REFRESH;
+        return setup.getSetUpOperation();
     }
-
     @Override
     protected DatabaseOperation getTearDownOperation() {
-        return DatabaseOperation.DELETE_ALL;
+        return setup.getTearDownOperation();
     }
 
     @Before
@@ -74,6 +80,12 @@ public class DataSourceDBUnitTest extends DataSourceBasedDBTestCase {
         assertEquals(
                 expectedTable.getTableMetaData().getTableName(),
                 actualTable.getTableMetaData().getTableName());
+
+        //ResultSet rs = connection.createStatement().executeQuery("select * from ITEMS");
+        //while(rs.next()) {
+        //    System.out.println(rs.getString(1));
+        //}
+
     }
 
     /*
@@ -84,15 +96,6 @@ public class DataSourceDBUnitTest extends DataSourceBasedDBTestCase {
 
         assertThat(rs.next()).isTrue();
         assertThat(rs.getString("title")).isEqualTo("Grey T-Shirt");
-    }
-
-    @Test
-    public void givenDataSetEmptySchema_whenDataSetCreated_thenTablesAreEqual() throws Exception {
-        IDataSet expectedDataSet = getDataSet();
-        ITable expectedTable = expectedDataSet.getTable("CLIENTS");
-        IDataSet databaseDataSet = getConnection().createDataSet();
-        ITable actualTable = databaseDataSet.getTable("CLIENTS");
-        Assertion.assertEquals(expectedTable, actualTable);
     }
 
     @Test

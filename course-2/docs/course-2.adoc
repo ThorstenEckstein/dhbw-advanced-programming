@@ -105,10 +105,7 @@ Siehe Implementierungen für V1 und V2:
 
  de.dhbw.course2.basics.collections.nm
 
-[%collapsible, title="_Exkurs - n:m Relationen in der Datenbank (mit Krähenfuß-Notation)_"]
-====
-image::diagrams/erd.svg[width="80%"]
-====
+Mehr zu Datenbanken & SQL siehe -> `Kurstag 7`.
 
 === Übungen
 

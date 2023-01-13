@@ -6,21 +6,19 @@ include::../../docs/asciidoc/settings.adoc[]
 
 *Allgemeine Inhalte*
 
-* [ ] SQL vs. NoSQL Datenbanken
+* [ ] SQL-Datenbanken
+* [ ] NoSQL-Datenbanken
 * [ ] SQL
 * [ ] ORM Objektrelationales Mapping
+* [ ] JDBC, JPA
 * [ ] Unit-Tests gegen In-Memory-Datenbank (H2)
 
-*Fachlicher Kontext*
-----
- + Speichern von fachlichen Objekten in Datenbank
-----
 
 === SQL-Datenbanken
 
 Eine *SQL-Datenbank* ist eine relationale Datenbank, die `Structured Query Language (SQL)` zum Speichern, Abrufen und Bearbeiten von Daten verwendet. SQL-Datenbanken sind die gängigste Art von relationalen Datenbanken und werden von einer Vielzahl von Unternehmen und Organisationen verwendet.
 
-Structured Query Language (SQL)-Datenbanken sind einfach zu benutzen und zu warten und bieten viele Funktionen, die sie für verschiedene Anwendungen geeignet machen. SQL-Datenbanken bieten zum Beispiel folgendes:
+SQL-Datenbanken sind einfach zu benutzen und zu warten und bieten viele Funktionen, die sie für verschiedene Anwendungen geeignet machen. SQL-Datenbanken bieten zum Beispiel folgendes:
 
 * Robuste Datensicherheit
 * Skalierbarkeit
@@ -34,6 +32,58 @@ und haben anerkannte Eigenschaften, darunter:
 * Vielseitig, geeignet für stark strukturierte Daten, im kleinen wie im grossen Kontext einsetzbar
 * Folgen dem -> <<ACID,ACID>> Prinzip und sind daher "zuverlässig"
 * Sind skalierbar (vertikal)
+
+=== Structured Query Language (SQL)
+
+SQL ist eine *Datenbanksprache* zur Definition von Datenstrukturen in relationalen Datenbanken sowie zum Bearbeiten (Einfügen, Verändern, Löschen) und Abfragen von darauf basierenden Datenbeständen.
+
+Die Sprache kann logische unterteilt werden, und zwar im Wesentlichen in
+
+. `DDL` - *Data Definition Language*. Befehle zur Definition des Datenbankschemas, d.h. zum Erzeugen, Ändern, Löschen von Datenbanktabellen, sowie zur Definition von Primärschlüsseln und Fremdschlüsseln.
+
+[source, sql]
+----
+ create table if not exists persons
+ (
+   'id'         int AUTO_INCREMENT NOT NULL,
+   'firstname'  varchar(100)       NOT NULL,
+   'lastname'   varchar(100)       NOT NULL,
+   PRIMARY KEY ('id')
+ );
+
+create index TrainNumber_Idx ON Trains (composedNumber)
+
+create view trains as
+     select ...
+       from locomotives l, wagons w
+      where ...
+----
+
+[start=2]
+. `DML` - *Data Manipulation Language*. Befehle zur Abfrage und Aufbereitung der gesuchten Informationen (`select, join, ...`), darüber hinaus Befehle zur Datenmanipulation (`insert, update, delete`) und lesendem Zugriff
+
+[source, sql]
+----
+ select * from customers c
+
+ select (p.name) from persons p
+
+ select p.address,
+        o.delivery
+   from persons p
+   join orders o
+     on p.id = o.personId;
+----
+
+*Datenbankmodellierung*
+
+Ein Datenbankmodell ist die theoretische Grundlage für eine Datenbank und bestimmt, in welcher Struktur Daten in einem Datenbanksystem gespeichert werden. In einem relationale Datenbankmodell werden die Daten tabellenbasiert organisiert. In NoSQL-Datenbanken werden als nicht-tabellenbasiert gespeichert, sondern als Dokumente, Key-Value-Listen oder Graphen.
+
+Es gibt zur *Modellierung* verschiedene Möglichkeiten und Notationen. Das bekannteste ist das `Entity-Relationship-Modell` und das zugehörige Diagramm `ERD`. Als Notation wird häufig die `Krähenfuß-Notation` eingesetzt.
+
+.Beispiel einer n:m Relation in der Datenbank (mit Krähenfuß-Notation)
+image::diagrams/erd.svg[width="80%", align="center"]
+
 
 === NoSQL-Datenbanken
 
@@ -85,7 +135,12 @@ Um dieses Problem zu lösen oder zumindest zu mildern, wurden verschiedene Lösu
 image::images/orm-2.png[title="ORM 2", align="center", width="70%"]
 
 
-=== JPA - Java Persistence API
+=== JPA - Jakarta Persistence API
+
+Die `Java/Jakarta Persistence API` ist eine Spezifikation von Java. Sie wird benutzt, um Java Objekte in relationalen Datenbanken zu persistieren. Sie agiert dabei als Brücke zwischen den objekt-orientierten Domänenmodellen (`POJOs`) und dem `RDBMS`.
+
+Dabei ist sie "nur" eine Spezifikation, sie führt selbst keine Datenbankoperationen aus. Daher ist immer eine Implementierung der API erforderlich, ORM Tools wie `Hibernate` oder `EclipseLink` implementieren die JPA Spezifikation für die Datenpersistenz.
+
 
 {tbd}
 

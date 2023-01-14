@@ -1,4 +1,4 @@
-package de.dhbw.course7.db;
+package de.dhbw.course7;
 
 import org.dbunit.dataset.IDataSet;
 import org.dbunit.dataset.xml.FlatXmlDataSetBuilder;

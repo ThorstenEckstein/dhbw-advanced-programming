@@ -1,5 +1,6 @@
 package de.dhbw.course7.db;
 
+import de.dhbw.course7.DatabaseTestConfig;
 import de.dhbw.course7.simple.Client;
 import de.dhbw.course7.simple.Item;
 import de.dhbw.course7.simple.ObjectRelationalMapper;
@@ -127,10 +128,12 @@ public class DataSourceDBUnitTest extends DataSourceBasedDBTestCase {
         // given -  already setup database connection, see above
 
         // when - insert and ...
-        connection.createStatement().executeUpdate("INSERT INTO CLIENTS (first_name, last_name) VALUES ('John', 'Jansen')");
+        connection.createStatement().executeUpdate(
+                "INSERT INTO CLIENTS (first_name, last_name) VALUES ('John', 'Jansen')");
 
         // directly fetch (select) the new data
-        ResultSet rs = connection.createStatement().executeQuery("select * from CLIENTS where last_name = 'Jansen'");
+        ResultSet rs = connection.createStatement().executeQuery(
+                "select * from CLIENTS where last_name = 'Jansen'");
 
         // then
         assertTrue(rs.next());

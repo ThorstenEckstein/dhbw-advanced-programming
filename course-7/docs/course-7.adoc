@@ -81,8 +81,13 @@ Ein Datenbankmodell ist die theoretische Grundlage für eine Datenbank und besti
 
 Es gibt zur *Modellierung* verschiedene Möglichkeiten und Notationen. Das bekannteste ist das `Entity-Relationship-Modell` und das zugehörige Diagramm `ERD`. Als Notation wird häufig die `Krähenfuß-Notation` eingesetzt.
 
-.Beispiel einer n:m Relation in der Datenbank (mit Krähenfuß-Notation)
-image::diagrams/erd.svg[width="80%", align="center"]
+.Beispiel Datenbankmodellierung mit Krähenfuß-Notation
+image::diagrams/kraehenfuss-notation.svg[width="60%", align="center"]
+
+oder mit konkreten Attributen:
+
+.Beispiel Datenbankmodellierung mit Krähenfuß-Notation (n:m)
+image::diagrams/erd.svg[width="60%", align="center"]
 
 
 === NoSQL-Datenbanken
@@ -128,11 +133,11 @@ Die Entscheidung hängt sehr stark vom der Fachlichkeit ab. D.h. also, vor der t
 
 Objektorientierte Programmiersprachen wie Java kapseln Daten und Verhalten in *Objekten*, hingegen legen relationale Datenbanken Daten in *Tabellen* ab. Die beiden Paradigmen sind grundlegend verschieden. So kapseln Objekte ihren Zustand und ihr Verhalten hinter einer Schnittstelle und haben eine eindeutige Identität. Relationale Datenbanken basieren dagegen auf dem mathematischen Konzept der relationalen Algebra. Dieser konzeptionelle Widerspruch wurde in den 1990er Jahren als object-relational impedance mismatch bekannt.
 
-image::images/orm-1.png[title="ORM 1", align="center", width="70%"]
+image::images/orm-1.png[title="ORM 1", align="center", width="60%"]
 
 Um dieses Problem zu lösen oder zumindest zu mildern, wurden verschiedene Lösungen vorgeschlagen. Dazu gehört die direkte `objektrelationale Abbildung` von Objekten auf Relationen. Sie hat den Vorteil, dass einerseits die Programmiersprache selbst nicht erweitert werden muss und andererseits relationale Datenbanken als etablierte Technik in allen Umgebungen als ausgereifte Software verfügbar sind.
 
-image::images/orm-2.png[title="ORM 2", align="center", width="70%"]
+image::images/orm-2.png[title="ORM 2", align="center", width="60%"]
 
 
 === JPA - Jakarta Persistence API
@@ -141,18 +146,78 @@ Die `Java/Jakarta Persistence API` ist eine Spezifikation von Java. Sie wird ben
 
 Dabei ist sie "nur" eine Spezifikation, sie führt selbst keine Datenbankoperationen aus. Daher ist immer eine Implementierung der API erforderlich, ORM Tools wie `Hibernate` oder `EclipseLink` implementieren die JPA Spezifikation für die Datenpersistenz.
 
+[source, java, lines]
+----
+@Entity <1>
+@Table(name="Stations") <2>
+public class Station {
+    @Id <3>
+    @GeneratedValue(strategy=GenerationType.AUTO)
+    private Long id;
+
+    @Column( <4>
+      name="StationName",
+      length=100,
+      nullable=false,
+      unique=false)
+    private String name;
+
+    @Transient <5>
+    private Integer yearOfConstruction;
+
+    @Temporal(TemporalType.DATE)
+    private Date nextFireDrill;
+
+    @Enumerated(EnumType.STRING)
+    private Buildings buildings;
+
+    @OneToMany(mappedBy="Platforms") <6>
+    private Set<Platform> platforms;
+
+    // other fields, getters and setters
+}
+----
+<1> Markiert eine Datenbank-Entität im Sinne der JPA
+<2> Tabellenname Mehrzahl, Javaklasse Einzahl
+<3> Primärschlüssel
+<4> Spalten Metadaten & Constraints
+<5> wird nicht in der Tabelle gespeichert
+<6> "One-To-Many" Relation als Liste (`Set`)
+
+[source, java, lines]
+----
+@Entity
+@Table(name="Platforms")
+public class Platform {
+
+    @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
+    private Long id;
+
+    @ManyToOne <1>
+    @Column(name="StationId")
+    @JoinColumn(name="id", nullable=false)
+    private Station station;
+
+    // ... more fields
+
+    public Platform() {}
+}
+----
+<1> siehe -> (6): "Rück-Bezug" nach instanziierter Relation
+
+."1:n" Relation im Sourcecode
+image::diagrams/jpa.svg[width="60%", align="center"]
 
 {tbd}
 
 
 === Übungen
 
-IMPORTANT: HIER Übungen überlegen, die die Studies umsetzen können!
-
-Und in der Testklasse finden sich auch ein paar kleine Übungen für die Inhalte des Kurses 7:
+Hier finden sich zwei kleine Übungen:
 
 [subs=attributes]
- {course-7-exam}/ExamTest.java
+ /test/de/dhbw/course7/study/MyStudyTests.java
 
 
 === Tipps, Patterns & Best Practices

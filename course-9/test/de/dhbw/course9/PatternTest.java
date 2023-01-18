@@ -30,7 +30,9 @@ import de.dhbw.course9.proxy.RenderEngine;
 import de.dhbw.course9.proxy.RenderEngineProxy;
 import de.dhbw.course9.proxy.RenderException;
 import de.dhbw.course9.strategy.DetailedPrintStrategy;
+import de.dhbw.course9.strategy.PrintContext;
 import de.dhbw.course9.strategy.SimplePrintStrategy;
+import de.dhbw.course9.strategy.SwitchPrinter;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -126,6 +128,21 @@ public class PatternTest {
 
 		// assert
 		assertEquals("UMN Mapserver Map Client", spatialMap.getName());
+	}
+
+	@Test
+	public void behavior_strategy_or_switch() {
+		// given
+		final SwitchPrinter.Format xml = SwitchPrinter.Format.Xml;
+
+		SwitchPrinter printer = new SwitchPrinter();
+		PrintContext context = new PrintContext();
+		context.add("format", xml);
+
+		// when
+		printer.print(xml, context);
+
+		// then
 	}
 
 	@Test

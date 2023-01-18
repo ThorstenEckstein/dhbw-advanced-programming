@@ -4,6 +4,7 @@ import de.dhbw.course9.model.Entity;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class PrintContext {
 
@@ -32,5 +33,12 @@ public class PrintContext {
 
     public void setItems(Map<String, Object> items) {
         this.items = items;
+    }
+
+    @Override
+    public String toString() {
+        return items.keySet().stream()
+                .map(key -> key + "=" + items.get(key))
+                .collect(Collectors.joining(", "));
     }
 }

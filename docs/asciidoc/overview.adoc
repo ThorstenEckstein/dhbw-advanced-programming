@@ -37,7 +37,7 @@ include::settings.adoc[]
  - Design Prinzipien
  - Design Patterns
  - Code Qualität
- - TDD, JUnit & Mockito
+ - TDD, JUnit
 
  *KW    Mo       - So          Kurstag*
  07    13.02.23 - 19.02.23    1: Mi., 15.02.
@@ -125,7 +125,6 @@ e| &nbsp;&nbsp; Kaffeepause
 | 15'
 | *Q&A*, Best Practices, Codequalität, Organisation, etc.
 |===
-
 
 // ###################################################
 // ###################################################

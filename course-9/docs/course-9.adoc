@@ -19,3 +19,18 @@ include::../../docs/asciidoc/settings.adoc[]
 ----
  to be done
 ----
+
+=== Erzeugungsmuster (Creational Patterns)
+
+*Factory* Pattern:
+
+[source, java]
+----
+include::{course-9-test}/PatternTest.java[tags="pattern-creation-factory"]
+----
+
+
+=== Strukturmuster (Structural Patterns)
+
+
+=== Verhaltensmuster (Behavioral Patterns)

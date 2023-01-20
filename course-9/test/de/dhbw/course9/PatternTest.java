@@ -12,6 +12,7 @@ import de.dhbw.course9.decorator.example2.commands.UpdateCommand;
 import de.dhbw.course9.decorator.example2.decorator.CommandDecorator;
 import de.dhbw.course9.decorator.example2.decorator.CreateCommandDecorator;
 import de.dhbw.course9.decorator.example2.decorator.UpdateCommandDecorator;
+import de.dhbw.course9.factory.Train;
 import de.dhbw.course9.model.Entity;
 import de.dhbw.course9.facade.Printer;
 import de.dhbw.course9.filter.v1.FilterChain;
@@ -33,6 +34,7 @@ import de.dhbw.course9.strategy.DetailedPrintStrategy;
 import de.dhbw.course9.strategy.PrintContext;
 import de.dhbw.course9.strategy.SimplePrintStrategy;
 import de.dhbw.course9.strategy.SwitchPrinter;
+import de.dhbw.course9.factory.*;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -45,8 +47,22 @@ public class PatternTest {
 		mf = new MockFactory();
 	}
 
-	// ------------------------------------------------------------------------------------------------ basic unit tests
+	//tag::pattern-creation-factory[]
+	@Test
+	public void creation_factory() {
+		// given
+		TrainFactory factory = new PassengerTrainFactory();
+		Engine engine = Engine.Electric;
 
+		// when
+		Train passengerTrain = factory.create(engine);
+
+		// then
+		assertEquals(Engine.Electric, passengerTrain.getEngine());
+	}
+	//end::pattern-creation-factory[]
+
+	//tag::pattern-structure-decorator-1[]
 	@Test
 	public void structure_decorator_example1() {
 		// arrange: create default
@@ -65,7 +81,9 @@ public class PatternTest {
 		// assert 2 - "Decorated way of rendering"
 		assertEquals("now printing ...", actualDecorated);
 	}
+	//end::pattern-structure-decorator-1[]
 
+	//tag::pattern-structure-decorator-2[]
 	@Test
 	public void structure_decorator_example2() {
 		// arrange: concrete command 'create' and decorate it
@@ -88,7 +106,9 @@ public class PatternTest {
 		// assert
 		// no asserts in this test
 	}
+	//end::pattern-structure-decorator-2[]
 
+	//tag::pattern-structure-proxy[]
 	@Test
 	public void structure_proxy() throws RenderException {
 		// arrange: a new instance of the proxy behind the public interface
@@ -105,7 +125,9 @@ public class PatternTest {
 		String actual = "Finished (map) rendering ... saved result in \"c:/myMap.png\"";
 		assertEquals(actual, renderResult);
 	}
+	//end::pattern-structure-proxy[]
 
+	//tag::pattern-behavior-observer[]
 	@Test
 	public void behavior_observer() {
 		// arrange: create a new observable subject (implements interface 'Observable')
@@ -129,7 +151,9 @@ public class PatternTest {
 		// assert
 		assertEquals("UMN Mapserver Map Client", spatialMap.getName());
 	}
+	//end::pattern-behavior-observer[]
 
+	//tag::pattern-behavior-strategy[]
 	@Test
 	public void behavior_strategy_or_switch() {
 		// given
@@ -144,7 +168,9 @@ public class PatternTest {
 
 		// then
 	}
+	//end::pattern-behavior-strategy[]
 
+	//tag::pattern-behavior-template[]
 	@Test
 	public void behavior_strategy_facade_templateMethod() {
 		// given
@@ -166,7 +192,9 @@ public class PatternTest {
 
 		// then
 	}
+	//end::pattern-behavior-template[]
 
+	//tag::pattern-behavior-adapter[]
 	@Test
 	public void behavior_adapter() {
 
@@ -201,7 +229,9 @@ public class PatternTest {
 		expected = " ... rendering finished ... publishing result at http://www.domain.de/map!";
 		assertEquals(expected, result);
 	}
+	//end::pattern-behavior-adapter[]
 
+	//tag::pattern-architecture-filter-1[]
 	@Test
 	public void architecture_filterV1() throws FilterException {
 		// arrange
@@ -231,5 +261,6 @@ public class PatternTest {
 				""";
 		assertEquals(actualTrace, filterChain.getTrace());
 	}
+	//end::pattern-architecture-filter-1[]
 
 }

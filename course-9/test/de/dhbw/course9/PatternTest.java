@@ -88,11 +88,15 @@ public class PatternTest {
 	public void structure_decorator_example2() {
 		// arrange: concrete command 'create' and decorate it
 		Command createCommand = new CreateCommand();
-		CommandDecorator decoratedCreateCommand = new CreateCommandDecorator(createCommand);
+
+		CommandDecorator decoratedCreateCommand =
+				new CreateCommandDecorator(createCommand);
 
 		// arrange: concrete command 'update' and decorate it
 		Command updateCommand = new UpdateCommand();
-		CommandDecorator decoratedUpdateCommand = new UpdateCommandDecorator(updateCommand);
+
+		CommandDecorator decoratedUpdateCommand =
+				new UpdateCommandDecorator(updateCommand);
 
 		// act
 		System.out.println("undecorated, default behaviour:");
@@ -111,18 +115,21 @@ public class PatternTest {
 	//tag::pattern-structure-proxy[]
 	@Test
 	public void structure_proxy() throws RenderException {
-		// arrange: a new instance of the proxy behind the public interface
+		// arrange: a new instance of the proxy behind the
+		// public interface
 		RenderEngine renderEngine = new RenderEngineProxy();
 
 		/*
-		 * Generally the primary call goes to RenderEngineProxy, but subsequently
-		 * the MapRenderEngine is really use (by delegating the call)
+		 * Generally the primary call goes to RenderEngineProxy,
+		 * but subsequently the MapRenderEngine is really use
+		 * (by delegating the call)
 		 */
 		// act: do the things we want to do using the proxy object ...
 		String renderResult = renderEngine.render();
 
 		// assert
-		String actual = "Finished (map) rendering ... saved result in \"c:/myMap.png\"";
+		String actual = "Finished (map) rendering ... " +
+				"saved result in \"c:/myMap.png\"";
 		assertEquals(actual, renderResult);
 	}
 	//end::pattern-structure-proxy[]
@@ -130,26 +137,31 @@ public class PatternTest {
 	//tag::pattern-behavior-observer[]
 	@Test
 	public void behavior_observer() {
-		// arrange: create a new observable subject (implements interface 'Observable')
+		// arrange: create a new observable subject
+		// (implements interface 'Observable')
 		Observable spatialMap = new ObservableMap("Map Client");
 
-		// create some new observer (each implementing the interface 'Observer')
+		// create some new observer
+		// (each implementing the interface 'Observer')
 		Observer observer1 = new MapObserver(1);
 		Observer observer2 = new MapObserver(2);
 		Observer observer3 = new MapObserver(3);
 
-		// register/attach these three observers on the observed subject.
+		// register/attach these three observers on the
+		// observed subject.
 		spatialMap.attach(observer1);
 		spatialMap.attach(observer2);
 		spatialMap.attach(observer3);
 
-		// act: force a "state-change" by calling some setter on the observed
-		// subject, which will cause the update/notification of all attached
-		// observing objects (observers).
+		// act: force a "state-change" by calling some setter
+		// on the observed subject, which will cause the update/
+		// notification of all attached observing objects (observers).
 		spatialMap.setName("UMN Mapserver Map Client");
 
 		// assert
-		assertEquals("UMN Mapserver Map Client", spatialMap.getName());
+		assertEquals(
+				"UMN Mapserver Map Client",
+				spatialMap.getName());
 	}
 	//end::pattern-behavior-observer[]
 
@@ -174,21 +186,23 @@ public class PatternTest {
 	@Test
 	public void behavior_strategy_facade_templateMethod() {
 		// given
-		Printer simplePrinter = new Printer(new SimplePrintStrategy());
-		Printer detailedPrinter = new Printer(new DetailedPrintStrategy());
+		Printer simplePrinter =
+				new Printer(new SimplePrintStrategy());
+		Printer detailedPrinter =
+				new Printer(new DetailedPrintStrategy());
 		Entity entity = new Entity("1234");
 
 		// when
 		simplePrinter
-				.caller("testStrategyPattern")
-				.entity(entity)
-				.print();
+			.caller("testStrategyPattern")
+			.entity(entity)
+			.print();
 
 		detailedPrinter
-				.caller("testStrategyPattern")
-				.entity(entity)
-				.item("mykey", "myvalue")
-				.print();
+			.caller("testStrategyPattern")
+			.entity(entity)
+			.item("myKey", "myValue")
+			.print();
 
 		// then
 	}
@@ -200,33 +214,42 @@ public class PatternTest {
 
 		// (1) complete self-implemented use case
 
-		// given: create renderer, the main interface for renderings that shall be done (can acts as a facade!)
+		// given: create renderer, the main interface for renderings
+		// that shall be done (can act as a facade!)
 		Renderer renderer = new Renderer();
-		// For rendering purposes, a render engine is required, use self-made implementation of this rendering mechanism
+		// For rendering purposes, a render engine is required, use
+		// self-made implementation of this rendering mechanism
 		SelfMadeRenderEngine engine = new SelfMadeRenderEngine();
 
-		// when: do render and print the rendering result (could also be implemented using strategy pattern!)
+		// when: do render and print the rendering result (could also
+		// be implemented using strategy pattern!)
 		String result = renderer.render(engine);
 
 		// then
-		String expected = " ... drawings finished ... saving result locally under c:/temp/myMap.png!";
+		String expected = " ... drawings finished ... saving result " +
+				"locally under c:/temp/myMap.png!";
 		assertEquals(expected, result);
 
-		// (2) use case integrating a proprietary implementation by using adapter pattern
+		// (2) use case integrating a proprietary implementation by
+		// using adapter pattern
 
-		// given: now use some proprietary render mechanism, for instance a purchased one or a provided class
-		// without knowing its internals (the real render code)
+		// given: now use some proprietary render mechanism, for instance a
+		// purchased one or a provided class without knowing its internals
+		// (the real render code)
 		ProprietaryRenderEngine pre = new ProprietaryRenderEngine();
-		// In order not to call the proprietary render method directly, wrap the vendor's render engine with some
-		// self-made implementation
+
+		// In order not to call the proprietary render method directly, wrap
+		// the vendor's render engine with some self-made implementation
 		engine = new SelfMadeMapRenderEngine(pre);
 
-		// when: execute renderings using the main processor, which decides what to do internally by interpreting
-		// the current instance's class type and which render method to call.
+		// when: execute renderings using the main processor, which decides
+		// what to do internally by interpreting the current instances' class
+		// type and which render method to call.
 		result = renderer.render(engine);
 
 		// then
-		expected = " ... rendering finished ... publishing result at http://www.domain.de/map!";
+		expected = " ... rendering finished ... publishing result at " +
+				"http://www.domain.de/map!";
 		assertEquals(expected, result);
 	}
 	//end::pattern-behavior-adapter[]

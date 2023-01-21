@@ -1,30 +1,34 @@
 include::../../docs/asciidoc/settings.adoc[]
 
+:toc:
+
 == {course-9}
 
 *Allgemeine Inhalte*
 
 * Design Patterns
-** Singleton
-** Template Method
-** Factory
-** Strategy
-** ...
+** Erzeugungsmuster
+** Strukturmuster
+** Verhaltensmuster
 * Refactoring
 ** Vorgehensweisen
 ** Nutzung der IDE
-** ...
 
-*Fachlicher Kontext*
+*Fachliche Anwendungsfälle*
 ----
- to be done
+ - Komplexe Erzeugung von Instanzen von "Zug"
+ - Ausgabe von Verspätungsmeldungen in GUIs
+ - Nutzung von Kommando's als Stil einer ganzen SW
+ - Adapter zur Umwandlung von domänenspezifischen Objekten
+ - Beobachtung von Zug-Ereignissen in einer Karte
+ - Wahlmöglichkeit für das Format von "Responses"
 ----
 
 === Erzeugungsmuster (Creational Patterns)
 
-*Factory* Pattern:
+*Factory*
 
-[source, java]
+[source, java, indent=0]
 ----
 include::{course-9-test}/PatternTest.java[tags="pattern-creation-factory"]
 ----
@@ -32,5 +36,54 @@ include::{course-9-test}/PatternTest.java[tags="pattern-creation-factory"]
 
 === Strukturmuster (Structural Patterns)
 
+*Decorator (V1)*
+
+[source, java, indent=0]
+----
+include::{course-9-test}/PatternTest.java[tags="pattern-structure-decorator-1"]
+----
+
+*Decorator (V2)*
+
+[source, java, indent=0]
+----
+include::{course-9-test}/PatternTest.java[tags="pattern-structure-decorator-2"]
+----
+
+*Proxy*
+
+[source, java, indent=0]
+----
+include::{course-9-test}/PatternTest.java[tags="pattern-structure-proxy"]
+----
+
 
 === Verhaltensmuster (Behavioral Patterns)
+
+*Adapter*
+
+[source, java, indent=0]
+----
+include::{course-9-test}/PatternTest.java[tags="pattern-behavior-adapter"]
+----
+
+*Observer*
+
+[source, java, indent=0]
+----
+include::{course-9-test}/PatternTest.java[tags="pattern-behavior-observer"]
+----
+
+*Strategy*
+
+[source, java, indent=0]
+----
+include::{course-9-test}/PatternTest.java[tags="pattern-behavior-strategy"]
+----
+
+*Template*
+
+[source, java, indent=0, indent=0]
+----
+include::{course-9-test}/PatternTest.java[tags="pattern-behavior-template"]
+----

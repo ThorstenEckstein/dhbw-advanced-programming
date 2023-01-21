@@ -1,8 +1,10 @@
 package de.dhbw.course9.filter.v1.mock;
 
-public class Input {
+public class Candidate {
 
 	private String name;
+	
+	private boolean committed = false;
 
 	public String getName() {
 		return name;
@@ -12,6 +14,18 @@ public class Input {
 		this.name = name;
 	}
 
+	public void commit() {
+		committed = true;
+	}
+	
+	public void rollback() {
+		committed = false;
+	}
+	
+	public boolean isCommitted() {
+		return committed;
+	}
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -28,7 +42,7 @@ public class Input {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Input other = (Input) obj;
+		Candidate other = (Candidate) obj;
 		if (name == null) {
 			if (other.name != null)
 				return false;
@@ -39,7 +53,7 @@ public class Input {
 
 	@Override
 	public String toString() {
-		return "Input [name=" + name + "]";
+		return "Output [name=" + name + ", committed=" + committed + "]";
 	}
 
 }

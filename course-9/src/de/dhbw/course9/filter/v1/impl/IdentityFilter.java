@@ -3,22 +3,22 @@ package de.dhbw.course9.filter.v1.impl;
 import de.dhbw.course9.filter.v1.DefaultFilter;
 import de.dhbw.course9.filter.v1.FilterChain;
 import de.dhbw.course9.filter.v1.FilterException;
-import de.dhbw.course9.filter.v1.mock.Input;
-import de.dhbw.course9.filter.v1.mock.Output;
+import de.dhbw.course9.filter.v1.mock.Subject;
+import de.dhbw.course9.filter.v1.mock.Candidate;
 
 public class IdentityFilter extends DefaultFilter {
 
 	@Override
-	public void doFilter(Input input, Output output, FilterChain filterChain)
+	public void doFilter(Subject subject, Candidate candidate, FilterChain filterChain)
 			throws FilterException {
 		
-		if (input == null) 
+		if (subject == null)
 			throw new FilterException();
 		
-		if (input.hashCode() == output.hashCode())
-			output.commit();
+		if (subject.hashCode() == candidate.hashCode())
+			candidate.commit();
 		
-		filterChain.doFilter(input, output);
+		filterChain.doFilter(subject, candidate);
 	}
 
 }

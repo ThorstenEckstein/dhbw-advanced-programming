@@ -35,7 +35,7 @@ public class ExamTests {
           }
         }
         
-        What will be the output?
+        What will be the candidate?
         A. 0
         B. 1
         C. 100

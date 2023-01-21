@@ -13,6 +13,7 @@ import de.dhbw.course9.decorator.example2.decorator.CommandDecorator;
 import de.dhbw.course9.decorator.example2.decorator.CreateCommandDecorator;
 import de.dhbw.course9.decorator.example2.decorator.UpdateCommandDecorator;
 import de.dhbw.course9.factory.Train;
+import de.dhbw.course9.filter.v1.mock.Candidate;
 import de.dhbw.course9.model.Entity;
 import de.dhbw.course9.facade.Printer;
 import de.dhbw.course9.filter.v1.FilterChain;
@@ -20,8 +21,7 @@ import de.dhbw.course9.filter.v1.FilterException;
 import de.dhbw.course9.filter.v1.impl.EqualityFilter;
 import de.dhbw.course9.filter.v1.impl.IdentityFilter;
 import de.dhbw.course9.filter.v1.impl.SynonymityFilter;
-import de.dhbw.course9.filter.v1.mock.Input;
-import de.dhbw.course9.filter.v1.mock.Output;
+import de.dhbw.course9.filter.v1.mock.Subject;
 import de.dhbw.course9.filter.v2.mock.MockFactory;
 import de.dhbw.course9.observer.MapObserver;
 import de.dhbw.course9.observer.Observable;
@@ -258,22 +258,22 @@ public class PatternTest {
 	@Test
 	public void architecture_filterV1() throws FilterException {
 		// arrange
-		FilterChain filterChain = new FilterChain();
-		filterChain.add(new IdentityFilter());
-		filterChain.add(new EqualityFilter());
-		filterChain.add(new SynonymityFilter());
+		FilterChain matching = new FilterChain();
+		matching.add(new IdentityFilter());
+		matching.add(new EqualityFilter());
+		matching.add(new SynonymityFilter());
 
-		Input input = new Input();
-		input.setName("Thorsten Eckstein");
+		Subject subject = new Subject();
+		subject.setName("Thorsten Eckstein");
 
-		Output output = new Output(); // with 'committed = false'
-		output.setName("Torsten Eckstein");
+		Candidate candidate = new Candidate(); // with 'committed = false'
+		candidate.setName("Torsten Eckstein");
 
 		// act
-		filterChain.doFilter(input, output);
+		matching.doFilter(subject, candidate);
 
 		// assert: commit() should be done during filter chain walk-through!
-		assertTrue(output.isCommitted());
+		assertTrue(candidate.isCommitted());
 
 		// assert: take a look at the process steps
 		String actualTrace = """
@@ -282,7 +282,7 @@ public class PatternTest {
 				Filtering: SynonymityFilter
 				End of Queue reached
 				""";
-		assertEquals(actualTrace, filterChain.getTrace());
+		assertEquals(actualTrace, matching.getTrace());
 	}
 	//end::pattern-architecture-filter-1[]
 

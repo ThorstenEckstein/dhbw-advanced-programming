@@ -219,11 +219,11 @@ public class PatternTest {
 		Renderer renderer = new Renderer();
 		// For rendering purposes, a render engine is required, use
 		// self-made implementation of this rendering mechanism
-		SelfMadeRenderEngine engine = new SelfMadeRenderEngine();
+		de.dhbw.course9.adapter.RenderEngine renderEngine = new SelfMadeRenderEngine();
 
 		// when: do render and print the rendering result (could also
 		// be implemented using strategy pattern!)
-		String result = renderer.render(engine);
+		String result = renderer.render(renderEngine);
 
 		// then
 		String expected = " ... drawings finished ... saving result " +
@@ -236,16 +236,16 @@ public class PatternTest {
 		// given: now use some proprietary render mechanism, for instance a
 		// purchased one or a provided class without knowing its internals
 		// (the real render code)
-		ProprietaryRenderEngine pre = new ProprietaryRenderEngine();
+		ProprietaryRenderEngine proprietaryRenderEngine = new ProprietaryRenderEngine();
 
 		// In order not to call the proprietary render method directly, wrap
 		// the vendor's render engine with some self-made implementation
-		engine = new SelfMadeMapRenderEngine(pre);
+		renderEngine = new SelfMadeMapRenderEngine(proprietaryRenderEngine);
 
 		// when: execute renderings using the main processor, which decides
 		// what to do internally by interpreting the current instances' class
 		// type and which render method to call.
-		result = renderer.render(engine);
+		result = renderer.render(renderEngine);
 
 		// then
 		expected = " ... rendering finished ... publishing result at " +
@@ -259,8 +259,8 @@ public class PatternTest {
 	public void architecture_filterV1() throws FilterException {
 		// arrange
 		FilterChain filterChain = new FilterChain();
-		filterChain.add(new EqualityFilter());
 		filterChain.add(new IdentityFilter());
+		filterChain.add(new EqualityFilter());
 		filterChain.add(new SynonymityFilter());
 
 		Input input = new Input();
@@ -277,8 +277,8 @@ public class PatternTest {
 
 		// assert: take a look at the process steps
 		String actualTrace = """
-				Filtering: EqualityFilter
 				Filtering: IdentityFilter
+				Filtering: EqualityFilter
 				Filtering: SynonymityFilter
 				End of Queue reached
 				""";

@@ -87,3 +87,13 @@ include::{course-9-test}/PatternTest.java[tags="pattern-behavior-strategy"]
 ----
 include::{course-9-test}/PatternTest.java[tags="pattern-behavior-template"]
 ----
+
+
+=== Architekturmuster (Architectural Patterns)
+
+*Filter-Chain*
+
+[source, java, indent=0]
+----
+include::{course-9-test}/PatternTest.java[tags="pattern-architecture-filter-1"]
+----

@@ -28,6 +28,8 @@ include::../../docs/asciidoc/settings.adoc[]
 
 *Factory*
 
+Versteckt eine komplexe Initialisierung bzw. Erzeugung in Fabrik-Methoden oder -Klassen. Oft in statischer Weise.
+
 [source, java, indent=0]
 ----
 include::{course-9-test}/PatternTest.java[tags="pattern-creation-factory"]
@@ -37,6 +39,10 @@ include::{course-9-test}/PatternTest.java[tags="pattern-creation-factory"]
 === Strukturmuster (Structural Patterns)
 
 *Decorator (V1)*
+
+Fügt zusätzlich Verantwortlichkeiten einer Klasse hinzu. Geeignet, wenn die genutzte Funktionalität aus Dritt-Bibliotheken kommt und angepasst werden soll.
+
+CAUTION: Kann leicht das _Single-Responsibility-Principle_ aushebeln!
 
 [source, java, indent=0]
 ----
@@ -52,6 +58,8 @@ include::{course-9-test}/PatternTest.java[tags="pattern-structure-decorator-2"]
 
 *Proxy*
 
+Repräsentiert einen Stellvertreter oder einen Platzhalter für das eigentliche zu nutzende Objekt dar und stellt auf diese Weise einen konktrollierbaren Zugriff auf die darunter liegende Klasse/Objekt bereit.
+
 [source, java, indent=0]
 ----
 include::{course-9-test}/PatternTest.java[tags="pattern-structure-proxy"]
@@ -62,12 +70,16 @@ include::{course-9-test}/PatternTest.java[tags="pattern-structure-proxy"]
 
 *Adapter*
 
+Fügt einer Klasse zusätzliche Funktionalität dynamisch (d.h. zur Laufzeit) hinzu. Ist vergleichbar mit "Subclassing", bleibt dabei aber flexibler.
+
 [source, java, indent=0]
 ----
 include::{course-9-test}/PatternTest.java[tags="pattern-behavior-adapter"]
 ----
 
 *Observer*
+
+Definiert eine 1:n Beziehung zwischen einem Objekt, das seine Zustandsänderung mitteilen möchte und Objekte, die diese Änderungen automatisch konsumieren (beobachten) wollen.
 
 [source, java, indent=0]
 ----
@@ -76,12 +88,16 @@ include::{course-9-test}/PatternTest.java[tags="pattern-behavior-observer"]
 
 *Strategy*
 
+Definiert eine Familie von Algorithmen, kapselt diese jeweils in separaten Klassen und macht sie dadruch austauschbar (_pluggable_). Nutzende Klassen sind gegenüber dem Austausch der Algorithmen agnostisch, sie bemerken ihn gar nicht.
+
 [source, java, indent=0]
 ----
 include::{course-9-test}/PatternTest.java[tags="pattern-behavior-strategy"]
 ----
 
 *Template*
+
+Definiert das _"Skelett"_ eines Algorithmus als Operation (Methode) mit vorgegebenem Ablauf und überlässt die Implementierung den (erbenden) Klassen für die ganze oder auch nur Teile des Algorithmus. Die Struktur des Algorithmus bleibt dabei aber immer gleich.
 
 [source, java, indent=0, indent=0]
 ----
@@ -92,6 +108,8 @@ include::{course-9-test}/PatternTest.java[tags="pattern-behavior-template"]
 === Architekturmuster (Architectural Patterns)
 
 *Filter-Chain*
+
+Typisches Architekturmuster, erlaubt die Aneinanderreihung von (in sich geschlossenen) unabhängigen Verarbeitungsschritten mit klaren Ein- und Ausgabewerten.
 
 [source, java, indent=0]
 ----

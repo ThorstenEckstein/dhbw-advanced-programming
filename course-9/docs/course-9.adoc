@@ -4,16 +4,6 @@ include::../../docs/asciidoc/settings.adoc[]
 
 == {course-9}
 
-*Allgemeine Inhalte*
-
-* Design Patterns
-** Erzeugungsmuster
-** Strukturmuster
-** Verhaltensmuster
-* Refactoring
-** Vorgehensweisen
-** Nutzung der IDE
-
 *Fachliche Anwendungsfälle*
 ----
  - Komplexe Erzeugung von Instanzen von "Zug"
@@ -23,6 +13,59 @@ include::../../docs/asciidoc/settings.adoc[]
  - Beobachtung von Zug-Ereignissen in einer Karte
  - Wahlmöglichkeit für das Format von "Responses"
 ----
+
+
+=== Qualität in Softwareprojekten
+
+Softwarequalität ist normiert und kann gemessen werden.
+
+Die internationale Organisation für Standardisierung (kurz `ISO`) und die internationale Kommission für Elektrotechnik (kurz `IEC`) definieren mit Normen wie der `ISO 25010` ein System zur einheitlichen Bewertung von *standardisierten Softwareentwicklung*.
+
+[subs=normal]
+ -> https://de.wikipedia.org/wiki/ISO/IEC_25000[ISO 25000]
+
+In dem in der `ISO 25010` verankerten Leitfaden für Software Systeme _„Software Product Quality Requirements and Evaluation (`SQuaRE`)“_ werden relevante Richtlinien zur Qualität von Software und Softwareentwicklung im Detail erläutert:
+
+. *Funktionalität*
+* vollständig hinsichtlich der Softwarefunktionalität
+* funktional korrekt
+* angemessene Funktionalität
+. *Zuverlässigkeit*
+* ausgereifte Software
+* Verfügbarkeit
+* Fehlertoleranz
+* Wiederherstellbarkeit
+. *Effizienz, Performance*
+* gutes Zeitverhalten
+* Ressourcen effektiv nutzen
+* Kapazitäten schonen
+. *Sicherheit*
+* Datenschutz
+* Integrität
+* nicht manipulierbar
+* sichere Administration und geschützte Benutzer-Accounts
+* Authentifizierbarkeit
+. *Kompatibilität*
+* optimale Co-Existenz zu anderen Softwareprodukten
+* Interoperabilität
+. *Usability*
+* leicht erlernbar (und lernfähig)
+* gute Bedienbarkeit (auch für behinderte Menschen)
+* Schutz vor Fehlbedienung durch Nutzer
+* Ästhetisches User-Interface
+. *Wartbarkeit*
+* modularer Aufbau
+* wiederverwendbare Komponenten
+* gute Analyse-Funktion
+* leicht modifizierbar
+* umfangreiche Testoptionen
+. *Portierbarkeit*
+* gute Adaptivität
+* leicht zu installieren
+* einfach austauschbar
+
+Siehe z.B. -> https://de.wikipedia.org/wiki/Softwarequalit%C3%A4t[Softwarequalität bei Wikipedia]
+
 
 === Erzeugungsmuster (Creational Patterns)
 
@@ -115,3 +158,42 @@ Typisches Architekturmuster, erlaubt die Aneinanderreihung von (in sich geschlos
 ----
 include::{course-9-test}/PatternTest.java[tags="pattern-architecture-filter-1"]
 ----
+
+
+=== Refactoring
+
+Es ist vollkommen "normal", dass der eigene Code mehrfach überarbeitet werden muss. Das ist gängige Praxis, und so gut wie niemand schreibt auf Anhieb sehr guten Sourcecode.
+
+Diese Softwarequalität lässt sich aber sehr oft auf recht einfache Weise und meistens auch schnell verbessern.
+
+Auch wenn man selbst die Qualität des eigenen Codes manchmal nur schwer bewerten kann, gibt es eine Reihe von Tools, Methoden und Hilfestellungen, die man nutzen kann. Dazu gehören:
+
+* Test Driven Development (`TDD`)
+* Design Patterns (s.o.)
+* Metriken (z.B. die `Zyklomatische Komplexität`)
+* Tools, die die Qualität automatisch checken, z.B. `SonarQube`
+* Code-Refactorings
+
+Besonders die `Refactorings` gehören zum Alltag eines Entwicklers und sollten _"wie selbstverständlich"_ permanent beachtet und genutzt werden. Man findet hier oft die Regel...
+
+TIP: _Jedesmal, wenn man an einer Stelle im Sourcecode arbeitet, sollte diese etwas verbessert verlassen als man sie vorgefunden hat (Pfadfinder-Regel)._
+
+Zur Verbesserung des Codes fängt man mit einfachen Aspekten an, von denen die meisten in den `Clean Code` Prinzipien formalisiert sind. Manches fällt einem aber schnell auf. Die Dinge, die vor allem das Verständnis des Codes verschlechtern oder die einem sonst "irgendwie merkwürdig" vorkommen, nenn man auch gerne
+
+ (Code) Smells
+
+Dazu zählen (Auszug) ...
+
+* unklare Variablen- oder Klassennamen
+* "Magic Numbers"
+* komplexe Methodensignaturen
+* Methoden mit tiefen Verschachtelungen
+* Methoden mit "zu viel" Code (zu viele Zeilen)
+
+Zur Durchführung von Refactorings kann und sollte jede IDE meist in sehr gut unterstützter Weise genutzt werden. IntelliJ hat dafür u.a. ganz Menüs wie `Code` oder `Refactor`.
+
+Ein *Beispiel* findet sich hier:
+
+[subs=normal]
+ {course-9-src}/refactoring/BeforeRefactoring.java
+

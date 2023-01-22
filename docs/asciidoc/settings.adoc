@@ -30,8 +30,8 @@
 :course-5:  {title-prefix} 5 - Kommunikationskonzepte
 :course-6:  {title-prefix} 6 - Exceptions, Code Dokumentation
 :course-7:  {title-prefix} 7 - Datenbank & Persistenz
-:course-8:  {title-prefix} 8 - Clean Code 1/2
-:course-9:  {title-prefix} 9 - Clean Code 2/2
+:course-8:  {title-prefix} 8 - Clean Code
+:course-9:  {title-prefix} 9 - Code Qualität
 :course-10: {title-prefix} 10 - Prüfungsvorbereitung
 
 :course-1-src: ../src/de/dhbw/course1

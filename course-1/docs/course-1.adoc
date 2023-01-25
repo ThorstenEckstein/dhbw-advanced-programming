@@ -49,7 +49,31 @@ image::diagrams/business-model.svg["Fachbegriffe",width="75%",align="center"]
 
 === Technisches Setup
 
-*Klassenmodell* erzeugen:
+==== Github
+
+Das Repository mit den Sourcen für dieses Seminar befindet sich hier:
+
+ https://github.com/ThorstenEckstein/dhbw-advanced-programming
+
+Zunächst muss das Repository geklont werden für die lokale Kopie:
+
+ git clone https://github.com/ThorstenEckstein/dhbw-advanced-programming.git
+
+Dann bitte direkt auf den Branch `hands-on` durch
+
+ git checkout -b hands-on
+
+wechseln.
+
+
+==== Einrichtung von IntelliJ (empfohlen)
+
+* ... Jakob's Test und Doing ...
+
+
+==== Klassenmodell
+
+Die Fachlichkeit (s.o.) kann in einem (Fach-) *Klassenmodell* abgebildet werden, z.B. mit folgenden Objekten:
 
 ----
  + Zug (Zugarten), Wagons (Wagonarten)
@@ -60,16 +84,16 @@ image::diagrams/business-model.svg["Fachbegriffe",width="75%",align="center"]
  (+ Dispositionsmaßnahme, Umleitung)
 ----
 
-Überblick über das grundsätzliche *Fachklassenmodell*:
+Überblick über das grundsätzliche *Fachklassenmodell* in zwei "Geschmacksrichtungen":
 
-*Infrastrukturelle* Sicht:
+*Infrastrukturelle* Sicht (statische Sicht):
 
 [plantuml, "Klassenmodell", png, align="center"]
 ....
 include::diagrams/business-model-ist.puml[]
 ....
 
-*Planerische* Sicht:
+*Planerische* Sicht (dynamische Sicht):
 
 [plantuml, "Klassenmodell", png, align="center"]
 ....
@@ -77,7 +101,7 @@ include::diagrams/business-model-soll.puml[]
 ....
 
 
-Das Interface `Train` sieht dabei wie folgt aus:
+Das Interface `Train` sieht dabei vielleicht so aus:
 
 [source, java, linenums]
 ----
@@ -87,6 +111,47 @@ include::{course-1-src}/model/train/Train.java[lines=5..13]
 Für mehr Einblicke in das Modell und die Objekterzeugung, siehe auch
 
  test/de/dhbw/course1/model/ModelTest.java
+
+
+=== Test Driven Development (`TDD`)
+
+Test Driven Development (`TDD`) ist eine gute Praxis, um den Sourcecode von Beginn an - mithilfe von Unit-Tests regelmäßig und bei Änderungen auf Korrektheit zu überprüfen. Die erste Umsetzung erfolgt vielfach durch Testklassen, den `Unit-Tests`.
+
+Unit-Tests haben folgende *Eigenschaften*:
+
+. Unit-Tests sind *automatisiert*. Ein Unit-Test-Framework führt Tests aus, verifiziert und gibt das Ergebnis zurück, damit es geprüft werden kann
+. Unit-Tests sind *granular*, sie sollen nur einen kleinen Teil des Codes -häufig eine Methode - testen.
+. Unit-Tests *isolieren* das Testziel und sollen möglichst ohne oder nur mit wenig "Vorbereitungen" gestartet werden können
+. Unit-Tests sind *deterministisch*, damit das Testergebnis sauber geprüft werden kann und wiederholt werden kann
+. Unit-Tests sind *unabhängig*. Die Ausführung der Tests dürfen in keiner Weise von anderen Testmethoden abhängen, denn die Reihenfolge der vom Framework ausgeführten Tests ist zufällig bzw. nicht vorhersagbar.
+
+*Umsetzung*:
+
+Unit-Tests weisen eine besondere (innere) Struktur auf, d.h. die Art und Weise, wie diese geschrieben werden. Dazu zählen
+
+* `given-when-then` oder
+* `arrange-act-assert`.
+
+*Vorgehensweise*:
+
+Auch das Schreiben von Tests folgt vielfach einer Routine bzw. einer "best practice". Neben zahlreichen gleichwertigen Ansätzen ist die so-genannte `"red, green, refactor"` Methode weitestgehend anerkannt.
+
+image::images/tdd-red-green-refactor.png[align="center", width="50%"]
+
+*Red, Green, Refactor*:
+
+Der "red, green, refactor" Ansatz hilft Entwicklern, den (zu implementierenden) Code zu entwickeln, indem sie den Fokus in den Phasen auf bestimmte Aspekte lenken:
+
+. [red]#*Red*#: _Was soll implementiert werden und wie fühlt sich das Ganze aus Sicht des "Clients" bzw. der Nutzer an?_ Nutzer sind hier primär die Entwickler selbst bzw. diejenigen, die die Klassen, Methoden, Algorithmen im Code aufrufen, also nutzen wollen. In dieser Phase _soll_ der Test noch scheitern, d.h. "rot" sein, weil hier nicht die Implementierung an sich, sondern die "Außensicht" auf die `API` im Vordergrund steht.
+
+. [green]#*Green*#: In dieser Phase geht es darum, den Test _"zum Laufen"_ zu bringen. Es wird also "grün". Im Vordergrund steht die _schnellste und einfachste Implementierung_ der Funktionalität. Der Code wird hier also nur technisch funktionsfähig gemacht, es werden aber so wenig wie möglich Überlegungen angestellt, wie der Code gut, schön oder effektiv geschrieben werden muss.
+
+. [blue]#*Refactor*#: In dieser letzten Phase (dieser Iteration) geht es nun genau darum, was in den beiden vorherigen Phasen absichtlich nicht gemacht werden sollte, nämlich die Verbesserung des Codes hinsichtlich seiner "Qualität" (das Thema Code-Qualität wird gegen Ende des Seminars noch näher betrachtet). Ergebnis dieser (drei) Phasen soll dann ein Unit-Test sein, der lesbar und wartbar ist und auch die Implementierung der Funktionalität einen bestimmten Reifegrad bzw. eine erste hinreichende Qualität erreicht hat, und natürlich letztlich die korrekte Funktionalität liefert.
+
+Dazu ein *Beispiel*:
+
+ test/de/dhbw/course1/tdd/TddByExampleTest.java
+
 
 === Objektvertrag (object contract)
 
@@ -160,7 +225,7 @@ image::diagrams/reference-semantics.svg["RefSem",width="100%",align="center"]
 | [yellow]#(1)#
 | Erzeugung einer Variable `a1` vom Typ `Account` mit Zuweisung zur neuen Instanz sowie der Initialisierung des Attributes `amount` mit dem Wert `0`
 
-[source,java]
+[source,java,indent=0]
 ----
 include::{course-1-test}/basics/BasicsTest.java[lines="69"]
 ----
@@ -168,7 +233,7 @@ include::{course-1-test}/basics/BasicsTest.java[lines="69"]
 | [yellow]#(2)#
 | Aus Sicht der Methode `process(Account acc)` wird eine Variable `acc` definiert, sie hat initial den Wert `null`
 
-[source,java]
+[source,java,indent=0]
 ----
 include::{course-1-src}/basics/refsemantics/Account.java[lines="22"]
 ----
@@ -177,16 +242,15 @@ include::{course-1-src}/basics/refsemantics/Account.java[lines="22"]
 | Beim Aufruf der Methode `process(a1)` wird der Wert bzw. die "Adresse" der Variable `a1`  nach `acc` kopiert (_"copy-by-value"_)
 
 //include::{course-1-test}/basics/BasicsTest.java[lines="73"]
-[source]
+[source,java,indent=0]
 ----
         Account.process(a1)
 ----
 
-
 | [yellow]#(4)#
 | Hier wird (einfach) eine neue Instanz `a2` von `Account` angelegt, sie hat zunächst nichts mit den vorhergehenden Dingen zu tun. Bei dieser zweiten Instanz wird das Attribut `amount` allerdings gleich dem Wert `100` initialisiert
 
-[source,java]
+[source,java,indent=0]
 ----
 include::{course-1-src}/basics/refsemantics/Account.java[lines="24"]
 ----
@@ -194,7 +258,7 @@ include::{course-1-src}/basics/refsemantics/Account.java[lines="24"]
 | [yellow]#(5)#
 | Bei der Zuweisung von `acc = a2` wird die Referenz auf die neue Instanz "gelenkt"
 
-[source,java]
+[source,java,indent=0]
 ----
 include::{course-1-src}/basics/refsemantics/Account.java[lines="25"]
 ----
@@ -202,7 +266,7 @@ include::{course-1-src}/basics/refsemantics/Account.java[lines="25"]
 | [yellow]#(6)#
 | Hier wird der interne Status der Instanz von `Account`, nämlich der Attributwert von `amount` um `250` erhöht, der Objektzustand wird also verändert!
 
-[source,java]
+[source,java,indent=0]
 ----
 include::{course-1-src}/basics/refsemantics/Account.java[lines="27"]
 ----
@@ -230,13 +294,3 @@ In der Testklasse finden sich weitere kleine Übungen für die Inhalte des Kurse
 
 === Tipps, Patterns & Best Practices
 
-Test Driven Development (TDD)::
-Ist eine gute Praxis, um seinen Code von Beginn an - mithilfe von Unit-Tests regelmäßig und bei Änderungen auf Korrektheit zu überprüfen. Dazu gibt es z.B. die Strukturen `given-when-then` oder `arrange-act-assert`.
-
-*Exkurs*. Eigenschaften von Unit-Tests
-
-. Unit-Tests sind *automatisiert*. Ein Unit-Test-Framework führt Tests aus, verifiziert und gibt das Ergebnis zurück, damit es geprüft werden kann
-. Unit-Tests sind *granular*, sie sollen nur einen kleinen Teil des Codes -häufig eine Methode - testen.
-. Unit-Tests *isolieren* das Testziel und sollen möglichst ohne oder nur mit wenig "Vorbereitungen" gestartet werden können
-. Unit-Tests sind *deterministisch*, damit das Testergebnis sauber geprüft werden kann und wiederholt werden kann
-. Unit-Tests sind *unabhängig*. Die Ausführung der Tests dürfen in keiner Weise von anderen Testmethoden abhängen, denn die Reihenfolge der vom Framework ausgeführten Tests ist zufällig bzw. nicht vorhersagbar.

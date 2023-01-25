@@ -1,13 +1,13 @@
 
+    //tag::bad-code-example-1[]
     public StateMachine<Task, TaskState, TaskAction, ObjectId> getTaskWorkflow(){
-        log.info("create StateMachine for Tasks (qualifier: {})", TASK_WORKFLOW);
         return StateMachine.<Task,TaskState,TaskAction, ObjectId>build()
             .withLogger(log)
             .withDefaultState(TaskState.DEFAULT)
+            ...
+    //end::bad-code-example-1[]
             .withService(taskService)
-            //Log all state-transitions
             .withDefaultTransitionAction(auditLoggingService::logWorkflowTransition)
-            //Publish Task workflow
             .withTransitionFrom(TaskState.draft).trigger(TaskAction.publish).to(TaskState.published)
                 .withActor(task -> task.getOwner())
                 //KMP-101: Task responsible employees are allowed to publish a task

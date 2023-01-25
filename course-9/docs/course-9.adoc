@@ -162,11 +162,13 @@ include::{course-9-test}/PatternTest.java[tags="pattern-architecture-filter-1"]
 
 === Refactoring
 
-Es ist vollkommen "normal", dass der eigene Code mehrfach überarbeitet werden muss. Das ist gängige Praxis, und so gut wie niemand schreibt auf Anhieb sehr guten Sourcecode.
+Es ist vollkommen "normal", dass (der eigene) Code mehrfach überarbeitet werden muss. Das ist gängige Praxis, und so gut wie niemand schreibt auf Anhieb sehr guten Sourcecode.
 
-Diese Softwarequalität lässt sich aber sehr oft auf recht einfache Weise und meistens auch schnell verbessern.
+IMPORTANT: _Es sollte immer beachtet werden, unter welchen Umständen Software entwickelt wird oder wurde, d.h. z.B. mit welchem Zeitdruck, mit welchen Anforderungen oder von welchen "Charakteren"!_
 
-Auch wenn man selbst die Qualität des eigenen Codes manchmal nur schwer bewerten kann, gibt es eine Reihe von Tools, Methoden und Hilfestellungen, die man nutzen kann. Dazu gehören:
+Es ergibt also recht häufig die Notwendigkeit, den Code weiterzuentwickeln. Die Softwarequalität lässt sich glücklicherweise meistens und bis zu einem bestimmten Grad auf recht einfache Weise und auch schnell verbessern.
+
+Auch wenn man selbst die Qualität des eigenen Codes manchmal nur schwer bewerten kann, gibt es eine Reihe von Tools, Methoden und Hilfestellungen, die genutzt werden können. Dazu gehören:
 
 * Test Driven Development (`TDD`)
 * Design Patterns (s.o.)
@@ -192,8 +194,25 @@ Dazu zählen (Auszug) ...
 
 Zur Durchführung von Refactorings kann und sollte jede IDE meist in sehr gut unterstützter Weise genutzt werden. IntelliJ hat dafür u.a. ganz Menüs wie `Code` oder `Refactor`.
 
-Ein *Beispiel* findet sich hier:
+Ein einfacheres *Beispiel* findet sich hier:
 
 [subs=normal]
  {course-9-src}/refactoring/BeforeRefactoring.java
 
+Komplexer Code ist häufig sehr schwer zu verändern, wie hier - deutlich komplexeren Beispielen - zu sehen:
+
+ course-9/docs/resources/bad-code-example-1.java
+
+[source, java, indent=0]
+----
+include::resources/bad-code-example-1.java[tags="bad-code-example-1"]
+----
+
+sowie
+
+ course-9/docs/resources/bad-code-example-2.java
+
+[source, java, indent=0]
+----
+include::resources/bad-code-example-2.java[tags="bad-code-example-2"]
+----

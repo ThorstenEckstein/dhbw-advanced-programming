@@ -76,10 +76,16 @@ public void handleGpsZugMeldung(final GpsGeoBsMeldung pGpsMeldung) {
 
   if (!isFluegelZugScenaroiToBeConsidered) {
 
-    lIsHauptSenderSet = mHauptSenderEvaluator.isHauptSenderSet(lZugNummer, lStartBf, lStartZeit, lSendendesFahrzeug, lMsgToken);
-    lIsHauptSender = mHauptSenderEvaluator.isTrainHauptSender(lZugNummer, lStartBf, lStartZeit, lSendendesFahrzeug, lMsgToken);
-    lIsHauptSenderMsgTooOld = mHauptSenderEvaluator.isHauptSenderMsgToolOld(lZugNummer, lStartBf, lStartZeit, lSendendesFahrzeug, lGpsMeldung
-        .getTimestamp().getTime(), lMsgToken);
+//tag::bad-code-example-2[]
+    ...
+    lIsHauptSenderSet = mHauptSenderEvaluator.isHauptSenderSet(lZugNummer, lStartBf,
+        lStartZeit, lSendendesFahrzeug, lMsgToken);
+    lIsHauptSender = mHauptSenderEvaluator.isTrainHauptSender(lZugNummer, lStartBf,
+        lStartZeit, lSendendesFahrzeug, lMsgToken);
+    lIsHauptSenderMsgTooOld = mHauptSenderEvaluator.isHauptSenderMsgToolOld(lZugNummer, lStartBf,
+        lStartZeit, lSendendesFahrzeug, lGpsMeldung.getTimestamp().getTime(), lMsgToken);
+        ...
+//end::bad-code-example-2[]
 
     boolean trainSeparationDetected = isSenderFahrzeugGetrennt(
             lGpsMeldung,

@@ -14,12 +14,14 @@ include::../../docs/asciidoc/settings.adoc[]
 
 *Theorie & Objektmodell*:
 
+//tag::content[]
 - [ ] Klassen & Objekte
 - [ ] Objektvertrag (hashCode, equals)
 - [ ] Vererbung & Interfaces
 - [ ] Abstrakte Klassen
 - [ ] Beziehungsarten (Besitz, Aufruf, Vererbung, ...), Aggregation vs. Komposition etc.
 - [ ] Referenzsemantik
+//end::content[]
 
 === Fachlicher Kontext
 
@@ -88,14 +90,14 @@ Die Fachlichkeit (s.o.) kann in einem (Fach-) *Klassenmodell* abgebildet werden,
 
 *Infrastrukturelle* Sicht (statische Sicht):
 
-[plantuml, "Klassenmodell", png, align="center"]
+[plantuml, "Klassenmodell-1", png, align="center"]
 ....
 include::diagrams/business-model-ist.puml[]
 ....
 
 *Planerische* Sicht (dynamische Sicht):
 
-[plantuml, "Klassenmodell", png, align="center"]
+[plantuml, "Klassenmodell-2", png, align="center"]
 ....
 include::diagrams/business-model-soll.puml[]
 ....

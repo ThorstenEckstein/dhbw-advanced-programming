@@ -1,5 +1,8 @@
 include::../../docs/asciidoc/settings.adoc[]
 
+:toc:
+
+////
 == {course-10}
 
 *Allgemeine Inhalte*
@@ -10,3 +13,8 @@ include::../../docs/asciidoc/settings.adoc[]
 ----
  to be done
 ----
+////
+
+=== {course-1}
+
+include::../../course-1/docs/course-1.adoc[tags="content"]

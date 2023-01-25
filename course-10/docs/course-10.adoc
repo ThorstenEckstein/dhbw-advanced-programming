@@ -2,19 +2,44 @@ include::../../docs/asciidoc/settings.adoc[]
 
 :toc:
 
-////
-== {course-10}
-
-*Allgemeine Inhalte*
-
-* to be done
-
-*Fachlicher Prüfungskontext*
-----
- to be done
-----
-////
-
 === {course-1}
 
 include::../../course-1/docs/course-1.adoc[tags="content"]
+
+=== {course-2}
+
+include::../../course-2/docs/course-2.adoc[tags="content"]
+
+=== {course-3}
+
+include::../../course-3/docs/course-3.adoc[tags="content"]
+
+=== {course-4}
+
+include::../../course-4/docs/course-4.adoc[tags="content"]
+
+=== {course-5}
+
+include::../../course-5/docs/course-5.adoc[tags="content"]
+
+=== {course-6}
+
+include::../../course-6/docs/course-6.adoc[tags="content"]
+
+=== {course-7}
+
+include::../../course-7/docs/course-7.adoc[tags="content"]
+
+=== {course-8}
+
+include::../../course-8/docs/course-8.adoc[tags="content"]
+
+=== {course-9}
+
+include::../../course-9/docs/course-9.adoc[tags="content"]
+
+=== {course-10}
+
+* [ ] Wiederholungen
+* [ ] Prüfungsvorbereitung
+* [ ] Praktische Übungen

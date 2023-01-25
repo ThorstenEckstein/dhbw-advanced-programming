@@ -6,12 +6,14 @@ include::../../docs/asciidoc/settings.adoc[]
 
 *Allgemeine Inhalte*
 
+//tag::content[]
 * [ ] SQL-Datenbanken
 * [ ] NoSQL-Datenbanken
 * [ ] SQL
 * [ ] ORM Objektrelationales Mapping
 * [ ] JDBC, JPA
 * [ ] Unit-Tests gegen In-Memory-Datenbank (H2)
+//end::content[]
 
 
 === SQL-Datenbanken

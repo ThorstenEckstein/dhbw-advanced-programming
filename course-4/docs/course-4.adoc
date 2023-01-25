@@ -6,9 +6,11 @@ include::../../docs/asciidoc/settings.adoc[]
 
 *Allgemeine Inhalte*
 
+//tag::content[]
 * [ ] Thread & Runnable
 * [ ] synchronized
 * [ ] Enumerations
+//end::content[]
 
 *Fachlicher Kontext*
 ----

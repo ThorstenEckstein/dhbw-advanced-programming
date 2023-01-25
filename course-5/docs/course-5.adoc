@@ -4,19 +4,15 @@ include::../../docs/asciidoc/settings.adoc[]
 
 == {course-5}
 
-////
 *Allgemeine Inhalte*
 
-* Beziehungen zwischen Systemen oder Komponenten (Call, ...)
-* synchron vs. asynchron
-* synchron
-** Method Calls
-** REST (SOAP?)
-** RMI
-* asynchron
-** publish/subscribe
-** fire & forget
-////
+//tag::content[]
+* [ ] Integrationskriterien
+* [ ] Integrationsoptionen bzw. -muster
+* [ ] Synchrone Kommunikation: RESTful WebServices
+* [ ] Asynchrone Kommunikation: Messaging
+* [ ] Beziehungen zwischen Systemen oder Komponenten
+//end::content[]
 
 Ganz allgemein umfasst der Begriff *Integration* das Ziel, verschiedene Applikationen zusammen arbeiten zu lassen, um einen einheitlichen Satz an Funktionalität bereitzustellen. Hierbei werden viele Teilbereiche berührt, z.B.
 

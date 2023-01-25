@@ -1,7 +1,7 @@
 package de.dhbw.course9.filter.v1;
 
-import de.dhbw.course9.filter.v1.mock.Input;
-import de.dhbw.course9.filter.v1.mock.Output;
+import de.dhbw.course9.filter.v1.mock.Subject;
+import de.dhbw.course9.filter.v1.mock.Candidate;
 
 public class FilterManager {
 
@@ -19,8 +19,8 @@ public class FilterManager {
 		this.filterChain = filterChain;
 	}
 	
-	public void executeFilterChain(Input input, Output output) throws FilterException {
-		filterChain.doFilter(input, output);
+	public void executeFilterChain(Subject subject, Candidate candidate) throws FilterException {
+		filterChain.doFilter(subject, candidate);
 	}
 
 }

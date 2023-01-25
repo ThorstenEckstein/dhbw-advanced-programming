@@ -31,7 +31,7 @@ public class Renderer {
      * @param localRenderEngine The engine to use.
      * @return the render result.
      */
-    public String render(SelfMadeRenderEngine localRenderEngine) {
+    public String render(RenderEngine localRenderEngine) {
         return localRenderEngine.renderMap();
     }
 

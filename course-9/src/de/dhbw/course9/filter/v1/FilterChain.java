@@ -3,8 +3,8 @@ package de.dhbw.course9.filter.v1;
 import java.util.LinkedList;
 import java.util.Queue;
 
-import de.dhbw.course9.filter.v1.mock.Input;
-import de.dhbw.course9.filter.v1.mock.Output;
+import de.dhbw.course9.filter.v1.mock.Subject;
+import de.dhbw.course9.filter.v1.mock.Candidate;
 
 /*
  * FilterChain acting like a controller, but should be a separate class!
@@ -37,11 +37,11 @@ public class FilterChain {
 		trace.append(traceItem).append("\n");
 	}
 
-	public void doFilter(Input input, Output output) throws FilterException {
+	public void doFilter(Subject subject, Candidate candidate) throws FilterException {
 		Filter filter = filters.poll();
 		if (filter != null) {
 			trace("Filtering: " + filter);
-			filter.doFilter(input, output, this);
+			filter.doFilter(subject, candidate, this);
 		} else {
 			trace("End of Queue reached");
 		}

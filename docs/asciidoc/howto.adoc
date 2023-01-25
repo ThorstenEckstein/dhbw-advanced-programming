@@ -5,7 +5,21 @@ include::settings.adoc[]
 
 === Setup IntelliJ IDE
 
-to be done
+Adding project libraries/dependencies:
+
+. Open project structure
+. Click `Libraries` on the left
+. Click `+` to add a library
+. Choose _"Maven ..."_ as dependency source
+. Specify the (exact, full) dependency path, like ...
+
+ org.junit.platform:junit-platform-suite-engine:1.9.1
+
+. Select all modules to add the dependency to, here most often "course 1 - 12"
+. When finished, the libs shall contain those as shown in the figure below
+
+.Project Libraries (all loaded from "Maven Central")
+image:images/IntelliJ-Project-Structure.png[align="center"]
 
 
 === Duplicate a new IntelliJ module on the base of another module

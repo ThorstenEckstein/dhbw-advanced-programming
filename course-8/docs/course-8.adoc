@@ -101,7 +101,7 @@ More than 3 method parameter or constructor arguments indicate a so-called code 
 
 
 Verify Arguments::
-This is a good practice anyway. Validation input data in methods or algorithms is always recommended. These checks (assertions) can be functional (e.g. checks for _value ranges_) as well as technical (e.g. checks for _null_).
+This is a good practice anyway. Validation subject data in methods or algorithms is always recommended. These checks (assertions) can be functional (e.g. checks for _value ranges_) as well as technical (e.g. checks for _null_).
 
 
 Avoid using constructors extensively::

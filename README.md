@@ -21,7 +21,7 @@ Dozent             : Thorsten Eckstein
 ## Zeitliche Planung
 
 ```
-  KW    Mo       - So          Kurstag
+  KW          Mo - So          Kurstag
 
   07    13.02.23 - 19.02.23    1: Mi., 15.02.
   08    20.02.23 - 26.02.23    2: Mi., 22.02.
@@ -53,17 +53,90 @@ Dozent             : Thorsten Eckstein
 
 **Allgemeine Lehrinhalte aus den Bereichen ...**
 
-* Fortgeschrittene objektorientierte Konzepte: Generische Interfaces
-und Klassen, 
-* Nutzung der Klassenbibliothek 
-* Aufbau grafischer Oberflächen: Layout, typische Komponenten für grafische Benutzungsschnittstellen, Ereignisbehandlung. 
-* Fortgeschrittene Programmiermethodik: Parallele Programmierung mit Threads, 
-* Synchronisations- & Kommunikationskonzepte, 
-* Ein- und Ausgabe über Streams.
+* Fortgeschrittene objektorientierte Konzepte
+* Nutzung der Klassenbibliothek
+* Aufbau grafischer Oberflächen
+* Fehler- & Ereignisbehandlung
+* Parallele Programmierung mit Threads
+* Synchronisations- & Kommunikationskonzepte
+* Ein- und Ausgabe über Streams
+* Datenbanken und Objektrelationales Mapping.
 
-**Zusätzliche Lehrinhalte**
-* TDD, JUnit & Mockito
-* Code Qualität
-* Design Prinzipien & Design Patterns
-
+**Ergänzende Lehrinhalte**
+- Design Prinzipien
+- Code Qualität
+- Design Patterns
+- TDD, JUnit
 ---
+
+## Kursdurchführung
+
+Die grundsätzlich geplante Strukturierung der Kurstage sieht wie folgt aus. Insgesamt `03:00` Zeitstunden, grob aufgeteilt nach:
+
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1%;">
+<col style="width: 22.2%;">
+<col style="width: 11.1%;">
+<col style="width: 55.5%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-center valign-top">Teil</th>
+<th class="tableblock halign-center valign-top">Zeit</th>
+<th class="tableblock halign-center valign-top">Dauer</th>
+<th class="tableblock halign-left valign-top">Inhalt</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>1</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>09:00 - 09:30</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>30'</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Theorie</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>09:30 - 10:00</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>30'</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Praxis: Individuell oder in Teamarbeit + Lösung</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>2</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>10:00 - 10:30</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>30'</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Theorie</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>10:30 - 10:45</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>15'</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>&nbsp;&nbsp; Kaffeepause</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>10:45 - 11:15</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>30'</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Praxis: Individuell oder in Teamarbeit + Lösung</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>3</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>11:15 - 11:30</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>15'</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Theorie</strong> (<em>optional</em>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>11:30 - 11:45</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>15'</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Praxis: Individuell oder in Teamarbeit + Lösung</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>4</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>11:45 - 12:00</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>15'</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Q&amp;A</strong>, Best Practices, Codequalität, Organisation, etc.</p></td>
+</tr>
+</tbody>
+</table>
+

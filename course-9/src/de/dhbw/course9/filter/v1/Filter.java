@@ -1,10 +1,10 @@
 package de.dhbw.course9.filter.v1;
 
-import de.dhbw.course9.filter.v1.mock.Input;
-import de.dhbw.course9.filter.v1.mock.Output;
+import de.dhbw.course9.filter.v1.mock.Candidate;
+import de.dhbw.course9.filter.v1.mock.Subject;
 
 public interface Filter {
 
-	public void doFilter(Input input, Output output, FilterChain filterChain) throws FilterException;
+	public void doFilter(Subject subject, Candidate candidate, FilterChain filterChain) throws FilterException;
 
 }

@@ -1,11 +1,7 @@
 package de.dhbw.course1.tdd;
 
 import main.java.de.dhbw.commons.Logger;
-import main.java.de.dhbw.course1.course1.Course1Main;
-import main.java.de.dhbw.course1.course1.tdd.TrainObserverFirstRefactoring;
-import main.java.de.dhbw.course1.course1.tdd.TrainObserverInGreenPhase;
-import main.java.de.dhbw.course1.course1.tdd.TrainObserverInRedPhase;
-import main.java.de.dhbw.course1.course1.tdd.TrainObserverSecondRefactoring;
+import de.dhbw.course1.Course1Main;
 import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

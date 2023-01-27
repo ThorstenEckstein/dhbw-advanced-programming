@@ -2,16 +2,16 @@ package de.dhbw.course1.model;
 
 import main.java.de.dhbw.commons.DateTimeUtil;
 import main.java.de.dhbw.commons.Logger;
-import main.java.de.dhbw.course1.course1.Course1Main;
-import main.java.de.dhbw.course1.course1.model.personnel.Driver;
-import main.java.de.dhbw.course1.course1.model.personnel.TrainDriver;
-import main.java.de.dhbw.course1.course1.model.routes.Route;
-import main.java.de.dhbw.course1.course1.model.timetable.Journey;
-import main.java.de.dhbw.course1.course1.model.timetable.Timetable;
-import main.java.de.dhbw.course1.course1.model.train.Locomotive;
-import main.java.de.dhbw.course1.course1.model.train.LongDistanceTrain;
-import main.java.de.dhbw.course1.course1.model.train.RegionalTrain;
-import main.java.de.dhbw.course1.course1.model.train.Train;
+import de.dhbw.course1.Course1Main;
+import de.dhbw.course1.model.personnel.Driver;
+import de.dhbw.course1.model.personnel.TrainDriver;
+import de.dhbw.course1.model.routes.Route;
+import de.dhbw.course1.model.timetable.Journey;
+import de.dhbw.course1.model.timetable.Timetable;
+import de.dhbw.course1.model.train.Locomotive;
+import de.dhbw.course1.model.train.LongDistanceTrain;
+import de.dhbw.course1.model.train.RegionalTrain;
+import de.dhbw.course1.model.train.Train;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

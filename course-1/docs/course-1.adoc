@@ -14,12 +14,14 @@ include::../../docs/asciidoc/settings.adoc[]
 
 *Theorie & Objektmodell*:
 
+//tag::content[]
 - [ ] Klassen & Objekte
 - [ ] Objektvertrag (hashCode, equals)
 - [ ] Vererbung & Interfaces
 - [ ] Abstrakte Klassen
 - [ ] Beziehungsarten (Besitz, Aufruf, Vererbung, ...), Aggregation vs. Komposition etc.
 - [ ] Referenzsemantik
+//end::content[]
 
 === Fachlicher Kontext
 
@@ -48,6 +50,12 @@ Ein paar Begriffe in der Übericht:
 image::diagrams/business-model.svg["Fachbegriffe",width="75%",align="center"]
 
 === Technisches Setup
+
+==== Java
+
+Der Kurz erfordert folgende Java Version:
+
+ Java 17 (LTS)
 
 ==== Github
 
@@ -88,14 +96,14 @@ Die Fachlichkeit (s.o.) kann in einem (Fach-) *Klassenmodell* abgebildet werden,
 
 *Infrastrukturelle* Sicht (statische Sicht):
 
-[plantuml, "Klassenmodell", png, align="center"]
+[plantuml, "Klassenmodell-1", png, align="center"]
 ....
 include::diagrams/business-model-ist.puml[]
 ....
 
 *Planerische* Sicht (dynamische Sicht):
 
-[plantuml, "Klassenmodell", png, align="center"]
+[plantuml, "Klassenmodell-2", png, align="center"]
 ....
 include::diagrams/business-model-soll.puml[]
 ....
@@ -136,7 +144,9 @@ Unit-Tests weisen eine besondere (innere) Struktur auf, d.h. die Art und Weise, 
 
 Auch das Schreiben von Tests folgt vielfach einer Routine bzw. einer "best practice". Neben zahlreichen gleichwertigen Ansätzen ist die so-genannte `"red, green, refactor"` Methode weitestgehend anerkannt.
 
-image::images/tdd-red-green-refactor.png[align="center", width="50%"]
+[small]#_Quelle:-> https://www.informatik-aktuell.de/entwicklung/methoden/tdd-erfahrungen-bei-der-einfuehrung.html[Informatik Aktuell]_#
+
+image::images/tdd-red-green-refactor.png[align="center", width="40%"]
 
 *Red, Green, Refactor*:
 
@@ -217,6 +227,8 @@ CAUTION: [red]#_Java does not support pass by reference concept!_#
 Ein weiteres Beispiel für *Reference Semantics*:
 
 image::diagrams/reference-semantics.svg["RefSem",width="100%",align="center"]
+
+[small]#_Quelle: -> https://stackoverflow.com/questions/40480/is-java-pass-by-reference-or-pass-by-value[Stackoverflow]_#
 
 [cols="^1,9a", grid="none", frame="none"]
 |===

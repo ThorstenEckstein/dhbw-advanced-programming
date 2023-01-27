@@ -6,10 +6,12 @@ include::../../docs/asciidoc/settings.adoc[]
 
 *Allgemeine Inhalte*
 
+//tag::content[]
 * [ ] Sichtbarkeiten von Klassen, Members, Methoden (Access Modifiers)
 * [ ] Methoden überladen, überschreiben/übersteuern
 * [ ] Collections API
 * [ ] Assoziationen (Beziehungsart "Besitz" im Code, sh. auch Kurstag 1)
+//end::content[]
 
 *Fachlicher Kontext*
 

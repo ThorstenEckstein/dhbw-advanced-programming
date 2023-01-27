@@ -7,26 +7,27 @@ import org.h2.jdbcx.JdbcDataSource;
 
 import javax.sql.DataSource;
 import java.io.File;
-import java.sql.Connection;
 
 public class DatabaseTestConfig {
 
-    private static final String DATA =  "dbunit/data.xml";
+    private static final String DATABASE_NAME = "test";
+    private static final String INPUT_DATA =  "dbunit/data.xml";
+    private static final String DATABASE_SCHEMA = "./dbunit/schema.sql";
 
     public DataSource getDataSource() {
         JdbcDataSource dataSource = new JdbcDataSource();
         dataSource.setURL(
-                "jdbc:h2:mem:test;" +
+                "jdbc:h2:mem:"+DATABASE_NAME+";" +
                 "MODE=LEGACY;" +
                 "DB_CLOSE_DELAY=-1;" +
-                "INIT=runscript from '~/Projects/Lehre/SS23/Programmierung-II-W3WI-109/course-7/dbunit/schema.sql'");
+                "INIT=runscript from '"+DATABASE_SCHEMA+"'");
         dataSource.setUser("sa");
         dataSource.setPassword("sa");
         return dataSource;
     }
 
     public IDataSet getDataSet() throws Exception {
-        return new FlatXmlDataSetBuilder().build(new File(DATA));
+        return new FlatXmlDataSetBuilder().build(new File(INPUT_DATA));
     }
 
     public DatabaseOperation getSetUpOperation() {

@@ -4,6 +4,13 @@ include::../../docs/asciidoc/settings.adoc[]
 
 == {course-9}
 
+//tag::content[]
+* [ ] Qualitätsaspekte
+* [ ] Softwaredesign mit Patterns
+* [ ] Refactoring
+//end::content[]
+
+
 *Fachliche Anwendungsfälle*
 ----
  - Komplexe Erzeugung von Instanzen von "Zug"

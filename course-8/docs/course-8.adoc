@@ -6,12 +6,14 @@ include::../../docs/asciidoc/settings.adoc[]
 
 *Allgemeine Inhalte*
 
+//tag::content[]
 * [ ] OOP Design Prinzipien
 * [ ] OOP Best Practices
+//end::content[]
 
 *Fachlicher Kontext*
 ----
- to be done
+ nothing specific
 ----
 
 

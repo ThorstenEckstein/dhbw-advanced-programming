@@ -1,6 +1,6 @@
 package de.dhbw.experimental.foodstore;
 
-import de.dhbw.commons.DateTimeUtil;
+import main.java.de.dhbw.commons.DateTimeUtil;
 
 import java.io.File;
 import java.io.FileNotFoundException;

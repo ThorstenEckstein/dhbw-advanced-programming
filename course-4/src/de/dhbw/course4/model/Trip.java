@@ -1,11 +1,10 @@
 package de.dhbw.course4.model;
 
-import de.dhbw.commons.Logger;
+import main.java.de.dhbw.commons.Logger;
 
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.concurrent.CountDownLatch;
 
 public class Trip implements Runnable {
 

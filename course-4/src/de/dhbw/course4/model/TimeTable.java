@@ -1,6 +1,6 @@
 package de.dhbw.course4.model;
 
-import de.dhbw.commons.Logger;
+import main.java.de.dhbw.commons.Logger;
 
 import java.util.HashMap;
 import java.util.Map;

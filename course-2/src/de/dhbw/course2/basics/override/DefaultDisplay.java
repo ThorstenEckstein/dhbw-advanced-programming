@@ -1,6 +1,6 @@
 package de.dhbw.course2.basics.override;
 
-import de.dhbw.commons.Logger;
+import main.java.de.dhbw.commons.Logger;
 
 import java.util.ArrayList;
 import java.util.List;

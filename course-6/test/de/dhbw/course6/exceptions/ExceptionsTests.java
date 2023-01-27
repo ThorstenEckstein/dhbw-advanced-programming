@@ -1,7 +1,7 @@
 package de.dhbw.course6.exceptions;
 
-import de.dhbw.commons.Colourizer;
-import de.dhbw.commons.Logger;
+import main.java.de.dhbw.commons.Colourizer;
+import main.java.de.dhbw.commons.Logger;
 import de.dhbw.course6.TrainObservationMonitor;
 import de.dhbw.course6.io.DataLoader;
 import de.dhbw.course6.io.Product;

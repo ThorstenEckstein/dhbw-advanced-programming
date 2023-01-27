@@ -1,6 +1,6 @@
 package de.dhbw.course3.streaming;
 
-import de.dhbw.commons.DateTimeUtil;
+import main.java.de.dhbw.commons.DateTimeUtil;
 
 import java.time.Duration;
 import java.time.ZonedDateTime;

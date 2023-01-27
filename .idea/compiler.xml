@@ -6,9 +6,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="course-1" />
+        <module name="commons" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="adv-dev" target="1.5" />
+      <module name="commons" target="17" />
+      <module name="course-1" target="17" />
       <module name="course-12" target="17" />
     </bytecodeTargetLevel>
   </component>

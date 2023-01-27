@@ -1,6 +1,6 @@
 package de.dhbw.course4.threads;
 
-import de.dhbw.commons.Logger;
+import main.java.de.dhbw.commons.Logger;
 import de.dhbw.course4.Course4Main;
 import de.dhbw.course4.TripBuilder;
 import de.dhbw.course4.model.TimeTable;

@@ -217,11 +217,11 @@ da die folgenden Befehle in der Kommandozeile ausgeführt werden sollen
 [start=2]
 . *Wechseln* in das Wurzelverzeichnis des Sourcecodes von _Kurs 6_:
 
- cd <your-repo-path>/course-6/src
+ cd <your-repo-path>/course-6/src/main/java
 
 . *Erzeugen* der Javadoc Dokumentation für ein spezifisches Java Package:
 
- javadoc -d ../html de.dhbw.course6.javadoc
+ javadoc -d ../../../html de.dhbw.course6.javadoc
 
 NOTE: [small]#_Falls die Java Laufzeitumgebung im Terminal nicht bekannt ist, muss diese entsprechend aktiviert werden. Zum Testen der Verfügbarkeit nutzt man z.B. einfach den Befehl `java -version`._#
 

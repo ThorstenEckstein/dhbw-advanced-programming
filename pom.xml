@@ -27,9 +27,9 @@
         <module>course-8</module>
         <module>course-9</module>
         <module>course-10</module>
+        <module>exam</module>
         <!--
         <module>docs</module>
-        <module>exam</module>
         <module>experiments</module>
         -->
     </modules>
@@ -43,6 +43,7 @@
 
         <unit-jupiter-engine.version>5.8.1</unit-jupiter-engine.version>
         <junit-platform-suite-engine.version>1.9.2</junit-platform-suite-engine.version>
+        <junit-jupiter-params.version>5.9.1</junit-jupiter-params.version>
     </properties>
 
     <!--
@@ -84,6 +85,13 @@
             <groupId>org.junit.platform</groupId>
             <artifactId>junit-platform-suite-engine</artifactId>
             <version>${junit-platform-suite-engine.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-params</artifactId>
+            <version>${junit-jupiter-params.version}</version>
             <scope>test</scope>
         </dependency>
 

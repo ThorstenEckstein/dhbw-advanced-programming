@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="exam" />
         <module name="course-1" />
         <module name="course-5" />
         <module name="course-4" />
@@ -33,6 +34,7 @@
       <module name="course-7" target="17" />
       <module name="course-8" target="17" />
       <module name="course-9" target="17" />
+      <module name="exam" target="17" />
     </bytecodeTargetLevel>
   </component>
 </project>

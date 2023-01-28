@@ -16,12 +16,14 @@
         <module name="commons" />
         <module name="course-7" />
         <module name="course-6" />
+        <module name="course-10" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="adv-dev" target="1.5" />
       <module name="commons" target="17" />
       <module name="course-1" target="17" />
+      <module name="course-10" target="17" />
       <module name="course-12" target="17" />
       <module name="course-2" target="17" />
       <module name="course-3" target="17" />

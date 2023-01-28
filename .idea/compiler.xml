@@ -12,6 +12,7 @@
         <module name="course-3" />
         <module name="course-2" />
         <module name="commons" />
+        <module name="course-7" />
         <module name="course-6" />
       </profile>
     </annotationProcessing>
@@ -25,6 +26,7 @@
       <module name="course-4" target="17" />
       <module name="course-5" target="17" />
       <module name="course-6" target="17" />
+      <module name="course-7" target="17" />
     </bytecodeTargetLevel>
   </component>
 </project>

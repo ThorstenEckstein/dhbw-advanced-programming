@@ -18,7 +18,7 @@ public class FoodstoreTest {
         DataLoader loader = new DataLoader();
 
         // when - files are searched relative to module root 'experiments'
-        Set<Product> data = loader.load("resources/Vorratsliste.csv");
+        Set<Product> data = loader.load("./src/test/resources/Vorratsliste.csv");
 
         // then
         logger.log(data);

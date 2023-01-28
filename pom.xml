@@ -28,9 +28,9 @@
         <module>course-9</module>
         <module>course-10</module>
         <module>exam</module>
+        <module>experiments</module>
         <!--
         <module>docs</module>
-        <module>experiments</module>
         -->
     </modules>
 

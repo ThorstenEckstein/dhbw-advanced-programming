@@ -18,8 +18,8 @@
     <modules>
         <module>commons</module>
         <module>course-1</module>
-        <!--
         <module>course-2</module>
+        <!--
         <module>course-3</module>
         <module>course-4</module>
         <module>course-5</module>

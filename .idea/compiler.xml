@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="course-1" />
         <module name="commons" />
+        <module name="course-2" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -15,6 +16,7 @@
       <module name="commons" target="17" />
       <module name="course-1" target="17" />
       <module name="course-12" target="17" />
+      <module name="course-2" target="17" />
     </bytecodeTargetLevel>
   </component>
 </project>

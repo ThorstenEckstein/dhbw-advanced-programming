@@ -8,8 +8,9 @@ include::../../docs/asciidoc/settings.adoc[]
 
 *Setup*:
 
-- [ ] IDE (IntelliJ & Visual Studio Code), Java (Installation, etc. ...)
+- [ ] IDE, Tools, Frameworks
 - [ ] Test-Driven-Development
+- [ ] Build- & Dependency Management
 - [ ] Unit-Tests mit JUnit
 
 *Theorie & Objektmodell*:
@@ -23,7 +24,166 @@ include::../../docs/asciidoc/settings.adoc[]
 - [ ] Referenzsemantik
 //end::content[]
 
-=== Fachlicher Kontext
+
+=== Frameworks, Tools & Setup
+
+==== Einrichtung eines lokalen _Workspaces_
+
+TIP: Richtet euch einen lokalen _Workspace_ ein, d.h. ein eigenes Wurzel-Verzeichnis, in das das Code-Repository geklont werden kann. Natürlich kann man seinen persönlichen Präferenzen folgen.
+
+Ich persönlich richte meine lokale Arbeitsumgebung (den _Workspace_) wann immer möglich, etwa für ein Projekt, mit exakt der gleichen Struktur wie die des (Remote-) Repositories ein.
+
+
+==== `Java`
+
+Empfehlung: Im Kurs soll folgende Java Version verwendet werden:
+
+ Java 17 (LTS)
+
+Man kann es aber auch mit höheren Versionen versuchen.
+
+
+==== IDE `IntelliJ` (empfohlen)
+
+Die empfohlene IDE ist `IntelliJ`. Die Seminarinhalte sollten sowohl in der _Community_ als auch in der _Enterprise_ Edition funktionieren.
+
+Der Seminarcode wurde mit folgender Version erstellt:
+
+ IntelliJ IDEA 2022.3.2 (Community Edition)
+
+Es gibt das Standard-Layout, aber auch ein experimentelles, das aktiviert werden kann.
+
+TIP: [small]#Alternativ kann auch `MS Visual Studio Code` genutzt werden und diese Umgebung sollte auch bei der Einrichtung keine besonderen Probleme verursachen. Aber ... auf eigene Gefahr ;-), das Seminar wurde (nur) für IntelliJ vorbereitet!#
+
+
+*Bundled PlugIns*: Mit IntelliJ werden diverse PlugIns automatisch installiert, dazu gehören die folgenden, die für das Seminar erforderlich sind und anfangs mal geprüft werden sollen:
+
+[cols="5a,5e", grid="none", frame="none"]
+|===
+| PlugIn | Kommentar
+
+| Git & GitHub
+| Source Code Management, lokaler Git-Client sollte mind. die Version 2.39.1 haben.
+
+| image::images/maven-plugin.png[]
+| Build- & Dependency Management
+|===
+
+
+*Non-bundled PlugIns*: Für den Code und Tests und die Dokumentation sind folgende PlugIns erforderlich, die nicht sowieso mit IntelliJ installiert werden:
+
+[cols="5a,5e", grid="none", frame="none"]
+|===
+| PlugIn | Kommentar
+
+| image::images/asciidoc-plugin.png[]
+| Dokumentations-Markup, Version 0.38.9 (oder höher)
+
+| image::images/diagrams-net-plugin.png[]
+| integrierte Erstellung von Diagrammen, Version 0.1.14 (oder höher)
+
+| image::images/plantuml-plugin.png[]
+| Erstellung von UML-Diagrammen, Version 5.22.0 (oder höher)
+
+|===
+[small]#_PS: Ich persönlich aktualisiere sehr zeitnah die PlugIns._#
+
+
+==== SCM mit `Git` und `Github`
+
+Das Repository mit den Sourcen für dieses Seminar befindet sich hier:
+
+ https://github.com/ThorstenEckstein/dhbw-advanced-programming
+
+Zunächst muss das Repository geklont werden für die lokale Kopie:
+
+ git clone https://github.com/ThorstenEckstein/dhbw-advanced-programming.git
+
+Dann bitte direkt auf den Branch `hands-on` durch
+
+ git checkout -b hands-on
+
+wechseln (kann man natürlich auch in der IDE/IntelliJ machen). In diesem Branch kann, sobald man ihn geklont hat, Code geschrieben werden, aber ...
+
+CAUTION: ... es soll kein Code in das `remote` Repository *gepushed* werden, da es sonst zu Konflikten bei möglicherweise erforderlichen Updates (durch _pullen_) kommen kann!
+
+
+==== Build Management mit `Maven`
+
+Ein sehr weit verbreitetes Framework bzw. Tool ist `Maven`.
+
+Die Erstellung einer Software beinhaltet viele Voraussetzungen, aber noch vor Beginn der Implementierung sollte man sich über ein paar Grundlagen Gedanken machen.
+
+Dazu gehört das *Build- & Dependency Management*. -> https://maven.apache.org/[`Maven`] erleichtert an dieser Stelle u.a. ...
+
+- die Verwaltung von _Dependencies_,
+- die Verwaltung des _Classpath_,
+- den _Compile_ des Projektes,
+- die _Konfiguration_,
+- den _Build_ des Projektes und nicht zuletzt
+- das _Deployment_ des "Liefergegenstandes" (Deliverable)
+- und viele weitere Aspekte ...
+
+Das Tool verfolgt den Ansatz
+
+ Convention over Configuration
+
+was eine geringst mögliche Basiskonfiguration ermöglicht, weil das Tool einfach eine Reihe von Annahmen trifft, die für sehr viele Projekte allgemein anerkannt sind und häufig genutzt werden. Erst wenn von den Konventionen abgewichen werden muss, kann das Projekt entsprechend _konfiguriert_ werden.
+
+Die wichtigste Datei für Maven ist das `Project Object Model` in Form der Datei
+
+ pom.xml
+
+die im Projekt im Wurzelverzeichnis zu finden ist, von vielen IDE automatisch erkannt und beim Laden des Projektes für die Projektkonfiguration genutzt wird.
+
+Bei hierarchischen Projektstrukturen wie in diesem Kurs gibt es mehrere POMs innerhalb der Hierarchie, sogenannte _parent_ und _child_ POMs, die zusammen gehören (-> siehe Kurs Repository)
+
+
+==== Test Driven Development (`TDD`)
+
+Test Driven Development (`TDD`) ist eine gute Praxis, um den Sourcecode von Beginn an - mithilfe von Unit-Tests regelmäßig und bei Änderungen auf Korrektheit zu überprüfen. Die erste Umsetzung erfolgt vielfach durch Testklassen, den `Unit-Tests`.
+
+Unit-Tests haben folgende *Eigenschaften*:
+
+. Unit-Tests sind *automatisiert*. Ein Unit-Test-Framework führt Tests aus, verifiziert und gibt das Ergebnis zurück, damit es geprüft werden kann
+. Unit-Tests sind *granular*, sie sollen nur einen kleinen Teil des Codes -häufig eine Methode - testen.
+. Unit-Tests *isolieren* das Testziel und sollen möglichst ohne oder nur mit wenig "Vorbereitungen" gestartet werden können
+. Unit-Tests sind *deterministisch*, damit das Testergebnis sauber geprüft werden kann und wiederholt werden kann
+. Unit-Tests sind *unabhängig*. Die Ausführung der Tests dürfen in keiner Weise von anderen Testmethoden abhängen, denn die Reihenfolge der vom Framework ausgeführten Tests ist zufällig bzw. nicht vorhersagbar.
+
+*Umsetzung*:
+
+Unit-Tests weisen eine besondere (innere) Struktur auf, d.h. die Art und Weise, wie diese geschrieben werden. Dazu zählen
+
+* `given-when-then` oder
+* `arrange-act-assert`.
+
+*Vorgehensweise*:
+
+Auch das Schreiben von Tests folgt vielfach einer Routine bzw. einer "best practice". Neben zahlreichen gleichwertigen Ansätzen ist die so-genannte `"red, green, refactor"` Methode weitestgehend anerkannt.
+
+[small]#_Quelle:-> https://www.informatik-aktuell.de/entwicklung/methoden/tdd-erfahrungen-bei-der-einfuehrung.html[Informatik Aktuell]_#
+
+image::images/tdd-red-green-refactor.png[align="center", width="40%"]
+
+*Red, Green, Refactor*:
+
+Der "red, green, refactor" Ansatz hilft Entwicklern, den (zu implementierenden) Code zu entwickeln, indem sie den Fokus in den Phasen auf bestimmte Aspekte lenken:
+
+. [red]#*Red*#: _Was soll implementiert werden und wie fühlt sich das Ganze aus Sicht des "Clients" bzw. der Nutzer an?_ Nutzer sind hier primär die Entwickler selbst bzw. diejenigen, die die Klassen, Methoden, Algorithmen im Code aufrufen, also nutzen wollen. In dieser Phase _soll_ der Test noch scheitern, d.h. "rot" sein, weil hier nicht die Implementierung an sich, sondern die "Außensicht" auf die `API` im Vordergrund steht.
+
+. [green]#*Green*#: In dieser Phase geht es darum, den Test _"zum Laufen"_ zu bringen. Es wird also "grün". Im Vordergrund steht die _schnellste und einfachste Implementierung_ der Funktionalität. Der Code wird hier also nur technisch funktionsfähig gemacht, es werden aber so wenig wie möglich Überlegungen angestellt, wie der Code gut, schön oder effektiv geschrieben werden muss.
+
+. [blue]#*Refactor*#: In dieser letzten Phase (dieser Iteration) geht es nun genau darum, was in den beiden vorherigen Phasen absichtlich nicht gemacht werden sollte, nämlich die Verbesserung des Codes hinsichtlich seiner "Qualität" (das Thema Code-Qualität wird gegen Ende des Seminars noch näher betrachtet). Ergebnis dieser (drei) Phasen soll dann ein Unit-Test sein, der lesbar und wartbar ist und auch die Implementierung der Funktionalität einen bestimmten Reifegrad bzw. eine erste hinreichende Qualität erreicht hat, und natürlich letztlich die korrekte Funktionalität liefert.
+
+Dazu ein *Beispiel*:
+
+ test/de/dhbw/course1/tdd/TddByExampleTest.java
+
+
+=== Fachlicher Schwerpunkt des Kurses (Fachlichkeit)
+
+==== Kontext
 
 ----
 Vorbereitung: Darstellung des fachlichen Kontextes
@@ -48,36 +208,6 @@ Der Zugbetrieb kann grundsätzlich unterteilt werden in:
 Ein paar Begriffe in der Übericht:
 
 image::diagrams/business-model.svg["Fachbegriffe",width="75%",align="center"]
-
-=== Technisches Setup
-
-==== Java
-
-Der Kurz erfordert folgende Java Version:
-
- Java 17 (LTS)
-
-==== Github
-
-Das Repository mit den Sourcen für dieses Seminar befindet sich hier:
-
- https://github.com/ThorstenEckstein/dhbw-advanced-programming
-
-Zunächst muss das Repository geklont werden für die lokale Kopie:
-
- git clone https://github.com/ThorstenEckstein/dhbw-advanced-programming.git
-
-Dann bitte direkt auf den Branch `hands-on` durch
-
- git checkout -b hands-on
-
-wechseln.
-
-
-==== Einrichtung von IntelliJ (empfohlen)
-
-* ... Jakob's Test und Doing ...
-
 
 ==== Klassenmodell
 
@@ -119,48 +249,6 @@ include::{course-1-src}/model/train/Train.java[lines=5..13]
 Für mehr Einblicke in das Modell und die Objekterzeugung, siehe auch
 
  test/de/dhbw/course1/model/ModelTest.java
-
-
-=== Test Driven Development (`TDD`)
-
-Test Driven Development (`TDD`) ist eine gute Praxis, um den Sourcecode von Beginn an - mithilfe von Unit-Tests regelmäßig und bei Änderungen auf Korrektheit zu überprüfen. Die erste Umsetzung erfolgt vielfach durch Testklassen, den `Unit-Tests`.
-
-Unit-Tests haben folgende *Eigenschaften*:
-
-. Unit-Tests sind *automatisiert*. Ein Unit-Test-Framework führt Tests aus, verifiziert und gibt das Ergebnis zurück, damit es geprüft werden kann
-. Unit-Tests sind *granular*, sie sollen nur einen kleinen Teil des Codes -häufig eine Methode - testen.
-. Unit-Tests *isolieren* das Testziel und sollen möglichst ohne oder nur mit wenig "Vorbereitungen" gestartet werden können
-. Unit-Tests sind *deterministisch*, damit das Testergebnis sauber geprüft werden kann und wiederholt werden kann
-. Unit-Tests sind *unabhängig*. Die Ausführung der Tests dürfen in keiner Weise von anderen Testmethoden abhängen, denn die Reihenfolge der vom Framework ausgeführten Tests ist zufällig bzw. nicht vorhersagbar.
-
-*Umsetzung*:
-
-Unit-Tests weisen eine besondere (innere) Struktur auf, d.h. die Art und Weise, wie diese geschrieben werden. Dazu zählen
-
-* `given-when-then` oder
-* `arrange-act-assert`.
-
-*Vorgehensweise*:
-
-Auch das Schreiben von Tests folgt vielfach einer Routine bzw. einer "best practice". Neben zahlreichen gleichwertigen Ansätzen ist die so-genannte `"red, green, refactor"` Methode weitestgehend anerkannt.
-
-[small]#_Quelle:-> https://www.informatik-aktuell.de/entwicklung/methoden/tdd-erfahrungen-bei-der-einfuehrung.html[Informatik Aktuell]_#
-
-image::images/tdd-red-green-refactor.png[align="center", width="40%"]
-
-*Red, Green, Refactor*:
-
-Der "red, green, refactor" Ansatz hilft Entwicklern, den (zu implementierenden) Code zu entwickeln, indem sie den Fokus in den Phasen auf bestimmte Aspekte lenken:
-
-. [red]#*Red*#: _Was soll implementiert werden und wie fühlt sich das Ganze aus Sicht des "Clients" bzw. der Nutzer an?_ Nutzer sind hier primär die Entwickler selbst bzw. diejenigen, die die Klassen, Methoden, Algorithmen im Code aufrufen, also nutzen wollen. In dieser Phase _soll_ der Test noch scheitern, d.h. "rot" sein, weil hier nicht die Implementierung an sich, sondern die "Außensicht" auf die `API` im Vordergrund steht.
-
-. [green]#*Green*#: In dieser Phase geht es darum, den Test _"zum Laufen"_ zu bringen. Es wird also "grün". Im Vordergrund steht die _schnellste und einfachste Implementierung_ der Funktionalität. Der Code wird hier also nur technisch funktionsfähig gemacht, es werden aber so wenig wie möglich Überlegungen angestellt, wie der Code gut, schön oder effektiv geschrieben werden muss.
-
-. [blue]#*Refactor*#: In dieser letzten Phase (dieser Iteration) geht es nun genau darum, was in den beiden vorherigen Phasen absichtlich nicht gemacht werden sollte, nämlich die Verbesserung des Codes hinsichtlich seiner "Qualität" (das Thema Code-Qualität wird gegen Ende des Seminars noch näher betrachtet). Ergebnis dieser (drei) Phasen soll dann ein Unit-Test sein, der lesbar und wartbar ist und auch die Implementierung der Funktionalität einen bestimmten Reifegrad bzw. eine erste hinreichende Qualität erreicht hat, und natürlich letztlich die korrekte Funktionalität liefert.
-
-Dazu ein *Beispiel*:
-
- test/de/dhbw/course1/tdd/TddByExampleTest.java
 
 
 === Objektvertrag (object contract)
@@ -302,7 +390,4 @@ In der Testklasse finden sich weitere kleine Übungen für die Inhalte des Kurse
 
 [subs=attributes]
  {course-1-exam}/ExamTest.java
-
-
-=== Tipps, Patterns & Best Practices
 

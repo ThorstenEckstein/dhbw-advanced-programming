@@ -34,8 +34,18 @@ Mögliche Assoziationen/Relationen mit Kardinalitäten
  + Strecke      n:m      Abschnitte
 ----
 
+=== Recap
+
+Was bisher geschah ...
+
+====
+include::../../course-1/docs/course-1.adoc[tags="content"]
+====
+
 
 === Access Modifier
+
+Die Standard "Access Modifier" sind:
 
 * `default`
 * `public`
@@ -46,6 +56,7 @@ Mögliche Assoziationen/Relationen mit Kardinalitäten
 ----
 include::{course-2-test}/basics/BasicsTest.java[tags="visibility"]
 ----
+
 
 === Überladen & Überschreiben
 
@@ -108,6 +119,7 @@ Siehe Implementierungen für V1 und V2:
  de.dhbw.course2.basics.collections.nm
 
 Mehr zu Datenbanken & SQL siehe -> `Kurstag 7`.
+
 
 === Übungen
 

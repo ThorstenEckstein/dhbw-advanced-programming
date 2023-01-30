@@ -17,7 +17,17 @@ include::../../docs/asciidoc/settings.adoc[]
 ----
 
 
+=== Recap
+
+Was bisher geschah ...
+
+====
+include::../../course-7/docs/course-7.adoc[tags="content"]
+====
+
+
 === OOP Design Prinzipien
+
 
 ==== Single Responsibility Principle
 

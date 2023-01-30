@@ -19,6 +19,15 @@ include::../../docs/asciidoc/settings.adoc[]
 ----
 
 
+=== Recap
+
+Was bisher geschah ...
+
+====
+include::../../course-2/docs/course-2.adoc[tags="content"]
+====
+
+
 === Generics
 
 Generische Programmierung in Java ist durch Generics seit langem möglich. Der Begriff steht synonym für "parametrisierte Typen". Die Idee ist, zusätzliche Variablen für Typen einzuführen. Diese Typ-Variablen repräsentieren zum Zeitpunkt der Implementierung unbekannte Typen. Erst bei der Verwendung der Klassen, Schnittstellen und Methoden werden diese Typ-Variablen durch konkrete Typen ersetzt. Damit kann typsichere Programmierung meistens gewährleistet werden. In der Regel wird die Codemenge durch Generics reduziert (Prinzip: `DRY`), manchmal wird er allerdings auch schwerer wartbar und abnehmende Lesbarkeit. Die folgenden zwei Varianten finden sich in der Praxis am häufigsten:

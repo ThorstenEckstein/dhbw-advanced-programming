@@ -57,16 +57,27 @@ public class BasicsTest {
     }
     //end::overload[]
 
-    //tag::override[]
+
+
     @Test
-    public void canOverwriteMethods() {
+    public void canOverrideMethods1() {
         // given
-        Display display1 = new DefaultDisplay();
-        Display display2 = new PlatformDisplay();
+        Display display = new DefaultDisplay();
 
         // when
-        display1.update(0, "5 minutes delay");
-        display2.update(0, "5 minutes delay");
+        display.update(0, "5 minutes delay");
+
+        // then
+    }
+
+    //tag::override[]
+    @Test
+    public void canOverrideMethods() {
+        // given
+        Display display = new PlatformDisplay();
+
+        // when
+        display.update(0, "5 minutes delay");
 
         // then
     }
@@ -92,17 +103,17 @@ public class BasicsTest {
         journey.checkIn(julia);
         journey.checkIn(fred);
 
-        logger.log(journey);
+        logger.log("Vorher:  " + journey);
 
         // when - does this work?
         //journey.checkOut(julia);
-        PassengerImpl1 againJulia = new PassengerImpl1("Julia");
-        journey.checkOut(againJulia);
+        julia = new PassengerImpl1("Julia");
+        journey.checkOut(julia);
 
         // then
         assertEquals(3, journey.getPassengers().size());
 
-        logger.log(journey);
+        logger.log("Nachher: " + journey);
     }
 
     @Test
@@ -122,7 +133,7 @@ public class BasicsTest {
         journey.checkIn(julia);
         journey.checkIn(fred);
 
-        logger.log(journey);
+        logger.log("Vorher:  " + journey);
 
         // when - does this work, and why?
         Passenger stillJulia = new PassengerImpl2("Julia");
@@ -131,7 +142,7 @@ public class BasicsTest {
         // then
         assertEquals(2, journey.getPassengers().size());
 
-        logger.log(journey);
+        logger.log("Nachher: " + journey);
     }
 
 }

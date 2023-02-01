@@ -42,7 +42,7 @@ public class BasicsTest {
     @DisplayName(
             """
             Reference Semantics with objects:
-             Although the argument variable is copied, just the reference ist copied. The object that is referenced
+             Although the argument variable is copied, just the reference is copied. The object that is referenced
              is still the same and thus changed here!
             """
     )

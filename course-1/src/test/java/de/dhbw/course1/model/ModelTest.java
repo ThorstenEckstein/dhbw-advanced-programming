@@ -61,7 +61,7 @@ public class ModelTest {
         // when
 
         // then
-        logger.log(journey);
+        logger.log(timetable);
     }
 
 }

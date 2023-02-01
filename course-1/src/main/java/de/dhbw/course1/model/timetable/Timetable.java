@@ -44,4 +44,12 @@ public class Timetable {
     public int hashCode() {
         return Objects.hash(title);
     }
+
+    @Override
+    public String toString() {
+        return "Timetable{" +
+                "title='" + title + '\'' +
+                ", journeys=" + journeys +
+                '}';
+    }
 }

@@ -27,38 +27,24 @@ Die Prüfungen finden an folgenden Tagen statt:
 
 Die nachfolgende Tabelle enthält die *zeitliche Planung* zur Durchführung:
 
-[cols="2h,^2m,^1m,^1m,^1m"]
+[cols="5h,^2m,^1m,^1m,^1m"]
 |===
 | Name	| Datum	| Von	| Bis	| Raum
 
-| Bertram, Friedrich	| Mi., 26.04.23	| 09:00	| 09:30	| ?
-| Betcher, Julia	| Mi., 26.04.23	| 09:35	| 10:05	| ?
-| Choi, Dong-Keun	| Mi., 26.04.23	| 10:10	| 10:40	| ?
-| Ditscher, Elias	| Mi., 26.04.23	| 10:45	| 11:15	| ?
-| Dugan, Ege	| Mi., 26.04.23	| 11:20	| 11:50	| ?
-| Egartner, Henrik	| Mi., 26.04.23	| 11:55	| 12:25	| ?
-| Flessa, Julian	| Mi., 26.04.23	| 13:25	| 13:55	| ?
-| Galotta, Antonio	| Mi., 26.04.23	| 14:00	| 14:30	| ?
-| Grimme, Jannes	| Mi., 26.04.23	| 14:35	| 15:05	| ?
-| Haar, Leon	| Mi., 26.04.23	| 15:10	| 15:40	| ?
-| Hantschick, Markus	| Mi., 26.04.23	| 15:45	| 16:15	| ?
-| Hermann, Aliyah	| Mi., 26.04.23	| 16:20	| 16:50	| ?
-| Jaeger, Moritz	| Mi., 26.04.23	| 16:55	| 17:25	| ?
-| Knopp, Robert	| Mi., 26.04.23	| 17:30	| 18:00	| ?
-| Kotsyuba, Maxim	| Do., 27.04.23	| 09:00	| 09:30	| ?
-| Kreiselmaier, Simon	| Do., 27.04.23	| 09:35	| 10:05	| ?
-| Lang, Henri	| Do., 27.04.23	| 10:10	| 10:40	| ?
-| Lojewski, Dustin	| Do., 27.04.23	| 10:45	| 11:15	| ?
-| Mack, Maximilian	| Do., 27.04.23	| 11:20	| 11:50	| ?
-| Mendel, Kevin	| Do., 27.04.23	| 11:55	| 12:25	| ?
-| Prussak, Maximilian	| Do., 27.04.23	| 13:25	| 13:55	| ?
-| Prucelj, David	| Do., 27.04.23	| 14:00	| 14:30	| ?
-| Ritzmann, Felix	| Do., 27.04.23	| 14:35	| 15:05	| ?
-| Schultz, Simon	| Do., 27.04.23	| 15:10	| 15:40	| ?
-| Uzun, Aysegül	| Do., 27.04.23	| 15:45	| 16:15	| ?
-| Yilmaz, Murat	| Do., 27.04.23	| 16:20	| 16:50	| ?
-| Zanger, Janek	| Do., 27.04.23	| 16:55	| 17:25	| ?
-
+| Bertram, Friedrich ; Betcher, Julia	| Mi., 26.04.23	| 09:00	| 09:45	| ?
+| Choi, Dong-Keun ; Ditscher, Elias	| Mi., 26.04.23	| 10:00	| 10:45	| ?
+| Dugan, Ege ; Egartner, Henrik	| Mi., 26.04.23	| 11:00	| 11:45	| ?
+| Flessa, Julian ; Galotta, Antonio	| Mi., 26.04.23	| 12:00	| 12:45	| ?
+| Grimme, Jannes ; Haar, Leon	| Mi., 26.04.23	| 14:00	| 14:45	| ?
+| Hantschick, Markus ; Hermann, Aliyah	| Mi., 26.04.23	| 15:00	| 15:45	| ?
+| Jaeger, Moritz ; Knopp, Robert	| Mi., 26.04.23	| 16:00	| 16:45	| ?
+| Kotsyuba, Maxim ; Kreiselmaier, Simon	| Do., 27.04.23	| 09:00	| 09:45	| ?
+| Lang, Henri ; Lojewski, Dustin	| Do., 27.04.23	| 10:00	| 10:45	| ?
+| Mack, Maximilian ; Mendel, Kevin	| Do., 27.04.23	| 11:00	| 11:45	| ?
+| Prussak, Maximilian ; Prucelj, David	| Do., 27.04.23	| 13:00	| 13:45	| ?
+| Ritzmann, Felix ; Schultz, Simon	| Do., 27.04.23	| 14:00	| 14:45	| ?
+| Uzun, Aysegül ; Yilmaz, Murat	| Do., 27.04.23	| 15:00	| 15:45	| ?
+| Zanger, Janek ; n.n.	| Do., 27.04.23	| 16:00	| 16:45	| ?
 
 |===
 

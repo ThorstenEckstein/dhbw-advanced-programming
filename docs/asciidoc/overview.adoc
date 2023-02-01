@@ -77,53 +77,43 @@ include::settings.adoc[]
 // ###################################################
 // ###################################################
 // ###################################################
-== Kursdurchführung
+== Tagesplanung
 
 Die grundsätzlich geplante Strukturierung der Kurstage sieht wie folgt aus. Insgesamt `03:00` Zeitstunden, grob aufgeteilt nach:
 
 [cols="^1s,^2m,^1m,5"]
 |===
-| Teil | Zeit | Dauer | Inhalt
+| Teil | Zeit (ungefähr) | Dauer | Inhalt
 
 | 1
 | 09:00 - 09:30
 | 30'
-s| Theorie
+| [red]#*Theorie*#, Recap
 
 |
-| 09:30 - 10:00
-| 30'
-| Praxis: Individuell oder in Teamarbeit + Lösung
+| 09:30 - 10:15
+| 45'
+| [blue]#*Praxis*#: Individuell oder in Teamarbeit & Lösung
+
+|
+| 10:15 - 10:30
+| 15'
+e| &nbsp;&nbsp;&nbsp; Kaffeepause
 
 | 2
-| 10:00 - 10:30
+| 10:30 - 11:00
 | 30'
-s| Theorie
+| [red]#*Theorie*#
 
 |
-| 10:30 - 10:45
-| 15'
-e| &nbsp;&nbsp; Kaffeepause
+| 11:00 - 11:45
+| 45'
+| [blue]#*Praxis*#: Individuell oder in Teamarbeit & Lösung
 
 |
-| 10:45 - 11:15
-| 30'
-| Praxis: Individuell oder in Teamarbeit + Lösung
-
-| 3
-| 11:15 - 11:30
-| 15'
-| *Theorie* (_optional_)
-
-|
-| 11:30 - 11:45
-| 15'
-| Praxis: Individuell oder in Teamarbeit + Lösung
-
-| 4
 | 11:45 - 12:00
 | 15'
-| *Q&A*, Best Practices, Codequalität, Organisation, etc.
+| Q&A, Best Practices, Organisation, etc.
 |===
 
 // ###################################################

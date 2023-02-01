@@ -2,7 +2,9 @@ package de.dhbw.exam;
 
 import java.util.Arrays;
 import java.util.List;
-import static main.java.de.dhbw.commons.Colourizer.*;
+
+import static main.java.de.dhbw.commons.Colourizer.green;
+import static main.java.de.dhbw.commons.Colourizer.red;
 
 public class Answer {
 
@@ -64,13 +66,9 @@ public class Answer {
     }
 
     public String face(String studentExplanation) {
-        if (studentExplanation == null ||
-            studentExplanation.isBlank() ||
-            studentExplanation.contains("your answer here")
-        ) {
+        if (isNoValidAnswer(studentExplanation)) {
             setDetail("HINT: Please give an answer BEFORE (!) checking the common explanation ... ;-)");
         }
-
         return """
                
                YOUR explanation:
@@ -82,4 +80,11 @@ public class Answer {
                        green(getDetail())
                 );
     }
+
+    private boolean isNoValidAnswer(String studentAnswer) {
+        return studentAnswer == null ||
+                studentAnswer.isBlank() ||
+                studentAnswer.contains("your answer here");
+    }
+
 }

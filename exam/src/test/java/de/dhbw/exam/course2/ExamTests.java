@@ -1,7 +1,7 @@
 package de.dhbw.exam.course2;
 
-import main.java.de.dhbw.commons.Logger;
 import de.dhbw.exam.Answer;
+import main.java.de.dhbw.commons.Logger;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -21,6 +21,7 @@ public class ExamTests {
         """
         Q1: Which would be most suitable for storing data elements that must not appear
         in the store more than once, if searching is not a priority?
+        
         A. Collection
         B. List
         C. Set
@@ -45,6 +46,7 @@ public class ExamTests {
     @DisplayName(
             """
             Q2: What is the most important characteristic of a TreeSet?
+            
             A. uses keys to store values
             B. maintains natural order
             C. can store null elements
@@ -98,6 +100,50 @@ public class ExamTests {
     public void question4() {
         // given
         Answer commonExplanation = correctAnswers.of(Q4);
+
+        // when
+        final String studentExplanation =
+                """
+                ... your answer here ...
+                """;
+
+        // then
+        logger.log(commonExplanation.face(studentExplanation));
+    }
+
+    @DisplayName(
+            """
+            Q5: If a variable is declared as 'private', where may the variable be accessed?
+            
+            Explain in your own words!
+            """
+    )
+    @Test
+    public void question5() {
+        // given
+        Answer commonExplanation = correctAnswers.of(Q5);
+
+        // when
+        final String studentExplanation =
+                """
+                ... your answer here ...
+                """;
+
+        // then
+        logger.log(commonExplanation.face(studentExplanation));
+    }
+
+    @DisplayName(
+            """
+            Q6: If a method is declared as protected, where may the method be accessed?
+                        
+            Explain in your own words!
+            """
+    )
+    @Test
+    public void question6() {
+        // given
+        Answer commonExplanation = correctAnswers.of(Q6);
 
         // when
         final String studentExplanation =

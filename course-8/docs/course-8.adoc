@@ -17,7 +17,17 @@ include::../../docs/asciidoc/settings.adoc[]
 ----
 
 
+=== Recap
+
+Was bisher geschah ...
+
+====
+include::../../course-7/docs/course-7.adoc[tags="content"]
+====
+
+
 === OOP Design Prinzipien
+
 
 ==== Single Responsibility Principle
 
@@ -46,12 +56,12 @@ The *Dependency Inversion Principle* (DIP) states that high-level modules should
 
 ==== Don’t Repeat Yourself Principle (DRY)
 
-`DRY` is a programming principle that encourages developers to reduce repetition of code, and instead use abstraction and modularization to make the code more maintainable. This means that rather than writing multiple lines of code for similar tasks, you can create functions or classes that can be reused throughout your program. By following this principle, you can save time and effort when coding, as well as making it easier to debug and modify existing code.
+`DRY` is a programming principle that encourages developers to reduce *repetition* of code, and instead use abstraction and modularization to make the code more maintainable. This means that rather than writing multiple lines of code for similar tasks, you can create functions or classes that can be reused throughout your program. By following this principle, you can save time and effort when coding, as well as making it easier to debug and modify existing code.
 
 
 ==== Keep it simple and stupid (KISS)
 
-A phrase just saying that when writing an application, implementation should start small, easy and lightweight, and everything, that is not needed (for the moment) shall be basically ignored and implemented later. But, that does not protect developers from "considering" future requirements that maybe affect the overall architecture.
+A phrase just saying that when writing an application, implementation should start *small, easy and lightweight*, and everything, that is not needed (for the moment) shall be basically ignored and implemented later. But, that does not protect developers from "considering" future requirements that maybe affect the overall architecture.
 
 Approaches like "Test Driven Development" support this principle strongly, because tests can be written with a "fail fast" approach and can be extended step by step.
 

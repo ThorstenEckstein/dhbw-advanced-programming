@@ -1,1 +1,1 @@
-typeSearchIndex = [{"l":"Alle Klassen und Schnittstellen","u":"allclasses-index.html"},{"p":"de.dhbw.course6.javadoc","l":"DateTimeHelper"}];updateSearchResults();
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"de.dhbw.course6.javadoc","l":"DateTimeHelper"}];updateSearchResults();

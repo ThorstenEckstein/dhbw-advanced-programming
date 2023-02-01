@@ -34,10 +34,6 @@ s| [[BFP]] Betriebsfahrplan
 |
 | Der Betriebsfahrplan (betriebliche Zugfahrplan) stellt die Sicht des Eisenbahnverkehrsunternehmens (EVU) auf den Zugfahrplan mit Fahrlagen und Reihungen dar. Der verkehrliche Zugfahrplan (Kundensicht) kann vom betrieblichen Zugfahrplan abweichen. Schlüssel ist die betriebliche Zugnummer (Train ID). Siehe auch -> <<KFP,Kundenfahrplan>>
 
-s|[[BackendForFrontend]]BFF
-| Backend for Frontend
-| A server providing an API that is called by browser
-
 // ######################################
 // ###                C               ###
 // ######################################
@@ -93,10 +89,6 @@ s|Frontend
 // ######################################
 3+| [[I]] [red]#*I*#
 
-s|IdP
-|
-|Identity Provider. A server, that implements OIDC ({idp})
-
 // ######################################
 // ###                J               ###
 // ######################################
@@ -131,21 +123,9 @@ s| [[KFP]] Kundenfahrplan
 // ######################################
 3+| [[O]] [red]#*O*#
 
-s|[[OAUTH]]OAuth 2
-|
-|Open Authorization, Name of the Specification (Version 2)
-
-s|OIDC
-|
-|Open ID Connect, Name of the Specification
-
 s|[[ortungsmeldung]] Ortungsmeldung
 | -> <<zuglaufmeldung, Zuglaufmeldung>>, Zuglaufereignis
 |Message about the current train location, with or without geo coordinates
-
-s|OWASP
-|
-|Open Web Application Security Project®
 
 // ######################################
 // ###                P               ###
@@ -171,10 +151,6 @@ s| SCS
 |
 | Self-contained System, see also -> https://scs-architecture.org/[scs-architecture.org]
 
-s|SSL
-|
-|Secure Socket Layer
-
 s| Strecke
 | Track
 | A track is a one or double-railed connection of two points with its own kilometerage, on which regular train traffic is accomplished, was accomplished or is to be accomplished in the future.
@@ -187,10 +163,6 @@ s| Strecke
 s| Tier
 | Stufe
 | The term tier refers to physical entities like deliverables or deployable applications.
-
-s|TLS, mTLS
-|
-|(mutual) Transport Layer Security
 
 // ######################################
 // ###                U               ###

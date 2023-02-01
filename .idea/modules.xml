@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Programmierung-II-W3WI-109.iml" filepath="$PROJECT_DIR$/Programmierung-II-W3WI-109.iml" />
+      <module fileurl="file://$PROJECT_DIR$/adv-dev.iml" filepath="$PROJECT_DIR$/adv-dev.iml" />
       <module fileurl="file://$PROJECT_DIR$/commons/commons.iml" filepath="$PROJECT_DIR$/commons/commons.iml" />
       <module fileurl="file://$PROJECT_DIR$/course-1/course-1.iml" filepath="$PROJECT_DIR$/course-1/course-1.iml" />
       <module fileurl="file://$PROJECT_DIR$/course-10/course-10.iml" filepath="$PROJECT_DIR$/course-10/course-10.iml" />
@@ -14,7 +14,6 @@
       <module fileurl="file://$PROJECT_DIR$/course-7/course-7.iml" filepath="$PROJECT_DIR$/course-7/course-7.iml" />
       <module fileurl="file://$PROJECT_DIR$/course-8/course-8.iml" filepath="$PROJECT_DIR$/course-8/course-8.iml" />
       <module fileurl="file://$PROJECT_DIR$/course-9/course-9.iml" filepath="$PROJECT_DIR$/course-9/course-9.iml" />
-      <module fileurl="file://$PROJECT_DIR$/docs/docs.iml" filepath="$PROJECT_DIR$/docs/docs.iml" />
       <module fileurl="file://$PROJECT_DIR$/exam/exam.iml" filepath="$PROJECT_DIR$/exam/exam.iml" />
       <module fileurl="file://$PROJECT_DIR$/experiments/experiments.iml" filepath="$PROJECT_DIR$/experiments/experiments.iml" />
     </modules>

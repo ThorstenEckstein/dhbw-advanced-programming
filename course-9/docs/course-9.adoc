@@ -22,6 +22,15 @@ include::../../docs/asciidoc/settings.adoc[]
 ----
 
 
+=== Recap
+
+Was bisher geschah ...
+
+====
+include::../../course-8/docs/course-8.adoc[tags="content"]
+====
+
+
 === Qualität in Softwareprojekten
 
 Softwarequalität ist normiert und kann gemessen werden.

@@ -69,7 +69,7 @@ without limitation in the term "modification".) Each licensee is addressed as
 
 Activities other than copying, distribution and modification are not covered by
 this License; they are outside its scope.  The act of running the Program is
-not restricted, and the candidate from the Program is covered only if its contents
+not restricted, and the output from the Program is covered only if its contents
 constitute a work based on the Program (independent of having been made by
 running the Program).  Whether that is true depends on what the Program does.
 
@@ -292,7 +292,7 @@ pointer to where the full notice is found.
 
 Also add information on how to contact you by electronic and paper mail.
 
-If the program is interactive, make it candidate a short notice like this when it
+If the program is interactive, make it output a short notice like this when it
 starts in an interactive mode:
 
     Gnomovision version 69, Copyright (C) year name of author Gnomovision comes

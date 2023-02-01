@@ -16,6 +16,15 @@ include::../../docs/asciidoc/settings.adoc[]
 //end::content[]
 
 
+=== Recap
+
+Was bisher geschah ...
+
+====
+include::../../course-6/docs/course-6.adoc[tags="content"]
+====
+
+
 === SQL-Datenbanken
 
 Eine *SQL-Datenbank* ist eine relationale Datenbank, die `Structured Query Language (SQL)` zum Speichern, Abrufen und Bearbeiten von Daten verwendet. SQL-Datenbanken sind die gängigste Art von relationalen Datenbanken und werden von einer Vielzahl von Unternehmen und Organisationen verwendet.

@@ -19,6 +19,15 @@ include::../../docs/asciidoc/settings.adoc[]
 ----
 
 
+=== Recap
+
+Was bisher geschah ...
+
+====
+include::../../course-3/docs/course-3.adoc[tags="content"]
+====
+
+
 === Thread & Runnable
 
 *Threads* erlauben einer Applikation mehrere Operationen gleichzeitig und effizient auszuführen. Das wird häufig genutzt, um komplexe, langwierige oder performanzlastige Operationen wie z.B. IO-Operationen im Hintergrund auszuführen, ohne dass der "Hauptablauf" der Applikation unterbrochen werden muss.

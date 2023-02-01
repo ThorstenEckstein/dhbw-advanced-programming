@@ -34,42 +34,42 @@
 :course-9:  {title-prefix} 9 - Code Qualität
 :course-10: {title-prefix} 10 - Prüfungsvorbereitung
 
-:course-1-src: ../src/de/dhbw/course1
-:course-1-test: ../test/de/dhbw/course1
+:course-1-src: ../src/main/java/de/dhbw/course1
+:course-1-test: ../src/test/java/de/dhbw/course1
 :course-1-exam: <your-repo>/exam/test/de/dhbw/exam/course1
 
-:course-2-src: ../src/de/dhbw/course2
-:course-2-test: ../test/de/dhbw/course2
+:course-2-src: ../src/main/java/de/dhbw/course2
+:course-2-test: ..//src/test/java/de/dhbw/course2
 :course-2-exam: <your-repo>/exam/test/de/dhbw/exam/course2
 
-:course-3-src: ../src/de/dhbw/course3
-:course-3-test: ../test/de/dhbw/course3
+:course-3-src: ../src/main/java/de/dhbw/course3
+:course-3-test: ../src/test/java/de/dhbw/course3
 :course-3-exam: <your-repo>/exam/test/de/dhbw/exam/course3
 
-:course-4-src: ../src/de/dhbw/course4
-:course-4-test: ../test/de/dhbw/course4
+:course-4-src: ../src/main/java/de/dhbw/course4
+:course-4-test: ../src/test/java/de/dhbw/course4
 :course-4-exam: <your-repo>/exam/test/de/dhbw/exam/course4
 
-:course-5-src: ../src/de/dhbw/course5
-:course-5-test: ../test/de/dhbw/course5
+:course-5-src: ../src/main/java/de/dhbw/course5
+:course-5-test: ../src/test/java/java/de/dhbw/course5
 :course-5-exam: <your-repo>/exam/test/de/dhbw/exam/course5
 
-:course-6-src: ../src/de/dhbw/course6
-:course-6-test: ../test/de/dhbw/course6
+:course-6-src: ../src/main/java/de/dhbw/course6
+:course-6-test: ../src/test/java/java/de/dhbw/course6
 :course-6-exam: <your-repo>/exam/test/de/dhbw/exam/course6
 
-:course-7-src: ../src/de/dhbw/course7
-:course-7-test: ../test/de/dhbw/course7
+:course-7-src: ../src/main/java/de/dhbw/course7
+:course-7-test: ../src/test/java/de/dhbw/course7
 :course-7-exam: <your-repo>/exam/test/de/dhbw/exam/course7
 
-:course-8-src: ../src/de/dhbw/course8
-:course-8-test: ../test/de/dhbw/course8
+:course-8-src: ../src/main/java/de/dhbw/course8
+:course-8-test: ../src/test/java/de/dhbw/course8
 :course-8-exam: <your-repo>/exam/test/de/dhbw/exam/course8
 
-:course-9-src: ../src/de/dhbw/course9
-:course-9-test: ../test/de/dhbw/course9
+:course-9-src: ../src/main/java/de/dhbw/course9
+:course-9-test: ../src/test/java/de/dhbw/course9
 :course-9-exam: <your-repo>/exam/test/de/dhbw/exam/course9
 
-:course-10-src: ../src/de/dhbw/course10
-:course-10-test: ../test/de/dhbw/course10
+:course-10-src: ../src/main/java/de/dhbw/course10
+:course-10-test: ../src/test/java/de/dhbw/course10
 :course-10-exam: <your-repo>/exam/test/de/dhbw/exam/course10

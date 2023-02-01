@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2020 Thorsten Eckstein
+  -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>de.dhbw.adv-dev</groupId>
+    <artifactId>parent</artifactId>
+    <version>1.0</version>
+
+    <packaging>pom</packaging>
+    <name>AdvancedProgrammingII</name>
+    <description>DHBW Mannheim Course</description>
+    <url />
+
+    <modules>
+        <module>commons</module>
+        <module>course-1</module>
+        <module>course-2</module>
+        <module>course-3</module>
+        <module>course-4</module>
+        <module>course-5</module>
+        <module>course-6</module>
+        <module>course-7</module>
+        <module>course-8</module>
+        <module>course-9</module>
+        <module>course-10</module>
+        <module>exam</module>
+        <module>experiments</module>
+        <!--
+        <module>docs</module>
+        -->
+    </modules>
+
+    <properties>
+        <java.version>17</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <maven.compiler.plugin.version>3.10.1</maven.compiler.plugin.version>
+        <maven.surefire.plugin.version>3.0.0-M8</maven.surefire.plugin.version>
+
+        <unit-jupiter-engine.version>5.8.1</unit-jupiter-engine.version>
+        <junit-platform-suite-engine.version>1.9.2</junit-platform-suite-engine.version>
+        <junit-jupiter-params.version>5.9.1</junit-jupiter-params.version>
+    </properties>
+
+    <!--
+     | Basically, there are 2 ways to distribute dependencies to child pom's:
+     |
+     | 1. Using <dependencies />
+     |    You can declare the dependencies in the parent pom in the <dependencies /> node.
+     |    Each child will benefit from the dependency and does not need to re-declare it, these dependencies
+     |    are in place.
+     |    NOTE: Child pom will always import these deps, regardless of being required or not, that is the biggest
+     |    disadvantage of this approach.
+     |
+     | 2. Using <dependencyManagement />
+     |    You can declare the dependencies in the parent pom under the <dependencyManagement /> node.
+     |    Each child that requires it, adds the dependency in the its own <dependencies /> node.
+     |    In such a case, the version of the dependency is not required to be specified. This way is the
+     |    recommended way to manage dependencies, and used in all modules, where no version should appear!
+     |
+    <dependencyManagement>
+        <dependencies>
+            ... insert managed dependencies here ...
+        </dependencies>
+    </dependencyManagement>
+    -->
+
+    <!--
+     | Following dependencies are automatically known/added in (all) child modules
+    -->
+    <dependencies>
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>${unit-jupiter-engine.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.junit.platform</groupId>
+            <artifactId>junit-platform-suite-engine</artifactId>
+            <version>${junit-platform-suite-engine.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-params</artifactId>
+            <version>${junit-jupiter-params.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${maven.compiler.plugin.version}</version>
+                    <configuration>
+                        <release>17</release>
+                    </configuration>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>${maven.surefire.plugin.version}</version>
+                    <!--
+                    <configuration>
+                        <argLine>
+                            - -illegal-access=permit
+                        </argLine>
+                    </configuration>
+                    -->
+                </plugin>
+
+            </plugins>
+        </pluginManagement>
+    </build>
+
+</project>

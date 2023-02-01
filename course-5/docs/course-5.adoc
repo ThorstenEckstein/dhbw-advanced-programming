@@ -14,6 +14,18 @@ include::../../docs/asciidoc/settings.adoc[]
 * [ ] Beziehungen zwischen Systemen oder Komponenten
 //end::content[]
 
+
+=== Recap
+
+Was bisher geschah ...
+
+====
+include::../../course-4/docs/course-4.adoc[tags="content"]
+====
+
+
+=== Was versteht man eigentlich unter "Integration" ?
+
 Ganz allgemein umfasst der Begriff *Integration* das Ziel, verschiedene Applikationen zusammen arbeiten zu lassen, um einen einheitlichen Satz an Funktionalität bereitzustellen. Hierbei werden viele Teilbereiche berührt, z.B.
 
 * Integration auf verschiedenen *Ebenen* (Mikro- bis Makro)
@@ -28,7 +40,7 @@ So gut wie alles, d.h. unter anderem ...
 image::diagrams/integration-overview.svg[width="100%"]
 
 
-=== Kriterien
+=== Integrationskriterien
 
 Um Daten, Funktionen, Services oder Anwendungen integrieren zu können, müssen viele Aspekte beachtet werden. Eine *gute Integration* muss entsprechend all die Erfordernisse, Komplexitäten Konsequenzen berücksichtigen. D.h., die Auswahl dessen, "was" und "wie" integriert wird, bedarf einer guten Entscheidungsgrundlage. Die folgenden *Kriterien* helfen bei diesen Überlegungen:
 

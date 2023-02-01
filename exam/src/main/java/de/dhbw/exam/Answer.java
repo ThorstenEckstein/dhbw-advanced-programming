@@ -1,14 +1,15 @@
 package de.dhbw.exam;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.LinkedList;
 import java.util.List;
+import static main.java.de.dhbw.commons.Colourizer.*;
 
 public class Answer {
 
     private List<String> letters;
     private String detail;
+
+    public static final String EXPLANATION = "Z";
 
     private Answer(String letter, String detail) {
         this.letters = List.of(letter);
@@ -31,6 +32,10 @@ public class Answer {
     public static Answer from(String letter, String format, Object... args) {
         String detail = String.format(format, args);
         return new Answer(letter, detail);
+    }
+
+    public static Answer fromExplanation(String detail) {
+        return new Answer(EXPLANATION, detail);
     }
 
     public List<String> getLetters() {
@@ -58,4 +63,23 @@ public class Answer {
         }
     }
 
+    public String face(String studentExplanation) {
+        if (studentExplanation == null ||
+            studentExplanation.isBlank() ||
+            studentExplanation.contains("your answer here")
+        ) {
+            setDetail("HINT: Please give an answer BEFORE (!) checking the common explanation ... ;-)");
+        }
+
+        return """
+               
+               YOUR explanation:
+               > %s
+               COMMON explanation:
+               > %s
+               """.formatted(
+                       red(studentExplanation) ,
+                       green(getDetail())
+                );
+    }
 }

@@ -3,6 +3,7 @@ package de.dhbw.exam.course2;
 import main.java.de.dhbw.commons.Logger;
 import de.dhbw.exam.Answer;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
@@ -61,6 +62,51 @@ public class ExamTests {
 
         // then
         assertTrue(isCorrect, butMaybeWrong(Q2, studentAnswer));
+    }
+
+    @DisplayName(
+            """
+            Q3: What is function overloading?
+            
+            A. When a function overrides a method defined in the parent class
+            B. When a function has more then 3 arguments
+            C. Multiple functions with same name but different parameters
+            """
+    )
+    // Please give your answer here:
+    @ValueSource(strings = {"C"}) // TODO: COURSE 2 -> REPLACE CORRECT ANSWER WITH "?" BEFORE COURSE DAY
+    @ParameterizedTest
+    public void question3(String studentAnswer) {
+        // given
+        Answer correctAnswer = correctAnswers.of(Q3);
+
+        // when
+        boolean isCorrect = studentAnswer.equals(correctAnswer.getLetter());
+
+        // then
+        assertTrue(isCorrect, butMaybeWrong(Q3, studentAnswer));
+    }
+
+    @DisplayName(
+            """
+            Q4: What do you mean by 'Access Modifier'?
+            
+            Explain in your own words!
+            """
+    )
+    @Test
+    public void question4() {
+        // given
+        Answer commonExplanation = correctAnswers.of(Q4);
+
+        // when
+        final String studentExplanation =
+                """
+                ... your answer here ...
+                """;
+
+        // then
+        logger.log(commonExplanation.face(studentExplanation));
     }
 
 }

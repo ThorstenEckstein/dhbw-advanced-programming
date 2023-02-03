@@ -46,11 +46,15 @@ public class StreamingTest {
         // given - preparation see beforeEach() above
 
         // when
-        List<Schedule> filtered = timetable.getSchedules().stream().filter(s -> s.getFrom().equals("MA")).toList();
+        List<Schedule> filtered = timetable.getSchedules().stream()
+                .filter(s -> s.getFrom().equals("MA"))
+                .toList();
 
-        // a bit more readable
+        // a bit more readable (wobei Predicate am ehesten mit (besondere) 'Eigenschaft' übersetzbar)
         //Predicate<Schedule> departingFromMannheim = s -> s.getFrom().equals("MA");
-        //List<Schedule> filtered = timetable.getSchedules().stream().filter(departingFromMannheim).toList();
+        //List<Schedule> filtered = timetable.getSchedules().stream()
+        // .filter(departingFromMannheim)
+        // .toList();
 
         // then
         logger.log("Full timetable     : " + timetable.getSchedules());
@@ -62,6 +66,8 @@ public class StreamingTest {
     @Test
     public void canMapTimetable() {
         // given - preparation see beforeEach() above
+
+        logger.log("Original timetable : " + timetable.getSchedules());
 
         //List<Schedule> mapped = timetable.getSchedules().stream().map(s -> {
         //    s.setFrom(s.getFrom().toLowerCase());
@@ -94,7 +100,39 @@ public class StreamingTest {
         assertEquals(4, nSchedules);
     }
 
-    //tag::reduce-example[]
+    //tag::reduce-example1[]
+    @Test
+    public void canCalculateTotalByReducing() {
+        // given
+        List<Integer> numbers = List.of(1, 4, 78, 3, 54, 19, 234);
+
+        // when - reduce()
+        //
+        //             "startWert" (Identity)
+        //                   |  "naechsteZahl"
+        //                   |        |  "ZwischenErgebnis"
+        //                   |        |        |
+        //   Iteration 1:   (0)  +    1   =    1
+        //   Iteration 2:    1   +    4   =    5
+        //   Iteration 3:    5   +   78   =   83
+        //   Iteration 4:   83   +    3   =   86
+        //                    ... usw. ...
+        //   Iteration n:  ...   +   243  =  393 ("total")
+
+        // int startWert = 0;
+        // Integer total = numbers.stream().reduce(startWert,
+        //   (zwischenErgebnis, naechsteZahl) -> zwischenErgebnis + naechsteZahl);
+
+        // vorheriges in kürzerer Form und besser lesbar!
+        //   wobei: "Integer::sum" ist hier der "BinaryOperator<T> accumulator"
+        Integer total = numbers.stream().reduce(0, Integer::sum);
+
+        // then
+        assertEquals(393, total);
+    }
+    //end::reduce-example1[]
+
+    //tag::reduce-example2[]
     @Test
     public void canReduceScheduleDurations() {
         // given - An example journey
@@ -109,17 +147,18 @@ public class StreamingTest {
 
         // when - step 2: reduce()
 
-        //Duration reduced = durations.stream()
-        //        .reduce(Duration.ZERO,
-        //               (partialDuration, d) -> partialDuration.plus(d));
+        //Duration reduced = durations.stream().reduce(
+        //   Duration.ZERO,
+        //   (partialDuration, d) -> partialDuration.plus(d));
 
         Duration reduced = durations.stream()
                 .reduce(Duration.ZERO, Duration::plus);
 
         // then
-        logger.log("Duration [min]: " + reduced.toMinutes());
+        logger.log("Total journey duration: " +
+                reduced.toMinutes() + " [min]: ");
         assertEquals(120, reduced.toMinutes());
     }
-    //end::reduce-example[]
+    //end::reduce-example2[]
 
 }

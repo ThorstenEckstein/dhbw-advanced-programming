@@ -23,4 +23,15 @@ public class MyStudyTests {
         // then - assert the correct total price
     }
 
+    //tag::old-fashioned-reduce[]
+    @Test
+    public void canCalculateTotalInOldFashionedWay() {
+        // given - a list of at least 10 random Integers
+
+        // when - iterate over the list and calculate the total
+
+        // then - assert the correct total
+    }
+    //end::old-fashioned-reduce[]
+
 }

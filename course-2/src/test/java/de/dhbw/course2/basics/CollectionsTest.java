@@ -16,15 +16,6 @@ public class CollectionsTest {
 
     private final Logger logger = new Logger(CollectionsTest.class);
 
-    /**
-     * Exercise: Write tests that use other types from the "collections" framework, like:
-     * - Collection
-     * - Set
-     * - Map
-     *
-     * Explain differences and name the characteristics!
-     */
-
     @Test
     public void testASimpleListExample() {
         // given

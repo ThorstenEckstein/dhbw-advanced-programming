@@ -13,7 +13,16 @@ public class MyStudyTests {
      * ------------------------------------------------------------- */
 
     @Test
-    public void testStudy1() {
+    public void exercise1() {
+        // given
+
+        // when
+
+        // then
+    }
+
+    @Test
+    public void exercise2() {
         // given
 
         // when

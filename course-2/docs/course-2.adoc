@@ -191,10 +191,23 @@ Mehr zu Datenbanken & SQL siehe -> `Kurstag 7`.
 
 === Übungen
 
-In der Testklasse finden sich kleine Übungen für die Inhalte des Kurses 2:
+Die Übungsaufgaben können hier (innerhalb von Kurs 2) implementiert werden:
 
-[subs=attributes]
- {course-2-exam}/ExamTest.java
+ /src/test/java/de/dhbw/course2/study/MyStudyTests.java
+
+Übung 1::
+
+Erstelle eine Klasse `News`, die eine Aussage als String enthalten können. Mache die News durch Nutzung der `equals()` Methode vergleichbar, sodass du prüfen kannst, ob 2 News (= 2 Instanzen der Klasse News) mit verschiedenen - vielleicht _ähnlichen_ Aussagen - inhaltlich gleich oder sogar identisch sind.
+
+Übung 2::
+
+Schreibe einen Test, in dem eine `SortedMap` benutzt wird, befülle diese mit mindestens 5 Einträgen, nutze dazu `String` sowohl für den Schlüssel (K) also auch für den Wert (V). Beschreibe die Haupt-Charakteristik den dieses Map-Typus und prüfen, ob die Haupteigenschaft gegeben ist.
+
+Übungsfragen::
+
+Hier findest du sich kleine Übungsfragen für die Inhalte des Kurses 2:
+
+ /exam/src/test/java/de/dhbw/exam/course2/ExamTests.java
 
 
 === Tipps, Patterns & Best Practices

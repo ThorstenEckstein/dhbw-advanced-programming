@@ -130,23 +130,26 @@ include::{course-3-test}/lambda/LambdaTest.java[tag="lambda-example-2"]
 
 === Übungen
 
-Übung 1::
-Implementiere den "old fashioned way" für die Berechnung einer Summe:
+Wie immer, nutze einfach die Testklasse für die Übungen, hier unter "/Course 3":
 
-.de/dhbw/course3/study/MyStudyTests.java
+ /src/test/de/dhbw/course3/study/MyStudyTests.java
+
+
+Übung 1::
+Implementiere den _"old fashioned way"_ für die Berechnung einer Summe:
+
 [source, java]
 ----
 include::{tests-from-course-3}/de/dhbw/course3/study/MyStudyTests.java[tags="old-fashioned-reduce"]
 ----
 
+
 Übung 2::
 Für einen `Warenkorb` gilt es, deren enthaltene `Produkte` zu filtern und den gesamten `Preis` zu ermitteln:
 
-[subs=attributes]
- course-3/test/de/dhbw/course3/study/MyStudyTests.java
 
-Übung 3::
-In der Testklasse finden sich kleine "Quizfragen" für die Inhalte des Kurses 3:
+Übungsfragen::
+In der nachstehenden Testklasse finden sich kleine "Quizfragen" für die Inhalte des Kurses 3:
 
 [subs=attributes]
  {course-3-exam}/ExamTest.java

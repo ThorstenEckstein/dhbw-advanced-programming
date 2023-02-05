@@ -85,7 +85,7 @@ TIP: [small]#Alternativ kann auch `MS Visual Studio Code` genutzt werden und die
 | image::images/plantuml-plugin.png[]
 | Erstellung von UML-Diagrammen, Version 5.22.0 (oder höher)
 
-| image::images/database-plugin.png[]
+| image::images/database-plugin.png[width="70%"]
 | Zugriff auf H2 Datenbank, Version 3.3.5889.0
 
 |===
@@ -185,7 +185,9 @@ Dazu ein *Beispiel*:
 
 ==== `H2` Database
 
-Wenn das H2 Database PlugIn installiert ist, kann man eine Verbindung zu einer H2 Datenbank (Instanz) erstellen.
+NOTE: In der IntelliJ _Ultimate_ Edition kann das bereits enthaltene PlugIn `Database Tools` genutzt werden, leider aber nicht in der _Community_ Edition. In diesem Fall wird das PlugIn `Database Navigator` genutzt. Dessen Nutzung wird an Kurstag 7 näher erläutert!
+
+Wenn das H2 Database PlugIn korrekt installiert ist, kann man eine Verbindung zu einer H2 Datenbank (Instanz) erstellen.
 
 Das wird im Detail näher in Kurs 7 beschrieben:
 

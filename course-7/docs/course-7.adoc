@@ -226,6 +226,8 @@ image::diagrams/jpa.svg[width="60%", align="center"]
 [[SETUP_H2_DATABASE]]
 === Setup H2 Database
 
+NOTE: Grundsätzliches zur H2 Datenbank -> http://www.h2database.com/html/features.html[h2database.com]
+
 . *PlugIn* installieren (bereits am Kurstag 1 erfolgt)
 . Die *View* `DB Browser` aktivieren, im Menü `View > Tool Windows > DB Browser` (kann noch am rechten Rand von IntelliJ angesiedelt werden mit Rechtsklick auf das Symbol und _Move to ..._)
 . *Hinzufügen* einer Datenbankverbindung: Klick auf das `+` Plus-Symbol

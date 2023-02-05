@@ -22,7 +22,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="adv-dev" target="1.5" />
+      <module name="adv-dev" target="17" />
       <module name="commons" target="17" />
       <module name="course-1" target="17" />
       <module name="course-10" target="17" />

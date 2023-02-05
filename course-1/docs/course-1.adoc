@@ -85,6 +85,9 @@ TIP: [small]#Alternativ kann auch `MS Visual Studio Code` genutzt werden und die
 | image::images/plantuml-plugin.png[]
 | Erstellung von UML-Diagrammen, Version 5.22.0 (oder höher)
 
+| image::images/database-plugin.png[]
+| Zugriff auf H2 Datenbank, Version 3.3.5889.0
+
 |===
 [small]#_PS: Ich persönlich aktualisiere sehr zeitnah die PlugIns._#
 
@@ -179,6 +182,14 @@ Der "red, green, refactor" Ansatz hilft Entwicklern, den (zu implementierenden) 
 Dazu ein *Beispiel*:
 
  test/de/dhbw/course1/tdd/TddByExampleTest.java
+
+==== `H2` Database
+
+Wenn das H2 Database PlugIn installiert ist, kann man eine Verbindung zu einer H2 Datenbank (Instanz) erstellen.
+
+Das wird im Detail näher in Kurs 7 beschrieben:
+
+-> <<SETUP_H2_DATABASE, Kurstag 7: H2 Database Setup>>
 
 
 === Fachlicher Schwerpunkt des Kurses (Fachlichkeit)

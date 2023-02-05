@@ -223,8 +223,35 @@ image::diagrams/jpa.svg[width="60%", align="center"]
 {tbd}
 
 
+[[SETUP_H2_DATABASE]]
+=== Setup H2 Database
+
+. *PlugIn* installieren (bereits am Kurstag 1 erfolgt)
+. Die *View* `DB Browser` aktivieren, im Menü `View > Tool Windows > DB Browser` (kann noch am rechten Rand von IntelliJ angesiedelt werden mit Rechtsklick auf das Symbol und _Move to ..._)
+. *Hinzufügen* einer Datenbankverbindung: Klick auf das `+` Plus-Symbol
+. Dazu folgende *Connection Settings* nutzen und Verbindung testen mithilfe des Buttons `Test Connection`:
+
+image::images/connection-settings.png[]
+
+[start=5]
+. Dann kann man eine sogenannte *SQL Console* öffnen, wobei automatisch eine neue Verbindung zur Datenbank aufgebaut wird:
+
+image::images/open-sql-console.png[width="25%", align="center"]
+
+Im unteren Bereich von IntelliJ gibt es neues Icon image:images/database-console-icon.png[width="20%"], für den Zugriff auf die Inhalte und Ergebnisse von SQL Statements.
+
+
 === Übungen
 
+Übung 1::
+Nutzt die SQL Statements aus der Datei
+
+ course-7/dbunit/demonstration.sql
+
+um diese einfach selbst einmal gegen die lokale bzw. eigene H2 Datenbank auszuführen. Die Befehle können einfach aus der Datei in die geöffnete/gestartete _Datenbank Console_ kopiert werden, dann erscheinen in den Zeilen jeweils _execution_ Symbole: image:images/execute-stmt-icon.png[width="25%"] ...
+
+
+Übung 2::
 Hier finden sich zwei kleine Übungen:
 
 [subs=attributes]

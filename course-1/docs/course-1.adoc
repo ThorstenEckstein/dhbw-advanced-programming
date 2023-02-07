@@ -29,23 +29,33 @@ include::../../docs/asciidoc/settings.adoc[]
 
 ==== Einrichtung eines lokalen _Workspaces_
 
-TIP: Richtet euch einen lokalen _Workspace_ ein, d.h. ein eigenes Wurzel-Verzeichnis, in das das Code-Repository geklont werden kann. Natürlich kann man seinen persönlichen Präferenzen folgen.
+TIP: Richtet euch bitte einen lokalen _Workspace_ ein, d.h. ein eigenes Wurzelverzeichnis, in das das SourceCode-Repository bzw. die Kursinhalte "gespeichert" werden kann.
 
-Ich persönlich richte meine lokale Arbeitsumgebung (den _Workspace_) wann immer möglich, etwa für ein Projekt, mit exakt der gleichen Struktur wie die des (Remote-) Repositories ein.
+Natürlich kann man hier den persönlichen Präferenzen für dieses Wurzelverzeichnis folgen ...
+
+Zum Beispiel für Windows:
+
+ C:\Projekte\ProgrammierungJavaII
+
+oder unter MacOS:
+
+ /Users/<user>/Projects/ProgrammierungJavaII
+
+Ich persönlich richte meine lokale Arbeitsumgebung (den _Workspace_) wann immer möglich, etwa für ein Projekt, mit exakt der gleichen Struktur wie die des (Online/Remote-) Repositories ein.
 
 
 ==== `Java`
 
 Empfehlung: Im Kurs soll folgende Java Version verwendet werden:
 
- Java 17 (LTS)
+ Java 17 (LTS=Long Term Support)
 
-Man kann es aber auch mit höheren Versionen versuchen.
+Ggf. muss diese Version noch installiert werden, wobei die Versionsnummern ("Minor") _hinter_ der Hauptversionsnummer 17 ("Major") nicht so wichtig sind.
 
 
-==== IDE `IntelliJ` (empfohlen)
+==== IDE `IntelliJ`
 
-Die empfohlene IDE ist `IntelliJ`. Die Seminarinhalte sollten sowohl in der _Community_ als auch in der _Enterprise_ Edition funktionieren.
+*IDE*. Die empfohlene IDE ist `IntelliJ`. Die Seminarinhalte sollten sowohl in der _Community_ als auch in der _Enterprise_ Edition funktionieren.
 
 Der Seminarcode wurde mit folgender Version erstellt:
 
@@ -94,21 +104,93 @@ TIP: [small]#Alternativ kann auch `MS Visual Studio Code` genutzt werden und die
 
 ==== SCM mit `Git` und `Github`
 
+Bitte zuerst prüfen, ob `git` korrekt installiert ist. Das geht am besten in einem Terminal durch
+
+ git --version
+
+was zum Beispiel folgende Ausgabe ergibt: `git version 2.39.1`
+
 Das Repository mit den Sourcen für dieses Seminar befindet sich hier:
 
  https://github.com/ThorstenEckstein/dhbw-advanced-programming
 
 Zunächst muss das Repository geklont werden für die lokale Kopie:
 
- git clone https://github.com/ThorstenEckstein/dhbw-advanced-programming.git
+ git clone https://github.com/ThorstenEckstein/dhbw-advanced-programming.git -b <your-branch>
 
-Dann bitte direkt auf den Branch `hands-on` durch
+//Dann bitte direkt auf den Branch `hands-on` durch
 
- git checkout -b hands-on
+// git checkout -b hands-on
 
-wechseln (kann man natürlich auch in der IDE/IntelliJ machen). In diesem Branch kann, sobald man ihn geklont hat, Code geschrieben werden, aber ...
+// wechseln (kann man natürlich auch in der IDE/IntelliJ machen). In diesem Branch kann, sobald man ihn geklont hat, Code geschrieben werden, aber ...
+
+Zur Prüfung, auf welchem Branch man sich aktuell befindet, wechselt man in das neue Verzeichnis und gibt Folgendes ein:
+
+ git branch
+
+Hier sollte jetzt das Folgende erscheinen:
+
+   main
+   develop
+ * <your-branch>
 
 CAUTION: ... es soll kein Code in das `remote` Repository *gepushed* werden, da es sonst zu Konflikten bei möglicherweise erforderlichen Updates (durch _pullen_) kommen kann!
+
+
+[red]#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!#
+
+[red]#*Git > Clone mit Nutzung von IntelliJ & Screenshots*#
+
+
+Unter *Windows* (11):
+
+- Terminal (oder auch `CMD` - "Command Line Prompt", könnte PowerShell sein) öffnen (z.B. mit "Suche" nach dem Begriff "Terminal")
+- Den aktuellen Pfad im Terminal prüfen
+
+ dir
+ => C:\Users\<your-name>
+
+- Hier einen "Workspace" anlegen, d.h. ein Wurzelverzeichnis z.B. "Projekte":
+
+ mkdir Projekte
+ => C:\Users\<your-name>\Projekte
+
+- In diesen neuen, noch leeren Ordner wechseln
+
+ cd Projekte
+
+AUSFLUG: JAVA VERSION PRÜFEN
+
+- Prüfen, ob `java` vorhanden ist
+
+ java -version
+
+AUSFLUG: GIT VERSION PRÜFEN
+
+- Prüfen, ob `git` vorhanden ist
+
+ git --version
+
+AUSFLUG: ANZEIGE VON UMGEBUNGSVARIABLEN
+
+- *PowerShell*: Umgebungsvariablen prüfen, um alle anzuzeigen
+
+ gci env:
+
+- oder um nur eine einzelne - hier der PATH - anzuzeigen:
+
+ $env:PATH
+
+- *CMD (COmmand Line Tool)*: Umgebungsvariablen prüfen, um alle anzuzeigen
+
+ set
+
+- oder um nur eine einzelne - hier der PATH - anzuzeigen:
+
+ echo %Path%
+
+
+[red]#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!#
 
 
 ==== Build Management mit `Maven`

@@ -38,7 +38,33 @@ public class CollectionsTest {
 
         // then
         assertEquals(2, students.size());
+    }
 
+    // ACTIVATE TO DEMONSTRATE EQUALS IN COURSE:
+    //@Test
+    public void testASimpleListExampleWithEquals() {
+        // given
+        List<Student> students = new ArrayList<>();
+        Student s1 = new Student("Michaela");
+        Student s2 = new Student("Alexander");
+        Student s3 = new Student("Henrik");
+
+        Student theGuyNamedAlex = new Student("Alexander");
+
+        // when
+        students.add(s1);
+        students.add(s2);
+        students.add(s3);
+
+        logger.log("Before removal: " + students);
+
+        // Wird das funktionieren? Wenn ja, warum? wenn nein, warum nicht?
+        students.remove(theGuyNamedAlex);
+
+        logger.log("After removal:  " + students);
+
+        // then
+        assertEquals(2, students.size());
     }
 
     @Test
@@ -80,7 +106,7 @@ public class CollectionsTest {
         });
     }
 
-    // Später, Kurs 6
+    // Später, Kurs 4
     //tag::synchronized-list[]
     @Test
     public void canSynchronizeCollection() {
@@ -113,6 +139,5 @@ public class CollectionsTest {
         // no assertion, just to demonstrate 'synchronized'
     }
     //end::synchronized-list[]
-
 
 }

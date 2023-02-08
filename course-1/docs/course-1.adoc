@@ -396,7 +396,7 @@ Die wichtigsten Elemente von Java:
 [source,java]
 ----
 - interface
-- class
+- (abstract) class
 - field
 - method
 ----
@@ -407,6 +407,11 @@ Erzeuge ein erstes, kleines *Klassenmodell*:
 - Eine Klasse `EuroExpress`, die das Interface `Train` implementiert, also auch das erforderliche Attribut beinhaltet
 - Ebenso eine weitere Klasse `Intercity`, die das Interface `Train` implementiert
 - Einen Test, der je eine Instanz der zwei Implementierungen erzeugt und deren Zugnummer ausgibt
+
+ Frage   : Was fällt bei der Implementierung jetzt besonders ins Auge?
+ Antwort : ?
+
+
 
 ////
 Das Interface `Train` sieht dabei vielleicht so aus:

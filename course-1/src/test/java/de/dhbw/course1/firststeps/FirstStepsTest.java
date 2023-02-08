@@ -8,7 +8,6 @@ public class FirstStepsTest {
     public void canCreateFirstModel() {
         // given
         Train euroExpress = new EuroExpress();
-
         Train intercity = new Intercity();
 
         // when
@@ -21,9 +20,9 @@ public class FirstStepsTest {
 
         // DEBUG MODUS AUSPROBIEREN UND EVALUATE DEMONSTRIEREN
 
-//        System.out.println(intercity);
-//        System.out.println(intercity.toString()); // Name@HexCodeOf(hashCode())
-//        System.out.println(intercity.hashCode());
+        // System.out.println(intercity);
+        // System.out.println(intercity.toString()); // Name@HexCodeOf(hashCode())
+        // System.out.println(intercity.hashCode());
     }
 
 }

@@ -380,20 +380,50 @@ include::diagrams/business-model-ist.puml[]
 include::diagrams/business-model-soll.puml[]
 ....
 
+Für mehr Einblicke in das Modell und die Objekterzeugung, siehe auch
 
+ test/de/dhbw/course1/model/ModelTest.java
+
+
+=== Das erste Klassenmodell
+
+Die wichtigsten Elemente von Java:
+
+[source,java]
+----
+- interface
+- class
+- field
+- method
+----
+
+Erzeuge ein erstes, kleines *Klassenmodell*:
+
+- Ein Interface `Train` mit mit zugehörigen Methoden für ein Attribut namens `train number`
+- Eine Klasse `EuroExpress`, die das Interface `Train` implementiert, also auch das erforderliche Attribut beinhaltet
+- Ebenso eine weitere Klasse `Intercity`, die das Interface `Train` implementiert
+- Einen Test, der je eine Instanz der zwei Implementierungen erzeugt und deren Zugnummer ausgibt
+
+////
 Das Interface `Train` sieht dabei vielleicht so aus:
 
 [source, java, linenums]
 ----
 include::{course-1-src}/model/train/Train.java[lines=5..13]
 ----
-
-Für mehr Einblicke in das Modell und die Objekterzeugung, siehe auch
-
- test/de/dhbw/course1/model/ModelTest.java
-
+////
 
 === Objektvertrag (object contract)
+
+In Java erben alle Objekte von der Klasse `Object`, denn ... alle Klassen in Java _sind_ Objekte:
+
+-> https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html[https://docs.oracle.com/.../java/lang/Object.html]
+
+Die Klasse stellt den Grundvertrag für alle Java Objekte dar, die folgenden zwei sollen dabei näher betrachtet werden, da sie eine besondere Bedeutung haben:
+
+* `equals()`
+* `hashCode()` (_im Debug Modus erkennt man den Hashcode nicht direkt, so etwas wie_ `EuroExpress@1234`)
+
 
 The Object class defines both the `equals()` and `hashCode()` methods, which means that these two methods are implicitly defined in every Java class, even if they are not implemented explicitly.
 
@@ -517,14 +547,16 @@ include::{course-1-src}/basics/refsemantics/Account.java[lines="27"]
 
 === Übungen
 
-
 Übungsaufgabe 1::
-Erzeuge ein kleines Klassenmodell aus dem folgenden Anwendungsfall:
+
+siehe Kapitel -> "<<_das_erste_klassenmodell,das erste Klassenmodell>>"
+
+Übungsaufgabe 2::
+Erzeuge ein zweites Klassenmodell aus dem folgenden Anwendungsfall:
 
 -> _"Ein Bahnhof besteht aus einer Wartehalle und Bahnsteigen mit je mindestens 1 oder 2 Gleisen. Bahnhöfe werden zudem nach Fern- und Regionalbahnhöfen differenziert."_
 
-
-Übungsaufgabe 2::
+Übungsaufgabe 3::
 Versuche "Reference Semantics" grafisch zu erläutern!
 
 Weitere Übungen::

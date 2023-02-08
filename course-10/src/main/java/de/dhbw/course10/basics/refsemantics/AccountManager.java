@@ -1,4 +1,4 @@
-package de.dhbw.course1.basics.refsemantics;
+package de.dhbw.course10.basics.refsemantics;
 
 @SuppressWarnings({"UnusedAssignment", "ReassignedVariable", "ParameterCanBeLocal"})
 public class AccountManager {

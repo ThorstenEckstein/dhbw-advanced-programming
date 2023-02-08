@@ -1,4 +1,4 @@
-package de.dhbw.course2.basics.visibility;
+package de.dhbw.course1.basics.visibility;
 
 public class VisibilityExampleClass {
 
@@ -13,7 +13,7 @@ public class VisibilityExampleClass {
     // protected = accessible in this class and from subclasses
     protected String fieldC;
 
-    // provate = accessible only in this class
+    // private = accessible only in this class
     private String fieldD;
 
 }

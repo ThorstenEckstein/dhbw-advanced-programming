@@ -43,21 +43,6 @@ include::../../course-1/docs/course-1.adoc[tags="content"]
 ====
 
 
-=== Access Modifier
-
-Die Standard "Access Modifier" sind:
-
-* `default`
-* `public`
-* `protected`
-* `private`
-
-[source,java]
-----
-include::{course-2-test}/basics/BasicsTest.java[tags="visibility"]
-----
-
-
 === Überladen & Überschreiben
 
 //IMPORTANT: HIER FORTSETZEN ... SIEHE TEST!

@@ -32,7 +32,7 @@
 :course-7:  {title-prefix} 7 - Datenbank & Persistenz
 :course-8:  {title-prefix} 8 - Clean Code
 :course-9:  {title-prefix} 9 - Code Qualität
-:course-10: {title-prefix} 10 - Prüfungsvorbereitung
+:course-10: {title-prefix} 10 - Prüfungsvorbereitung & Zusatzinhalte
 
 // ------------------------------------------------------------
 // use this for referencing sources in current module!

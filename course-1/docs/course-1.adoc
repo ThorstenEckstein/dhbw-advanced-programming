@@ -29,19 +29,55 @@ include::../../docs/asciidoc/settings.adoc[]
 
 ==== Einrichtung eines lokalen _Workspaces_
 
-TIP: Richtet euch bitte einen lokalen _Workspace_ ein, d.h. ein eigenes Wurzelverzeichnis, in das das SourceCode-Repository bzw. die Kursinhalte "gespeichert" werden kann.
+TIP: Zuerst wird ein lokaler _Workspace_ eingerichtet, d.h. ein Wurzelverzeichnis, in das das SourceCode-Repository bzw. die Kursinhalte "geklont/gespeichert" werden kann.
 
-Natürlich kann man hier den persönlichen Präferenzen für dieses Wurzelverzeichnis folgen ...
+_(Natürlich kann man hier immer den persönlichen Präferenzen für dieses Wurzelverzeichnis folgen, für die Einrichtung des Kurses ist es aber besser, den Empfehlungen zu folgen ...)_
 
-Zum Beispiel für Windows:
+Man kann alles Folgende auf unterschiedliche Arten erledigen, vor allem mit dem Unterschied
 
- C:\Projekte\ProgrammierungJavaII
+* Über die GUIs bzw. Menüs der Tools, z.B. bei `IntelliJ` oder
+* Über die Kommandozeilen Tools, z.B. `CMD`, `PowerShell` oder die `bash`
 
-oder unter MacOS:
+_(Ich persönlich richte meine lokale Arbeitsumgebung (den Workspace) wann immer möglich, etwa für ein Projekt, mit exakt der gleichen Struktur wie die des (Online/Remote-) Repositories ein, dazu später mehr)_
 
- /Users/<user>/Projects/ProgrammierungJavaII
+Wir verfolgen hier für bestimmte Schritte des Setups die Kommandozeilen Tools, insbesondere für die initiale Nutzung von `git`. Zunächst aber der Workspace:
 
-Ich persönlich richte meine lokale Arbeitsumgebung (den _Workspace_) wann immer möglich, etwa für ein Projekt, mit exakt der gleichen Struktur wie die des (Online/Remote-) Repositories ein.
+.Einrichtung Workspace unter *Windows* (11) am Beispiel
+[%collapsible]
+====
+- Terminal (oder auch `CMD` - "Command Line Prompt", könnte PowerShell sein) öffnen (z.B. mit "Suche" nach dem Begriff "Terminal")
+
+- Den aktuellen Pfad im Terminal prüfen
+
+ dir
+ => C:\Users\<your-name>
+
+- Hier einen "Workspace" anlegen, d.h. ein Wurzelverzeichnis z.B. "Projekte":
+
+ mkdir Projekte
+
+- Also im Ergebnis:
+
+ C:\Users\<your-name>\Projekte
+====
+
+.Einrichtung Workspace unter *MacOS* am Beispiel
+[%collapsible]
+====
+- Terminal öffnen
+- Den aktuellen Pfad im Terminal prüfen
+
+ pwd
+ => /Users/<your-name>
+
+- Hier einen "Workspace" anlegen, d.h. ein Wurzelverzeichnis z.B. "Projekte":
+
+ mkdir Projekte
+
+- Also im Ergebnis:
+
+ /Users/<your-name>/Projekte
+====
 
 
 ==== `Java`
@@ -52,21 +88,33 @@ Empfehlung: Im Kurs soll folgende Java Version verwendet werden:
 
 Ggf. muss diese Version noch installiert werden, wobei die Versionsnummern ("Minor") _hinter_ der Hauptversionsnummer 17 ("Major") nicht so wichtig sind.
 
+- In den neuen Workspace, momentan noch leeren Ordner (s.o.), wechseln
+
+ cd Projekte
+
+- Prüfen, ob `java` vorhanden ist
+
+ java -version
+
+Dann sollte eine Java Version angezeigt werden.
+
 
 ==== IDE `IntelliJ`
 
 *IDE*. Die empfohlene IDE ist `IntelliJ`. Die Seminarinhalte sollten sowohl in der _Community_ als auch in der _Enterprise_ Edition funktionieren.
 
-Der Seminarcode wurde mit folgender Version erstellt:
+Der Code für den Kurs wurde mit folgender Version erstellt, die installiert sein muss (falls noch nicht vorhanden, bitte installieren):
 
  IntelliJ IDEA 2022.3.2 (Community Edition)
 
-Es gibt das Standard-Layout, aber auch ein experimentelles, das aktiviert werden kann.
-
 TIP: [small]#Alternativ kann auch `MS Visual Studio Code` genutzt werden und diese Umgebung sollte auch bei der Einrichtung keine besonderen Probleme verursachen. Aber ... auf eigene Gefahr ;-), das Seminar wurde (nur) für IntelliJ vorbereitet!#
 
+IntelliJ bietet ein neben dem Standard-Layout auch ein experimentelles, das aktiviert werden kann. Der Standard ist aber vollkommen ok.
 
-*Bundled PlugIns*: Mit IntelliJ werden diverse PlugIns automatisch installiert, dazu gehören die folgenden, die für das Seminar erforderlich sind und anfangs mal geprüft werden sollen:
+[big]#IntelliJ *PlugIns*#
+
+*Bundled PlugIns*::
+Mit IntelliJ werden diverse PlugIns automatisch installiert, dazu gehören die folgenden, die für das Seminar erforderlich sind und anfangs mal geprüft werden sollen:
 
 [cols="5a,5e", grid="none", frame="none"]
 |===
@@ -80,7 +128,8 @@ TIP: [small]#Alternativ kann auch `MS Visual Studio Code` genutzt werden und die
 |===
 
 
-*Non-bundled PlugIns*: Für den Code und Tests und die Dokumentation sind folgende PlugIns erforderlich, die nicht sowieso mit IntelliJ installiert werden:
+*Non-bundled PlugIns*::
+Für den Code und Tests und die Dokumentation sind folgende PlugIns erforderlich, die nicht sowieso mit IntelliJ installiert werden:
 
 [cols="5a,5e", grid="none", frame="none"]
 |===
@@ -104,31 +153,25 @@ TIP: [small]#Alternativ kann auch `MS Visual Studio Code` genutzt werden und die
 
 ==== SCM mit `Git` und `Github`
 
-Bitte zuerst prüfen, ob `git` korrekt installiert ist. Das geht am besten in einem Terminal durch
+* Bitte zuerst prüfen, ob `git` installiert ist. Das geht am besten im Kommandozeilen Tool durch
 
  git --version
 
-was zum Beispiel folgende Ausgabe ergibt: `git version 2.39.1`
+* was zum Beispiel folgende Ausgabe ergibt: `git version 2.39.1`
 
-Das Repository mit den Sourcen für dieses Seminar befindet sich hier:
-
- https://github.com/ThorstenEckstein/dhbw-advanced-programming
-
-Zunächst muss das Repository geklont werden für die lokale Kopie:
+* Zunächst muss das Repository (_https://github.com/ThorstenEckstein/dhbw-advanced-programming_) "geklont", d.h. heruntergeladen werden, in Form einer lokalen Kopie:
 
  git clone https://github.com/ThorstenEckstein/dhbw-advanced-programming.git -b <your-branch>
 
 //Dann bitte direkt auf den Branch `hands-on` durch
-
 // git checkout -b hands-on
-
 // wechseln (kann man natürlich auch in der IDE/IntelliJ machen). In diesem Branch kann, sobald man ihn geklont hat, Code geschrieben werden, aber ...
 
-Zur Prüfung, auf welchem Branch man sich aktuell befindet, wechselt man in das neue Verzeichnis und gibt Folgendes ein:
+* Zur Prüfung, auf welchem Branch man sich aktuell befindet, wechselt man in das neue, lokale Verzeichnis des Repositories und gibt ein:
 
  git branch
 
-Hier sollte jetzt das Folgende erscheinen:
+* Hier sollte jetzt etwas Ähnliches erscheinen:
 
    main
    develop
@@ -136,43 +179,9 @@ Hier sollte jetzt das Folgende erscheinen:
 
 CAUTION: ... es soll kein Code in das `remote` Repository *gepushed* werden, da es sonst zu Konflikten bei möglicherweise erforderlichen Updates (durch _pullen_) kommen kann!
 
-
-[red]#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!#
-
-[red]#*Git > Clone mit Nutzung von IntelliJ & Screenshots*#
-
-
-Unter *Windows* (11):
-
-- Terminal (oder auch `CMD` - "Command Line Prompt", könnte PowerShell sein) öffnen (z.B. mit "Suche" nach dem Begriff "Terminal")
-- Den aktuellen Pfad im Terminal prüfen
-
- dir
- => C:\Users\<your-name>
-
-- Hier einen "Workspace" anlegen, d.h. ein Wurzelverzeichnis z.B. "Projekte":
-
- mkdir Projekte
- => C:\Users\<your-name>\Projekte
-
-- In diesen neuen, noch leeren Ordner wechseln
-
- cd Projekte
-
-AUSFLUG: JAVA VERSION PRÜFEN
-
-- Prüfen, ob `java` vorhanden ist
-
- java -version
-
-AUSFLUG: GIT VERSION PRÜFEN
-
-- Prüfen, ob `git` vorhanden ist
-
- git --version
-
-AUSFLUG: ANZEIGE VON UMGEBUNGSVARIABLEN
-
+._Hilfe zu bzw. Anzeige von Umgebungsvariablen_
+[%collapsible]
+====
 - *PowerShell*: Umgebungsvariablen prüfen, um alle anzuzeigen
 
  gci env:
@@ -181,19 +190,32 @@ AUSFLUG: ANZEIGE VON UMGEBUNGSVARIABLEN
 
  $env:PATH
 
-- *CMD (COmmand Line Tool)*: Umgebungsvariablen prüfen, um alle anzuzeigen
+- *CMD (Command Line Tool)*: Umgebungsvariablen prüfen, um alle anzuzeigen
 
  set
 
 - oder um nur eine einzelne - hier der PATH - anzuzeigen:
 
  echo %Path%
+====
+
+==== Projekt in `IntelliJ` laden
+
+* IntelliJ starten
+
+* Öffnen des Projektes mit `Open` und das Kurzverzeichnis (Repository) mit auswählen. Das Projekt sollte sich jetzt grundsätzlich "selber" einrichten, z.B. werden erforderliche Bibliotheken im Hintergrund automatisch heruntergeladen, siehe `Maven`, dazu gleich mehr).
+
+* Ggf. stellt IntelliJ dem Nutzer noch Fragen zu bestimmten Aspekten, etwa:
+
+.. Sprache: Soll das `German-Language` Pack downgeloaded werden? => Ja, download
+.. Rückfrage zu `Kroki-Settings` (gehört zum Asciidoc PlugIn)? => Ja, download
+.. Rückfrage zu `asciidoctorj-diagrams` (ebenfalls im Asciidoc Kontext) => Ja, downlaod
+.. evtl. weitere ..., die müssen wir uns dann einfach zusammen anschauen.
+
+Das Projekt sollte jetzt in IntelliJ geladen und verfügbar sein.
 
 
-[red]#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!#
-
-
-==== Build Management mit `Maven`
+==== Projektverwaltung mit `Maven`
 
 Ein sehr weit verbreitetes Framework bzw. Tool ist `Maven`.
 
@@ -222,6 +244,31 @@ Die wichtigste Datei für Maven ist das `Project Object Model` in Form der Datei
 die im Projekt im Wurzelverzeichnis zu finden ist, von vielen IDE automatisch erkannt und beim Laden des Projektes für die Projektkonfiguration genutzt wird.
 
 Bei hierarchischen Projektstrukturen wie in diesem Kurs gibt es mehrere POMs innerhalb der Hierarchie, sogenannte _parent_ und _child_ POMs, die zusammen gehören (-> siehe Kurs Repository)
+
+Das Projekt sollte jetzt einmal insgesamt "gebaut" werden:
+
+* entweder über das User-Interface von IntelliJ
+* oder über die Kommandozeile
+
+Am besten einfach in IntelliJ:
+
+* Rechts oben am Rand von IntelliJ gibt es ein Symbol `_m_` (=maven), das öffnet die Standard Maven-View -> *(1)*
+
+* Dann gibt es ein Symbol zur Ausführung von Maven -> *(2)*
+* darauf hin öffnet sich ein modales Fenster, hier gibt man `mvn clean compile` in der Kommandozeile ein oder macht das über die GUI -> *(3a)* oder *(3b)*
+
+[cols="1a,1a,1a",grid="none",frame="none"]
+|===
+^| (1) ^| (2) ^| (3a)
+| image::images/maven-view.png[]
+| image::images/execute-maven-goal.png[]
+| image::images/mvn-clean-compile.png[]
+oder *(3b)*
+
+image::images/mvn-clean-compile-ui.png[]
+|===
+
+Das Projekt sollte jetzt "bauen", d.h. die Sourcen _kompilieren_ und _assembeln_ (`/target` Ordner, spiel hier aber keine Rolle). Im unteren Bereich von IntelliJ öffnet sich automatisch eine Console und das "Build" Ergebniss wird angezeigt ... hoffentlich [green]#*SUCCESS*# für ale Module ;-) ...
 
 
 ==== Test Driven Development (`TDD`)

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="DBNavigator.Project.DataEditorManager">
     <record-view-column-sorting-type value="BY_INDEX" />
-    <value-preview-text-wrapping value="true" />
+    <value-preview-text-wrapping value="false" />
     <value-preview-pinned value="false" />
   </component>
   <component name="DBNavigator.Project.DatabaseBrowserManager">
@@ -13,7 +13,13 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="7cbf7c15-234b-4243-afaa-6ba327b10c31">
-      <console name="H2 Database" type="STANDARD" schema="database" session="Main" />
+      <console name="H2 Database" type="STANDARD" schema="PUBLIC" session="Main"><![CDATA[SELECT 
+   u.ID,
+   u.LAST_NAME,
+   a.NUMBER
+  FROM USERS u
+  JOIN ACCOUNTS a
+    ON u.id = a.id]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">
@@ -21,6 +27,10 @@
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
     <open-files />
+  </component>
+  <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="7cbf7c15-234b-4243-afaa-6ba327b10c31" dataset="PUBLIC.ACCOUNTS" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="7cbf7c15-234b-4243-afaa-6ba327b10c31" dataset="PUBLIC.USERS" active-filter-id="EMPTY_FILTER" />
   </component>
   <component name="DBNavigator.Project.ExecutionManager">
     <retain-sticky-names value="false" />
@@ -30,7 +40,9 @@
     <filters />
   </component>
   <component name="DBNavigator.Project.ScriptExecutionManager" clear-outputs="true">
-    <recently-used-interfaces />
+    <recently-used-interfaces>
+      <mapping database-type="GENERIC" interface-id="DEFAULT" />
+    </recently-used-interfaces>
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>

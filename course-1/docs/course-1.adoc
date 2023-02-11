@@ -29,6 +29,18 @@ include::../../docs/asciidoc/settings.adoc[]
 - [ ] _Referenzsemantik (-> siehe Kurstag 10)_
 
 
+====
+HERE HERE HERE HERE
+
+* german language package -> yes, download
+
+* kroki settings -> yes, download
+
+* asciidoctorj-diagrams -> yes, download
+
+HERE HERE HERE HERE
+====
+
 === Frameworks, Tools & Setup
 
 ==== Einrichtung eines lokalen _Workspaces_

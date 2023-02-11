@@ -1,19 +1,36 @@
 package de.dhbw.course2.relations;
 
-import de.dhbw.course2.basics.collections.n.Train1;
-import de.dhbw.course2.basics.collections.n.Train2;
-import de.dhbw.course2.basics.collections.n.Wagon1;
-import de.dhbw.course2.basics.collections.n.Wagon2;
+import de.dhbw.course2.basics.collections.n.*;
 import main.java.de.dhbw.commons.Logger;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class RelationsTest {
 
     private final Logger logger = new Logger(RelationsTest.class);
+
+    @Test
+    public void oneToOne() {
+        // given
+        Person person = new Person("Julian", "sjw73h73hdkf8");
+        Passport passport = person.getPassport();
+
+        // when
+        boolean deleted = delete(person);
+
+        // then
+        assertTrue(deleted);
+        assertNull(person.getPassport());
+    }
+
+    private boolean delete(Person person) {
+        person.deletePassport();
+        person = null;
+        return true;
+    }
 
     @Test
     public void oneToMany1() {
@@ -46,6 +63,5 @@ public class RelationsTest {
         // then
         assertEquals(2, train2.wagons.size());
     }
-
 
 }

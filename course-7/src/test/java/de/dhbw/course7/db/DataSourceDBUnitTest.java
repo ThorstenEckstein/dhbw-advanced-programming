@@ -29,10 +29,12 @@ import java.util.List;
  * followed by some inputs:
  *   [Enter]   jdbc:h2:~/test
  *   URL       jdbc:h2:mem:default
+ *
  *   [Enter]   org.h2.Driver
  *   Driver
+ *
  *   [Enter]
- *   User      sa
+ *   User
  *   Password
  *   Type the same password again to confirm database creation.
  *   Password

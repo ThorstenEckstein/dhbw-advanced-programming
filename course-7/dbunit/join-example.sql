@@ -11,21 +11,24 @@ CREATE TABLE IF NOT EXISTS ACCOUNTS
 (
     id         int          NOT NULL,
     number     varchar(10)  NOT NULL,
-    PRIMARY KEY (id)
+    user_id    int,
+    PRIMARY KEY (id),
+    FOREIGN KEY (user_id) REFERENCES USERS(id)
 );
 
 INSERT INTO USERS VALUES (1, 'Max', 'Mutzke', null)
 INSERT INTO USERS VALUES (2, 'Mark', 'Forster', null)
 INSERT INTO USERS VALUES (3, 'Herbert', 'Grönemeyer', null)
 
-INSERT INTO ACCOUNTS VALUES (1, '1234567890')
-INSERT INTO ACCOUNTS VALUES (2, '0987654321')
-INSERT INTO ACCOUNTS VALUES (3, '8822773366')
+INSERT INTO ACCOUNTS VALUES (1, '1234567890', 3)
+INSERT INTO ACCOUNTS VALUES (2, '0987654321', 1)
+INSERT INTO ACCOUNTS VALUES (3, '8822773366', 2)
 
 SELECT
    u.ID,
-   u.LAST_NAME,
-   a.NUMBER
+   u.FIRST_NAME || ' ' || u.LAST_NAME as full_name,
+   a.NUMBER as account_number
   FROM USERS u
   JOIN ACCOUNTS a
-    ON u.id = a.id
+    ON u.id = a.user_id
+ ORDER BY u.ID

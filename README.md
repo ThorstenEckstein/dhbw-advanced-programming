@@ -140,3 +140,4 @@ Die grundsätzlich geplante Strukturierung der Kurstage sieht wie folgt aus. Ins
 </tbody>
 </table>
 
+EOF

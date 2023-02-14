@@ -35,20 +35,19 @@ Dozent             : Thorsten Eckstein
   16    17.04.23 - 23.04.23   10: Mi., 19.04.
 ```
 
-
 ## Inhalt
 
 ```
-  1.  Kurstag  1 - Setup & Basics 1/2
-  2.  Kurstag  2 - Basics 2/2
-  3.  Kurstag  3 - Generics, Streaming & funktionale Programmierung
-  4.  Kurstag  4 - Parallele Programmierung
-  5.  Kurstag  5 - Kommunikationskonzepte
-  6.  Kurstag  6 - Exceptions, Code Dokumentation
-  7.  Kurstag  7 - Datenbank & Persistenz
-  8.  Kurstag  8 - Clean Code 1/2
-  9.  Kurstag  9 - Clean Code 2/2
-  10. Kurstag 10 - Prüfungsvorbereitung
+  1.  Kurstag 1 - Setup & Basics 1/2
+  2.  Kurstag 2 - Basics 2/2
+  3.  Kurstag 3 - Generics, Streaming & funktionale Programmierung
+  4.  Kurstag 4 - Parallele Programmierung
+  5.  Kurstag 5 - Kommunikationskonzepte
+  6.  Kurstag 6 - Exceptions, Code Dokumentation
+  7.  Kurstag 7 - Datenbank & Persistenz
+  8.  Kurstag 8 - Clean Code
+  9.  Kurstag 9 - Code Qualität
+  10. Kurstag 10 - Prüfungsvorbereitung & Zusatzinhalte
 ```
 
 **Allgemeine Lehrinhalte aus den Bereichen ...**
@@ -60,83 +59,15 @@ Dozent             : Thorsten Eckstein
 * Parallele Programmierung mit Threads
 * Synchronisations- & Kommunikationskonzepte
 * Ein- und Ausgabe über Streams
-* Datenbanken und Objektrelationales Mapping.
+* Datenbanken und Objektrelationales Mapping
 
 **Ergänzende Lehrinhalte**
 - Design Prinzipien
 - Code Qualität
 - Design Patterns
-- TDD, JUnit
+- TDD, JUnit, Projektverwaltung
 ---
 
 ## Kursdurchführung
 
-Die grundsätzlich geplante Strukturierung der Kurstage sieht wie folgt aus. Insgesamt `03:00` Zeitstunden, grob aufgeteilt nach:
-
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 11.1%;">
-<col style="width: 22.2%;">
-<col style="width: 11.1%;">
-<col style="width: 55.5%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-center valign-top">Teil</th>
-<th class="tableblock halign-center valign-top">Zeit</th>
-<th class="tableblock halign-center valign-top">Dauer</th>
-<th class="tableblock halign-left valign-top">Inhalt</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>1</strong></p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><code>09:00 - 09:30</code></p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><code>30'</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Theorie</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><code>09:30 - 10:00</code></p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><code>30'</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Praxis: Individuell oder in Teamarbeit + Lösung</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>2</strong></p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><code>10:00 - 10:30</code></p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><code>30'</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Theorie</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><code>10:30 - 10:45</code></p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><code>15'</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>&nbsp;&nbsp; Kaffeepause</em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><code>10:45 - 11:15</code></p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><code>30'</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Praxis: Individuell oder in Teamarbeit + Lösung</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>3</strong></p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><code>11:15 - 11:30</code></p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><code>15'</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Theorie</strong> (<em>optional</em>)</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><code>11:30 - 11:45</code></p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><code>15'</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Praxis: Individuell oder in Teamarbeit + Lösung</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>4</strong></p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><code>11:45 - 12:00</code></p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><code>15'</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Q&amp;A</strong>, Best Practices, Codequalität, Organisation, etc.</p></td>
-</tr>
-</tbody>
-</table>
-
+Siehe dazu im Modul `/docs` das Dokument `/asciidoc/overview.adoc` bzw. gleichnamige PDF Dokument.

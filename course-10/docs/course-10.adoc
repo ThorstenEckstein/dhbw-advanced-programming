@@ -40,6 +40,17 @@ include::../../course-9/docs/course-9.adoc[tags="content"]
 
 === {course-10}
 
+*Vorbereitung*:
+
 * [ ] Wiederholungen
+* [ ] Prüfungsorganisation
 * [ ] Prüfungsvorbereitung
-* [ ] Praktische Übungen
+
+=== Zusätzliche Inhalte
+
+Zusätzliche Inhalte, die während des Semesters flexibel gehandhabt bzw. integriert werden können:
+
+* [ ] Referenzsemantik (_vgl. separates Kapitel -> reference-semantics.adoc_)
+
+// uncomment to include
+//include::reference-semantics.adoc[]

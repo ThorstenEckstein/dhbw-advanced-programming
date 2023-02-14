@@ -2,6 +2,7 @@ package de.dhbw.course3.study;
 
 import main.java.de.dhbw.commons.Logger;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 public class MyStudyTests {
@@ -13,7 +14,20 @@ public class MyStudyTests {
         // implement a shopping cart with 4 products (having 'name', 'category' and 'price')
     }
 
+    //tag::old-fashioned-reduce[]
     @Test
+    @DisplayName("Übung 1")
+    public void canCalculateTotalInOldFashionedWay() {
+        // given - a list of at least 10 random Integers
+
+        // when - iterate over the list and calculate the total
+
+        // then - assert the correct total
+    }
+    //end::old-fashioned-reduce[]
+
+    @Test
+    @DisplayName("Übung 2")
     public void canFilterAndReduceShoppingCart() {
         // given - use created shopping cart from above beforeEach()
 

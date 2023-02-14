@@ -78,4 +78,50 @@ public class ExamTests {
         assertTrue(isCorrect, butMaybeWrong(Q2, studentAnswer));
     }
 
+    @DisplayName(
+            """
+            Q3: Which is the correct value range for primitive data type int?
+            
+            A. 16 bits
+            A. 32 bits
+            A. 64 bits
+            """
+    )
+    // Please give your answer here:
+    @ValueSource(strings = {"B"}) // TODO: COURSE 1 -> REPLACE CORRECT ANSWER WITH "?" BEFORE COURSE DAY
+    @ParameterizedTest
+    public void question3(String studentAnswer) {
+        // given
+        Answer correctAnswer = correctAnswers.of(Q3);
+
+        // when
+        boolean isCorrect = studentAnswer.equals(correctAnswer.getLetter());
+
+        // then
+        assertTrue(isCorrect, butMaybeWrong(Q3, studentAnswer));
+    }
+
+    @DisplayName(
+            """
+            Q4: What is a local variable?
+            
+            A. Variables defined inside methods, constructors or blocks are called local variables
+            B. Variables defined inside methods are called local variables
+            C. Variables defined inside methods, constructors are called local variables
+            """
+    )
+    // Please give your answer here:
+    @ValueSource(strings = {"A"}) // TODO: COURSE 1 -> REPLACE CORRECT ANSWER WITH "?" BEFORE COURSE DAY
+    @ParameterizedTest
+    public void question4(String studentAnswer) {
+        // given
+        Answer correctAnswer = correctAnswers.of(Q4);
+
+        // when
+        boolean isCorrect = studentAnswer.equals(correctAnswer.getLetter());
+
+        // then
+        assertTrue(isCorrect, butMaybeWrong(Q4, studentAnswer));
+    }
+
 }

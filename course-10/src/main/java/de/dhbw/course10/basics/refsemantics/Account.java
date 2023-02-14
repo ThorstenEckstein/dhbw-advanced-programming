@@ -1,4 +1,4 @@
-package de.dhbw.course1.basics.refsemantics;
+package de.dhbw.course10.basics.refsemantics;
 
 public class Account {
 

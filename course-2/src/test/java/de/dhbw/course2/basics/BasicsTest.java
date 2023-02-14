@@ -8,39 +8,16 @@ import de.dhbw.course2.basics.objectcontract.PassengerImpl2;
 import de.dhbw.course2.basics.override.DefaultDisplay;
 import de.dhbw.course2.basics.override.Display;
 import de.dhbw.course2.basics.override.PlatformDisplay;
-import de.dhbw.course2.basics.visibility.VisibilityExampleClass;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class BasicsTest {
 
     private final Logger logger = new Logger(BasicsTest.class);
-
-    //tag::visibility[]
-    @Test
-    public void canCheckVisibility() {
-        // given
-        VisibilityExampleClass someClass = new VisibilityExampleClass();
-
-        // What is the reason for fields A, C and D being not accessible?
-
-        //someClass.fieldA
-        someClass.fieldB = "some value for field B";
-        //someClass.fieldC
-        //someClass.fieldD
-
-        // when
-        String fieldBValue = someClass.fieldB;
-
-        // then
-        assertNotNull(fieldBValue);
-    }
-    //end::visibility[]
 
     //tag::overload[]
     @Test

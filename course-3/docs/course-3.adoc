@@ -50,49 +50,6 @@ include::{course-3-src}/generics/Printer.java[tag="generic-method"]
 ----
 
 
-=== Streaming (API)
-
-Zur verbesserten Verarbeitung von "Listen" in Java wurden spezielle Methoden durch "streaming" mit Java 8 eingeführt. Häufig wird der Begriff `filter-map-reduce` genutzt, um diese Möglichkeiten zusammenzufassen.
-
-Beispiele siehe
-
- course-3/test/de/dhbw/course3/streaming/StreamingTest.java
-
-`Filter`
-
-Bei der Anwendung mehrerer oder komplexer Filteroperationen sollte die Performanz beachtet werden. Hier eine Einschätzung:
-
-.Performanz bei komplexen Filteroperationen
-image::images/FilterPerformance.png[width="100%",align="center"]
-
-`Map`
-
-_"Mapping"_ Operationen auf Listen transformieren diese. Methoden oder Klassen, deren Zweck die Abbildung von Klassen in andere Strukturen implementieren, werden häufig _"mapping"_ Methoden genannt, daher hier dieser Term hier ebenfalls genutzt.
-
-Besonders die Veränderung der Datentypen der Listenelemente ist ein wichtiger Anwendungsfall beim Einsatz von `map(...)`.
-
-`Reduce`
-
-`Stream.reduce()` Operation reduzieren die Ausgangsdatenmenge. Dies erfolgt in Teilschritten:
-
-* `Identity` – Ein Element mit einem initialen Wert für die Reduktionsoperation und der "default return value" wenn der Stream leer sein sollte.
-* `Accumulator` – Eine Funktion mit zwei Parametern: ein Teilergebnis der Reduktionsoperation und das nächste Element des Streams.
-* `Combiner` – Eine Funktion um die Teilergebnisse (der Reduktionsoperation) zu kombinieren wenn `reduce` parallelisiert wird.
-
-Richtig nutzbringend ist oft erst die Kombination `filter`, `map` und `reduce` Operationen, um aus Daten *Informationen* zu gewinnen.
-
-Dazu ein Beispiel:
-
-[source,java,title="Beispiel einer reduce() Operation"]
-----
-include::{course-3-test}/streaming/StreamingTest.java[tag="reduce-example"]
-----
-
-Übung am Beispiel - Warenkorb mit Produkten:
-
- course-3/test/de/dhbw/course3/study/MyStudyTests.java
-
-
 === Funktionale Programmierung mit Lambda Ausdrücken
 
 Funktionale Programmierung ist ein *Programmierparadigma*, in dem Funktionen im Mittelpunkt stehen, sie werden nicht nur definiert und angewendet, sondern auch wie Daten miteinander verknüpft, als Parameter verwendet und als Funktionsergebnisse genutzt.
@@ -124,19 +81,97 @@ z.B. für den Gebrauch in *Listen*:
 include::{course-3-test}/lambda/LambdaTest.java[tag="lambda-example-1"]
 ----
 
-Und eines für einen *fachlichen* Nutzen:
 
-[source,java,title="Lamdba Ausdrücke"]
+=== Streaming (API)
+
+Zur verbesserten Verarbeitung von "Listen" in Java wurden spezielle Methoden durch "streaming" mit Java 8 eingeführt. Häufig wird der Begriff `filter-map-reduce` genutzt, um diese Möglichkeiten zusammenzufassen.
+
+`Filter`
+
+Bei der Anwendung mehrerer oder komplexer Filteroperationen sollte die Performanz beachtet werden. Hier eine Einschätzung:
+
+.Performanz bei komplexen Filteroperationen
+image::images/FilterPerformance.png[width="100%",align="center"]
+
+`Map`
+
+_"Mapping"_ Operationen auf Listen transformieren diese. Methoden oder Klassen, deren Zweck die Abbildung von Klassen in andere Strukturen implementieren, werden häufig _"mapping"_ Methoden genannt, daher hier dieser Term hier ebenfalls genutzt.
+
+Besonders die Veränderung der Datentypen der Listenelemente ist ein wichtiger Anwendungsfall beim Einsatz von `map(...)`.
+
+`Reduce`
+
+`Stream.reduce()` Operation reduzieren die Ausgangsdatenmenge. Dies erfolgt in Teilschritten:
+
+* `Identity` – Ein Element mit einem initialen Wert für die Reduktionsoperation und der "default return value" wenn der Stream leer sein sollte.
+* `Accumulator` – Eine Funktion mit zwei Parametern: ein Teilergebnis der Reduktionsoperation und das nächste Element des Streams.
+* `Combiner` – Eine Funktion um die Teilergebnisse (der Reduktionsoperation) zu kombinieren wenn `reduce` parallelisiert wird.
+
+Richtig nutzbringend ist oft erst die Kombination `filter`, `map` und `reduce` Operationen, um aus einfachen *Daten* am Ende *Informationen* zu gewinnen.
+
+Dazu ein Beispiel:
+
+[source,java,title="Beispiel einer reduce() Operation"]
+----
+include::{course-3-test}/streaming/StreamingTest.java[tag="reduce-example1"]
+----
+
+Weitere Beispiele finden sich in
+
+ course-3/test/de/dhbw/course3/study/StreamingTest.java
+
+sowie zur Demonstration für einen *fachlichen* Nutzen, der "Erkenntnisse" aus den vorhandenen Daten ermittelt:
+
+[source,java,title="Fachliches Beispiel (good code?, bad code?)"]
 ----
 include::{course-3-test}/lambda/LambdaTest.java[tag="lambda-example-2"]
 ----
 
+
 === Übungen
 
-In der Testklasse finden sich kleine Übungen für die Inhalte des Kurses 3:
+Wie immer, nutze einfach die Testklasse für die Übungen, hier unter "/Course 3":
+
+ /src/test/de/dhbw/course3/study/MyStudyTests.java
+
+
+Übung 1::
+Implementiere den _"old fashioned way"_ für die Berechnung einer Summe:
+
+[source, java]
+----
+include::{tests-from-course-3}/de/dhbw/course3/study/MyStudyTests.java[tags="old-fashioned-reduce"]
+----
+
+
+Übung 2::
+Für einen `Warenkorb` gilt es, deren enthaltene `Produkte` zu filtern und den gesamten `Preis` zu ermitteln:
+
+
+Übungsfragen::
+In der nachstehenden Testklasse finden sich kleine "Quizfragen" für die Inhalte des Kurses 3:
 
 [subs=attributes]
  {course-3-exam}/ExamTest.java
 
 
 === Tipps, Patterns & Best Practices
+
+*Predicates*
+
+`Predicates` sollten, wenn möglich, _benannt_ werden, d.h. zum Beispiel anstelle von
+
+ list.stream().filter(i -> i >= 10)
+
+besser gekapselt in einer Methode oder mit einer Variable
+
+ Predicate<Integer> isGreaterOrEqual10 = i -> i >= 10
+
+oder
+
+[source, java]
+----
+Predicate<Integer> isGreaterOrEqualTo(Integer number) {
+   return i -> i >= number;
+}
+----

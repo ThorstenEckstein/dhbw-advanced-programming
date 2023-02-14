@@ -85,6 +85,13 @@ public File load(String fileName) {
 [small]#_Zeile 2: `this` ist die Referenz auf die Instanz der umgebenden Klasse (das Monitor-Objekt)_#
 
 
+Siehe auch:
+[source, java, lines]
+----
+include::{tests-from-course-2}/de/dhbw/course2/basics/CollectionsTest.java[tags="synchronized-list"]
+----
+
+
 === Enumerations
 
 `Enumerations` sind vordefinierte *Wertelisten* und können typsicher genutzt werden.

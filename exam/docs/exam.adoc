@@ -16,12 +16,22 @@ include::../../docs/asciidoc/settings.adoc[]
 
 == Überblick
 
-Jede Prüfung dauert insgesamt `30` Minuten.
-Sie umfasst einen <<_teil_1__praxis,_praktischen_>> und einen <<_teil_2__theorie,_theoretischen_>> Teil.
+Jede Prüfung dauert insgesamt `60` Minuten mit je 3 Kandidaten.
+Sie beinhaltet sowohl <<_teil_1__praxis,_praktische_>> und <<_teil_2__theorie,_theoretische_>> Teile.
 
-Die Prüfungen finden an folgenden Tagen statt:
+=== Zwischenprüfungen
 
-. `26.04.23 - 27.04.23`, `03.05.23 - 04.05.23` oder `?`
+to be done
+
+=== Mündliche Abschlussprüfung
+
+Die mündlichen Prüfungen finden an folgenden Tagen statt:
+
+ noch nicht bekannt
+
+(_26.04.23 - 27.04.23, 03.05.23 - 04.05.23_?)
+
+
 
 === Zeitliche Planung
 
@@ -31,34 +41,36 @@ Die nachfolgende Tabelle enthält die *zeitliche Planung* zur Durchführung:
 |===
 | Name	| Datum	| Von	| Bis	| Raum
 
-| Bertram, Friedrich ; Betcher, Julia	| Mi., 26.04.23	| 09:00	| 09:45	| ?
-| Choi, Dong-Keun ; Ditscher, Elias	| Mi., 26.04.23	| 10:00	| 10:45	| ?
-| Dugan, Ege ; Egartner, Henrik	| Mi., 26.04.23	| 11:00	| 11:45	| ?
-| Flessa, Julian ; Galotta, Antonio	| Mi., 26.04.23	| 12:00	| 12:45	| ?
-| Grimme, Jannes ; Haar, Leon	| Mi., 26.04.23	| 14:00	| 14:45	| ?
-| Hantschick, Markus ; Hermann, Aliyah	| Mi., 26.04.23	| 15:00	| 15:45	| ?
-| Jaeger, Moritz ; Knopp, Robert	| Mi., 26.04.23	| 16:00	| 16:45	| ?
-| Kotsyuba, Maxim ; Kreiselmaier, Simon	| Do., 27.04.23	| 09:00	| 09:45	| ?
-| Lang, Henri ; Lojewski, Dustin	| Do., 27.04.23	| 10:00	| 10:45	| ?
-| Mack, Maximilian ; Mendel, Kevin	| Do., 27.04.23	| 11:00	| 11:45	| ?
-| Prussak, Maximilian ; Prucelj, David	| Do., 27.04.23	| 13:00	| 13:45	| ?
-| Ritzmann, Felix ; Schultz, Simon	| Do., 27.04.23	| 14:00	| 14:45	| ?
-| Uzun, Aysegül ; Yilmaz, Murat	| Do., 27.04.23	| 15:00	| 15:45	| ?
-| Zanger, Janek ; n.n.	| Do., 27.04.23	| 16:00	| 16:45	| ?
+| Student:In 1 ; Student:In 2 ; Student:In 3	| Mi., 26.04.23	| 09:00	| 10:00	| ?
+| Student:In 4 ; Student:In 5 ; Student:In 6	| Mi., 26.04.23	| 10:15	| 11:15	| ?
+| Student:In 7 ; Student:In 8 ; Student:In 9	| Mi., 26.04.23	| 11:30	| 12:30	| ?
+| Student:In 10 ; Student:In 11 ; Student:In 12	| Mi., 26.04.23	| 13:30	| 14:30	| ?
+| Student:In 13 ; Student:In 14 ; Student:In 15	| Mi., 26.04.23	| 14:45	| 15:45	| ?
+| Student:In 16 ; Student:In 17 ; Student:In 18	| Mi., 26.04.23	| 16:00	| 17:00	| ?
+| Student:In 19 ; Student:In 20 ; Student:In 21	| Do., 27.04.23	| 09:00	| 10:00	| ?
+| Student:In 22 ; Student:In 23 ; Student:In 24	| Do., 27.04.23	| 10:15	| 11:15	| ?
+| Student:In 25 ; Student:In 26 ; Student:In 27	| Do., 27.04.23	| 12:15	| 13:15	| ?
 
 |===
 
 
 === Teil 1 - Praxis
 
+Wird kurz vor der Prüfung bekannt gegeben.
+
+////
 In diesem Teil soll ein `Klassenmodell` zum nachfolgenden Anwendungsfall erstellen. Vor, während und nach der Erstellung des Modells soll der Studierende seine/ihre Gedanken zur Erstellung erläutern. Nach Beendigung werden noch Fragen zum Modell gestellt.
 
 [subs=normal]
 ----
 _to be done_
 ----
-
+////
 
 === Teil 2 - Theorie
 
+Wird kurz vor der Prüfung bekannt gegeben.
+
+////
 In diesem Teil der Prüfung werden dem/der Kandidat:In im Stile eines *Interviews* Fragen gestellt, die aus dem theoretischen Bereich des Seminars stammen. Das Interview soll den Charakter eines Bewerbungsgespräches haben.
+////

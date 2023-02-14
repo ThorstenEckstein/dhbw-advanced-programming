@@ -29,18 +29,6 @@ include::../../docs/asciidoc/settings.adoc[]
 - [ ] _Referenzsemantik (-> siehe Kurstag 10)_
 
 
-====
-HERE HERE HERE HERE
-
-* german language package -> yes, download
-
-* kroki settings -> yes, download
-
-* asciidoctorj-diagrams -> yes, download
-
-HERE HERE HERE HERE
-====
-
 === Frameworks, Tools & Setup
 
 ==== Einrichtung eines lokalen _Workspaces_
@@ -177,7 +165,7 @@ Für den Code und Tests und die Dokumentation sind folgende PlugIns erforderlich
 
 * Zunächst muss das Repository (_https://github.com/ThorstenEckstein/dhbw-advanced-programming_) "geklont", d.h. heruntergeladen werden, in Form einer lokalen Kopie:
 
- git clone https://github.com/ThorstenEckstein/dhbw-advanced-programming.git -b <your-branch>
+ git clone https://github.com/ThorstenEckstein/dhbw-advanced-programming.git -b hands-on
 
 //Dann bitte direkt auf den Branch `hands-on` durch
 // git checkout -b hands-on
@@ -191,7 +179,7 @@ Für den Code und Tests und die Dokumentation sind folgende PlugIns erforderlich
 
    main
    develop
- * <your-branch>
+ * hands-on
 
 CAUTION: ... es soll kein Code in das `remote` Repository *gepushed* werden, da es sonst zu Konflikten bei möglicherweise erforderlichen Updates (durch _pullen_) kommen kann!
 
@@ -271,7 +259,11 @@ Am besten einfach in IntelliJ:
 * Rechts oben am Rand von IntelliJ gibt es ein Symbol `_m_` (=maven), das öffnet die Standard Maven-View -> *(1)*
 
 * Dann gibt es ein Symbol zur Ausführung von Maven -> *(2)*
-* darauf hin öffnet sich ein modales Fenster, hier gibt man `mvn clean compile` in der Kommandozeile ein oder macht das über die GUI -> *(3a)* oder *(3b)*
+* darauf hin öffnet sich ein modales Fenster, hier gibt man
+
+ mvn clean compile
+
+in der Kommandozeile ein oder macht das über die *GUI* -> *(3a)* oder *(3b)*
 
 [cols="1a,1a,1a",grid="none",frame="none"]
 |===

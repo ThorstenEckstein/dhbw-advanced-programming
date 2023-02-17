@@ -1,0 +1,79 @@
+include::../../docs/asciidoc/settings.adoc[]
+
+=== Kurstag 1 - Setup & Basics 1/2
+
+* [x] Klassen & Objekte
+* [x] Vererbung & Interfaces
+* [x] abstrakte Klassen
+* [x] Access Modifier (Sichtbarkeiten, Scopes)
+
+====
+{continue-here}: Kapitel 1.6 von Kurstag 1
+====
+
+* [ ] Objektvertrag (hashCode, equals)
+* [ ] Beziehungsarten (Besitz, Aufruf, Vererbung, ...), Aggregation vs. Komposition etc.
+
+=== Kurstag 2 - Basics 2/2
+
+* [ ] Methoden überladen, überschreiben/übersteuern
+* [ ] Collections API
+* [ ] Assoziationen (Beziehungsart "Besitz" im Code, sh. auch Kurstag 1)
+
+=== Kurstag 3 - Generics, Streaming & funktionale Programmierung
+
+* [ ] Generics
+* [ ] Streaming API
+* [ ] Funktionale Programmierung mit Lambda-Ausdrücken
+
+=== Kurstag 4 - Parallele Programmierung
+
+* [ ] Thread & Runnable
+* [ ] synchronized
+* [ ] Enumerations
+
+=== Kurstag 5 - Kommunikationskonzepte
+
+* [ ] Integrationskriterien
+* [ ] Integrationsoptionen bzw. -muster
+* [ ] Synchrone Kommunikation: RESTful WebServices
+* [ ] Asynchrone Kommunikation: Messaging
+* [ ] Beziehungen zwischen Systemen oder Komponenten
+
+=== Kurstag 6 - Exceptions, Code Dokumentation
+
+* [ ] Checked vs. Runtime (unchecked) exceptions
+* [ ] Technische vsw. Fachliche Exceptions
+* [ ] Exception Handling - was ist zu tun?
+* [ ] Javadoc - Regeln
+* [ ] Javadoc - Syntax
+
+=== Kurstag 7 - Datenbank & Persistenz
+
+* [ ] SQL-Datenbanken
+* [ ] NoSQL-Datenbanken
+* [ ] SQL
+* [ ] ORM Objektrelationales Mapping
+* [ ] JDBC, JPA
+* [ ] Unit-Tests gegen In-Memory-Datenbank (H2)
+
+=== Kurstag 8 - Clean Code
+
+* [ ] OOP Design Prinzipien
+* [ ] OOP Best Practices
+
+=== Kurstag 9 - Code Qualität
+
+* [ ] Qualitätsaspekte
+* [ ] Softwaredesign mit Patterns
+* [ ] Refactoring
+
+=== Kurstag 10 - Prüfungsvorbereitung & Zusatzinhalte
+
+* [ ] Wiederholungen
+* [ ] Prüfungsorganisation
+* [ ] Prüfungsvorbereitung
+
+=== Zusätzliche Inhalte
+
+* [ ] Referenzsemantik (vgl. separates Kapitel → reference-semantics.adoc)

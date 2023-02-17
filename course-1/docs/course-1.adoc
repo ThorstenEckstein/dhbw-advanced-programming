@@ -471,6 +471,17 @@ include::{course-1-test}/basics/BasicsTest.java[tag="object-contract-2"]
 
 === Übungen
 
+Die *Übungen* sollen in Form von *Unit-Tests* in folgendem _Package_ implementiert werden:
+
+[subs=normal]
+ src/[red]#*test*#/java/de/dhbw/course1/exercises/ExerciseTests.java
+
+Die *Testobjekte*, also die _echten_ Klassen, Interfaces oder anderer Sourcecode sollen getrennt, nämlich hier umgesetzt werden:
+
+[subs=normal]
+ src/[red]#*main*#/java/de/dhbw/course1/exercises
+
+
 Übungsaufgabe 1::
 
 siehe Kapitel -> "<<_das_erste_klassenmodell,das erste Klassenmodell>>"
@@ -486,8 +497,8 @@ Erweitere dein Modell aus Übungsaufgabe 2, z.B. die Klasse `Bahnhof`, um die Me
 Übungsaufgabe 3::
 Versuche "Reference Semantics" grafisch zu erläutern!
 
-Weitere Übungen::
-In der Testklasse finden sich weitere kleine Übungen für die Inhalte des Kurses 1:
+Testfragen::
+Im Modul `/exam` finden sich weitere kleine Übungen für die Inhalte des Kurses 1, und zwar in der dortigen Testklasse:
 
 [subs=attributes]
  {course-1-exam}/ExamTest.java

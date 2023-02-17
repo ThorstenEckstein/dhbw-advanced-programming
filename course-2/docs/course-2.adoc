@@ -184,6 +184,7 @@ include::diagrams/many-to-many-example-2.puml[]
 
 Implementierungsbeispiele:
 
+ de.dhbw.course2.basics.collections.n
  de.dhbw.course2.basics.collections.nm
 
 Mehr zu Datenbanken & SQL siehe -> `Kurstag 7`.
@@ -191,9 +192,16 @@ Mehr zu Datenbanken & SQL siehe -> `Kurstag 7`.
 
 === Übungen
 
-Die Übungsaufgaben können hier (innerhalb von Kurs 2) implementiert werden:
+Die *Übungen* sollen in Form von *Unit-Tests* in folgendem _Package_ implementiert werden:
 
- /src/test/java/de/dhbw/course2/study/MyStudyTests.java
+[subs=normal]
+ src/[red]#*test*#/java/de/dhbw/course2/exercises/ExerciseTests.java
+
+Die *Testobjekte*, also die _echten_ Klassen, Interfaces oder anderer Sourcecode sollen getrennt, nämlich hier umgesetzt werden:
+
+[subs=normal]
+ src/[red]#*main*#/java/de/dhbw/course2/exercises
+
 
 Übung 1::
 
@@ -203,11 +211,19 @@ Erstelle eine Klasse `News`, die eine Aussage als String enthalten können. Mach
 
 Schreibe einen Test, in dem eine `SortedMap` benutzt wird, befülle diese mit mindestens 5 Einträgen, nutze dazu `String` sowohl für den Schlüssel (K) also auch für den Wert (V). Beschreibe die Haupt-Charakteristik den dieses Map-Typus und prüfen, ob die Haupteigenschaft gegeben ist.
 
-Übungsfragen::
+Übung 3::
 
-Hier findest du sich kleine Übungsfragen für die Inhalte des Kurses 2:
+_Ein Experiment_: Erzeuge eine Klasse `Person` mit einem Attribut `name` und leite daraus ein Interface `Mensch` ab, und zwar - so oft wie möglich - mithilfe von
 
- /exam/src/test/java/de/dhbw/exam/course2/ExamTests.java
+* Code-Generation,
+* Auto-Completion oder
+* Refactoring-Proposals
 
+die von der IDE angeboten werden (IntelliJ).
 
-=== Tipps, Patterns & Best Practices
+Testfragen::
+Im Modul `/exam` finden sich weitere kleine Übungen für die Inhalte des Kurses 2, und zwar in der dortigen Testklasse:
+
+[subs=attributes]
+ {course-2-exam}/ExamTest.java
+

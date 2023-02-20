@@ -135,7 +135,20 @@ innerhalb des zu aktualisierenden, lokalen Repositories.
 
 Um "_seine/ihre_" eigenen, lokalen Änderungen oder Implementierungen im "remote" Repository online zu speichern, *MUSS* man einen separaten, eigenen Branch erzeugen, bevor man Änderungen vornimmt!
 
-CAUTION: Lokale Änderungen dürfen *NICHT* im Branch `hands-on` vorgenommen werden!
+CAUTION: [red]#_ACHTUNG: Lokale Änderungen dürfen zwar im Branch `hands-on` vorgenommen, aber nicht in das "remote" Repository mit `git push` übertragen werden!_#
+
+Ein _eigener Branch_ kann hier helfen, damit man seine eigenen Experimente ohne Konflikte mit den Kursunterlagen zu verursachen durchführen kann. Das geht recht einfach mithilfe von `IntelliJ`, und zwar im Menü
+
+`Git > New Banch ...`
+
+woraufhin der Name des neuen Branches angegeben werden muss:
+
+image::images/git-create-student-branch.png[width="50%", align="center"]
+
+Idealerweise nutzt man zur Benennung folgende Konvention, wie im Screenshot auch schon zu sehen ist:
+
+ student/<your-name>
+
 
 *git commit*
 
@@ -149,3 +162,5 @@ Zur Speicherung von lokalen Änderungen im "lokalen" Repository nutzt man am bes
 Übertragung der lokalen Änderungen (die vorher "committed" wurden), in das "remote Repository" online durch die IDE mit `"Push ..."` oder in der Kommandozeile mittels
 
  git push
+
+WARNING: Für das `pushen` immer beachten, dass dies nur in einem eigenen Branch erlaubt ist!

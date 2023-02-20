@@ -130,7 +130,7 @@ include::{course-3-test}/lambda/LambdaTest.java[tag="lambda-example-2"]
 
 === Übungen
 
-Wie immer, nutze einfach die Testklasse für die Übungen, hier unter "/Course 3":
+Wie immer, nutze einfach die Testklasse für die Übungen, hier unter `/course 3`:
 
  /src/test/de/dhbw/course3/study/MyStudyTests.java
 
@@ -140,7 +140,7 @@ Implementiere den _"old fashioned way"_ für die Berechnung einer Summe:
 
 [source, java]
 ----
-include::{tests-from-course-3}/de/dhbw/course3/study/MyStudyTests.java[tags="old-fashioned-reduce"]
+include::{tests-from-course-3}/de/dhbw/course3/exercises/ExerciseTests.java[tags="old-fashioned-reduce"]
 ----
 
 

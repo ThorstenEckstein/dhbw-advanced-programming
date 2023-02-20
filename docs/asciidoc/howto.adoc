@@ -86,4 +86,80 @@ And finally, in case of problems:
 NOTE: [small]#Like above, see also the file `.vscode/settings.json` that shows which classpath entries to add, so that the modules can "see" code of other modules.#
 
 
+=== Git Lifecycle Commands
 
+*git version*
+
+Eine Prüfung, ob `git` installiert ist, geht am besten im Kommandozeilen Tool mittels
+
+ git --version
+
+was zum Beispiel folgende Ausgabe ergibt: `git version 2.39.1`
+
+*git clone*
+
+Ein Repository muss initial "geklont", d.h. heruntergeladen werden. Dadurch entsteht ein lokales Arbeitsverzeichnis bzw. eine Kopie des Remote Repositories:
+
+:myrepo: https://github.com/ThorstenEckstein/dhbw-advanced-programming.git
+:mybranch: hands-on
+
+[subs="normal"]
+----
+ git clone [red]#<url-to-repo.git># -b [blue]#<branch-to-clone>#
+----
+[small]#_(-> siehe Kurstag 1)_#
+
+*git branch*
+
+Zur Prüfung, auf welchem _Branch_ man sich aktuell lokal (!) befindet, wechselt man in das geklonte Verzeichnis des Repositories und gibt ein:
+
+ git branch
+
+Hier sollte jetzt etwas Ähnliches erscheinen:
+
+----
+ * <branch-name>
+----
+
+Das Sternchen `*` markiert den _aktuell bearbeiteten Branch_.
+
+*git pull*
+
+Die Aktualisierung des lokalen Arbeitsverzeichnisses (lokales Repository) erfolgt entweder mithilfe der IDE im Menü oder GIT Icon oder durch das Kommando
+
+ git pull
+
+innerhalb des zu aktualisierenden, lokalen Repositories.
+
+*Ein eigener Branch für die Übungen*
+
+Um "_seine/ihre_" eigenen, lokalen Änderungen oder Implementierungen im "remote" Repository online zu speichern, *MUSS* man einen separaten, eigenen Branch erzeugen, bevor man Änderungen vornimmt!
+
+CAUTION: [red]#_ACHTUNG: Lokale Änderungen dürfen zwar im Branch `hands-on` vorgenommen, aber nicht in das "remote" Repository mit `git push` übertragen werden!_#
+
+Ein _eigener Branch_ kann hier helfen, damit man seine eigenen Experimente ohne Konflikte mit den Kursunterlagen zu verursachen durchführen kann. Das geht recht einfach mithilfe von `IntelliJ`, und zwar im Menü
+
+`Git > New Banch ...`
+
+woraufhin der Name des neuen Branches angegeben werden muss:
+
+image::images/git-create-student-branch.png[width="50%", align="center"]
+
+Idealerweise nutzt man zur Benennung folgende Konvention, wie im Screenshot auch schon zu sehen ist:
+
+ student/<your-name>
+
+*git commit*
+
+Zur Speicherung von lokalen Änderungen im "lokalen" Repository nutzt man am besten die IDE im Menu durch `"Commit ..."` oder die Kommandozeile
+
+ git add .
+ git commit - m "commit-message"
+
+*git push*
+
+Übertragung der lokalen Änderungen (die vorher "committed" wurden), in das "remote Repository" online durch die IDE mit `"Push ..."` oder in der Kommandozeile mittels
+
+ git push
+
+WARNING: Für das `pushen` immer beachten, dass dies nur in einem eigenen Branch erlaubt ist!

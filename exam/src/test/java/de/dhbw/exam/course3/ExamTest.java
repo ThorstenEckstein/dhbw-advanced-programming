@@ -35,7 +35,7 @@ public class ExamTest {
             """
     )
     // Please give your answer here:
-    @ValueSource(strings = {"B"}) // TODO: COURSE 3 -> REPLACE CORRECT ANSWER WITH "?" BEFORE COURSE DAY
+    @ValueSource(strings = {"?"})
     @ParameterizedTest
     public void question1(String studentAnswer) {
         // given

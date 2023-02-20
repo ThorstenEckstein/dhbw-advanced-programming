@@ -149,7 +149,6 @@ Idealerweise nutzt man zur Benennung folgende Konvention, wie im Screenshot auch
 
  student/<your-name>
 
-
 *git commit*
 
 Zur Speicherung von lokalen Änderungen im "lokalen" Repository nutzt man am besten die IDE im Menu durch `"Commit ..."` oder die Kommandozeile

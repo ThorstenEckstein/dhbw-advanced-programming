@@ -1,16 +1,11 @@
-package de.dhbw.course6.study;
+package de.dhbw.course6.exercises;
 
 import main.java.de.dhbw.commons.Logger;
 import org.junit.jupiter.api.Test;
 
-public class MyStudyTests {
+public class ExerciseTests {
 
-    private final Logger logger = new Logger(MyStudyTests.class);
-
-    /* ----------------------------------------------------------------
-     * Im test-package 'study' bzw. in dieser Testklasse können einfach
-     * eigene Tests oder Experimente geschrieben werden.
-     * ------------------------------------------------------------- */
+    private final Logger logger = new Logger(ExerciseTests.class);
 
     @Test
     public void ensureGoodJavadocDocumentation() {

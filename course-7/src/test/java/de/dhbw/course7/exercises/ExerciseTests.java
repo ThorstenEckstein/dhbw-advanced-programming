@@ -1,9 +1,8 @@
-package de.dhbw.course7.study;
+package de.dhbw.course7.exercises;
 
 import de.dhbw.course7.DatabaseTestConfig;
 import org.dbunit.DataSourceBasedDBTestCase;
 import org.dbunit.dataset.IDataSet;
-import org.dbunit.dataset.ITable;
 import org.dbunit.operation.DatabaseOperation;
 import org.junit.After;
 import org.junit.Before;
@@ -14,10 +13,9 @@ import org.junit.runners.JUnit4;
 
 import javax.sql.DataSource;
 import java.sql.Connection;
-import java.sql.Statement;
 
 @RunWith(JUnit4.class)
-public class MyDBUnitTest extends DataSourceBasedDBTestCase {
+public class ExerciseTests extends DataSourceBasedDBTestCase {
 
     private Connection connection;
 

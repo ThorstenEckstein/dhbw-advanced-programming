@@ -1,4 +1,4 @@
-package de.dhbw.course6.study;
+package de.dhbw.course6.exercises;
 
 public interface XmlAdapter {
 

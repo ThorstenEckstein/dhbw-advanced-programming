@@ -1,13 +1,13 @@
-package de.dhbw.course3.study;
+package de.dhbw.course3.exercises;
 
 import main.java.de.dhbw.commons.Logger;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-public class MyStudyTests {
+public class ExerciseTests {
 
-    private final Logger logger = new Logger(MyStudyTests.class);
+    private final Logger logger = new Logger(ExerciseTests.class);
 
     @BeforeEach
     public void beforeEach() {

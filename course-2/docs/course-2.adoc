@@ -222,7 +222,13 @@ Die *Testobjekte*, also die _echten_ Klassen, Interfaces oder anderer Sourcecode
 
 Übung 1::
 
-Erstelle eine Klasse `News`, die eine Aussage als String enthalten können. Mache die News durch Nutzung der `equals()` Methode vergleichbar, sodass du prüfen kannst, ob 2 News (= 2 Instanzen der Klasse News) mit verschiedenen - vielleicht _ähnlichen_ Aussagen - inhaltlich gleich oder sogar identisch sind.
+Die Übung für `equals()` und `hashCode()` besteht aus 2 Teilen:
+
+*1a)*
+Erstelle eine Klasse `News`, die den Inhalt der News als Attribut/Feld vom Typ `String` enthält. Versuche dabei, die zum Feld gehörenden Methoden (`getter` und `setter`) UND einen Konstruktur (optional) mithilfe von _Code Generierung_ zu erzeugen. Schreibe dazu einen Test (in der Testmethode `exercise1a()`), in der der hashCode von 2 News-Instanzen _technisch_ verglichen wird.
+
+*1b)*
+Mache die News durch Übersteuerung der `equals()` Methode (=Override aus der Klasse Object) _logisch_ vergleichbar. Schreibe einen Test (in der Testmethode `exercise1b()`), durch den geprüft werden kann, ob 2 News (= 2 Instanzen der Klasse News) mit verschiedenen - vielleicht aber _ähnlichen_ Aussagen - inhaltlich gleich sind oder nicht.
 
 Übung 2::
 

@@ -15,7 +15,7 @@
 //  -> https://docs.asciidoctor.org/asciidoc/latest/pass
 :nl: pass:[<br/>]
 :tbd: pass:n[[blue]#_to be continued here ..._#]
-:continue-here: pass:n[[red]#*HIER FORTSETZEN*#]
+:continue-here: pass:n[[red]#*... HIER FORTSETZEN ...*#]
 //:example: pass:[&#63;]
 //:example-caption: {example}
 

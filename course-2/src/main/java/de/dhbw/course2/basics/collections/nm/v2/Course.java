@@ -4,7 +4,7 @@ import java.util.Set;
 
 public class Course {
 
-    Long id;
+    public Long id;
 
-    Set<Registration> registrations;
+    public Set<Registration> registrations;
 }

@@ -2,35 +2,38 @@ include::../../docs/asciidoc/settings.adoc[]
 
 === Erfahrungsprotokoll & Planung
 
-[cols="^1,^1,^1,7"]
+[cols="^1,^1m,^1m,7e"]
 |===
-| [ ] | Geplant (1) | Durch-geführt (2) | Inhalt
+| | PLAN (1) | IST (2) | Inhalt, Kommentar
 
 a| * [x] {nbsp} | 1 | 1 | IDE Setup (Git, IntelliJ, Maven, PlugIns)
-a| * [x] {nbsp} | 1 | 1 | Maven Projektstruktur & pom
-a| * [x] {nbsp} | 1 | 1 | TDD Theorie
-a| * [x] {nbsp} | 1 | 1 | Clone Project
+a| * [x] {nbsp} | 1 | 1 | Einführung Maven, Projektstruktur & pom
+a| * [x] {nbsp} | 1 | 1 | TDD Einführung
+a| * [x] {nbsp} | 1 | 1 | Git Einführung & clone project
 a| * [x] {nbsp} | 1 | 1 | Klassen & Objekte
 a| * [x] {nbsp} | 1 | 1 | Vererbung & Interfaces
 a| * [x] {nbsp} | 1 | 1 | abstrakte Klassen
 a| * [x] {nbsp} | 1 | 1 | Access Modifier (Sichtbarkeiten, Scopes)
 a| * [x] {nbsp} | 1 | 2 | Update Project bzw. git pull
 a| * [x] {nbsp} | 1 | 2 | Übung: "Ein erstes Klassenmodell & der erste Unit-Test"
-a| * [x] {nbsp} | 1 | 2 | Theorie Objektvertrag (hashCode(), equals())
-a| * [x] {nbsp} | - | 2 | Zusatz: Debugging in der IDE
+a| * [x] {nbsp} | 1 | 2 | Einführung Objektvertrag (hashCode(), equals())
+a| * [x] {nbsp} | - | 2 | NEU: Debugging in der IDE
 
 4+a|
 ====
 {continue-here}
 ====
 
-a| * [ ] {nbsp} | 2 | 3 | Übung: "News Klasse" mit "Code Generation" erzeugen. Neu: Konstruktor
-a| * [ ] {nbsp} | 1 | 3 | Übung: equals() und hashCode()
-a| * [ ] {nbsp} | 2 | 3 | Demonstration: In `BasicsTest` die Wiederholungsübungen durchgehen (Passengers add/remove)
+a| * [ ] {nbsp} | 2 | 3 | Übung 1a: "News Klasse" mit "Code Generation" erzeugen. Neu: Konstruktor
+a| * [ ] {nbsp} | 2 | 3 | Übung 1b: equals() und hashCode()
+a| * [ ] {nbsp} | 2 | 3 | Unit-Test Demo: In `BasicsTest` die Wiederholungsübungen durchgehen (Passengers add/remove)
 a| * [ ] {nbsp} | 2 | 3 | Methoden überladen, überschreiben/übersteuern
-a| * [ ] {nbsp} | 2 | 3 | Collections API
+a| * [ ] {nbsp} | 2 | 3 | Unit-Test Demo: Overload, Override mit "Display"
+a| * [ ] {nbsp} | 2 | 3 | Collections API Einführung
+a| * [ ] {nbsp} | 2 | 3 | Übung 2: Eine SortedMap
 a| * [ ] {nbsp} | 2 | 3 | Beziehungsarten (Besitz, Aufruf, Vererbung, ...) & Assoziationen
 a| * [ ] {nbsp} | 2 | 3 | Assoziationen = Aggregation vs. Komposition (Beziehungsart "Besitz" im Code)
+a| * [ ] {nbsp} | 2 | 3 | Übung 3: ManyToMany, Information Hiding
 
 |===
 [small]#*(1)* = Thema war ursprünglich geplant für Seminartag <n>,

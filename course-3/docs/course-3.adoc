@@ -18,6 +18,23 @@ include::../../docs/asciidoc/settings.adoc[]
  + Standard-Beispiele/-Übungsaufgaben
 ----
 
+=== UPDATE
+
+
+Das *Projekt* bzw. der "_lokale Workspace_", d.h. euer lokales Arbeitsverzeichnis, in dem alle Sourcen liegen, muss als allererstes zum Start in den Tag aktualisiert werden, d.h. ...
+
+-> _"Update Project"_
+
+Das geht am besten mithilfe der IDE im Menü oder über das GIT Icon:
+
+image::../../course-2/docs/images/git-pull.png[width="30%", align="center"]
+
+Danach muss - im sich öffnenden Dialog - noch folgendes bestätigt werden: _merge incoming changes into the current branch_
+
+image::../../course-2/docs/images/git-accept-merge.png[width="50%", align="center"]
+
+Der Vorgang sollte mit einer Erfolgsmeldung abschließen.
+
 
 === Recap
 

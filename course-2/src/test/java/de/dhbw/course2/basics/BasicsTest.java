@@ -17,52 +17,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class BasicsTest {
 
-    private final Logger logger = new Logger(BasicsTest.class);
-
-    //tag::overload[]
-    @Test
-    public void canOverloadMethods() {
-        // given
-        de.dhbw.course2.basics.overload.PlatformDisplay display = new de.dhbw.course2.basics.overload.PlatformDisplay();
-
-        // when
-        display.update();
-        display.update("MA-DA");
-        display.update(List.of("MA-DA", "FFM-MUE"));
-
-        // then
-    }
-    //end::overload[]
-
-
-
-    @Test
-    public void canOverrideMethods1() {
-        // given
-        Display display = new DefaultDisplay();
-
-        // when
-        display.update(0, "5 minutes delay");
-
-        // then
-    }
-
-    //tag::override[]
-    @Test
-    public void canOverrideMethods() {
-        // given
-        Display display = new PlatformDisplay();
-
-        // when
-        display.update(0, "5 minutes delay");
-
-        // then
-    }
-    //end::override[]
-
-
-    // ###################################### Wiederholungen ######################################
-
     @Test
     @DisplayName(
             """
@@ -121,5 +75,46 @@ public class BasicsTest {
 
         logger.log("Nachher: " + journey);
     }
+
+    private final Logger logger = new Logger(BasicsTest.class);
+
+    //tag::overload[]
+    @Test
+    public void canOverloadMethods() {
+        // given
+        de.dhbw.course2.basics.overload.PlatformDisplay display = new de.dhbw.course2.basics.overload.PlatformDisplay();
+
+        // when
+        display.update();
+        display.update("MA-DA");
+        display.update(List.of("MA-DA", "FFM-MUE"));
+
+        // then
+    }
+    //end::overload[]
+
+    @Test
+    public void canOverrideMethods1() {
+        // given
+        Display display = new DefaultDisplay();
+
+        // when
+        display.update(0, "5 minutes delay");
+
+        // then
+    }
+
+    //tag::override[]
+    @Test
+    public void canOverrideMethods2() {
+        // given
+        Display display = new PlatformDisplay();
+
+        // when
+        display.update(0, "5 minutes delay");
+
+        // then
+    }
+    //end::override[]
 
 }

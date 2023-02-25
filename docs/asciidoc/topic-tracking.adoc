@@ -1,19 +1,17 @@
 include::../../docs/asciidoc/settings.adoc[]
 
+== Geplante Inhalte
+
 === Kurstag 1 - Setup & Basics 1/2
 
-* [x] Klassen & Objekte
-* [x] Vererbung & Interfaces
-* [x] abstrakte Klassen
-* [x] Access Modifier (Sichtbarkeiten, Scopes)
-* [x] Objektvertrag (hashCode(), equals())
+* [ ] Klassen & Objekte
+* [ ] Vererbung & Interfaces
+* [ ] abstrakte Klassen
+* [ ] Access Modifier (Sichtbarkeiten, Scopes)
+* [ ] Objektvertrag (hashCode(), equals())
 
 
 === Kurstag 2 - Basics 2/2
-
-====
-{continue-here}
-====
 
 * [ ] Methoden überladen, überschreiben/übersteuern
 * [ ] Collections API

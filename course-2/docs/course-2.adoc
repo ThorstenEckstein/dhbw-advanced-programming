@@ -9,7 +9,8 @@ include::../../docs/asciidoc/settings.adoc[]
 //tag::content[]
 * [ ] Methoden überladen, überschreiben/übersteuern
 * [ ] Collections API
-* [ ] Assoziationen (Beziehungsart "Besitz" im Code, sh. auch Kurstag 1)
+* [ ] Beziehungsarten (Aufruf, Vererbung, Assoziation, ...)
+* [ ] Assoziationen (Aggregation vs. Komposition im Code)
 //end::content[]
 
 *Fachlicher Kontext*
@@ -61,8 +62,6 @@ include::../../course-1/docs/course-1.adoc[tags="content"]
 
 === Überladen & Überschreiben
 
-//IMPORTANT: HIER FORTSETZEN ... SIEHE TEST!
-
 [source,java,title="Beispiel Überladen von Methoden"]
 ----
 include::{course-2-src}/basics/overload/PlatformDisplay.java[lines="5..16"]
@@ -88,6 +87,13 @@ Die zugehörige Annotation im Code ist
 
 Sie sollte in jedem Fall genutzt werden, zudem wird sie auch von der IDE vorgeschlagen
 
+Die zugehörigen *Unit-Tests* finden sich hier:
+
+ /test/de/dhbw/course2/basics/BasicsTest
+   .canOverloadMethods()
+   .canOverrideMethods1()
+   .canOverrideMethods2()
+
 
 === Collections Framework
 
@@ -98,6 +104,9 @@ Siehe z.B. -> https://en.wikipedia.org/wiki/Java_collections_framework[Java Coll
 * Position von Elementen (_numerischer index_)
 * Möglichkeit zur Ordnung von Elementen (z.B. _insertion order_)
 * Möglichkeit von `null` Elementen oder Duplikaten (_Set vs. List_)
+
+CAUTION: -> _Duplikate in Listen? Wann ist ein Listenelement ein Duplikat? Technisch gleich oder logisch gleich?_
+
 * Zugriff auf Elemente anhand eines Schlüssels (_List vs. Map_)
 
 image::images/collections-api.png["Collections API",width="100%",align="center"]
@@ -141,6 +150,9 @@ SortedSet is a Set that maintains its elements in ascending order. Sorted sets a
 A map that maintains its mappings in ascending key order. This is the Map analog of SortedSet.
 Sorted maps are used for naturally ordered collections of key/value pairs.
 
+TIP: Übrigens, das ist eine beliebte Prüfungsfrage: _"Welche Eigenschaften hat das Collections-Interface ...?"_
+
+
 ==== Special Java Collections Classes
 
 Java Collections framework comes with many implementation classes for the interfaces. Most common implementations are:
@@ -175,6 +187,15 @@ Its main usage are;
 
 ==== One-to-One-Assoziation
 
+Siehe Unit-Test:
+
+ de.dhbw.course2.relations.RelationsTest.oneToOne()
+
+Ein Beispiel::
+_Jede natürliche Person besitzt (genau) einen Personalausweis, der Ausweis kann verloren gehen, die Person kann sterben, dann müsste auch der Personalausweis vernichtet werden._
+
+Es geht hier also oft um die Überlegung zur *Semantik bzw. Qualität* einer Beziehung zwischen zwei abhängigen Objekten!
+
 
 ==== One-to-Many-Assoziation
 
@@ -185,7 +206,12 @@ Ein Beispiel für eine Eins-zu-Viele Beziehung:
 include::diagrams/one-to-many-example.puml[]
 ....
 
-Siehe Implementierungen für V1 und V2:
+Zugehörige Unit-Tests:
+
+ de.dhbw.course2.relations.RelationsTest.oneToMany1()
+ de.dhbw.course2.relations.RelationsTest.oneToMany2()
+
+sowie Implementierungen für V1 und V2:
 
  de.dhbw.course2.basics.collections.n
 
@@ -204,7 +230,11 @@ Implementierungsbeispiele:
  de.dhbw.course2.basics.collections.n
  de.dhbw.course2.basics.collections.nm
 
-Mehr zu Datenbanken & SQL siehe -> `Kurstag 7`.
+Zugehörige Unit-Tests:
+
+ de.dhbw.course2.relations.RelationsTest.manyToMany()
+
+Eine weitere Perspektive auf Relationen kommt oft im Umfeld Datenbanken & SQL vor, dazu mehr erst später, am -> `Kurstag 7`.
 
 
 === Übungen
@@ -228,13 +258,26 @@ Die Übung für `equals()` und `hashCode()` besteht aus 2 Teilen:
 Erstelle eine Klasse `News`, die den Inhalt der News als Attribut/Feld vom Typ `String` enthält. Versuche dabei, die zum Feld gehörenden Methoden (`getter` und `setter`) UND einen Konstruktur (optional) mithilfe von _Code Generierung_ zu erzeugen. Schreibe dazu einen Test (in der Testmethode `exercise1a()`), in der der hashCode von 2 News-Instanzen _technisch_ verglichen wird.
 
 *1b)*
-Mache die News durch Übersteuerung der `equals()` Methode (=Override aus der Klasse Object) _logisch_ vergleichbar. Schreibe einen Test (in der Testmethode `exercise1b()`), durch den geprüft werden kann, ob 2 News (= 2 Instanzen der Klasse News) mit verschiedenen - vielleicht aber _ähnlichen_ Aussagen - inhaltlich gleich sind oder nicht.
+Mache die News mithilfe der Methode `equals()` und `hashCode()` (=Overrides aus der Klasse Object) _logisch_ vergleichbar. Schreibe einen Test (in der Testmethode `exercise1b()`), durch den geprüft werden kann, ob 2 News (= 2 Instanzen der Klasse News) mit verschiedenen - vielleicht aber _ähnlichen_ Aussagen - inhaltlich gleich sind oder nicht.
+
 
 Übung 2::
 
 Schreibe einen Test, in dem eine `SortedMap` benutzt wird, befülle diese mit mindestens 5 Einträgen, nutze dazu `String` sowohl für den Schlüssel (K) also auch für den Wert (V). Beschreibe die Haupt-Charakteristik den dieses Map-Typus und prüfen, ob die Haupteigenschaft gegeben ist.
 
-Übung 3::
+
+Übung 3 (optional)::
+
+Setzen das Prinzip *Information Hiding* um, indem in den Beispiel-Klassen im Paket
+
+ de.dhbw.course2.basics.collections.nm
+
+die zu den vorhandenen Attributen gehörenden `getter` und `setter` Methoden eingeführt werden. Außerdem muss noch der zugehörige Unit-Test entsprechend angepasst werden:
+
+ de.dhbw.course2.relations.RelationsTest.manyToMany()
+
+
+Übung 4 (optional)::
 
 _Ein Experiment_: Erzeuge eine Klasse `Person` mit einem Attribut `name` und leite daraus ein Interface `Mensch` ab, und zwar - so oft wie möglich - mithilfe von
 

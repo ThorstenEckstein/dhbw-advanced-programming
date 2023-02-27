@@ -287,7 +287,7 @@ um diese einfach selbst einmal gegen die lokale bzw. eigene H2 Datenbank auszufÃ
 Hier finden sich zwei kleine Ãœbungen:
 
 [subs=attributes]
- /test/de/dhbw/course7/study/MyStudyTests.java
+ /test/de/dhbw/course7/exercises/ExerciseTests.java
 
 
 === Tipps, Patterns & Best Practices

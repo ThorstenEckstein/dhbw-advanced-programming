@@ -43,7 +43,7 @@ public class ExamTests {
         """
     )
     // Please give your answer here:
-    @ValueSource(strings = {"D"}) // TODO: COURSE 1 -> REPLACE CORRECT ANSWER WITH "?" BEFORE COURSE DAY
+    @ValueSource(strings = {"?"})
     @ParameterizedTest
     public void question1(String studentAnswer) {
         // given
@@ -65,7 +65,7 @@ public class ExamTests {
             """
     )
     // Please give your answer here:
-    @ValueSource(strings = {"A"}) // TODO: COURSE 1 -> REPLACE CORRECT ANSWER WITH "?" BEFORE COURSE DAY
+    @ValueSource(strings = {"?"})
     @ParameterizedTest
     public void question2(String studentAnswer) {
         // given
@@ -88,7 +88,7 @@ public class ExamTests {
             """
     )
     // Please give your answer here:
-    @ValueSource(strings = {"B"}) // TODO: COURSE 1 -> REPLACE CORRECT ANSWER WITH "?" BEFORE COURSE DAY
+    @ValueSource(strings = {"?"})
     @ParameterizedTest
     public void question3(String studentAnswer) {
         // given
@@ -111,7 +111,7 @@ public class ExamTests {
             """
     )
     // Please give your answer here:
-    @ValueSource(strings = {"A"}) // TODO: COURSE 1 -> REPLACE CORRECT ANSWER WITH "?" BEFORE COURSE DAY
+    @ValueSource(strings = {"?"})
     @ParameterizedTest
     public void question4(String studentAnswer) {
         // given

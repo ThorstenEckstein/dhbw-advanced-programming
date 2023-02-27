@@ -1,12 +1,12 @@
-package de.dhbw.course3;
+package de.dhbw.course1;
 
 import main.java.de.dhbw.commons.Logger;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-public class StudySolutions {
+public class ExerciseSolutions {
 
-    private final Logger logger = new Logger(StudySolutions.class);
+    private final Logger logger = new Logger(ExerciseSolutions.class);
 
     @Test
     @DisplayName("Lösung zu Übung 1 / Exercise 1")

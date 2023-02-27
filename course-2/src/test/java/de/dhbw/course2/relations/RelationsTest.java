@@ -1,10 +1,15 @@
 package de.dhbw.course2.relations;
 
 import de.dhbw.course2.basics.collections.n.*;
+import de.dhbw.course2.basics.collections.nm.v2.Course;
+import de.dhbw.course2.basics.collections.nm.v2.Registration;
+import de.dhbw.course2.basics.collections.nm.v2.Student;
 import main.java.de.dhbw.commons.Logger;
 import org.junit.jupiter.api.Test;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Date;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -16,7 +21,6 @@ public class RelationsTest {
     public void oneToOne() {
         // given
         Person person = new Person("Julian", "sjw73h73hdkf8");
-        Passport passport = person.getPassport();
 
         // when
         boolean deleted = delete(person);
@@ -62,6 +66,36 @@ public class RelationsTest {
 
         // then
         assertEquals(2, train2.wagons.size());
+    }
+
+    @Test
+    public void manyToMany() {
+        // given
+        Course course = new Course();
+        course.id = 2023001L;
+
+        Student alex = new Student();
+        alex.id = 1L;
+
+        Student dana = new Student();
+        dana.id = 2L;
+
+        Registration reg1 = new Registration();
+        Registration reg2 = new Registration();
+
+        // when
+        reg1.courseId = course.id;
+        reg1.studentId = dana.id;
+        reg1.registrationDate = LocalDate.now();
+
+        reg2.courseId = course.id;
+        reg2.studentId = alex.id;
+        reg2.registrationDate = LocalDate.now();
+
+        // then
+        // no asserts here, just for demonstration
+        System.out.println(reg1);
+        System.out.println(reg2);
     }
 
 }

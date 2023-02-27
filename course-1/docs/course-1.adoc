@@ -21,7 +21,6 @@ include::../../docs/asciidoc/settings.adoc[]
 - [ ] Vererbung & Interfaces
 - [ ] Abstrakte Klassen
 - [ ] Access Modifier (Sichtbarkeiten, Scopes)
-- [ ] Beziehungsarten (Besitz, Aufruf, Vererbung, ...), Aggregation vs. Komposition etc.
 //end::content[]
 
 *Mögliche Zusatzinhalte*:

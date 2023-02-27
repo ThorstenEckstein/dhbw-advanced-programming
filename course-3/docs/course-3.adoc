@@ -18,6 +18,23 @@ include::../../docs/asciidoc/settings.adoc[]
  + Standard-Beispiele/-Übungsaufgaben
 ----
 
+=== UPDATE
+
+
+Das *Projekt* bzw. der "_lokale Workspace_", d.h. euer lokales Arbeitsverzeichnis, in dem alle Sourcen liegen, muss als allererstes zum Start in den Tag aktualisiert werden, d.h. ...
+
+-> _"Update Project"_
+
+Das geht am besten mithilfe der IDE im Menü oder über das GIT Icon:
+
+image::../../course-2/docs/images/git-pull.png[width="30%", align="center"]
+
+Danach muss - im sich öffnenden Dialog - noch folgendes bestätigt werden: _merge incoming changes into the current branch_
+
+image::../../course-2/docs/images/git-accept-merge.png[width="50%", align="center"]
+
+Der Vorgang sollte mit einer Erfolgsmeldung abschließen.
+
 
 === Recap
 
@@ -47,6 +64,16 @@ Zeile 1 macht die Klasse generisch, in Zeile 9 wird der unbekannte Typ genutzt.
 [source,java,title="Beispiel einer generischen Methode"]
 ----
 include::{course-3-src}/generics/Printer.java[tag="generic-method"]
+----
+
+*Bounded Generics*
+
+Oft kommen sogenannte *bounded generics* zum Einsatz.
+Dabei wird bei der Definition einfach die Superklasse angegeben, von welcher der generische Typ erben muss. Auf diese Weise wird der ansonsten _beliebige_ Typ eingeschränkt, so dass der generische Typ zwar immer noch unbekannt ist, aber nicht von _jedem_ Typ sein kann, sondern nur entsprechend der Einschränkung, z.B.
+
+[source, java]
+----
+ public <T extends Number> add(T first, T second) { ... }
 ----
 
 
@@ -118,7 +145,7 @@ include::{course-3-test}/streaming/StreamingTest.java[tag="reduce-example1"]
 
 Weitere Beispiele finden sich in
 
- course-3/test/de/dhbw/course3/study/StreamingTest.java
+ course-3/test/de/dhbw/course3/streaming/StreamingTest.java
 
 sowie zur Demonstration für einen *fachlichen* Nutzen, der "Erkenntnisse" aus den vorhandenen Daten ermittelt:
 
@@ -132,10 +159,14 @@ include::{course-3-test}/lambda/LambdaTest.java[tag="lambda-example-2"]
 
 Wie immer, nutze einfach die Testklasse für die Übungen, hier unter `/course 3`:
 
- /src/test/de/dhbw/course3/study/MyStudyTests.java
-
+ /src/test/de/dhbw/course3/exercises/ExerciseTests.java
 
 Übung 1::
+
+Implementiere eine Klasse `Workflow` mit einer statischen & generischen Methode `execute`, die beliebige Workflow-Schritte ausführen kann. Konkrete Workflowschritte erben von einer Klasse namens `Step`. Die "Ausführung" selbst soll hier lediglich die Ausgabe des Names des Workflow-Schrittes sein (der Klassenname)
+
+
+Übung 2::
 Implementiere den _"old fashioned way"_ für die Berechnung einer Summe:
 
 [source, java]
@@ -144,7 +175,7 @@ include::{tests-from-course-3}/de/dhbw/course3/exercises/ExerciseTests.java[tags
 ----
 
 
-Übung 2::
+Übung 3::
 Für einen `Warenkorb` gilt es, deren enthaltene `Produkte` zu filtern und den gesamten `Preis` zu ermitteln:
 
 

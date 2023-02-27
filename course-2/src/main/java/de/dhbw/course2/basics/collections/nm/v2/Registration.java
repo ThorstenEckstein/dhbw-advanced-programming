@@ -4,12 +4,16 @@ import java.time.LocalDate;
 
 public class Registration {
 
-    Long courseId;
-    Long studentId;
+    public Long courseId;
+    public Long studentId;
 
     // maybe some additional attributes
     // NOTE: without this, this class would be a so-called "key table"
 
-    LocalDate registrationDate;
+    public LocalDate registrationDate;
 
+    @Override
+    public String toString() {
+        return "Registration " + hashCode() + ": student " + studentId + " attends course " + courseId;
+    }
 }

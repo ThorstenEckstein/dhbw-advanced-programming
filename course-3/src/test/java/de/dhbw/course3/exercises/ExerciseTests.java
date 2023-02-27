@@ -14,10 +14,22 @@ public class ExerciseTests {
         // implement a shopping cart with 4 products (having 'name', 'category' and 'price')
     }
 
+    //tag::generic-workflow[]
+    @Test
+    @DisplayName("Übung 1: Generic workflow execution")
+    public void exercise1() {
+        // given - a Workflow to execute steps
+
+        // when - execute is called, the step-name is printed to the console
+
+        // then - no assertion, just a log output
+    }
+    //end::generic-workflow[]
+
     //tag::old-fashioned-reduce[]
     @Test
-    @DisplayName("Übung 1")
-    public void canCalculateTotalInOldFashionedWay() {
+    @DisplayName("Übung 2: Calculate a total in old fashioned way")
+    public void exercise2() {
         // given - a list of at least 10 random Integers
 
         // when - iterate over the list and calculate the total
@@ -27,8 +39,8 @@ public class ExerciseTests {
     //end::old-fashioned-reduce[]
 
     @Test
-    @DisplayName("Übung 2")
-    public void canFilterAndReduceShoppingCart() {
+    @DisplayName("Übung 3: Filter & reduce a shopping cart")
+    public void exercise3() {
         // given - use created shopping cart from above beforeEach()
 
         // when - step 1: filter your shopping cart for products for some 'category'

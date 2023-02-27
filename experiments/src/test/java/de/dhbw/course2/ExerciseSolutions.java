@@ -9,9 +9,9 @@ import java.util.*;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class StudySolutions {
+public class ExerciseSolutions {
 
-    private final Logger logger = new Logger(StudySolutions.class);
+    private final Logger logger = new Logger(ExerciseSolutions.class);
 
     @Test
     @DisplayName("Lösung zu Übung 1 / Exercise 1")

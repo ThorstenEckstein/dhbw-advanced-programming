@@ -14,6 +14,7 @@ import org.junit.jupiter.api.Test;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertIterableEquals;
 
 public class BasicsTest {
 
@@ -116,5 +117,25 @@ public class BasicsTest {
         // then
     }
     //end::override[]
+
+    @Test
+    @DisplayName("For-Loop")
+    //tag::foreach-loop[]
+    public void canLoopWithForEach() {
+        // given
+        List<String> list = List.of("a", "b", "c", "d");
+
+        // when
+        for (String item : list) {
+            System.out.printf(
+                    "Item '%s' at position '%s' \n",
+                    item,
+                    list.indexOf(item));
+        }
+
+        // then
+        assertEquals(4, list.size());
+    }
+    //end::foreach-loop[]
 
 }

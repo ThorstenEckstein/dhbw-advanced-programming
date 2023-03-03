@@ -95,6 +95,82 @@ Die zugehörigen *Unit-Tests* finden sich hier:
    .canOverrideMethods2()
 
 
+=== Datentypen
+
+Übersicht über die Datentypen in Java:
+
+image::images/datentypen.png[width="75%", align="center"]
+
+Quelle: -> https://de.wikibooks.org/wiki/Java_Standard:_Primitive_Datentypen[Wikibooks: Datatypes]
+
+Quelle: -> https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html[Oracle: Datatypes]
+
+
+=== Typumwandlungen
+
+*Type-Casting* mit primitiven Datentypen
+
+Man unterscheidet zwischen einer *expliziten* und einer *impliziten* Typumwandlung.
+
+.Widening & Narrowing
+image::images/type-casting.png[width="75%", align="center"]
+
+CAUTION: _Bei der Umwandlung in "kleinere" Datentypen können Fehler auftreten (Informationsverlust), es findet das sogenannte "Narrowing" automatisch statt. Es entsteht zwar kein Compiler-Fehler, aber z.B. die Zahl wird verfälscht (-> https://docs.oracle.com/javase/specs/jls/se17/html/jls-5.html#jls-5.1.3[Narrowing])_
+
+
+==== Implizite Typumwandlung
+
+Die implizite Typumwandlung findet automatisch bei der Zuweisung statt. Dies geht jedoch nur, wenn ein niederwertiger Datentyp in einen höher wertigeren Datentypen umgewandelt wird, also z.B. vom Datentyp `int` in den Datentyp `long`:
+
+[source, java]
+----
+int wert1 = 10;
+long wert2 = 30;
+wert2 = wert1; // automatische Umwandlung
+----
+
+==== Explizite Typumwandlung
+
+Die explizite Umwandlung erfolgt durch den sogenannten `cast`-Operator mit runden Klammern. Hier wird von einem höher wertigeren Datentyp in einen nieder wertigen Datentypen umgewandelt. In welchen Datentyp umgewandelt werden soll, muss bei dem cast Operator explizit angegeben werden.
+
+[source, java]
+----
+int wert1 = 10;
+float wert2 = 30.5f;
+wert1 = (int) wert2; // Umwandlung per 'cast'
+----
+
+-> <<Course_2_Exercise_2, Übung 2>>
+
+
+=== Statische Klassen & Methoden
+
+Das Schlüsselwort `static` bedeutet im Wesentlichen, das die Attribute oder Methoden nicht an die Erzeugung einer *Instanz* gebunden sind.
+
+Siehe dazu den *Unit-Test* hier
+
+ src/test/java/de/dhbw/course2/basics/StaticTest.java
+
+
+=== Schleifen
+
+Es gibt eine Reihe von Möglichkeiten, über die Einträge von Listen oder Maps zu iterieren. Dazu werden *Schleifen* eingesetzt.
+
+Es drei relevante Schleifen-Typen. Je nach Einsatzszenario entscheidet man sich für eine der drei Schleifen:
+
+* For-(Each)-Schleife
+* While-Schleife
+* Do-While-Schleife
+
+Hier ein Beispiel für eine häufig genutzte Schleife, die `for-each` Loop:
+
+.siehe -> de.dhbw.course2.basics.BasicsTest.canLoopWithForEach()
+[source, java]
+----
+include::{tests-from-course-2}/de/dhbw/course2/basics/BasicsTest.java[tags="foreach-loop"]
+----
+
+
 === Collections Framework
 
 Siehe z.B. -> https://en.wikipedia.org/wiki/Java_collections_framework[Java Collections Framework auf Wikipedia]
@@ -250,6 +326,7 @@ Die *Testobjekte*, also die _echten_ Klassen, Interfaces oder anderer Sourcecode
  src/[red]#*main*#/java/de/dhbw/course2/exercises
 
 
+[[Course_2_Exercise_1]]
 Übung 1::
 
 Die Übung für `equals()` und `hashCode()` besteht aus 2 Teilen:
@@ -261,31 +338,60 @@ Erstelle eine Klasse `News`, die den Inhalt der News als Attribut/Feld vom Typ `
 Mache die News mithilfe der Methode `equals()` und `hashCode()` (=Overrides aus der Klasse Object) _logisch_ vergleichbar. Schreibe einen Test (in der Testmethode `exercise1b()`), durch den geprüft werden kann, ob 2 News (= 2 Instanzen der Klasse News) mit verschiedenen - vielleicht aber _ähnlichen_ Aussagen - inhaltlich gleich sind oder nicht.
 
 
+[[Course_2_Exercise_2]]
 Übung 2::
 
-Schreibe einen Test, in dem eine `SortedMap` benutzt wird, befülle diese mit mindestens 5 Einträgen, nutze dazu `String` sowohl für den Schlüssel (K) also auch für den Wert (V). Beschreibe die Haupt-Charakteristik den dieses Map-Typus und prüfen, ob die Haupteigenschaft gegeben ist.
+Übung zu *Typumwandlung* in
+
+[subs=normal]
+ src/[red]#*test*#/java/de/dhbw/course2/exercises/MoreExerciseTests.java
+
+Schreibe je einen Test für
+
+a. Gegeben `char c = '1'` -> Umwandlung in `int`
+b. Gegeben `int i = 127` -> Umwandlung in `byte`
+
+und prüfe das Ergebnis, also den erwarteten Wert, jeweils mithilfe der Assertions-Methode `assertEquals(<expected>, <actual>)`.
 
 
-Übung 3 (optional)::
+[[Course_2_Exercise_3]]
+Übung 3::
 
-Setzen das Prinzip *Information Hiding* um, indem in den Beispiel-Klassen im Paket
+Übung zu *Syntax, Klassenmodell* und erforderliche *Methoden*.
 
- de.dhbw.course2.basics.collections.nm
+Erzeuge eine
 
-die zu den vorhandenen Attributen gehörenden `getter` und `setter` Methoden eingeführt werden. Außerdem muss noch der zugehörige Unit-Test entsprechend angepasst werden:
+. konkrete Klasse `Person`
+. mit einem Attribut `name`, erstelle dann
+. die zum Attribut gehörende `get` und `set` Methode,
+. erstelle außerdem die `equals()` und `hashCode()` Methoden,
+. zuletzt leite aus dieser konkreten Klasse ein Interface `Mensch` ab
+
+Wenn möglich, nutze für alle diese Schritte `Code-Generation`, die von der IDE angeboten werden (IntelliJ, Tastenkombinationen).
+
+[[Course_2_Exercise_4]]
+Übung 4::
+
+a. *Listen*: Schreibe einen Test, in dem eine konkrete Implementierung von `List` und den Datentyp `Integer` benutzt wird. Befülle diese mit beliebig vielen Einträgen. _Optional: ... und summiere alle Listeneinträge mithilfe einer `for-each` Schleife_.
+
+b. *Maps*: Schreibe einen Test, in dem eine konkrete Implementierung von `SortedMap` benutzt wird. Befülle diese mit mindestens 5 Einträgen, nutze dazu `String` sowohl für den Schlüssel (K) also auch für den Wert (V). Überprüfe die Haupt-Charakteristik _"natürliche Sortierung"_ dieses Map-Typs.
+
+
+[[Course_2_Exercise_5]]
+Übung 5 (optional)::
+
+Umsetzung des Prinzips *Information Hiding*:
+
+In dem folgenden Paket finden sich die Klassen aus der Demonstration:
+
+ de.dhbw.course2.basics.collections.nm.v2
+
+Diese Klassen enthalten aber noch keine Methoden!
+
+Füge die zu den Attributen gehörenden `getter` und `setter` Methoden hinzu und passe auch den zugehörigen Unit-Test entsprechend an. Der findet sich hier:
 
  de.dhbw.course2.relations.RelationsTest.manyToMany()
 
-
-Übung 4 (optional)::
-
-_Ein Experiment_: Erzeuge eine Klasse `Person` mit einem Attribut `name` und leite daraus ein Interface `Mensch` ab, und zwar - so oft wie möglich - mithilfe von
-
-* Code-Generation,
-* Auto-Completion oder
-* Refactoring-Proposals
-
-die von der IDE angeboten werden (IntelliJ).
 
 Testfragen::
 Im Modul `/exam` finden sich weitere kleine Übungen für die Inhalte des Kurses 2, und zwar in der dortigen Testklasse:

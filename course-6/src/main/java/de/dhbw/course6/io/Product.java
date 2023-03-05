@@ -1,6 +1,6 @@
 package de.dhbw.course6.io;
 
-import main.java.de.dhbw.commons.DateTimeUtil;
+import de.dhbw.commons.DateTimeUtil;
 
 import java.time.ZonedDateTime;
 import java.util.Objects;

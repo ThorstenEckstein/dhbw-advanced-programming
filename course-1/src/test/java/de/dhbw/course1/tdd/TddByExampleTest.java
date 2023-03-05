@@ -1,6 +1,6 @@
 package de.dhbw.course1.tdd;
 
-import main.java.de.dhbw.commons.Logger;
+import de.dhbw.commons.Logger;
 import de.dhbw.course1.Course1Main;
 import org.junit.jupiter.api.*;
 

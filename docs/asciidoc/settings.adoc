@@ -19,6 +19,8 @@
 //:example: pass:[&#63;]
 //:example-caption: {example}
 
+// pass-through
+:symbol-update-project: pass:n[[blue]#*&#x2199;*#]
 
 // content settings
 :course-title-count: {counter:course-title-count}
@@ -77,6 +79,14 @@
 :course-10-test: ../src/test/java/de/dhbw/course10
 :course-10-exam: <your-repo>/exam/test/de/dhbw/exam/course10
 
+// -------- module variables
+
+// vars to access from inner module
+:generics-root:        {project-root}/generics
+:generics-src:         {generics-root}/src/main/java/de/dhbw/generics
+:generics-test:        {generics-root}/src/test/java/de/dhbw/generics
+:generics-exam:        <your-repo>/exam/test/de/dhbw/exam/generics
+
 // ------------------------------------------------------------
 // use this from modules to reference sources in other modules!
 :project-root: ../..
@@ -101,3 +111,4 @@
 :tests-from-course-8:  {project-root}/course-8/src/test/java
 :tests-from-course-9:  {project-root}/course-9/src/test/java
 :tests-from-course-10: {project-root}/course-10/src/test/java
+

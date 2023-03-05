@@ -1,6 +1,6 @@
 package de.dhbw.course4.model;
 
-import main.java.de.dhbw.commons.Logger;
+import de.dhbw.commons.Logger;
 
 import java.util.Iterator;
 import java.util.LinkedList;

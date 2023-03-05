@@ -1,6 +1,6 @@
 package de.dhbw.course3;
 
-import main.java.de.dhbw.commons.Logger;
+import de.dhbw.commons.Logger;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

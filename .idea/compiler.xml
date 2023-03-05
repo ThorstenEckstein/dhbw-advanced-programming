@@ -19,6 +19,7 @@
         <module name="course-10" />
         <module name="exam" />
         <module name="course-1" />
+        <module name="generics" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -37,6 +38,7 @@
       <module name="course-9" target="17" />
       <module name="exam" target="17" />
       <module name="experiments" target="17" />
+      <module name="generics" target="17" />
     </bytecodeTargetLevel>
   </component>
 </project>

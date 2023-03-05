@@ -16,6 +16,7 @@
       <module fileurl="file://$PROJECT_DIR$/course-9/course-9.iml" filepath="$PROJECT_DIR$/course-9/course-9.iml" />
       <module fileurl="file://$PROJECT_DIR$/exam/exam.iml" filepath="$PROJECT_DIR$/exam/exam.iml" />
       <module fileurl="file://$PROJECT_DIR$/experiments/experiments.iml" filepath="$PROJECT_DIR$/experiments/experiments.iml" />
+      <module fileurl="file://$PROJECT_DIR$/generics/generics.iml" filepath="$PROJECT_DIR$/generics/generics.iml" />
     </modules>
   </component>
 </project>

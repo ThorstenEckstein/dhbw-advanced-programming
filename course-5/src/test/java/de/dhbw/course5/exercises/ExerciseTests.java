@@ -1,6 +1,6 @@
 package de.dhbw.course5.exercises;
 
-import main.java.de.dhbw.commons.Logger;
+import de.dhbw.commons.Logger;
 import org.junit.jupiter.api.Test;
 
 public class ExerciseTests {

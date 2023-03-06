@@ -71,14 +71,25 @@ Nutze folgende Testklasse für die Übungen:
 [subs=normal]
  src/[red]#*test*#/de/dhbw/generics/ExerciseTests.java
 
+
 [[generics-exercise-1]]
 *Übung 1:*
+
+Erstelle ein Interface für einen Taschenrechner, der die vier Grundrechenarten in Form von Methoden zur Verfügung stellt. Der Taschenrechner sollte mit einem beliebigen Zahlentyp umgehen können.
+
+TIP: Zahlentypen in Java haben eine gemeinsame Superklasse `java.lang.Number`.
+
+_Optional: Realisiere auch einen konkreten Taschenrechner, der das Interface implementiert und schreibe einen kleinen Test, der die Funktionsfähigkeit mindestens einer der Rechenarten am Beispiel testet._
+
+
+[[generics-exercise-2]]
+*Übung 2:*
 
 Implementiere eine konkrete Klasse `Workflow`.
 
 Diese Klasse soll eine statische, generische Methode `execute` bekommen, die beliebige Workflow-`Schritte` ausführen kann.
 
-DIe Workflow-Schritte sollen von einer Eltern-Klasse namens `Step` erben. Implementiere mindestens 2 konkrete Workflow-Schritte.
+Die Workflow-Schritte sollen von einer Eltern-Klasse namens `Step` erben. Implementiere mindestens 2 konkrete Workflow-Schritte.
 
 Realisiere für die "Ausführung" der `execute` Methode einfach eine Konsolenausgabe, z.B. des Names des konkreten Workflow-Schrittes (d.h. der Klassenname).
 

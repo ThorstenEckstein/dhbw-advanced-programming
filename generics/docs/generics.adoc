@@ -61,7 +61,7 @@ Die Unit-Tests zur *Demonstration* finden sich hier:
 Der zugehörige, in den Tests genutzte *Quellcode* findet sich hier:
 
 [subs=normal]
-src/[red]#*main*#/java/de/dhbw/generics/*.java
+ src/[red]#*main*#/java/de/dhbw/generics/*.java
 
 
 === Exercises
@@ -75,11 +75,18 @@ Nutze folgende Testklasse für die Übungen:
 [[generics-exercise-1]]
 *Übung 1:*
 
-Erstelle ein Interface für einen Taschenrechner, der die vier Grundrechenarten in Form von Methoden zur Verfügung stellt. Der Taschenrechner sollte mit einem beliebigen Zahlentyp umgehen können.
+Erstelle ein Interface für einen Taschenrechner, der die vier Grundrechenarten in Form von Methoden zur Verfügung stellt, also für...
+
+* addieren,
+* subtrahieren,
+* multiplizieren und
+* dividieren.
+
+Der Taschenrechner sollte mit einem beliebigen Zahlentyp umgehen können.
 
 TIP: Zahlentypen in Java haben eine gemeinsame Superklasse `java.lang.Number`.
 
-_Optional: Realisiere auch einen konkreten Taschenrechner, der das Interface implementiert und schreibe einen kleinen Test, der die Funktionsfähigkeit mindestens einer der Rechenarten am Beispiel testet._
+_Optional: Realisiere auch einen konkreten Taschenrechner, der das Interface implementiert, und schreibe dazu einen kleinen Test, der die Funktionsfähigkeit mindestens einer der Rechenarten am Beispiel auch mal testet._
 
 
 [[generics-exercise-2]]

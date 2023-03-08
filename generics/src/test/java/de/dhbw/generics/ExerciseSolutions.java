@@ -11,8 +11,8 @@ public class ExerciseSolutions {
     private final Logger logger = new Logger(ExerciseSolutions.class);
 
     @Test
-    @DisplayName("Exercise 1")
-    public void exercise1Solution() {
+    @DisplayName("Exercise 2 - Workflow")
+    public void exercise2Solution() {
         // given
         Step step1 = new Start();
         Step step2 = new Choice();
@@ -27,12 +27,12 @@ public class ExerciseSolutions {
     }
 
     @Test
-    @DisplayName("Exercise 2")
-    public void exercise2Solution() {
+    @DisplayName("Exercise 1 - Calculator")
+    public void exercise1Solution() {
         /*
         public interface Calculator<T extends Number> {
             T add(T first, T second);
-            T remove(T first, T second);
+            T subtract(T first, T second);
             T multiply(T first, T second);
             T divide(T first, T second);
         }

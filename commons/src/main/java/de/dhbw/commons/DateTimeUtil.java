@@ -1,4 +1,4 @@
-package main.java.de.dhbw.commons;
+package de.dhbw.commons;
 
 import java.time.LocalDateTime;
 import java.time.ZoneId;

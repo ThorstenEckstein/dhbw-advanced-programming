@@ -4,7 +4,7 @@ import de.dhbw.course2.basics.collections.n.*;
 import de.dhbw.course2.basics.collections.nm.v2.Course;
 import de.dhbw.course2.basics.collections.nm.v2.Registration;
 import de.dhbw.course2.basics.collections.nm.v2.Student;
-import main.java.de.dhbw.commons.Logger;
+import de.dhbw.commons.Logger;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;

@@ -1,7 +1,7 @@
 package de.dhbw.course1.model;
 
-import main.java.de.dhbw.commons.DateTimeUtil;
-import main.java.de.dhbw.commons.Logger;
+import de.dhbw.commons.DateTimeUtil;
+import de.dhbw.commons.Logger;
 import de.dhbw.course1.Course1Main;
 import de.dhbw.course1.model.personnel.Driver;
 import de.dhbw.course1.model.personnel.TrainDriver;

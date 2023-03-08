@@ -1,7 +1,7 @@
 package de.dhbw.course3.streaming;
 
-import main.java.de.dhbw.commons.DateTimeUtil;
-import main.java.de.dhbw.commons.Logger;
+import de.dhbw.commons.DateTimeUtil;
+import de.dhbw.commons.Logger;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

@@ -1,9 +1,14 @@
 include::../../docs/asciidoc/settings.adoc[]
 
-:sectnums!:
-//:show-answers:
 
-== Frage 1
+:sectnums!:
+:show-answers:
+
+
+:question-seq: {counter:question-seq}
+====
+[.big.red]#*Frage {question-seq}*#
+====
 
 Welche der folgenden *Listentypen* wäre am passendsten zur Speicherung von Listenelementen geeignet, wenn ein Listenelement nicht mehr als einmal vorkommen darf, und auch der Wert `null` ebenfalls nicht eingefügt werden darf?
 
@@ -21,8 +26,14 @@ ifdef::show-answers[]
 -> C
 endif::[]
 
+{nl}
 
-== Frage 2
+
+// -----------------------------------------------------------------
+:question-seq: {counter:question-seq}
+====
+[.big.red]#*Frage {question-seq}*#
+====
 
 Welche ist die wichtigste Eigenschaft von `TreeSet`?
 
@@ -38,8 +49,14 @@ ifdef::show-answers[]
 -> B
 endif::[]
 
+{nl}
 
-== Frage 3
+
+// -----------------------------------------------------------------
+:question-seq: {counter:question-seq}
+====
+[.big.red]#*Frage {question-seq}*#
+====
 
 Was bedeutet *Überladung* (von Methoden)?
 
@@ -56,11 +73,17 @@ ifdef::show-answers[]
 -> C
 endif::[]
 
+{nl}
+
 
 // >>>>>>>>>>>>>>>>>>>>>>>>> PAGE BREAK <<<<<<<<<<<<<<<<<<<<<<<<<<<<
 <<<
 
-== Frage 4
+// -----------------------------------------------------------------
+:question-seq: {counter:question-seq}
+====
+[.big.red]#*Frage {question-seq}*#
+====
 
 Java kennt unterschiedliche sogenannte `access modifier`, die den Zugriff bzw. die Sichtbarkeit von Klassen, Datenattributen oder Methoden steuern. Nennen Sie diese und beschrieben Sie kurz deren Bedeutung!
 
@@ -85,8 +108,13 @@ endif::[]
 {nl}
 {nl}
 
-// ----------------------------- FRAGE 5 -----------------------------
-== Frage 5
+
+// -----------------------------------------------------------------
+:question-seq: {counter:question-seq}
+====
+[.big.red]#*Frage {question-seq}*#
+====
+
 
 to be done?
 

@@ -259,7 +259,63 @@ Its main usage are;
 - To avoid ConcurrentModificationException
 
 
-=== Assoziation
+=== Assoziationen
+
+Klassen existieren quasi nie unabhängig, denn Software besteht immer auch vielen Klassen und weiteren Datenstrukturen, die nur gemeinsam funktionieren und somit die Software bilden.
+
+
+==== Beziehungsarten
+
+Klassen gehen also mit anderen Klassen viele sogenannte *"Beziehungen"* ein. Dabei gibt es verschiedene Arten von Beziehungen. Die wichtigsten sind:
+
+* *Aufruf* (_dynamische Beziehung zu Laufzeit_), kann innerhalb einer Software sein oder zwischen ganzen Systemen!
+* *Vererbung*, *Realisierung* (_statische Beziehung zur Compilezeit_)
+* *Besitz* (_statische Beziehung zur Compilezeit_) -> wird (neben weiteren Varianten) oft auch als *Assoziation* bezeichnet.
+
+IMPORTANT: _Der Grad - also die Anzahl und Qualität - der Summe aller dieser Beziehungen zwischen den Klassen einer Software wird unter dem Begriffspaar *Kopplung & Kohäsion* zusammengefasst ("loose coupling"). Ein allgemeines Qualitätsziel von Software ist bspw., einen niedrigen Grad von Kopplung der Komponenten zu erreichen. Je geringer die Kopplung ist, desto besser ist die Software änderbar!_
+
+=> [blue]#_Einfügen: Erläuterndes Bild von "Kopplung & Kohäsion"_#
+
+==== Aggregation & Komposition
+
+Assoziationen können auch qualitativ und semantisch recht unterschiedlich sein. In diesem Zusammenhang sind Aggregation und Komposition von Bedeutung.
+
+Die Aggregation, sowie auch die Komposition, ist eine Assoziation von *Teilen zu einem Ganzen*. Jedes Teil ist zu dem Ganzen mit einer Assoziation "ist-teil-von" (part-of) verbunden.
+
+Der Unterschied einer Komposition zur Aggregation ist, dass die Teile, die ein Objekt enthält, von dem Ganzen *existentiell abhängig* sind (Beispiel _Gebäude_ und _Räume_).
+
+====
+_Frage: Wie könnte man "existentielle Abhängigkeit" im Code ausdrücken?_
+====
+
+==== Navigierbarkeit
+
+Sobald Klassen durch Assoziationen verbunden werden, kommt der Aspekt der *Navigierbarkeit* (von Instanz zu Instanz) hinzu, d.h. man überlegt, welche Klasse welche als Attribut enthält und ob auch die assoziierte Klasse etwas über diese Beziehung weiß.
+
+Letztlich drückt sich die Navigierbarkeit darin aus, ob assoziierte Klassen
+
+* als Attribut mit `Typ` -> (2) oder
+* nur als `Id` in Form eines primitiven Datentyps -> (3)
+
+vorhanden sind. Auch die "besitzende" Klasse hat in aller Regel selbst eine ID -> (1).
+
+Am Beispiel:
+
+[source, java]
+----
+public class Train {
+    public long id; <1>
+    public Locomotive locomotive; <2>
+    public long locomotiveId; <3>
+}                           |
+                            |
+public class Locomotive {   |
+    public long id; <-------+
+    public Train train; // ist das hier sinnvoll?
+}
+----
+
+
 
 ==== One-to-One-Assoziation
 
@@ -282,14 +338,19 @@ Ein Beispiel für eine Eins-zu-Viele Beziehung:
 include::diagrams/one-to-many-example.puml[]
 ....
 
-Zugehörige Unit-Tests:
+TIP: Man beachte immer auch die Richtung der Pfeile, die in aller Regel etwas über die *Lesart* und *Navigierbarkeit* aussagt!
+
+Zugehörige Unit-Tests zur *Demonstration*:
 
  de.dhbw.course2.relations.RelationsTest.oneToMany1()
  de.dhbw.course2.relations.RelationsTest.oneToMany2()
 
 sowie Implementierungen für V1 und V2:
 
- de.dhbw.course2.basics.collections.n
+[subs=normal]
+ de.dhbw.course2.basics.collections.[red]#*n*#
+
+-> <<Course_2_Exercise_5, Übung 5>>
 
 
 ==== Many-to-Many-Assoziation
@@ -378,13 +439,27 @@ b. *Maps*: Schreibe einen Test, in dem eine konkrete Implementierung von `Sorted
 
 
 [[Course_2_Exercise_5]]
-Übung 5 (optional)::
+Übung 5::
 
-Umsetzung des Prinzips *Information Hiding*:
+Erstelle zwei Klassen
+
+* `Course` und
+* `Student`
+
+Der Kurs kann von *mehreren* Student:innen besucht werden. Setze diese Beziehung zwischen den beiden Klassen in der Klasse `Course` um.
+
+Überlege hier auch, welcher *Listentyp* sich dafür am besten eignet.
+
+
+[[Course_2_Exercise_6]]
+Übung 6 (optional)::
+
+Umsetzung des Prinzips *Information Hiding*
 
 In dem folgenden Paket finden sich die Klassen aus der Demonstration:
 
- de.dhbw.course2.basics.collections.nm.v2
+[subs=normal]
+ de.dhbw.course2.basics.collections.[red]#*nm*#.v2
 
 Diese Klassen enthalten aber noch keine Methoden!
 

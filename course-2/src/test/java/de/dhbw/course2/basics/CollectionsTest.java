@@ -1,6 +1,6 @@
 package de.dhbw.course2.basics;
 
-import main.java.de.dhbw.commons.Logger;
+import de.dhbw.commons.Logger;
 import de.dhbw.course2.basics.collections.nm.v1.Student;
 import org.junit.jupiter.api.Test;
 

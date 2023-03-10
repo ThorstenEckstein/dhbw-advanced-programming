@@ -3,7 +3,7 @@ package de.dhbw.course2.exercises;
 import de.dhbw.course2.basics.collections.nm.v2.Course;
 import de.dhbw.course2.basics.collections.nm.v2.Registration;
 import de.dhbw.course2.basics.collections.nm.v2.Student;
-import main.java.de.dhbw.commons.Logger;
+import de.dhbw.commons.Logger;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -70,8 +70,18 @@ public class MoreExerciseTests {
     }
 
     @Test
-    @DisplayName("Übung 5: Information Hiding durch getter & setter Methoden")
-    public void manyToMany() {
+    @DisplayName("Übung 5: Assoziation mit Kurs und Student:innen")
+    public void exercise5() {
+        // given
+
+        // when
+
+        // then
+    }
+
+    @Test
+    @DisplayName("Übung 6: Information Hiding durch getter & setter Methoden")
+    public void exercise6() {
         // given
         Course course = new Course();
         // Course Attribut 'id' setzen

@@ -6,9 +6,8 @@ public class Person {
 
     private Passport passport;
 
-    public Person(String name, String passportNumber) {
+    public Person(String name) {
         this.name = name;
-        this.passport = new Passport(passportNumber);
     }
 
     public String getName() {

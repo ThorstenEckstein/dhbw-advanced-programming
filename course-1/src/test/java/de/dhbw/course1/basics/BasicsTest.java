@@ -3,7 +3,7 @@ package de.dhbw.course1.basics;
 import de.dhbw.course1.basics.objectcontract.Passenger;
 import de.dhbw.course1.basics.objectcontract.Train;
 import de.dhbw.course1.basics.visibility.VisibilityExampleClass;
-import main.java.de.dhbw.commons.Logger;
+import de.dhbw.commons.Logger;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

@@ -29,6 +29,11 @@
         <module>course-10</module>
         <module>exam</module>
         <module>experiments</module>
+
+        <!-- new modules, reorganized from course-like to topic-like -->
+        <module>generics</module>
+        <module>functional-programming</module>
+
         <!--
         <module>docs</module>
         -->

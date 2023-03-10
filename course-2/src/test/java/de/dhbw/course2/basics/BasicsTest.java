@@ -1,6 +1,6 @@
 package de.dhbw.course2.basics;
 
-import main.java.de.dhbw.commons.Logger;
+import de.dhbw.commons.Logger;
 import de.dhbw.course2.basics.objectcontract.Journey;
 import de.dhbw.course2.basics.objectcontract.Passenger;
 import de.dhbw.course2.basics.objectcontract.PassengerImpl1;

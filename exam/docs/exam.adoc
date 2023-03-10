@@ -16,28 +16,67 @@ include::../../docs/asciidoc/settings.adoc[]
 
 == Überblick
 
-Jede Prüfung dauert insgesamt `60` Minuten mit je 3 Kandidaten.
-Sie beinhaltet sowohl <<_teil_1__praxis,_praktische_>> und <<_teil_2__theorie,_theoretische_>> Teile.
+Die gesamte Prüfungsleistung beinhaltet *zwei Teile*. Diese sind:
 
-=== Zwischenprüfungen
+. Individueller, schriftlicher *Kurztest*
+. Mündliche *Abschlussprüfung* in Kleingruppen
 
-to be done
+[[kurztest]]
+=== Schriftlicher Kurztest
 
+Der schriftliche Kurztest dauert (gemäß Prüfungsordnung)
+
+ 20 Minuten
+
+In dieser Zeit sollen die ausgedruckten Prüfungsfragen schriftlich durch die Studierenden beantwortet werden. Der Kurztest findet "direkt" zu Beginn der Lehrveranstaltung am
+
+ dd.mm.yyyy, 09:30 - 09:50
+
+statt.
+
+
+[[abschlusstest]]
 === Mündliche Abschlussprüfung
 
 Die mündlichen Prüfungen finden an folgenden Tagen statt:
 
  noch nicht bekannt
 
-(_26.04.23 - 27.04.23, 03.05.23 - 04.05.23_?)
+Die Prüfungen sind in `[2er|3er]-Gruppen` organisiert, wobei die Zusammensetzung der Gruppen wird vorher bekannt gegeben wird. Jede mündliche Prüfung beinhaltet folgende *Elemente*:
 
+. Wissens-, Konzept- bzw. Theoriefragen an einzelne Studierende der Gruppe
+. Aufgabenstellung für die Gruppe mit Diskussion zwischen den Studierenden (z.B. Erstellung und Diskussion eines Klassenmodells)
 
 
 === Zeitliche Planung
 
 Die nachfolgende Tabelle enthält die *zeitliche Planung* zur Durchführung:
 
-[cols="5h,^2m,^1m,^1m,^1m"]
+////
+[cols="5h,^2m,^1m,^1m,^1m", title="2er Gruppen"]
+|===
+| Name	| Datum	| Von	| Bis	| Raum
+
+| Student:In 1 ; Student:In 2	| Mi., 26.04.23	| 09:00	| 09:45	| ?
+| Student:In 3 ; Student:In 4	| Mi., 26.04.23	| 10:00	| 10:45	| ?
+| Student:In 5 ; Student:In 6	| Mi., 26.04.23	| 11:00	| 11:45	| ?
+| Student:In 7 ; Student:In 8	| Mi., 26.04.23	| 12:00	| 12:45	| ?
+| Student:In 9 ; Student:In 10	| Mi., 26.04.23	| 14:00	| 14:45	| ?
+| Student:In 11 ; Student:In 12	| Mi., 26.04.23	| 15:00	| 15:45	| ?
+| Student:In 13 ; Student:In 14	| Mi., 26.04.23	| 16:00	| 16:45	| ?
+| Student:In 15 ; Student:In 16	| Do., 27.04.23	| 09:00	| 09:45	| ?
+| Student:In 17 ; Student:In 18	| Do., 27.04.23	| 10:00	| 10:45	| ?
+| Student:In 19 ; Student:In 20	| Do., 27.04.23	| 11:00	| 11:45	| ?
+| Student:In 21 ; Student:In 22	| Do., 27.04.23	| 13:00	| 13:45	| ?
+| Student:In 23 ; Student:In 24	| Do., 27.04.23	| 14:00	| 14:45	| ?
+| Student:In 25 ; Student:In 26	| Do., 27.04.23	| 15:00	| 15:45	| ?
+| Student:In 27 ; n.n.	| Do., 27.04.23	| 16:00	| 16:45	| ?
+
+|===
+////
+
+////
+[cols="5h,^2m,^1m,^1m,^1m", title="3er Gruppen"]
 |===
 | Name	| Datum	| Von	| Bis	| Raum
 
@@ -52,3 +91,4 @@ Die nachfolgende Tabelle enthält die *zeitliche Planung* zur Durchführung:
 | Student:In 25 ; Student:In 26 ; Student:In 27	| Do., 27.04.23	| 12:15	| 13:15	| ?
 
 |===
+////

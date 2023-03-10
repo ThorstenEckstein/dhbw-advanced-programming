@@ -83,8 +83,8 @@ public class ExamTests {
             Q3: Which is the correct value range for primitive data type int?
             
             A. 16 bits
-            A. 32 bits
-            A. 64 bits
+            B. 32 bits
+            C. 64 bits
             """
     )
     // Please give your answer here:

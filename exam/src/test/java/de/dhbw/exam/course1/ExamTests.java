@@ -1,6 +1,6 @@
 package de.dhbw.exam.course1;
 
-import main.java.de.dhbw.commons.Logger;
+import de.dhbw.commons.Logger;
 import de.dhbw.exam.Answer;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;

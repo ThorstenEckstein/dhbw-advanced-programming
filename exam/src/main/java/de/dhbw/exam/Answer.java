@@ -3,8 +3,8 @@ package de.dhbw.exam;
 import java.util.Arrays;
 import java.util.List;
 
-import static main.java.de.dhbw.commons.Colourizer.green;
-import static main.java.de.dhbw.commons.Colourizer.red;
+import static de.dhbw.commons.Colourizer.green;
+import static de.dhbw.commons.Colourizer.red;
 
 public class Answer {
 

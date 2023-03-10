@@ -1,4 +1,4 @@
-package main.java.de.dhbw.commons;
+package de.dhbw.commons;
 
 public class Colourizer {
 

@@ -1,6 +1,6 @@
 package de.dhbw.exam.course9;
 
-import main.java.de.dhbw.commons.Logger;
+import de.dhbw.commons.Logger;
 import de.dhbw.exam.Answer;
 import de.dhbw.exam.course8.ExamAnswers;
 import org.junit.jupiter.api.DisplayName;

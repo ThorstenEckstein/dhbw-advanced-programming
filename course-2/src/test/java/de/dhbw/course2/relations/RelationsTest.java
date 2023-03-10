@@ -4,7 +4,8 @@ import de.dhbw.course2.basics.collections.n.*;
 import de.dhbw.course2.basics.collections.nm.v2.Course;
 import de.dhbw.course2.basics.collections.nm.v2.Registration;
 import de.dhbw.course2.basics.collections.nm.v2.Student;
-import main.java.de.dhbw.commons.Logger;
+import de.dhbw.commons.Logger;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
@@ -18,22 +19,17 @@ public class RelationsTest {
     private final Logger logger = new Logger(RelationsTest.class);
 
     @Test
+    @DisplayName("Demo: Einfache Assoziation")
     public void oneToOne() {
         // given
-        Person person = new Person("Julian", "sjw73h73hdkf8");
+        Person person = new Person("Olaf");
+        Passport passport = new Passport("sjw73h73hdkf8");
 
         // when
-        boolean deleted = delete(person);
+        person.setPassport(passport);
 
         // then
-        assertTrue(deleted);
-        assertNull(person.getPassport());
-    }
-
-    private boolean delete(Person person) {
-        person.deletePassport();
-        person = null;
-        return true;
+        assertNotNull(person.getPassport());
     }
 
     @Test

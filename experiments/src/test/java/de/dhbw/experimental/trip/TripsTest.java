@@ -1,7 +1,7 @@
 package de.dhbw.experimental.trip;
 
-import main.java.de.dhbw.commons.DateTimeUtil;
-import main.java.de.dhbw.commons.Logger;
+import de.dhbw.commons.DateTimeUtil;
+import de.dhbw.commons.Logger;
 import org.junit.jupiter.api.Test;
 
 import java.time.Duration;

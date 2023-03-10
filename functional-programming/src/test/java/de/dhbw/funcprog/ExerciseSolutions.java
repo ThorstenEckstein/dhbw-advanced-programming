@@ -49,11 +49,15 @@ public class ExerciseSolutions {
         // given - a list of at least 10 random Integers
         List<Double> list = List.of(1.0, 34.9, 34.23, 47.11);
 
-        // when - loop over the list and calculate the total
-        double sum = list.stream().mapToDouble(Double::doubleValue).sum();
+        // when - loop over the list and calculate the total (3 variants)
+        double sum1 = list.stream().reduce(0.0 , (val1, val2) -> val1 + val2);
+        double sum2 = list.stream().mapToDouble(d -> d.doubleValue()).sum();
+        double sum3 = list.stream().mapToDouble(Double::doubleValue).sum();
 
         // then - assert the correct total
-        assertEquals(117.24, sum);
+        assertEquals(117.24, sum1);
+        assertEquals(117.24, sum2);
+        assertEquals(117.24, sum3);
     }
 
 }

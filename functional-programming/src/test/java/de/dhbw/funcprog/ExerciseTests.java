@@ -29,23 +29,26 @@ public class ExerciseTests {
     @Test
     @DisplayName("Übung 2a: Calculate a total in old fashioned way")
     public void exercise2a() {
-        // given - a list of at least 10 random Integers
+        // given - a list of min. 5 arbitrary Integers
 
         // when - iterate over the list and calculate the total
+        // for ( ... : ... ) { ... }
 
         // then - assert the correct total
     }
     //end::old-fashioned-reduce[]
 
+    //tag::modern-reduce[]
     @Test
     @DisplayName("Übung 2b: Calculate a total the modern way")
     public void exercise2b() {
-        // given - a list of at least 5 random Doubles
+        // given - a list of min. 5 arbitrary Doubles
 
         // when - loop over the list and calculate the total
 
         // then - assert the correct total
     }
+    //end::modern-reduce[]
 
     @Test
     @DisplayName("Übung 3: Filter & reduce a shopping cart, calculate total price")

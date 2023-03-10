@@ -120,25 +120,38 @@ Nutze folgende Testklasse für die Übungen:
  src/[red]#*test*#/de/dhbw/{package}/ExerciseTests.java
 
 
-[[generics-exercise-1]]
+[[funcprog-exercise-1]]
 *Übung 1:*
 
-Implementiere eine Liste mit mehreren bool'schen Werten. Nutze dann einen Lambda-Ausdruck, durch den die Listenelemente auf der Konsole ausgegeben werden können.
+Implementiere eine Liste mit mehreren `boolean` Werten.
+
+Nutze dann einen Lambda-Ausdruck, durch den die Listenelemente auf der Konsole ausgegeben werden können.
 
 
-[[generics-exercise-2]]
-*Übung 2:*
+[[funcprog-exercise-2a]]
+*Übung 2a:*
 
 Implementiere den _"old fashioned way"_ für die Berechnung einer Summe:
 
 [source, java, indent="0"]
 ----
-include::{tests-from-course-3}/de/dhbw/course3/exercises/ExerciseTests.java[tags="old-fashioned-reduce"]
+include::../src/test/java/de/dhbw/funcprog/ExerciseTests.java[tags="old-fashioned-reduce"]
 ----
 
 
-[[generics-exercise-2]]
-*Übung 2:*
+[[funcprog-exercise-2b]]
+*Übung 2b:*
+
+Implementiere die Übung 2a mit modernen Mitteln, d.h. ersetze die "alte" `for-each` Loop durch einen *Lambda*-Ausdruck:
+
+[source, java, indent="0"]
+----
+include::../src/test/java/de/dhbw/funcprog/ExerciseTests.java[tags="modern-reduce"]
+----
+
+
+[[generics-exercise-3]]
+*Übung 3:*
 
 Für einen `Warenkorb` gilt es, darin enthaltene `Produkte` (mind. 3) zu nach ihrer `Produktkategorie` zu filtern.
 

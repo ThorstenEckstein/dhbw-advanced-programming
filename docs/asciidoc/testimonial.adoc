@@ -67,9 +67,16 @@ a| * [ ] {nbsp} | 2 | 5 | Theorie: Many-To-Many
 a| * [ ] {nbsp} | 2 | 5 | Demo: ManyToMany am Beispiel der n:m Relation (Kurs, Student:innen)
 a| * [ ] {nbsp} | 2 | 5 | Übung 6: ManyToMany, Information Hiding
 
-a| * [ ] {nbsp} | 3 | 5 | (Modul) Einführung Java Generics
+a| * [ ] {nbsp} | 3 | 5 | (*Modul*) Einführung Java Generics
 a| * [ ] {nbsp} | 3 | 5 | Demo in Klasse GenericsTest
-a| * [ ] {nbsp} | 3 | 5 | Übungen 1+2
+a| * [ ] {nbsp} | 3 | 5 | Übungen 1 - Calculator
+a| * [ ] {nbsp} | 3 | 5 | Übungen 2 - Workflow mit Steps
+
+a| * [ ] {nbsp} | 3 | 5 | (*Modul*) Einführung funktionale Programmierung
+a| * [ ] {nbsp} | 3 | 5 | Demo in Klassen LambdaTests und StreamingTests
+a| * [ ] {nbsp} | 3 | 5 | Übungen 1 - Lambda Ausdruck
+a| * [ ] {nbsp} | 3 | 5 | Übungen 2a+b - for-each "old fashioned" vs. "modern way"
+a| * [ ] {nbsp} | 3 | 5 | Übungen 3 (optional) Warenkorb, Gesamtpreis-Kalkulation mit filter-map-reduce Algorithmen
 
 |===
 [small]#*(1)* = Thema war ursprünglich geplant für Seminartag `n`, oder "neu eingeführt" mit Klammern `(n)`,

@@ -70,8 +70,18 @@ public class MoreExerciseTests {
     }
 
     @Test
-    @DisplayName("Übung 5: Information Hiding durch getter & setter Methoden")
-    public void manyToMany() {
+    @DisplayName("Übung 5: Assoziation mit Kurs und Student:innen")
+    public void exercise5() {
+        // given
+
+        // when
+
+        // then
+    }
+
+    @Test
+    @DisplayName("Übung 6: Information Hiding durch getter & setter Methoden")
+    public void exercise6() {
         // given
         Course course = new Course();
         // Course Attribut 'id' setzen

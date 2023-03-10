@@ -109,7 +109,7 @@ Die Unit-Tests zur *Demonstration* finden sich hier:
 Der zugehörige, in den Tests genutzte *Quellcode* findet sich hier:
 
 [subs=normal]
-src/[red]#*main*#/java/de/dhbw/{package}/*.java
+ src/[red]#*main*#/java/de/dhbw/{package}/*.java
 
 
 === Übungen
@@ -122,6 +122,12 @@ Nutze folgende Testklasse für die Übungen:
 
 [[generics-exercise-1]]
 *Übung 1:*
+
+Implementiere eine Liste mit mehreren bool'schen Werten. Nutze dann einen Lambda-Ausdruck, durch den die Listenelemente auf der Konsole ausgegeben werden können.
+
+
+[[generics-exercise-2]]
+*Übung 2:*
 
 Implementiere den _"old fashioned way"_ für die Berechnung einer Summe:
 

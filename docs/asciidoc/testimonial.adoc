@@ -51,17 +51,25 @@ a| * [x] {nbsp} | (2) | 4 | Übung 3: Klassenmodell implementieren und "generate
 
 a| * [x] {nbsp} | 2 | 4 | Wiederholung: Collections Framework
 a| * [x] {nbsp} | 2 | 4 | Übung 4a: Eine Liste implementieren und die "for-each-loop" nutzen zur Summierung
-a| * [ ] {nbsp} | 2 | 4 | Übung 4b: Eine SortedMap implementieren und sie Sortierung prüfen
 
 4+a|
 ====
 {continue-here}
 ====
 
-a| * [ ] {nbsp} | 2 | 5 | Theorie: Beziehungsarten (Besitz, Aufruf, Vererbung, ...) & Assoziationen
-a| * [ ] {nbsp} | 2 | 5 | Theorie: Assoziationen = Aggregation vs. Komposition (Beziehungsart "Besitz" im Code)
-a| * [ ] {nbsp} | 2 | 5 | Demo: ManyToMany am Beispiel der n:m Relation
-a| * [ ] {nbsp} | 2 | 5 | Übung 5: ManyToMany, Information Hiding
+a| * [ ] {nbsp} | 2 | 4 | Übung 4b: Eine SortedMap implementieren und sie Sortierung prüfen
+
+a| * [ ] {nbsp} | 2 | 5 | Theorie: Beziehungsarten (Besitz, Aufruf, Vererbung, ...), Aggregation vs. Komposition
+a| * [ ] {nbsp} | 2 | 5 | Demo: OneToOne, OneToMany am Beispiel
+a| * [ ] {nbsp} | 2 | 5 | Übung 5: Assoziation mit Kurs und Student:innen
+
+a| * [ ] {nbsp} | 2 | 5 | Theorie: Many-To-Many
+a| * [ ] {nbsp} | 2 | 5 | Demo: ManyToMany am Beispiel der n:m Relation (Kurs, Student:innen)
+a| * [ ] {nbsp} | 2 | 5 | Übung 6: ManyToMany, Information Hiding
+
+a| * [ ] {nbsp} | 3 | 5 | (Modul) Einführung Java Generics
+a| * [ ] {nbsp} | 3 | 5 | Demo in Klasse GenericsTest
+a| * [ ] {nbsp} | 3 | 5 | Übungen 1+2
 
 |===
 [small]#*(1)* = Thema war ursprünglich geplant für Seminartag `n`, oder "neu eingeführt" mit Klammern `(n)`,

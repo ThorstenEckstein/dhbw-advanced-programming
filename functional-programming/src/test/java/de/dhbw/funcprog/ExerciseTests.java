@@ -5,6 +5,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.util.List;
+
 public class ExerciseTests {
 
     private final Logger logger = new Logger(ExerciseTests.class);
@@ -12,10 +14,21 @@ public class ExerciseTests {
     @BeforeEach
     public void beforeEach() { }
 
+    @Test
+    @DisplayName("Exercise 1: Loop with Streams & Lambda")
+    public void exercise2Solution() {
+        // given - some list with boolean values
+
+        // when - use list.stream() and some lambda expression
+        //        to log each list item to console
+
+        // then - nothing here
+    }
+
     //tag::old-fashioned-reduce[]
     @Test
-    @DisplayName("Übung 1: Calculate a total in old fashioned way")
-    public void exercise1() {
+    @DisplayName("Übung 2a: Calculate a total in old fashioned way")
+    public void exercise2a() {
         // given - a list of at least 10 random Integers
 
         // when - iterate over the list and calculate the total
@@ -25,7 +38,17 @@ public class ExerciseTests {
     //end::old-fashioned-reduce[]
 
     @Test
-    @DisplayName("Übung 2: Filter & reduce a shopping cart, calculate total price")
+    @DisplayName("Übung 2b: Calculate a total the modern way")
+    public void exercise2b() {
+        // given - a list of at least 5 random Doubles
+
+        // when - loop over the list and calculate the total
+
+        // then - assert the correct total
+    }
+
+    @Test
+    @DisplayName("Übung 3: Filter & reduce a shopping cart, calculate total price")
     public void exercise3() {
         // given - use created shopping cart from above beforeEach()
 

@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="private-experiments" />
+        <module name="module-exceptions" />
         <module name="module-generics" />
         <module name="course-5" />
         <module name="course-4" />
@@ -22,6 +23,7 @@
         <module name="course-1" />
         <module name="module-enums" />
         <module name="course-exam" />
+        <module name="module-javadoc" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -40,8 +42,10 @@
       <module name="course-9" target="17" />
       <module name="course-exam" target="17" />
       <module name="module-enums" target="17" />
+      <module name="module-exceptions" target="17" />
       <module name="module-funcprogramming" target="17" />
       <module name="module-generics" target="17" />
+      <module name="module-javadoc" target="17" />
       <module name="private-experiments" target="17" />
     </bytecodeTargetLevel>
   </component>

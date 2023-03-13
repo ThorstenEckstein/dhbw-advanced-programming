@@ -7,6 +7,8 @@
         <option value="$PROJECT_DIR$/generics/pom.xml" />
         <option value="$PROJECT_DIR$/functional-programming/pom.xml" />
         <option value="$PROJECT_DIR$/enums/pom.xml" />
+        <option value="$PROJECT_DIR$/module-enums/pom.xml" />
+        <option value="$PROJECT_DIR$/module-javadoc/pom.xml" />
       </list>
     </option>
   </component>

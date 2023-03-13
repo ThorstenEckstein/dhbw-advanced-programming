@@ -16,8 +16,10 @@
       <module fileurl="file://$PROJECT_DIR$/course-9/course-9.iml" filepath="$PROJECT_DIR$/course-9/course-9.iml" />
       <module fileurl="file://$PROJECT_DIR$/exam/course-exam.iml" filepath="$PROJECT_DIR$/exam/course-exam.iml" />
       <module fileurl="file://$PROJECT_DIR$/enums/module-enums.iml" filepath="$PROJECT_DIR$/enums/module-enums.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module-exceptions/module-exceptions.iml" filepath="$PROJECT_DIR$/module-exceptions/module-exceptions.iml" />
       <module fileurl="file://$PROJECT_DIR$/functional-programming/module-funcprogramming.iml" filepath="$PROJECT_DIR$/functional-programming/module-funcprogramming.iml" />
       <module fileurl="file://$PROJECT_DIR$/generics/module-generics.iml" filepath="$PROJECT_DIR$/generics/module-generics.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module-javadoc/module-javadoc.iml" filepath="$PROJECT_DIR$/module-javadoc/module-javadoc.iml" />
       <module fileurl="file://$PROJECT_DIR$/experiments/private-experiments.iml" filepath="$PROJECT_DIR$/experiments/private-experiments.iml" />
     </modules>
   </component>

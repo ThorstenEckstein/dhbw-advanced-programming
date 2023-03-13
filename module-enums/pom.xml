@@ -9,7 +9,7 @@
 		<version>1.0</version>
 	</parent>
 
-	<artifactId>enums</artifactId>
+	<artifactId>module-enums</artifactId>
 	<packaging>jar</packaging>
     <name>enums</name>
 

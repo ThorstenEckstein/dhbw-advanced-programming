@@ -3,7 +3,7 @@ CREATE TABLE IF NOT EXISTS USERS
     `id`         int          NOT NULL,
     `first_name` varchar(100) NOT NULL,
     `last_name`  varchar(100) NOT NULL,
-    `Nickname`   varchar(200) NULL,
+    `Nickname`   varchar(200),
     PRIMARY KEY (`id`)
 );
 

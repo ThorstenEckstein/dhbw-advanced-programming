@@ -17,11 +17,16 @@ Das *Projekt* bzw. der "_lokale Workspace_", d.h. euer lokales Arbeitsverzeichni
 
 Das geht am besten mithilfe der IDE im Menü oder über das GIT Icon:
 
-image::../../docs/asciidoc/images/git-pull.png[width="30%", align="center"]
+[cols="^6a,^4a", grid="0", frame="0"]
+|===
 
-Danach muss - im sich öffnenden Dialog - noch folgendes bestätigt werden: _merge incoming changes into the current branch_
+<| Das geht am besten mithilfe der IDE im Menü oder über das GIT Icon:
+|
+image::../../docs/asciidoc/images/git-pull.png[width="65%", align="center"]
 
-image::../../docs/asciidoc/images/git-accept-merge.png[width="50%", align="center"]
+<| Danach muss - im sich öffnenden Dialog - noch folgendes bestätigt werden: _merge incoming changes into the current branch_
+|
+image::../../docs/asciidoc/images/git-accept-merge.png[width="85%", align="center"]
+|===
 
 Der Vorgang sollte mit einer Erfolgsmeldung abschließen.
-

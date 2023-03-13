@@ -1,9 +1,17 @@
 include::../../docs/asciidoc/settings.adoc[]
 
-// local document variables
-:func-prog-src_: ../src/main/java
-:func-prog-test_: ../src/test/java
-:package: funcprog
+// local document variables ---------------------------------------------------------------------
+:module-package: funcprog
+
+:module-sources: ../src/main/java/de/dhbw/{module-package}
+:module-tests: ../src/test/java/de/dhbw/{module-package}
+
+:module-demo-path-sources: pass:n[src/[red]#*main*#/java/de/dhbw/{module-package}/demo]
+:module-demo-path-tests: pass:n[src/[red]#*test*#/java/de/dhbw/{module-package}]
+
+:module-exercises-path-sources: pass:n[src/[red]#*main*#/java/de/dhbw/{module-package}/exercises]
+:module-exercises-path-tests: pass:n[src/[red]#*test*#/java/de/dhbw/{module-package}]
+// ----------------------------------------------------------------------------------------------
 
 :toc:
 
@@ -49,7 +57,7 @@ z.B. für den Gebrauch in *Listen*:
 
 [source,java,title="Lamdba Ausdrücke"]
 ----
-include::{func-prog-test_}/de/dhbw/{package}/LambdaTests.java[tag="lambda-example-1"]
+include::{module-tests}/LambdaTests.java[tag="lambda-example-1"]
 ----
 
 
@@ -84,18 +92,14 @@ Dazu ein Beispiel:
 
 [source,java,title="Beispiel einer reduce() Operation"]
 ----
-include::{func-prog-test_}/de/dhbw/{package}/StreamingTests.java[tag="reduce-example1"]
+include::{module-tests}/StreamingTests.java[tag="reduce-example1"]
 ----
-
-Weitere Beispiele finden sich in
-
- course-3/test/de/dhbw/course3/streaming/StreamingTest.java
 
 sowie zur Demonstration für einen *fachlichen* Nutzen, der "Erkenntnisse" aus den vorhandenen Daten ermittelt:
 
 [source,java,title="Fachliches Beispiel (good code?, bad code?)", indent="0"]
 ----
-include::{func-prog-test_}/de/dhbw/{package}/LambdaTests.java[tag="lambda-example-2"]
+include::{module-tests}/LambdaTests.java[tag="lambda-example-2"]
 ----
 
 
@@ -103,21 +107,28 @@ include::{func-prog-test_}/de/dhbw/{package}/LambdaTests.java[tag="lambda-exampl
 
 Die Unit-Tests zur *Demonstration* finden sich hier:
 
-[subs=normal]
- src/[red]#*test*#/java/de/dhbw/{package}/FuncProgTests.java
+[subs="normal"]
+ {module-demo-path-tests}/LambdaTests.java & StreamingTests.java
 
 Der zugehörige, in den Tests genutzte *Quellcode* findet sich hier:
 
-[subs=normal]
- src/[red]#*main*#/java/de/dhbw/{package}/*.java
+[subs="normal"]
+ {module-demo-path-sources}/*.java
 
 
-=== Übungen
+=== Exercises
 
-Nutze folgende Testklasse für die Übungen:
+Nutze folgendes Package für deine *Unit-Tests*:
 
-[subs=normal]
- src/[red]#*test*#/de/dhbw/{package}/ExerciseTests.java
+[subs="normal"]
+ {module-exercises-path-tests}/ExerciseTests.java
+
+Die im Test benutzten *Implementierungen* gehören in das Package:
+
+[subs="normal"]
+ {module-exercises-path-sources}/*.java
+
+{nl}
 
 
 [[funcprog-exercise-1]]

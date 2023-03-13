@@ -1,8 +1,17 @@
 include::../../docs/asciidoc/settings.adoc[]
 
-// local document variables
-:enums-src_: ../src/main/java
-:enums-test_: ../src/test/java
+// local document variables ---------------------------------------------------------------------
+:module-package: enums
+
+:module-sources: ../src/main/java/de/dhbw/{module-package}
+:module-tests: ../src/test/java/de/dhbw/{module-package}
+
+:module-demo-path-sources: pass:n[src/[red]#*main*#/java/de/dhbw/{module-package}/demo]
+:module-demo-path-tests: pass:n[src/[red]#*test*#/java/de/dhbw/{module-package}]
+
+:module-exercises-path-sources: pass:n[src/[red]#*main*#/java/de/dhbw/{module-package}/exercises]
+:module-exercises-path-tests: pass:n[src/[red]#*test*#/java/de/dhbw/{module-package}]
+// ----------------------------------------------------------------------------------------------
 
 :toc:
 
@@ -115,28 +124,29 @@ public enum FoodGroup {
 
 Die Unit-Tests zur *Demonstration* finden sich hier:
 
-[subs=normal]
- src/[red]#*test*#/java/de/dhbw/enums/EnumsTest.java
+[subs="normal"]
+ {module-demo-path-tests}/EnumTests.java
 
 Der zugehörige, in den Tests genutzte *Quellcode* findet sich hier:
 
-[subs=normal]
- src/[red]#*main*#/java/de/dhbw/enums/*.java
+[subs="normal"]
+ {module-demo-path-sources}/*.java
 
 
 === Exercises
 
 Nutze folgendes Package für deine *Unit-Tests*:
 
-[subs=normal]
- src/[red]#*test*#/de/dhbw/enums/ExerciseTests.java
+[subs="normal"]
+ {module-exercises-path-tests}/ExerciseTests.java
 
 Die im Test benutzten *Implementierungen* gehören in das Package:
 
-[subs=normal]
- src/[red]#*main*#/de/dhbw/enums/exercises/*.java
+[subs="normal"]
+ {module-exercises-path-sources}/*.java
 
 {nl}
+
 
 [[enums-exercise-1]]
 *Übung 1:*

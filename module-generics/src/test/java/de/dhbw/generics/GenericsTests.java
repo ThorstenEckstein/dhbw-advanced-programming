@@ -15,9 +15,9 @@ import java.util.Vector;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SuppressWarnings("unused")
-public class GenericsTest {
+public class GenericsTests {
 
-    private final Logger logger = new Logger(GenericsTest.class);
+    private final Logger logger = new Logger(GenericsTests.class);
 
     @Test
     public void canUseGenericClassWithString() {

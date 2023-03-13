@@ -74,7 +74,7 @@ public class DateTimeHelper {
 	 * </p>
 	 *
 	 * In case of invalid pattern, an exception will be thrown, please
-	 * visit &larr;
+	 * visit &rarr;
 	 * <a href="https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html#ofPattern-java.lang.String-">
 	 *  <code>DateTimeFormatter.ofPattern(String)</code>
 	 * </a>

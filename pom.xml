@@ -33,6 +33,7 @@
         <!-- new modules, reorganized from course-like to topic-like -->
         <module>generics</module>
         <module>functional-programming</module>
+        <module>enums</module>
 
         <!--
         <module>docs</module>

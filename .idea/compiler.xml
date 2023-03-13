@@ -18,6 +18,7 @@
         <module name="course-6" />
         <module name="course-10" />
         <module name="exam" />
+        <module name="enums" />
         <module name="functional-programming" />
         <module name="course-1" />
         <module name="generics" />
@@ -37,6 +38,7 @@
       <module name="course-7" target="17" />
       <module name="course-8" target="17" />
       <module name="course-9" target="17" />
+      <module name="enums" target="17" />
       <module name="exam" target="17" />
       <module name="experiments" target="17" />
       <module name="functional-programming" target="17" />

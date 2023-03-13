@@ -6,8 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="private-experiments" />
         <module name="module-exceptions" />
+        <module name="private-experiments" />
         <module name="module-generics" />
         <module name="course-5" />
         <module name="course-4" />

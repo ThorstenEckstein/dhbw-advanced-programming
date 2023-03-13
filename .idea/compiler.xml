@@ -6,9 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="experiments" />
+        <module name="private-experiments" />
+        <module name="module-generics" />
         <module name="course-5" />
         <module name="course-4" />
+        <module name="module-funcprogramming" />
         <module name="course-3" />
         <module name="course-2" />
         <module name="course-9" />
@@ -17,11 +19,9 @@
         <module name="course-7" />
         <module name="course-6" />
         <module name="course-10" />
-        <module name="exam" />
-        <module name="enums" />
-        <module name="functional-programming" />
         <module name="course-1" />
-        <module name="generics" />
+        <module name="module-enums" />
+        <module name="course-exam" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -38,11 +38,11 @@
       <module name="course-7" target="17" />
       <module name="course-8" target="17" />
       <module name="course-9" target="17" />
-      <module name="enums" target="17" />
-      <module name="exam" target="17" />
-      <module name="experiments" target="17" />
-      <module name="functional-programming" target="17" />
-      <module name="generics" target="17" />
+      <module name="course-exam" target="17" />
+      <module name="module-enums" target="17" />
+      <module name="module-funcprogramming" target="17" />
+      <module name="module-generics" target="17" />
+      <module name="private-experiments" target="17" />
     </bytecodeTargetLevel>
   </component>
 </project>

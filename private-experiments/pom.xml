@@ -11,7 +11,7 @@
 
 	<artifactId>private-experiments</artifactId>
 	<packaging>jar</packaging>
-    <name>experiments</name>
+    <name>private-experiments</name>
 
 	<properties>
 		<commons.version>1.0</commons.version>

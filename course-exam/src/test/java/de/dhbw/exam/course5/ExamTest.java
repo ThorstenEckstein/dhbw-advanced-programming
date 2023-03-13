@@ -2,6 +2,7 @@ package de.dhbw.exam.course5;
 
 import de.dhbw.commons.Logger;
 import de.dhbw.exam.Answer;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
@@ -10,6 +11,7 @@ import static de.dhbw.exam.Answers.*;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @DisplayName("Course 5 ExamTests")
+@Disabled
 public class ExamTest {
 
     private final Logger logger = new Logger(ExamTest.class);

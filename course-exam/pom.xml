@@ -11,7 +11,7 @@
 
 	<artifactId>course-exam</artifactId>
 	<packaging>jar</packaging>
-    <name>exam</name>
+    <name>course-exam</name>
 
 	<properties>
 		<commons.version>1.0</commons.version>

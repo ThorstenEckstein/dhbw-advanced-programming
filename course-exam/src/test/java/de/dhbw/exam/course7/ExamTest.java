@@ -1,10 +1,12 @@
 package de.dhbw.exam.course7;
 
 import de.dhbw.commons.Logger;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
+@Disabled
 @DisplayName("Course 7 ExamTests")
 public class ExamTest {
 

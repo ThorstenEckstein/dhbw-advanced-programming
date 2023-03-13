@@ -11,7 +11,7 @@
 
 	<artifactId>module-generics</artifactId>
 	<packaging>jar</packaging>
-    <name>generics</name>
+    <name>module-generics</name>
 
 	<properties>
 		<commons.version>1.0</commons.version>

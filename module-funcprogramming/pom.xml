@@ -11,7 +11,7 @@
 
 	<artifactId>module-funcprogramming</artifactId>
 	<packaging>jar</packaging>
-    <name>functional-programming</name>
+    <name>module-funcprogramming</name>
 
 	<properties>
 		<commons.version>1.0</commons.version>
